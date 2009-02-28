@@ -1,0 +1,152 @@
+servers = (
+  {
+    address = "irc.quakenet.org";
+    chatnet = "QuakeNet";
+    port = "6667";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.freenode.net";
+    chatnet = "freenode";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.oftc.net";
+    chatnet = "OFTC";
+    port = "6667";
+    autoconnect = "yes";
+  },
+  #  {
+  #    address = "im.bitlbee.org";
+  #    port = "6667";
+  #    autoconnect = "yes";
+  #  }
+);
+
+chatnets = {
+  QuakeNet = {
+    type = "IRC";
+    autosendcmd = "";
+    max_kicks = "1";
+    max_msgs = "3";
+    max_whois = "30";
+  };
+  freenode = {
+    type = "IRC";
+    autosendcmd = "";
+    max_kicks = "1";
+    max_msgs = "3";
+    max_whois = "30";
+  };
+  OFTC = {
+    type = "IRC";
+    autosendcmd = "";
+    max_kicks = "1";
+    max_msgs = "3";
+    max_whois = "30";
+  };
+};
+
+
+channels = (
+  { name = "#awesome"; chatnet = "OFTC"; autojoin = "yes"; },
+  { name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#linux"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#zsh"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#debian"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#legions"; chatnet = "QuakeNet"; autojoin = "yes"; }
+);
+
+aliases = {
+  J = "join";
+  DATE = "time";
+  HOST = "userhost";
+  W = "whois $0 $0";
+  N = "names";
+  T = "topic";
+  C = "scrollback clear";
+  K = "kick";
+  KB = "kickban";
+  KN = "knockout";
+  B = "ban";
+  UB = "unban";
+  IG = "ignore";
+  UNIG = "unignore";
+  WC = "window close";
+  ID = "quote nickserv identify";
+  RUN = "SCRIPT LOAD";
+  UPTIME = "eval exec - expr `date +%s` - \\$F | awk '{print \"Irssi uptime: \"int(\\\\\\$1/3600/24)\"d \"int(\\\\\\$1/3600%24)\"h \"int(\\\\\\$1/60%60)\"m \"int(\\\\\\$1%60)\"s\" }'";
+  CALC = "exec - if which bc &>/dev/null\\; then echo '$*' | bc | awk '{print \"$*=\"$$1}'\\; else echo bc was not found\\; fi";
+  Q = "QUERY";
+};
+
+statusbar = {
+
+  items = {
+    prompt = "{prompt $[.15]itemname}";
+    prompt_empty = "{prompt $winname}";
+
+    separator = "--------------------------------------------------------------------------------------------------------------------------------";
+    separator2 = "-------------------------------------------------------------------------------------------------------------------------------%N";
+  };
+
+  default = {
+    topic = { disabled = "yes"; };
+    window = { disabled = "yes"; };
+    window_inact = { disabled = "yes"; };
+
+    separator = {
+      type = "root";
+      placement = "bottom";
+      position = "0";
+      visible = "always";
+      items = { separator = { }; separator2 = { }; };
+    };
+
+    prompt = {
+      type = "root";
+      placement = "bottom";
+      position = "100";
+      visible = "always";
+      items = {
+        prompt = { priority = "-1"; };
+        prompt_empty = { priority = "-1"; };
+        input = { priority = "10"; };
+      };
+    };
+
+    mpdbar = { disabled = "yes"; };
+    awl_0 = {
+      items = {
+        barstart = { priority = "100"; };
+        awl_0 = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+  };
+};
+
+settings = {
+  core = {
+    real_name = "";
+    user_name = "";
+    nick = "";
+    quit_message = "none";
+  };
+  "perl/core/scripts" = {
+    awl_display_key = "$H$N:$C$S ";
+    mpd_host = "localhost";
+    mpd_port = "6600";
+  };
+  "fe-common/core" = {
+    timestamps = "yes";
+    show_nickmode = "yes";
+    theme = "kennae";
+  };
+  "irc/core" = { skip_motd = "yes"; };
+  "fe-text" = { actlist_sort = "refnum"; };
+};
+logs = { };

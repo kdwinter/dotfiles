@@ -1,0 +1,60 @@
+#!/bin/zsh
+#
+# change default behaviors for the basics
+
+. ~/.zsh/vars
+
+alias outside="weatherget -s BEXX0008 -m"
+alias mv="mv -v --backup=existing"
+alias mmv="noglob zmv -W"
+alias rm="rm -v"
+alias cp="cp -v"
+alias firefox="/usr/bin/firefox"
+alias mplayer="mplayer -idx"
+alias wget="wget --timeout 10"
+alias grep="grep --color=auto"
+
+#function call
+alias ex=extract_archive
+
+# basics
+alias c="clear"
+alias ll='ls -ahl --color | more; echo "\e[1;32m --[\e[1;34m Dirs:\e[1;36m `ls -al | egrep \"^drw\" | wc -l` \e[1;32m|\e[1;35m Files: \e[1;31m`ls -al | egrep -v \"^drw\" | grep -v total | wc -l` \e[1;32m]--"'
+alias cdc="cd; clear"
+
+alias conngig="sudo iwlist wlan0 scan && sudo netcfg wireless-gigamo"
+alias connmarina="sudo iwlist wlan0 scan && sudo netcfg wireless-marina"
+
+# auto open images
+alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}="mirage"
+# auto open movies
+alias -s {mpg,mpeg,avi,ogm,wmv,m4v,mp4,mov}="mplayer -idx"
+# auto open audio
+alias -s {mp3,ogg,wav,flac}="cmus"
+# auto open web addresses
+alias -s {html,php,com,net,org,gov}="firefox"
+# auto open regular files
+alias -s txt="vim"
+alias -s pdf="xpdf"
+
+alias mountnet="sudo mount -t cifs //192.168.1.5/E-Disk /home/gig/tmp/shares -o iocharset=utf8,file_mode=0777,dir_mode=0777"
+alias wcat="wget -q -O -"
+alias pacup="sudo pacman-color -Syu"
+alias startx="dbus-launch startx"
+alias install="sudo pacman-color -S"
+alias remove="sudo pacman-color -Rd"
+alias remove_deps="sudo pacman-color -Rscn"
+alias yaoup="yaourt -Syu --aur"
+alias yaous="yaourt -Ss"
+alias yinstall="yaourt -S"
+alias zetaf="sudo shutdown -h now"
+alias reboot="sudo reboot"
+alias svim="sudo vim"
+alias v="vim"
+alias vimaw="vim ~/.config/awesome/awesomerc.lua"
+alias netcfg="netcfg2"
+alias ls="ls -hF -a --color=auto"
+alias foobar="wine ~/.wine/drive_c/Program\ Files/foobar2000/foobar2000.exe"
+alias utorrent="wine ~/downloads/utorrent.exe"
+alias nautilus="nautilus --no-desktop"
+alias spotify="wine ~/.wine/drive_c/Program\ Files/Spotify/spotify.exe"
