@@ -2,89 +2,40 @@
 
 case $TERM in
     *xterm*|rxvt|rxvt-unicode|rxvt-256color|(dt|k|E)term)
-		precmd () { print -Pn "\e]0;$TERM - (%L) [%n@%M]%# [%~]\a" } 
-		preexec () { print -Pn "\e]0;$TERM - (%L) [%n@%M]%# [%~] ($1)\a" }
-	;;
+        precmd () { print -Pn "\e]0;$TERM - (%L) [%n@%M]%# [%~]\a" } 
+        preexec () { print -Pn "\e]0;$TERM - (%L) [%n@%M]%# [%~] ($1)\a" }
+    ;;
     screen)
-    	precmd () { 
-			print -Pn "\e]83;title \"$1\"\a" 
-			print -Pn "\e]0;$TERM - (%L) [%n@%M]%# [%~]\a" 
-		}
-		preexec () { 
-			print -Pn "\e]83;title \"$1\"\a" 
-			print -Pn "\e]0;$TERM - (%L) [%n@%M]%# [%~] ($1)\a" 
-		}
-	;; 
+        precmd () { 
+            print -Pn "\e]83;title \"$1\"\a" 
+            print -Pn "\e]0;$TERM - (%L) [%n@%M]%# [%~]\a" 
+        }
+        preexec () { 
+            print -Pn "\e]83;title \"$1\"\a" 
+            print -Pn "\e]0;$TERM - (%L) [%n@%M]%# [%~] ($1)\a" 
+        }
+    ;; 
 esac
 
-function git_info_for_prompt {
-    local g="$(git rev-parse --git-dir 2>/dev/null)"
-    if [ -n "$g" ]; then
-        local r
-        local b
-        if [ -d "$g/../.dotest" ]
-        then
-            if test -f "$g/../.dotest/rebasing"
-            then
-                r="|REBASE"
-            elif test -f "$g/../.dotest/applying"
-            then
-                r="|AM"
-            else
-                r="|AM/REBASE"
-            fi
-            b="$(git symbolic-ref HEAD 2>/dev/null)"
-        elif [ -f "$g/.dotest-merge/interactive" ]
-        then
-            r="|REBASE-i"
-            b="$(cat "$g/.dotest-merge/head-name")"
-        elif [ -d "$g/.dotest-merge" ]
-        then
-            r="|REBASE-m"
-            b="$(cat "$g/.dotest-merge/head-name")"
-        elif [ -f "$g/MERGE_HEAD" ]
-        then
-            r="|MERGING"
-            b="$(git symbolic-ref HEAD 2>/dev/null)"
-        else
-            if [ -f "$g/BISECT_LOG" ]
-            then
-                r="|BISECTING"
-            fi
-            if ! b="$(git symbolic-ref HEAD 2>/dev/null)"
-            then
-                if ! b="tag: $(git describe --exact-match HEAD 2>/dev/null)"
-                then
-                    b="$(cut -c1-7 "$g/HEAD")..."
-                fi
-            fi
-        fi
-
-        if [ -n "$1" ]; then
-            printf "$1" "${b##refs/heads/}$r"
-        else
-            printf "%s" "${b##refs/heads/}$r"
-        fi
-    fi
-}
-
 setprompt () {
-	# load some modules
-	autoload -U colors zsh/terminfo # Used in the colour alias below
-	colors
-	setopt prompt_subst
+    autoload -U colors zsh/terminfo
+    colors
+    setopt prompt_subst
 
-    # Check UID
-    if [[ $UID -ge 1000 ]]; then # normal user
-		eval PR_USER='%n'
-		eval PR_USER_OP='%#'
-	elif [[ $UID -eq 0 ]]; then # root
-		eval PR_USER='%n'
-		eval PR_USER_OP='%#'
-	fi	
+    for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
+        eval PR_$color='%{$fg[${(L)color}]%}'
+    done
+    PR_NO_COLOR="%{$terminfo[sgr0]%}"
 
-    PROMPT=$'[${PR_USER}][%~] ${PR_USER_OP} '
-    RPROMPT="[$(git_info_for_prompt)]"
+    if [[ $UID -ge 1000 ]]; then
+        eval PR_USER='%n'
+        eval PR_USER_OP='%#'
+    elif [[ $UID -eq 0 ]]; then
+        eval PR_USER='%n'
+        eval PR_USER_OP='%#'
+    fi	
+
+    PROMPT=$'${PR_CYAN}${PR_USER}${PR_NO_COLOR}:%~${PR_USER_OP} '
 }
 
 setprompt
