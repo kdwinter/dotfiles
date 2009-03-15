@@ -7,18 +7,18 @@ if v:version >= 700
 endif
 if has('gui_running')
     let &guicursor = &guicursor . ",a:blinkon0"
-    set guioptions-=e
+    "set guioptions-=e
     set guioptions-=T
-    set guioptions-=m
-    set guioptions-=r
-    set guioptions+=a
-    set guioptions+=c
+    "set guioptions-=m
+    "set guioptions-=r
+    "set guioptions+=a
+    "set guioptions+=c
     if has ('win32')
         set columns=120
         set lines=60
-        set guifont=Bitstream_Vera_Sans_Mono:h8:cANSI
+        set guifont=DejaVu_Sans_Mono:h8:cANSI
     else
-        set guifont=Terminus\ 8
+        set guifont=DejaVu\ Sans\ Mono\ 8
     endif
 "elseif (&term =~ 'screen' || &term =~ 'linux')
 elseif (&term =~ 'linux')
@@ -28,7 +28,8 @@ elseif (&term =~ 'linux')
     colorscheme desert
 else
     set t_Co=256
-    colorscheme jellybeans
+    "colorscheme zenburn
+    colorscheme wombat
     set mouse=a
     set ttymouse=xterm
     set termencoding=utf-8
@@ -88,7 +89,7 @@ inoremap <C-s> <esc>:w<cr>a
 nnoremap <C-s> :w<cr>
 
 " Set taglist plugin options
-let Tlist_Use_Right_Window = 1
+"let Tlist_Use_Right_Window = 1
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Compact_Format = 1
 let Tlist_Show_Menu = 1
