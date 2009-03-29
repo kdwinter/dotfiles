@@ -1,0 +1,8 @@
+set titlestring=Vimperator
+set defsearch=google
+
+map <C-r> :restart<CR>
+
+echo ".vimperatorrc sourced"
+
+" vim: ft=vimperator

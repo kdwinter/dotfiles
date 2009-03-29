@@ -29,16 +29,16 @@ hi LineNr 		guifg=#857b6f guibg=#000000 gui=none ctermfg=240  ctermbg=232  cterm
 hi StatusLine 	guifg=#f6f3e8 guibg=#444444 gui=none ctermfg=230  ctermbg=238  cterm=none
 hi StatusLineNC guifg=#857b6f guibg=#444444 gui=none ctermfg=144  ctermbg=238  cterm=none
 hi VertSplit 	guifg=#444444 guibg=#444444 gui=none ctermfg=238  ctermbg=238  cterm=none
-hi Folded 		guibg=#384048 guifg=#a0a8b0 gui=none ctermfg=237  ctermbg=247  cterm=none "FIXME
+hi Folded 		guibg=#384048 guifg=#a0a8b0 gui=none ctermfg=237  ctermbg=247  cterm=none
 hi Title		guifg=#f6f3e8 guibg=NONE	gui=bold ctermfg=230  ctermbg=NONE cterm=bold
 hi Visual		guifg=#f6f3e8 guibg=#444444 gui=none ctermfg=230  ctermbg=238  cterm=none
 hi SpecialKey	guifg=#808080 guibg=#343434 gui=none ctermfg=244  ctermbg=236  cterm=none
 
 " Syntax highlighting
-hi Comment 		guifg=#99968b gui=none ctermfg=246 cterm=none "FIXME
-hi Todo 		guifg=#8f8f8f gui=none ctermfg=245 cterm=none
+hi Comment 		guifg=#99968b gui=none ctermfg=246 cterm=none
+hi Todo 		guifg=#8f8f8f gui=none ctermfg=245 cterm=none ctermbg=238
 hi Constant 	guifg=#e5786d gui=none ctermfg=167 cterm=none
-hi String 		guifg=#95e454 gui=none ctermfg=113 cterm=none
+hi String 		guifg=#95e454 gui=none ctermfg=113 cterm=none ctermbg=237
 hi Identifier 	guifg=#cae682 gui=none ctermfg=150 cterm=none
 hi Function 	guifg=#cae682 gui=none ctermfg=150 cterm=none
 hi Type 		guifg=#cae682 gui=none ctermfg=150 cterm=none

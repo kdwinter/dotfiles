@@ -2,8 +2,8 @@ set nocompatible        " use gVim defaults
 set encoding=utf-8      " unicode encoding
 syntax on               " enable syntax highlighting
 if v:version >= 700
-	set cursorline
-	set listchars+=tab:»·,trail:·,extends:~,nbsp:.
+    set cursorline
+    set listchars+=tab:»·,trail:·,extends:~,nbsp:.
 endif
 if has('gui_running')
     let &guicursor = &guicursor . ",a:blinkon0"
@@ -28,7 +28,6 @@ elseif (&term =~ 'linux')
     colorscheme desert
 else
     set t_Co=256
-    "colorscheme zenburn
     colorscheme wombat
     set mouse=a
     set ttymouse=xterm

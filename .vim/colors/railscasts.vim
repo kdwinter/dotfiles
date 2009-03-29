@@ -44,7 +44,8 @@ hi link htmlTag                     xmlTag
 hi link htmlTagName                 xmlTagName
 hi link htmlEndTag                  xmlEndTag
 
-hi Normal                    guifg=#E6E1DC guibg=#111111 
+hi Normal                    guifg=#E6E1DC guibg=#111111
+hi NonText                   guifg=#888888 ctermfg=244
 hi Cursor                    guifg=#000000 ctermfg=0 guibg=#FFFFFF ctermbg=15	
 hi CursorLine                guibg=#000000 ctermbg=236 cterm=NONE
 hi CursorColumn              guibg=#262626
@@ -52,8 +53,8 @@ hi TabLine                   guifg=black guibg=#b0b8c0 gui=italic
 hi TabLineFill               guifg=#9098a0
 hi TabLineSel                guifg=black guibg=#f0f0f0 gui=italic,bold
 hi Pmenu                     guifg=white guibg=#808080
-hi StatusLine                guifg=#f0f0f0 guibg=#101010 gui=italic
-hi StatusLineNC              guifg=#a0a0a0 guibg=#181818 gui=italic
+hi StatusLine                guifg=#f0f0f0 guibg=#444444 gui=italic
+hi StatusLineNC              guifg=#a0a0a0 guibg=#333333 gui=italic
 hi Folded                    guibg=#384048 guifg=#a0a8b0 gui=italic
 hi FoldColumn                guibg=#384048 guifg=#a0a8b0
 hi SignColumn                guibg=#384048 guifg=#a0a8b0
@@ -83,10 +84,10 @@ hi Special                   guifg=#DA4939 ctermfg=167
 
 hi pythonBuiltin             guifg=#6D9CBE ctermfg=73 gui=NONE cterm=NONE
 hi rubyBlockParameter        guifg=#FFFFFF ctermfg=73
-hi rubyClass                 guifg=#FFFFFF ctermfg=73
+"hi rubyClass                 guifg=#FFFFFF ctermfg=73
 hi rubyConstant              guifg=#DA4939 ctermfg=167
 hi rubyInstanceVariable      guifg=#D0D0FF ctermfg=73
-hi rubyInterpolation         guifg=#519F50 ctermfg=107
+"hi rubyInterpolation         guifg=#519F50 ctermfg=107
 hi rubyLocalVariableOrMethod guifg=#D0D0FF ctermfg=189
 hi rubyPredefinedConstant    guifg=#DA4939 ctermfg=167
 hi rubyPseudoVariable        guifg=#FFC66D ctermfg=221
