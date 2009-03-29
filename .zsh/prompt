@@ -23,19 +23,15 @@ setprompt () {
     setopt prompt_subst
 
     for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
-        eval PR_$color='%{$fg[${(L)color}]%}'
+        eval PR_$color='%{$terminfo[bold]$fg[${(L)color}]%}'
+        eval PR_LIGHT_$color='%{$fg[${(L)color}]%}'
     done
     PR_NO_COLOR="%{$terminfo[sgr0]%}"
+    PR_USER="%n"
+    PR_DATE="%T"
 
-    if [[ $UID -ge 1000 ]]; then
-        eval PR_USER='%n'
-        eval PR_USER_OP='%#'
-    elif [[ $UID -eq 0 ]]; then
-        eval PR_USER='%n'
-        eval PR_USER_OP='%#'
-    fi	
-
-    PROMPT=$'${PR_CYAN}${PR_USER}${PR_NO_COLOR}:%~${PR_USER_OP} '
+    PROMPT=$'${PR_GREEN}${PR_USER}${PR_NO_COLOR} ${PR_WHITE}%~${PR_NO_COLOR} ${PR_MAGENTA}»${PR_NO_COLOR} '
+    RPROMPT=$'${PR_MAGENTA}«${PR_NO_COLOR} ${PR_BLUE}${PR_DATE}${PR_NO_COLOR}'
 }
 
 setprompt

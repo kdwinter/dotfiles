@@ -1,4 +1,4 @@
-Xcursor.theme: neutral
+Xcursor.theme: Neutral_Plus
 
 !-------------------------------------------------------------------------------
 !
@@ -6,89 +6,146 @@ Xcursor.theme: neutral
 !      U R X V T
 !
 !
-URxvt*font:                     -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
-URxvt*boldFont:                 -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
-URxvt*italicFont:               -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
-URxvt*boldItalicFont:           -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
-!URxvt*font:                     xft:Liberation Mono:pixelsize=10
-URxvt*saveLines:                32767
-URxvt*scrollBar:	            false
-URxvt*scrollBar_right:	        true
-URxvt*loginShell:	            true
-URxvt*tintColor:                #555555
-URxvt*shading:                  30
-URxvt*termName:		            rxvt-unicode
-URxvt*inheritPixmap:	        true
-URxvt*cutchars:		            "()*,<>[]{}|'
-URxvt*secondaryScroll:	        true
-urxvt*perl-lib:		            /usr/lib/urxvt/perl/
-urxvt*perl-ext-common:	        default,matcher
-URxvt*urlLauncher:	            /usr/bin/firefox
-URxvt*matcher.button:	        1
-URxvt*matcher.pattern.1:        \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
-URxvt*visualBell:	            true
-URxvt*keysym.C-u:               perl:matcher
-URxvt*urgentOnBell:             true
-URxvt*background:               #1e1e1e
-URxvt*foreground:               #dcdccc
+URxvt*font:             -*-proggytiny-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt*boldFont:         -*-proggytiny-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt*italicFont:       -*-proggytiny-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt*boldItalicFont:   -*-proggytiny-*-*-*-*-*-*-*-*-*-*-*-*
 
-!-------------------------------------------------------------------------------
-!
-!
-!      C O L O R S
-!
-!
+!URxvt*font:             -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
+!URxvt*boldFont:         -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
+!URxvt*italicFont:       -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
+!URxvt*boldItalicFont:   -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
+
+
+URxvt*saveLines:        32767
+URxvt*scrollBar:        false
+URxvt*scrollBar_right:  true
+URxvt*loginShell:       true
+URxvt*shading:          30
+URxvt*termName:         rxvt-unicode
+URxvt*secondaryScroll:  true
+urxvt*perl-lib:         /usr/lib/urxvt/perl/
+urxvt*perl-ext-common:  default,matcher,searchable-scrollback
+URxvt*urlLauncher:      /usr/bin/firefox-nightly
+URxvt*matcher.button:   1
+urxvt.cutchars:         `()'*<>[]{|}"
+URxvt*cutchars:         `"()'*<>[]{|}
+URxvt*visualBell:       true
+URxvt*keysym.C-u:       perl:matcher
+URxvt*urgentOnBell:     true
+URxvt*cursorColor:      #6dacd8
+!URxvt*inheritPixmap:    true
+
+! Daisuke
+URxvt*background:       #030303
+URxvt*foreground:       #dcdccc
+!black
+URxvt*color0:           #1e1e1e
+URxvt*color8:           #505050
+!red
+URxvt*color1:           #b04020
+URxvt*color9:           #dd4010
+!green
+URxvt*color2:           #afd700
+URxvt*color10:          #daff30
+!yellow
+URxvt*color3:           #f7cf0a
+URxvt*color11:          #fce70d
+!blue
+URxvt*color4:           #3060aa
+URxvt*color12:          #6099dd
+!magenta
+URxvt*color5:           #d6156c
+URxvt*color13:          #fe4365
+!cyan
+URxvt*color6:           #a0c2de
+URxvt*color14:          #c9dee8
+!white
+URxvt*color7:           #808080
+URxvt*color15:          #b0b0b0
+
+! Light
+!URxvt*background: #f0f0f0
+!URxvt*foreground: #22303d
+! black
+!URxvt*color0:    #cbd9e2
+!URxvt*color8:    #666666
+! red
+!URxvt*color1:    #6dacd8
+!URxvt*color9:    #62aada
+! green
+!URxvt*color2:    #315b81
+!URxvt*color10:    #477ea7
+! yellow
+!URxvt*color3:    #4282b0
+!URxvt*color11:    #62aada
+! blue
+!URxvt*color4:    #315b81
+!URxvt*color12:    #477ea7
+! magenta
+!URxvt*color5:    #4282b0
+!URxvt*color13:    #62aada
+! cyan
+!URxvt*color6:    #315b81
+!URxvt*color14:    #477ea7
+! white
+!URxvt*color7:    #22303d
+!URxvt*color15:    #444444
+
+! Tango
 ! Black
-*color0:  #1e1e1e
-*color8:  #555753
+!URxvt*color0:  #1e1e1e
+!URxvt*color8:  #555753
 ! Red
-*color1:  #CC0000
-*color9:  #EF2929
+!URxvt*color1:  #CC0000
+!URxvt*color9:  #EF2929
 ! Green
-*color2:  #4E9A06
-*color10: #8AE234
+!URxvt*color2:  #4E9A06
+!URxvt*color10: #8AE234
 ! Yellow
-*color3:  #C4A000
-*color11: #FCE94F
+!URxvt*color3:  #C4A000
+!URxvt*color11: #FCE94F
 ! Blue
-*color4:  #3465A4
-*color12: #729FCF
+!URxvt*color4:  #3465A4
+!URxvt*color12: #729FCF
 ! Purple
-*color5:  #75507B
-*color13: #AD7FA8
+!URxvt*color5:  #75507B
+!URxvt*color13: #AD7FA8
 ! Cyan
 ! have to use rgb: here, doesn't work otherwise :O
-*color6:  rgb:06/98/9A
-*color14: #34E2E2
+!URxvt*color6:  rgb:06/98/9A
+!URxvt*color14: #34E2E2
 ! White
-*color7:  #9f9f9f
-*color15: #e0e0e0
+!URxvt*color7:  #9f9f9f
+!URxvt*color15: #e0e0e0
 
 ! Zenburn
+!URxvt*background:  #3F3F3F
+!URxvt*foreground:  #DCDCCC
 ! black + red
-!*color0:      #1E2320
-!*color1:      #705050
+!URxvt*color0:      #1E2320
+!URxvt*color1:      #705050
 ! green + yellow
-!*color2:      #60b48a
-!*color3:      #dfaf8f
+!URxvt*color2:      #60b48a
+!URxvt*color3:      #dfaf8f
 ! blue + purple
-!*color4:      #506070
-!*color5:      #dc8cc3
+!URxvt*color4:      #506070
+!URxvt*color5:      #dc8cc3
 ! cyan + white
-!*color6:      #8cd0d3
-!*color7:      #dcdccc
+!URxvt*color6:      #8cd0d3
+!URxvt*color7:      #dcdccc
 ! bright-black + bright-red
-!*color8:      #709080
-!*color9:      #dca3a3
+!URxvt*color8:      #709080
+!URxvt*color9:      #dca3a3
 ! bright-green + bright-yellow
-!*color10:     #c3bf9f
-!*color11:     #f0dfaf
+!URxvt*color10:     #c3bf9f
+!URxvt*color11:     #f0dfaf
 ! bright-blue + bright-purple
-!*color12:     #94bff3
-!*color13:     #ec93d3
+!URxvt*color12:     #94bff3
+!URxvt*color13:     #ec93d3
 ! bright-cyan + bright-white
-!*color14:     #93e0e3
-!*color15:     #ffffff
+!URxvt*color14:     #93e0e3
+!URxvt*color15:     #ffffff
 
 !-------------------------------------------------------------------------------
 !
@@ -122,10 +179,10 @@ xterm*charClass:     33:48,35-38:48,39:43,42-47:48,58-59:48,61:48,63-64:48,126:4
 ! Appearance
 xterm*utf8:          2
 xterm*eightBitInput: true
-xterm*faceName:      terminus:pixelsize=10
+xterm*faceName:      terminus:pixelsize=12
 xterm*cursorColor:   #FFFFFF
 ! Zenburn
-xterm*background:  #3f3f3f
+xterm*background:  #222222
 xterm*foreground:  #dcdccc
 xterm*color0:      #1E2320
 xterm*color1:      #705050

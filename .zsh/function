@@ -1,26 +1,5 @@
 #!/bin/zsh
 #
-# list contents of directory on every "cd"
-function chpwd
-{
-	integer ls_lines="$(ls -C | wc -l)"
-	if [[ $ls_lines -eq 0 ]]; then
-		echo No files found: Empty Directory 
-	else
-		ls -hl --color | more
-		echo "\e[1;32m --[\e[1;34m Dirs:\e[1;36m `ls -l | egrep \"^drw\" | wc -l` \e[1;32m|\e[1;35m Files: \e[1;31m`ls -l | egrep -v \"^drw\" | grep -v total | wc -l` \e[1;32m]--"
-	fi
-# source and create project environment
-	if [[ -f $PWD/.projectenv ]]; then
-		. $PWD/.projectenv
-	fi
-}
-
-# viewing man pages
-function man {
-    /usr/bin/man $* | col -bp | iconv -c | view -c 'set ft=man nomod nolist' -
-}
-
 # reload zshrc
 function src() {
         autoload -U zrecompile
@@ -41,8 +20,19 @@ function ga() { git add $* }
 function gl() { git log $* }
 function gs() { git status $* }
 function gp() { git push $* }
-function gc() { git commit -m "$*" }
+function gc() { git commit --signoff -m "$*" }
 function gpl() { git pull $* }
+
+function pastie {
+  url=$(curl http://pastie.caboo.se/pastes/create \
+    -H "Expect:" \
+    -F "paste[parser]=plain_text" \
+    -F "paste[body]=<-" \
+    -F "paste[authorization]=burger" \
+    -s -L -o /dev/null -w "%{url_effective}")
+  echo -n "$url" | xclip
+  echo "$url"
+}
 
 extract_archive () {
     local old_dirs current_dirs lower

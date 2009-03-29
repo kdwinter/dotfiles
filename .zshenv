@@ -10,7 +10,7 @@ if tty -s ; then
 fi
 
 # Exports
-export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/opt/mozilla/bin:/opt/java/jre/bin:/home/gig/bin:/home/gig/hacks
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/opt/mozilla/bin:/opt/java/jre/bin:/home/gig/bin
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LOCALE=en_US.UTF-8
@@ -22,6 +22,7 @@ export EDITOR=vim
 export VISUAL=vim
 export HISTCONTROL=ignoredups
 export IGNOREEOF=3
+export WMII_ADDRESS=/tmp/ns.gig.:0/wmii
 
 # watch for people
 watch=(notme)                   # watch for everybody but me
@@ -79,8 +80,6 @@ bindkey "\e[3~" delete-char
 
 bindkey "\e[5~" beginning-of-history
 bindkey "\e[6~" end-of-history
-
-WATCHFMT="%B->%b %n has just %a %(l:tty%l:%U-Ghost-%u)%(m: from %m:)"
 
 # Automatically start X and log out after when logging into vc/1
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/vc/1 ]]; then
