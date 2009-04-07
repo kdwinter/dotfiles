@@ -28,7 +28,8 @@ elseif (&term =~ 'linux')
     colorscheme desert
 else
     set t_Co=256
-    colorscheme wombat
+    colorscheme gardener
+    "colorscheme mustang
     set mouse=a
     set ttymouse=xterm
     set termencoding=utf-8
