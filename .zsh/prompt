@@ -29,9 +29,10 @@ setprompt () {
     PR_NO_COLOR="%{$terminfo[sgr0]%}"
     PR_USER="%n"
     PR_DATE="%T"
+    PR_DIR="%~"
 
-    PROMPT=$'${PR_GREEN}${PR_USER}${PR_NO_COLOR} ${PR_WHITE}%~${PR_NO_COLOR} ${PR_MAGENTA}»${PR_NO_COLOR} '
-    RPROMPT=$'${PR_MAGENTA}«${PR_NO_COLOR} ${PR_BLUE}${PR_DATE}${PR_NO_COLOR}'
+    PROMPT=$'${PR_USER} ${PR_DIR} ${PR_YELLOW}»${PR_NO_COLOR} '
+    RPROMPT=$'${PR_YELLOW}«${PR_NO_COLOR} ${PR_DATE}'
 }
 
 setprompt

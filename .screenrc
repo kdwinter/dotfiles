@@ -1,22 +1,19 @@
-# ~/.screenrc
-
 defscrollback 10000
 deflogin on
 altscreen on
 autodetach on
-msgwait 2 # 1 second messages
+msgwait 2
 activity "active: %n (%t) [%w:%s]"
 bell "bell: %n (%t) [%w:%s]^G"
 vbell_msg "[[[ ding ]]]"
 vbell off
 startup_message off
 defutf8 on
-
 term screen-256color
 termcapinfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 termcapinfo rxvt-256color 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm' 
 
-#screen -t torrent rtorrent
+screen -t torrent rtorrent
 screen -t irc irssi
 screen -t mail alpine
 screen -t zsh
@@ -27,16 +24,23 @@ bindkey -k k3 select 2
 bindkey -k k4 select 3
 bindkey -k k5 select 4
 bindkey -k k6 select 5
+bindkey -k k7 select 6
+bindkey -k k8 select 7
+bindkey -k k9 select 8
+bindkey -k k10 select 9
+bindkey -k k11 select 10
+bindkey -k k12 select 11
 
 bindkey "^[Od" prev
 bindkey "^[Oc" next
 
-select 2
+select 3
 
 #backtick 1 0 0 $HOME/.screen/netinfo 3 wlan0
 #backtick 2 5 5 $HOME/.screen/batinfo -n
 #backtick 3 5 5 $HOME/.screen/meminfo
 #caption always "%{=bu kb} %=< %?%-Lw%?%{kc}[:%n %t:]%{kb}%?%+Lw%? >%= "
 #hardstatus alwayslastline "%{+b bw}[%H :: $USER]%{=b kw} %=[[ %1` | %2` | %3` ]]%=%{=b bw}[%d.%m.%y %0c]"
-caption always "%{= kb}[ %{kG}$USER%{kW}@%{kG}%H %{b}][ %=%{w}%?%-Lw%?%{b}(%{W}%n*%f %t%?(%u)%?%{b})%{w}%?%+Lw%?%= %{b}][%{kB} %d.%m.%Y %{kW}%0c %{kb}]"
+#caption always "%{= kb}[ %{kG}$USER%{kW}@%{kG}%H %{b}][ %=%{w}%?%-Lw%?%{b}(%{W}%n*%f %t%?(%u)%?%{b})%{w}%?%+Lw%?%= %{b}][%{kB} %d.%m.%Y %{kW}%0c %{kb}]"
+hardstatus alwayslastline "%{= w}%-w%{= Bk} %n %t %{-}%+w %-="
 sorendition +b kG

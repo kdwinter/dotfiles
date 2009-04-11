@@ -6,9 +6,11 @@ if v:version >= 700
     set listchars+=tab:»·,trail:·,extends:~,nbsp:.
 endif
 if has('gui_running')
-    let &guicursor = &guicursor . ",a:blinkon0"
-    "set guioptions-=e
-    set guioptions-=T
+    let &guicursor = &guicursor . ",a:blinkon0" " disable cursor blinking
+    set guioptions-=m                           " remove the menu bar
+    set guioptions-=T                           " remove the tool bar
+    set guioptions-=L                           " never show scrollbars
+    set guioptions-=R                           " set guioptions-=e
     "set guioptions-=m
     "set guioptions-=r
     "set guioptions+=a
@@ -18,7 +20,8 @@ if has('gui_running')
         set lines=60
         set guifont=DejaVu_Sans_Mono:h8:cANSI
     else
-        set guifont=DejaVu\ Sans\ Mono\ 8
+        set guifont=Monaco\ 7.5
+        "set guifont=DejaVu\ Sans\ Mono\ 8
     endif
 "elseif (&term =~ 'screen' || &term =~ 'linux')
 elseif (&term =~ 'linux')
@@ -29,12 +32,28 @@ elseif (&term =~ 'linux')
 else
     set t_Co=256
     colorscheme gardener
-    "colorscheme mustang
+    "colorscheme zenburn
     set mouse=a
     set ttymouse=xterm
     set termencoding=utf-8
 endif
-set shell=/bin/zsh
+
+ru macros/matchit.vim   " Enabled extended % matching
+set shm=atI             " Disable intro screen
+set hi=50               " Only store past 50 commands
+set ul=150              " Only undo up to 150 times
+set lz                  " Don't redraw screen during macros
+set tf                  " Improves redrawing for newer computers
+set sc                  " Show incomplete command at bottom right
+set bs=2                " Allow backspacing over anything
+set ic scs              " Only be case sensitive when search contains uppercase
+set sb                  " Open new split windows below current
+set gd                  " Assume /g flag on :s searches
+set hid                 " Allow hidden buffers
+set tm=500              " Lower timeout for mappings
+set cot=menu            " Don't show extra info on completions
+set report=0            " Always report when lines are changed
+set shell=/bin/zsh      " set default shell
 set vb                  " don't beep
 set t_vb=               " ^
 set foldenable          " allow folding code
@@ -48,7 +67,6 @@ set autoindent          " auto indents next new line
 set nosmartindent       " intelligent indenting -- DEPRECATED by cindent
 set hlsearch            " highlight all search results
 set incsearch           " increment search
-set ignorecase          " case-insensitive search
 set smartcase           " upper-case sensitive search
 set backspace=indent,eol,start
 set history=100         " 100 lines of command line history
@@ -56,7 +74,9 @@ set cmdheight=1         " command line height
 set ruler               " ruler display in status line
 set showmode            " show mode at bottom of screen
 set number              " show line numbers
-set nobackup            " disable backup files (filename~)
+set nobackup            " disable backup
+set nowritebackup       " ^
+set noswapfile          " disable swapfiles
 set showmatch           " show matching brackets (),{},[]
 set whichwrap=h,l,<,>,[,]
 set showcmd
@@ -93,6 +113,7 @@ nnoremap <C-s> :w<cr>
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Compact_Format = 1
 let Tlist_Show_Menu = 1
+map <F7> :TlistToggle<CR>
 
 " MiniBufExplorer
 let g:miniBufExplMapWindowNavVim = 1
@@ -100,16 +121,10 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1 
 
-" Set bracket matching and comment formats
-set matchpairs+=<:>
-set comments-=s1:/*,mb:*,ex:*/
-set comments+=s:/*,mb:**,ex:*/
-set comments+=fb:*
-set comments+=b:\"
-set comments+=n::
-
-" Basic abbreviations
-iab DATE <C-R>=strftime("%B %d, %Y (%H:%M)")<CR>
+" NERDTree
+let NERDTreeHijackNetrw=1
+let NERDTreeMouseMode=1
+map <F12> :NERDTreeToggle<CR>
 
 " Fix filetype detection
 au BufNewFile,BufRead *.inc set filetype=php
@@ -151,20 +166,22 @@ au BufReadPost *.doc %!antiword "%"
 " Reload vimrc when we edit it
 au! BufWritePost .vimrc source %
 
-" Toggle dark/light default colour theme for shitty terms
-map <F2> :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
-" Toggle taglist script
-map <F7> :Tlist<CR>
+" Access to todolist
+command! Todo :sp ~/.rudo/todo.txt
 
 " Prevent annoying typo
 imap <F1> <esc>
 nmap q: :q<cr>
-
-" VTreeExplorer
-map <F12> :VSTreeExplore <CR>
-let g:treeExplVertical=1
-let g:treeExplWinSize=35
-let g:treeExplDirSort=1
-
-set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C%.%#
-set errorformat=%f:%l:%c:%*\d:%*\d:%*\s%m
+ia teh the
+ia htis this
+ia tihs this
+ia funciton function
+ia funtion function
+ia fucntion function
+ia retunr return
+ia reutrn return
+ia foreahc foreach
+ia !+ !=
+ca eariler earlier
+ca !+ !=
+ca ~? ~/

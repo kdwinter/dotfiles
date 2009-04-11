@@ -6,16 +6,15 @@ Xcursor.theme: Neutral_Plus
 !      U R X V T
 !
 !
-URxvt*font:             -*-proggytiny-*-*-*-*-*-*-*-*-*-*-*-*
-URxvt*boldFont:         -*-proggytiny-*-*-*-*-*-*-*-*-*-*-*-*
-URxvt*italicFont:       -*-proggytiny-*-*-*-*-*-*-*-*-*-*-*-*
-URxvt*boldItalicFont:   -*-proggytiny-*-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*font:             -windows-proggycleansz-medium-r-normal--13-80-96-96-c-70-*-*
+!URxvt*boldFont:         -windows-proggycleansz-medium-r-normal--13-80-96-96-c-70-*-*
+!URxvt*italicFont:       -windows-proggycleansz-medium-r-normal--13-80-96-96-c-70-*-*
+!URxvt*boldItalicFont:   -windows-proggycleansz-medium-r-normal--13-80-96-96-c-70-*-*
 
-!URxvt*font:             -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
-!URxvt*boldFont:         -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
-!URxvt*italicFont:       -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
-!URxvt*boldItalicFont:   -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
-
+URxvt*font:             -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
+URxvt*boldFont:         -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
+URxvt*italicFont:       -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
+URxvt*boldItalicFont:   -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
 
 URxvt*saveLines:        32767
 URxvt*scrollBar:        false
@@ -36,8 +35,36 @@ URxvt*urgentOnBell:     true
 URxvt*cursorColor:      #6dacd8
 !URxvt*inheritPixmap:    true
 
+! IR_Black
+!URxvt*background:   #000000
+!URxvt*foreground:   #DCDCCC
+!black
+!URxvt*color0:       #4E4E4E
+!URxvt*color8:       #7C7C7C
+!red
+!URxvt*color1:       #FF6C60
+!URxvt*color9:       #FFB6B0
+!green
+!URxvt*color2:       #A8FF60
+!URxvt*color10:      #CEFFAB
+!yellow
+!URxvt*color3:       #FFFFB6
+!URxvt*color11:      #FFFFCB
+!blue
+!URxvt*color4:       #96CBFE
+!URxvt*color12:      #FFFFCB
+!magenta
+!URxvt*color5:       #FF73FD
+!URxvt*color13:      #FF9CFE
+!cyan
+!URxvt*color6:       #C6C5FE
+!URxvt*color14:      #DFDFFE
+!white
+!URxvt*color7:       #EEEEEE
+!URxvt*color15:      #FFFFFF
+
 ! Daisuke
-URxvt*background:       #030303
+URxvt*background:       #000000
 URxvt*foreground:       #dcdccc
 !black
 URxvt*color0:           #1e1e1e

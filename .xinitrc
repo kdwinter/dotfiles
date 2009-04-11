@@ -5,8 +5,8 @@ xset m 0 3 &
 xsetroot -cursor_name left_ptr -solid "#090909" &
 urxvtd -o -q -f &
 unclutter -idle 5 -root &
-# Fix java apps
+xbindkeys &
 wmname compiz &
 
-exec xterm
-#exec awesome
+#exec xterm
+exec wmii -r ~/.wmii-3.5/wmiirc

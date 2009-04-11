@@ -1,0 +1,7 @@
+gtk-icon-theme-name="ICON-sunfesta_2.1"
+gtk-font-name = "Terminus 8"
+style "user-font"
+{
+    font_name = "Terminus 8"
+}
+widget_class "*" style "user-font"
