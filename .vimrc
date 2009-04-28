@@ -20,8 +20,9 @@ if has('gui_running')
         set lines=60
         set guifont=DejaVu_Sans_Mono:h8:cANSI
     else
-        set guifont=Monaco\ 7.5
-        "set guifont=DejaVu\ Sans\ Mono\ 8
+        "set guifont=Monaco\ 7.5
+        "set guifont=DejaVu\ Sans\ Mono\ Bold\ 8
+        set guifont=MonteCarlo\ 8
     endif
 "elseif (&term =~ 'screen' || &term =~ 'linux')
 elseif (&term =~ 'linux')
@@ -31,8 +32,9 @@ elseif (&term =~ 'linux')
     colorscheme desert
 else
     set t_Co=256
-    colorscheme gardener
-    "colorscheme zenburn
+    "colo gardener
+    colo devolved
+    "colo xoria256
     set mouse=a
     set ttymouse=xterm
     set termencoding=utf-8
@@ -48,7 +50,6 @@ set sc                  " Show incomplete command at bottom right
 set bs=2                " Allow backspacing over anything
 set ic scs              " Only be case sensitive when search contains uppercase
 set sb                  " Open new split windows below current
-set gd                  " Assume /g flag on :s searches
 set hid                 " Allow hidden buffers
 set tm=500              " Lower timeout for mappings
 set cot=menu            " Don't show extra info on completions
