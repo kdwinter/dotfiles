@@ -22,17 +22,16 @@ setprompt () {
     colors
     setopt prompt_subst
 
-    for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
-        eval PR_$color='%{$terminfo[bold]$fg[${(L)color}]%}'
-        eval PR_LIGHT_$color='%{$fg[${(L)color}]%}'
-    done
-    PR_NO_COLOR="%{$terminfo[sgr0]%}"
-    PR_USER="%n"
-    PR_DATE="%T"
-    PR_DIR="%~"
-
-    PROMPT=$'${PR_USER} ${PR_DIR} ${PR_YELLOW}»${PR_NO_COLOR} '
-    RPROMPT=$'${PR_YELLOW}«${PR_NO_COLOR} ${PR_DATE}'
+    if [[ `whoami` == root ]]; then
+        export PS1="$(print '%{\e[1;31m%}[R] %{\e[0;33m%}[%*] %{\e[0;31m%}[%~]%{\e[0;31m%} %#%{\e[0m%} ')"
+    else
+        export PS1="$(print '%{\e[0;34m%}[%*] %{\e[0;33m%}[%~]%{\e[0;31m%} %#%{\e[0m%} ')"
+        if [[ `stty speed` == 115200 ]]; then
+            export LC_ALL=en_US.ISO8859-1
+        else
+            export LC_ALL=en_US.UTF-8
+        fi
+    fi
 }
 
 setprompt
