@@ -20,9 +20,9 @@ if has('gui_running')
         set lines=60
         set guifont=DejaVu_Sans_Mono:h8:cANSI
     else
-        "set guifont=Monaco\ 7.5
-        "set guifont=DejaVu\ Sans\ Mono\ Bold\ 8
-        set guifont=MonteCarlo\ 8
+        set guifont=Monaco\ 7.5
+        "set guifont=Monaco\ 8
+        "set guifont=DejaVu\ Sans\ Mono\ 9
     endif
 "elseif (&term =~ 'screen' || &term =~ 'linux')
 elseif (&term =~ 'linux')
@@ -32,28 +32,32 @@ elseif (&term =~ 'linux')
     colorscheme desert
 else
     set t_Co=256
-    "colo gardener
-    colo devolved
-    "colo xoria256
-    set mouse=a
-    set ttymouse=xterm
+    "colo wombat256
+    colo vividchalk
+    "set mouse=a
+    "set ttymouse=xterm
     set termencoding=utf-8
 endif
 
-ru macros/matchit.vim   " Enabled extended % matching
-set shm=atI             " Disable intro screen
-set hi=50               " Only store past 50 commands
-set ul=150              " Only undo up to 150 times
-set lz                  " Don't redraw screen during macros
-set tf                  " Improves redrawing for newer computers
-set sc                  " Show incomplete command at bottom right
-set bs=2                " Allow backspacing over anything
-set ic scs              " Only be case sensitive when search contains uppercase
-set sb                  " Open new split windows below current
-set hid                 " Allow hidden buffers
-set tm=500              " Lower timeout for mappings
-set cot=menu            " Don't show extra info on completions
-set report=0            " Always report when lines are changed
+set expandtab           " expand tabs to spaces
+set nosmarttab          " fuck tabs
+set nolazyredraw        " turn off lazy redraw
+set mat=5               " duration to show matching brace
+set autoread            " reload files automagically
+set viminfo='1000,f1,:100,@100,/20
+set shm=atI             " disable intro screen
+set hi=50               " only store past 50 commands
+set ul=150              " only undo up to 150 times
+set lz                  " don't redraw screen during macros
+set tf                  " improves redrawing for newer computers
+set sc                  " show incomplete command at bottom right
+set bs=2                " allow backspacing over anything
+set ic scs              " only be case sensitive when search contains uppercase
+set sb                  " open new split windows below current
+set hid                 " allow hidden buffers
+set tm=500              " lower timeout for mappings
+set cot=menu            " don't show extra info on completions
+set report=0            " always report when lines are changed
 set shell=/bin/zsh      " set default shell
 set vb                  " don't beep
 set t_vb=               " ^
@@ -61,22 +65,27 @@ set foldenable          " allow folding code
 set foldmethod=marker   " marks foldstarts/ends with {{{ }}}
 set expandtab           " insert spaces instead of tab chars
 set tabstop=4           " a n-space tab width
-set shiftwidth=4        " allows the use of < and > for VISUAL indenting
-set softtabstop=4       " counts n spaces when DELETE or BCKSPCE is used
-set textwidth=80
+set shiftwidth=2        " allows the use of < and > for VISUAL indenting
+set softtabstop=2       " counts n spaces when DELETE or BCKSPCE is used
+set textwidth=76        " in new gvim windows
 set autoindent          " auto indents next new line
-set nosmartindent       " intelligent indenting -- DEPRECATED by cindent
+set smartindent         " intelligent indenting -- DEPRECATED by cindent
+filetype indent on      " fix the f*cking indenting
 set hlsearch            " highlight all search results
 set incsearch           " increment search
 set smartcase           " upper-case sensitive search
 set backspace=indent,eol,start
-set history=100         " 100 lines of command line history
+set history=1000        " 1000 lines of command line history
 set cmdheight=1         " command line height
 set ruler               " ruler display in status line
 set showmode            " show mode at bottom of screen
 set number              " show line numbers
-set nobackup            " disable backup
-set nowritebackup       " ^
+set nobackup            " dont keep backups after close
+set writebackup         " do keep one while working
+set backupdir=$HOME/.vim/backup
+set backupcopy=yes
+set backupskip=/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*
+set directory=~/.vim/swap//,.,~/tmp,/tmp
 set noswapfile          " disable swapfiles
 set showmatch           " show matching brackets (),{},[]
 set whichwrap=h,l,<,>,[,]
@@ -114,13 +123,17 @@ nnoremap <C-s> :w<cr>
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Compact_Format = 1
 let Tlist_Show_Menu = 1
-map <F7> :TlistToggle<CR>
+map <F7> :Tlist<CR>
 
 " MiniBufExplorer
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1 
+
+" Rails
+let g:rails_subversion=1
+let g:rails_menu=2
 
 " NERDTree
 let NERDTreeHijackNetrw=1
@@ -138,21 +151,29 @@ au FileType c,cpp set cindent
 au FileType c,cpp set formatoptions+=ro
 
 " Ruby file specific options
-au FileType ruby,eruby setlocal sts=2 sw=2
-au FileType ruby,eruby set omnifunc=rubycomplete#Complete
-au FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-au FileType ruby,eruby let g:rubycomplete_rails = 1
-au FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+au BufRead,BufNewFile *.rpdf set ft=ruby
+au BufRead,BufNewFile *.rxls set ft=ruby
+au BufRead,BufNewFile *.ru set ft=ruby
+au BufRead,BufNewFile *.god set ft=ruby
+au BufRead,BufNewFile *.rtxt set ft=html spell
+au BufRead,BufNewFile *.sql set ft=pgsql
 
-" HTML abbreviations
-au FileType html,xhtml,php,eruby imap bbb <br />
-au FileType html,xhtml,php,eruby imap aaa <a href=""></a><left><left><left><left><left><left>
-au FileType html,xhtml,php,eruby imap iii <img src="" /><left><left><left><left>
-au FileType html,xhtml,php,eruby imap ddd <div id=""></div><left><left><left><left><left><left><left><left>
-au Filetype html,xhtml,php,eruby map <F8> :read /home/gig/code/html/templates/template.html<CR>
+au BufRead,BufNewFile *.rl set ft=ragel
+au BufRead,BufNewFile *.svg set ft=svg
+au BufRead,BufNewFile *.haml set ft=haml
+
+au BufRead,BufNewFile *.md set ft=mkd tw=72 ts=2 sw=2 expandtab
+au BufRead,BufNewFile *.markdown set ft=mkd tw=72 ts=2 sw=2 expandtab
+au BufRead,BufNewFile *.ron set ft=mkd tw=65 ts=2 sw=2 expandtab
+ 
+au Filetype ruby set textwidth=80 ts=2
+au Filetype haml set ts=2 sw=2 sts=0 expandtab tw=120
+
+" Python file specific options
+au FileType python set omnifunc=pythoncomplete#Complete
 
 " Compile and run keymappings
-au FileType php map <F6> :!php &<CR>
+au FileType php map <F6> :!php -f %<CR>
 au FileType python map <F6> :!python %<CR>
 au FileType perl map <F6> :!perl %<CR>
 au FileType ruby map <F6> :!ruby %<CR>
@@ -168,7 +189,7 @@ au BufReadPost *.doc %!antiword "%"
 au! BufWritePost .vimrc source %
 
 " Access to todolist
-command! Todo :sp ~/.rudo/todo.txt
+command! Todo :sp ~/.todo/todo.txt
 
 " Prevent annoying typo
 imap <F1> <esc>
