@@ -10,19 +10,21 @@ if tty -s ; then
 fi
 
 # Exports
-export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/opt/mozilla/bin:/opt/java/jre/bin:/home/gig/bin
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/opt/mozilla/bin:/opt/java/jre/bin:/home/gig/bin:/opt/OneSwarm
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LOCALE=en_US.UTF-8
 export BROWSER=firefox
-export PACKAGER="Gigamo <gigamo@gmail.com>"
-export CVS_RSH="ssh"
-export OOO_FORCE_DESKTOP="gnome"
+export PACKAGER='Gigamo <gigamo@gmail.com>'
+export OOO_FORCE_DESKTOP='gnome'
 export EDITOR=vim
 export VISUAL=vim
 export HISTCONTROL=ignoredups
 export IGNOREEOF=3
 export WMII_ADDRESS=/tmp/ns.gig.:0/wmii
+export JAVA_HOME=/opt/java
+export J2SDKDIR=/opt/java
+export RACK_ENV='development'
 
 # watch for people
 watch=(notme)                   # watch for everybody but me
@@ -83,6 +85,6 @@ bindkey "\e[6~" end-of-history
 
 # Automatically start X and log out after when logging into vc/1
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/vc/1 ]]; then
-  dbus-launch startx >& .myXLog
-  logout
+    dbus-launch startx >& .myXLog
+    logout
 fi

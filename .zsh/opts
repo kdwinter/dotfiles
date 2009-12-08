@@ -16,8 +16,8 @@ autoload -U zcalc			#	for mathhhh
 
 # history
 HISTFILE=~/.zsh/history
-HISTSIZE=3000
-SAVEHIST=3000
+HISTSIZE=5000
+SAVEHIST=5000
 
 # type a dir's name to cd into it
 compctl -/ cd
@@ -34,7 +34,6 @@ setopt noclobber
 setopt hist_reduce_blanks
 setopt hist_ignore_space
 setopt SH_WORD_SPLIT
-setopt nohup
 setopt nobeep                  # i hate beeps
 setopt automenu
 setopt autopushd               # automatically append dirs to the push/pop list

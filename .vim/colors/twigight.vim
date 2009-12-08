@@ -77,8 +77,8 @@ if &t_Co > 255
     hi Todo ctermfg=244 ctermbg=NONE cterm=bold
     hi StatusLine ctermfg=254 ctermbg=233 cterm=italic
     hi StatusLineNC ctermfg=247 ctermbg=234 cterm=italic
-    hi VertSplit ctermfg=234 ctermbg=234 cterm=italic
-    hi Folded ctermfg=238 ctermfg=248 cterm=italic
+    hi VertSplit ctermbg=248 ctermfg=234 cterm=italic
+    hi Folded ctermbg=238 ctermfg=248 cterm=italic
     hi FoldColumn ctermbg=238 ctermfg=248
     hi SignColumn ctermbg=238 ctermfg=248
     hi Title ctermfg=130 cterm=bold,underline

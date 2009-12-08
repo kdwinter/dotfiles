@@ -14,9 +14,9 @@ termcapinfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 termcapinfo rxvt-256color 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm' 
 
 screen -t irc irssi
-screen -t mail sup
-screen -t zsh
+#screen -t mail sup
 screen -t torrent rtorrent
+screen -t zsh
 
 bindkey -k k1 select 0
 bindkey -k k2 select 1
@@ -30,5 +30,5 @@ bindkey "^[Oc" next
 
 select 2
 
-caption always "%{= kb}[ %{kG}$USER%{kW} :: %{kG}%H %{b}][ %=%{w}%?%-Lw%?%{b}(%{W}%n*%f %t%?(%u)%?%{b})%{w}%?%+Lw%?%= %{b}][%{kB} %d.%m.%Y %{kW}%0c %{kb}]"
+caption always "%{= kb}[ %{kG}$USER%{kW} :: %{kG}%H %{b}][ %=%{w}%?%-Lw%?%{b}(%{W}%n*%f %t%?(%u)%?%{b})%{w}%?%+Lw%?%= %{b}]"
 sorendition +b kG

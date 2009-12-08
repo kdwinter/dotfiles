@@ -1,17 +1,15 @@
 #!/bin/sh
 #
 # ~/.xinitrc
+sudo setxkbmap be &
 xset m 0 3 &
-xsetroot -cursor_name left_ptr -solid "#090909" &
+xsetroot -cursor_name left_ptr -solid "#000000" &
 urxvtd -o -q -f &
-unclutter -idle 5 -root &
 wmname compiz &
 mpd &
-
-#exec awesome
-
+nitrogen --restore &
 xbindkeys &
-#exec wmii -r ~/.wmii-3.5/wmiirc
-exec wmii -r ~/.wmii-hg/wmiirc
 
 #exec xterm
+exec wmii -r ~/.wmii-hg/wmiirc
+#exec gnome-session

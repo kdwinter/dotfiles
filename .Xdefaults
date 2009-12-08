@@ -1,4 +1,4 @@
-Xcursor.theme: Neutral_Plus
+Xcursor.theme: neutral
 
 !-------------------------------------------------------------------------------
 !
@@ -11,10 +11,18 @@ Xcursor.theme: Neutral_Plus
 !URxvt*italicFont:       -windows-proggycleansz-medium-r-normal--13-80-96-96-c-70-*-*
 !URxvt*boldItalicFont:   -windows-proggycleansz-medium-r-normal--13-80-96-96-c-70-*-*
 
-URxvt*font:             -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
-URxvt*boldFont:         -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
-URxvt*italicFont:       -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
-URxvt*boldItalicFont:   -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
+!URxvt*font:             -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
+!URxvt*boldFont:         -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
+!URxvt*italicFont:       -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
+!URxvt*boldItalicFont:   -*-terminus-medium-r-*-*-12-120-*-*-*-*-*-*
+
+!URxvt*font:             -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
+
+!URxvt*font:             xft:MonteCarlo:pixelsize=12
+!URxvt*font:             xft:Profont:pixelsize=12
+!URxvt*font:             xft:Liberation Mono:pixelsize=11
+!URxvt*font:             xft:Envy Code R:pixelsize=11
+URxvt*font:             xft:Monaco:size=7.5
 
 URxvt*saveLines:        32767
 URxvt*scrollBar:        false
@@ -23,73 +31,202 @@ URxvt*loginShell:       true
 URxvt*shading:          30
 URxvt*termName:         rxvt-unicode
 URxvt*secondaryScroll:  true
-urxvt*perl-lib:         /usr/lib/urxvt/perl/
-urxvt*perl-ext-common:  default,matcher,searchable-scrollback
-URxvt*urlLauncher:      /usr/bin/firefox-nightly
+URxvt*perl-lib:         /usr/lib/urxvt/perl/
+URxvt*perl-ext-common:  default,matcher,searchable-scrollback
+URxvt*urlLauncher:      firefox
 URxvt*matcher.button:   1
-urxvt.cutchars:         `()'*<>[]{|}"
 URxvt*cutchars:         `"()'*<>[]{|}
 URxvt*visualBell:       true
 URxvt*keysym.C-u:       perl:matcher
 URxvt*urgentOnBell:     true
 URxvt*cursorColor:      #6dacd8
 !URxvt*inheritPixmap:    true
+!URxvt*tintColor:        #EEEEEE
+URxvt*background:       #222222
+URxvt*foreground:       #e1e2db
+
+! Slate
+!URxvt*color0:  #4E4E4E
+!URxvt*color8:  #7C7C7C
+!URxvt*color1:  #FF6C60
+!URxvt*color9:  #D19485
+!URxvt*color2:  #A8FF60
+!URxvt*color10: #CEFFAB
+!URxvt*color3:  #FFFFB6
+!URxvt*color11: #FFFFCB
+!URxvt*color4:  #96CBFE
+!URxvt*color12: #FFFFCB
+!URxvt*color5:  #FF73FD
+!URxvt*color13: #FF9CFE
+!URxvt*color6:  #C6C5FE
+!URxvt*color14: #DFDFFE
+!URxvt*color7:  #EEEEEE
+!URxvt*color15: #FFFFFF
+
+!droog
+!black
+!URxvt*color0:   #232526
+!URxvt*color8:   #1e1e1e
+!red
+!URxvt*color1:   #933046
+!URxvt*color9:   #4b2935
+!green
+!URxvt*color2:   #74835E
+!URxvt*color10:  #394332
+!yellow
+!URxvt*color3:   #C9B464
+!URxvt*color11:  #D6993C
+!blue
+!URxvt*color4:   #3b5170
+!URxvt*color12:  #36416b
+!magenta
+!URxvt*color5:   #6B709C
+!URxvt*color13:  #474F73
+!cyan
+!URxvt*color6:   #4A6A76
+!URxvt*color14:  #40505D
+!white
+!Rxvt*color7:   #E1E2DB
+!URxvt*color15:  #888888
+
+!dno
+!urxvt*color0: #101010
+!urxvt*color1: #f13a21
+!urxvt*color2: #93f91d
+!urxvt*color3: #ffd00a
+!urxvt*color4: #004f9e
+!urxvt*color5: #ec0048
+!urxvt*color6: #2aa7e7
+!urxvt*color7: #f2f2f2
+!!urxvt*color7: #ffffff
+!urxvt*color8: #1d202f
+!!urxvt*color9: #ff361e
+!urxvt*color9: #ffffff
+!urxvt*color10: #ffc005
+!urxvt*color11: #93ff00
+!urxvt*color12: #0071ff
+!urxvt*color13: #ef0051
+!urxvt*color14: #4bb8fd
+!urxvt*color15: #ffffff
+
+!black
+!*color0:    #1B1D1E
+!*color8:    #505354
+!!red
+!*color1:    #F92672
+!*color9:    #FF669D
+!!green
+!*color2:    #A6E22E
+!*color10:   #BEED5F
+!!yellow
+!*color3:    #FD971F
+!*color11:   #E6DB74
+!!blue
+!*color4:    #66D9EF
+!*color12:   #66D9EF
+!!magenta
+!*color5:    #9E6FFE
+!*color13:   #9E6FFE
+!!cyan
+!*color6:    #5E7175
+!*color14:   #A3BABF
+!!white
+!*color7:    #CCCCC6
+!*color15:   #F8F8F2
+
+!*foreground:#a0a0a0
+!*background:#000000
 
 ! IR_Black
-!URxvt*background:   #000000
-!URxvt*foreground:   #DCDCCC
+!URxvt*background: #000000
+!URxvt*foreground: #dcdccc
+!URxvt*color0: #2F2E2D
+!URxvt*color8: #4A4845
+!URxvt*color1: #C37561
+!URxvt*color9: #D19485
+!URxvt*color2: #A0A57E
+!URxvt*color10: #B6B99D
+!URxvt*color3: #D1A375
+!URxvt*color11: #DEBC9C
+!URxvt*color4: #7985A3
+!URxvt*color12: #98A1B9
+!URxvt*color5: #AB716D
+!URxvt*color13: #BE918E
+!URxvt*color6: #98B9B1
+!URxvt*color14: #CBE6CB
+!URxvt*color7: #D0D0D0
+!URxvt*color15: #EFEFEF
+
+!skwid
 !black
-!URxvt*color0:       #4E4E4E
-!URxvt*color8:       #7C7C7C
-!red
-!URxvt*color1:       #FF6C60
-!URxvt*color9:       #FFB6B0
-!green
-!URxvt*color2:       #A8FF60
-!URxvt*color10:      #CEFFAB
-!yellow
-!URxvt*color3:       #FFFFB6
-!URxvt*color11:      #FFFFCB
-!blue
-!URxvt*color4:       #96CBFE
-!URxvt*color12:      #FFFFCB
-!magenta
-!URxvt*color5:       #FF73FD
-!URxvt*color13:      #FF9CFE
-!cyan
-!URxvt*color6:       #C6C5FE
-!URxvt*color14:      #DFDFFE
-!white
-!URxvt*color7:       #EEEEEE
-!URxvt*color15:      #FFFFFF
+!*color0: #1C1C1C
+!*color8: #4d4d4d
+!!red
+!*color1: #D81860
+!*color9: #F00060
+!!green
+!*color2: #B7CE42
+!*color10: #BDE077
+!!yellow
+!*color3: #FEA63C
+!*color11: #FFE863
+!!blue
+!*color4: #66AABB
+!*color12: #AACCBB
+!!magenta
+!*color5: #B7416E
+!*color13: #BB4466
+!!cyan
+!*color6: #5E7175
+!*color14: #A3BABF
+!!white
+!*color7: #DDEEDD
+!*color15: #6C887A
+
+*color0: #040404
+*color1: #ba7373
+*color2: #739456
+*color3: #a4712e
+*color4: #7985a3
+*color5: #6f4f70
+*color6: #b0c4de
+*color7: #d0d0d0
+*color8: #554444
+*color9: #c14b4b
+*color10: #6ca318
+*color11: #7f672e
+*color12: #537595
+*color13: #a971a7
+*color14: #70999a
+*color15: #cacaca
 
 ! Daisuke
-URxvt*background:       #000000
-URxvt*foreground:       #dcdccc
+!URxvt*background:       #000000
+!URxvt*foreground:       #dcdccc
 !black
-URxvt*color0:           #1e1e1e
-URxvt*color8:           #505050
-!red
-URxvt*color1:           #b04020
-URxvt*color9:           #dd4010
-!green
-URxvt*color2:           #afd700
-URxvt*color10:          #daff30
-!yellow
-URxvt*color3:           #f7cf0a
-URxvt*color11:          #fce70d
-!blue
-URxvt*color4:           #3060aa
-URxvt*color12:          #6099dd
-!magenta
-URxvt*color5:           #d6156c
-URxvt*color13:          #fe4365
-!cyan
-URxvt*color6:           #a0c2de
-URxvt*color14:          #c9dee8
-!white
-URxvt*color7:           #808080
-URxvt*color15:          #b0b0b0
+!URxvt*color0:           #1e1e1e
+!URxvt*color8:           #505050
+!!red
+!URxvt*color1:           #b04020
+!URxvt*color9:           #dd4010
+!!green
+!URxvt*color2:           #afd700
+!URxvt*color10:          #daff30
+!!yellow
+!URxvt*color3:           #f7cf0a
+!URxvt*color11:          #fce70d
+!!blue
+!URxvt*color4:           #3060aa
+!URxvt*color12:          #6099dd
+!!magenta
+!URxvt*color5:           #d6156c
+!URxvt*color13:          #fe4365
+!!cyan
+!URxvt*color6:           #a0c2de
+!URxvt*color14:          #c9dee8
+!!white
+!URxvt*color7:           #808080
+!URxvt*color15:          #b0b0b0
 
 ! Light
 !URxvt*background: #f0f0f0
@@ -440,48 +577,48 @@ XCalc*ShapeStyle:             rectangle
 !
 !
 !XFontSel*sampleText.background:     TEXTBG
-XFontSel*menu*showUnselectable:       false
-XFontSel*MenuButton.shadowWidth:          0
-XFontsel*Toggle*ToggleStyle:          check
-XFontsel*MenuButton*Justify:           left
-XFontsel*MenuButton*MenuButtonStyle: select
-xfontsel.pane.commandBox.quitButton.background: #777777
-xfontsel.pane.commandBox.quitButton.foreground: snow
-xfontsel.pane.commandBox.ownButton.background:  orange3
-xfontsel.pane.commandBox.ownButton.foreground:  snow
-xfontsel.pane.commandBox.countLabel.background: snow
-xfontsel.pane.viewPort.sampleText.background:   #777777
-xfontsel.pane.viewPort.sampleText.foreground:   snow
-xfontsel.pane.fieldBox.field0.background:  #777777
-xfontsel.pane.fieldBox.field0.foreground:  snow
-xfontsel.pane.fieldBox.field1.background:  #777777
-xfontsel.pane.fieldBox.field1.foreground:  snow
-xfontsel.pane.fieldBox.field2.background:  #777777
-xfontsel.pane.fieldBox.field2.foreground:  snow
-xfontsel.pane.fieldBox.field3.background:  #777777
-xfontsel.pane.fieldBox.field3.foreground:  snow
-xfontsel.pane.fieldBox.field4.background:  #777777
-xfontsel.pane.fieldBox.field4.foreground:  snow
-xfontsel.pane.fieldBox.field5.background:  #777777
-xfontsel.pane.fieldBox.field5.foreground:  snow
-xfontsel.pane.fieldBox.field6.background:  #777777
-xfontsel.pane.fieldBox.field6.foreground:  snow
-xfontsel.pane.fieldBox.field7.background:  #777777
-xfontsel.pane.fieldBox.field7.foreground:  snow
-xfontsel.pane.fieldBox.field8.background:  #777777
-xfontsel.pane.fieldBox.field8.foreground:  snow
-xfontsel.pane.fieldBox.field9.background:  #777777
-xfontsel.pane.fieldBox.field9.foreground:  snow
-xfontsel.pane.fieldBox.field10.background: #777777
-xfontsel.pane.fieldBox.field10.foreground: snow
-xfontsel.pane.fieldBox.field11.background: #777777
-xfontsel.pane.fieldBox.field11.foreground: snow
-xfontsel.pane.fieldBox.field12.background: #777777
-xfontsel.pane.fieldBox.field12.foreground: snow
-xfontsel.pane.fieldBox.field13.background: #777777
-xfontsel.pane.fieldBox.field13.foreground: snow
-xfontsel.pane.fieldBox*foreground:         #000000
-xfontsel.pane.fieldBox.MenuButton.borderWidth:   1
-xfontsel.pane.fieldBox.MenuButton.internalHeight:1
-xfontsel.pane.fieldBox.MenuButton.internalWidth: 2
-xfontsel.pane.fieldBox.MenuButton.shapeStyle:    rectangle
+!XFontSel*menu*showUnselectable:       false
+!XFontSel*MenuButton.shadowWidth:          0
+!XFontsel*Toggle*ToggleStyle:          check
+!XFontsel*MenuButton*Justify:           left
+!XFontsel*MenuButton*MenuButtonStyle: select
+!xfontsel.pane.commandBox.quitButton.background: #777777
+!xfontsel.pane.commandBox.quitButton.foreground: snow
+!xfontsel.pane.commandBox.ownButton.background:  orange3
+!xfontsel.pane.commandBox.ownButton.foreground:  snow
+!xfontsel.pane.commandBox.countLabel.background: snow
+!xfontsel.pane.viewPort.sampleText.background:   #777777
+!xfontsel.pane.viewPort.sampleText.foreground:   snow
+!xfontsel.pane.fieldBox.field0.background:  #777777
+!xfontsel.pane.fieldBox.field0.foreground:  snow
+!xfontsel.pane.fieldBox.field1.background:  #777777
+!xfontsel.pane.fieldBox.field1.foreground:  snow
+!xfontsel.pane.fieldBox.field2.background:  #777777
+!xfontsel.pane.fieldBox.field2.foreground:  snow
+!xfontsel.pane.fieldBox.field3.background:  #777777
+!xfontsel.pane.fieldBox.field3.foreground:  snow
+!xfontsel.pane.fieldBox.field4.background:  #777777
+!xfontsel.pane.fieldBox.field4.foreground:  snow
+!xfontsel.pane.fieldBox.field5.background:  #777777
+!xfontsel.pane.fieldBox.field5.foreground:  snow
+!xfontsel.pane.fieldBox.field6.background:  #777777
+!xfontsel.pane.fieldBox.field6.foreground:  snow
+!xfontsel.pane.fieldBox.field7.background:  #777777
+!xfontsel.pane.fieldBox.field7.foreground:  snow
+!xfontsel.pane.fieldBox.field8.background:  #777777
+!xfontsel.pane.fieldBox.field8.foreground:  snow
+!xfontsel.pane.fieldBox.field9.background:  #777777
+!xfontsel.pane.fieldBox.field9.foreground:  snow
+!xfontsel.pane.fieldBox.field10.background: #777777
+!xfontsel.pane.fieldBox.field10.foreground: snow
+!xfontsel.pane.fieldBox.field11.background: #777777
+!xfontsel.pane.fieldBox.field11.foreground: snow
+!xfontsel.pane.fieldBox.field12.background: #777777
+!xfontsel.pane.fieldBox.field12.foreground: snow
+!xfontsel.pane.fieldBox.field13.background: #777777
+!xfontsel.pane.fieldBox.field13.foreground: snow
+!xfontsel.pane.fieldBox*foreground:         #000000
+!xfontsel.pane.fieldBox.MenuButton.borderWidth:   1
+!xfontsel.pane.fieldBox.MenuButton.internalHeight:1
+!xfontsel.pane.fieldBox.MenuButton.internalWidth: 2
+!xfontsel.pane.fieldBox.MenuButton.shapeStyle:    rectangle

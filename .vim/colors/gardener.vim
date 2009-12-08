@@ -4,9 +4,6 @@
 "    Modified: by entheon <jazzworksweb@yahoo.com>
 " Last Change: 13 Sept 2005
 
-"		Modified: by Christian Wills <chipmonk010@gmail.com>
-"	Last Change: 28 Mar 2008
-
 " Gardener v1.1
 " A modification of the Guardian colorscheme v1.2
 
@@ -57,13 +54,6 @@
 "
 "   g:gardener_setnum
 "       turns the background of the line numbers black
-"
-"		g:gardener_transbg
-"				Sets a transparent background. The background color
-"				of vim becomes whatever your terminal background is.
-"				Works nice with pseudo transparent terminals. Without
-"				this you get a solid background color that matches the
-"				scheme. 
 
 " Using The Options:
 "       To enable a feature add the line
@@ -94,8 +84,7 @@ if has("gui_running")
     else
         hi Normal           guibg=black       guifg=white      gui=none 
     endif
-"		hi NonText          guibg=#445566     guifg=#ffeecc    gui=bold 
-		hi NonText          guibg=bg			    guifg=#ffeecc    gui=bold 
+    hi NonText          guibg=#445566     guifg=#ffeecc    gui=bold 
     hi Visual           guibg=#557799     guifg=white      gui=none 
 
     hi Directory        guibg=bg	      guifg=#337700    gui=none
@@ -169,7 +158,6 @@ if has("gui_running")
     hi Underlined       guibg=bg          guifg=#99ccff    gui=underline
 
     hi Title            guibg=#445566     guifg=white	   gui=bold    
-"    hi Title            guibg=bg     guifg=white	   gui=bold    
     hi Ignore           guibg=bg	      guifg=#cccccc    gui=italic  
     hi Error            guibg=#ff0000     guifg=white	   gui=bold    
     hi Todo	            guibg=#556677     guifg=#ff0000    gui=bold    
@@ -192,27 +180,17 @@ else
 
 
     exec "hi Cursor         cterm=BOLD   ctermfg=255   ctermbg=167"
-    exec "hi CursorLine     cterm=none   ctermbg=238"
     exec "hi CursorIM       cterm=BOLD   ctermfg=255   ctermbg=167"
 
-		if exists("g:gardener_transbg")
-			exec "hi Normal         cterm=NONE   ctermfg=255   ctermbg=NONE"
-			exec "hi NonText        cterm=NONE   ctermfg=230   ctermbg=NONE"
-      exec "hi linenr					cterm=BOLD   ctermfg=244   ctermbg=NONE"
-		else
-			exec "hi Normal         cterm=NONE   ctermfg=255   ctermbg=233"
-			exec "hi NonText        cterm=NONE   ctermfg=230   ctermbg=233"
-"			exec "hi NonText        cterm=NONE   ctermfg=230   ctermbg=60"
-		endif
-
+    exec "hi Normal         cterm=NONE   ctermfg=255   ctermbg=0"
+    exec "hi NonText        cterm=NONE   ctermfg=230   ctermbg=60"
     exec "hi Visual         cterm=NONE   ctermfg=255   ctermbg=68"
 
     exec "hi Linear         cterm=NONE   ctermfg=248   ctermbg=NONE"
 
     exec "hi Directory      cterm=NONE   ctermfg=64    ctermbg=NONE"
 
-    exec "hi IncSearch      cterm=NONE   ctermfg=255   ctermbg=240"
-    exec "hi link Search IncSearch"
+    exec "hi IncSearch      cterm=NONE   ctermfg=255   ctermbg=25"
 
     exec "hi ErrorMsg       cterm=BOLD   ctermfg=196   ctermbg=NONE"
     exec "hi WarningMsg     cterm=BOLD   ctermfg=196   ctermbg=NONE"
@@ -221,7 +199,7 @@ else
     exec "hi Question       cterm=NONE   ctermfg=194   ctermbg=NONE"
 
     exec "hi StatusLineNC   cterm=NONE   ctermfg=16    ctermbg=229"
-    exec "hi StatusLine     cterm=BOLD   ctermfg=255   ctermbg=235"
+    exec "hi StatusLine     cterm=BOLD   ctermfg=255   ctermbg=167"
     exec "hi VertSplit      cterm=NONE   ctermfg=16    ctermbg=229"
 
     exec "hi DiffAdd        cterm=NONE   ctermfg=255   ctermbg=60"
@@ -247,7 +225,7 @@ else
     exec "hi Function       cterm=BOLD   ctermfg=229  ctermbg=NONE"
     exec "hi Statement      cterm=BOLD   ctermfg=230  ctermbg=NONE"
 
-    exec "hi Define         cterm=BOLD   ctermfg=68   ctermbg=NONE"
+    exec "hi Define         cterm=BOLD   ctermfg=68  ctermbg=NONE"
     exec "hi Conditional    cterm=BOLD   ctermfg=149  ctermbg=NONE"
 
     exec "hi Repeat         cterm=BOLD   ctermfg=208  ctermbg=NONE"
@@ -290,3 +268,4 @@ endif
 
 let g:colors_name = "gardener"
 let colors_name   = "gardener"
+

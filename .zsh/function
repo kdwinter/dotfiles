@@ -20,7 +20,7 @@ function ga() { git add $* }
 function gl() { git log $* }
 function gs() { git status $* }
 function gp() { git push $* }
-function gc() { git commit --signoff -m "$*" }
+function gc() { git commit -m "$*" }
 function gpl() { git pull $* }
 
 function pastie {
@@ -87,9 +87,61 @@ function dec2hex { awk 'BEGIN { printf "%x\n",$1}'; }
 function mkmine() { sudo chown -R ${USER} ${1:-.}; }
 # sanitize - set file/directory owner and permissions to normal values (644/755)
 # Usage: sanitize <file>
-sanitize() {
+function sanitize() {
     chmod -R u=rwX,go=rX "$@"
     chown -R ${USER}.users "$@"
 }
 
+function calculeer() { echo "$@" | bc }
+
+function git_info {
+    local g="$(git rev-parse --git-dir 2>/dev/null)"
+    if [ -n "$g" ]; then
+      local r
+      local b
+      if [ -d "$g/../.dotest" ]
+      then
+        if test -f "$g/../.dotest/rebasing"
+        then
+          r="|REBASE"
+        elif test -f "$g/../.dotest/applying"
+        then
+          r="|AM"
+        else
+          r="|AM/REBASE"
+        fi
+        b="$(git symbolic-ref HEAD 2>/dev/null)"
+      elif [ -f "$g/.dotest-merge/interactive" ]
+      then
+        r="|REBASE-i"
+        b="$(cat "$g/.dotest-merge/head-name")"
+      elif [ -d "$g/.dotest-merge" ]
+      then
+        r="|REBASE-m"
+        b="$(cat "$g/.dotest-merge/head-name")"
+      elif [ -f "$g/MERGE_HEAD" ]
+      then
+        r="|MERGING"
+        b="$(git symbolic-ref HEAD 2>/dev/null)"
+      else
+        if [ -f "$g/BISECT_LOG" ]
+        then
+          r="|BISECTING"
+        fi
+        if ! b="$(git symbolic-ref HEAD 2>/dev/null)"
+        then
+          if ! b="tag: $(git describe --exact-match HEAD 2>/dev/null)"
+          then
+            b="$(cut -c1-7 "$g/HEAD")..."
+          fi
+        fi
+      fi
+     
+      if [ -n "$1" ]; then
+        printf "$1" "${b##refs/heads/}$r"
+      else
+        printf "[%s]" "${b##refs/heads/}$r"
+      fi
+    fi
+}
 #compdef '_files -g "*.gz *.tgz *.bz2 *.tbz *.zip *.rar *.tar *.lha"' extract_archive

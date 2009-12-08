@@ -14,7 +14,7 @@ if version >= 700
   hi MatchParen guifg=white guibg=#80a090 gui=bold ctermfg=255 ctermbg=29 cterm=bold
 
   "Tabpages
-  hi TabLine guifg=black guibg=#b0b8c0 gui=none ctermbg=232 ctermfg=250 cterm=italic
+  hi TabLine guifg=black guibg=#b0b8c0 gui=none ctermbg=235 ctermfg=250 cterm=italic
   hi TabLineFill guifg=#9098a0 ctermfg=243
   hi TabLineSel guifg=black guibg=#f0f0f0 gui=bold ctermbg=232 ctermfg=254 cterm=italic,bold
 
@@ -30,9 +30,9 @@ hi Visual guibg=#404040 ctermbg=238
 "hi Cursor guifg=NONE guibg=#586068
 hi Cursor guibg=#b0d0f0 ctermbg=250
 
-hi Normal guifg=#e8e8d3 guibg=#151515 ctermfg=254 ctermbg=235
+hi Normal guifg=#e8e8d3 guibg=#151515 ctermfg=254 ctermbg=232
 "hi LineNr guifg=#808080 guibg=#e0e0e0
-hi LineNr guifg=#605958 guibg=#151515 ctermfg=242 ctermbg=234
+hi LineNr guifg=#605958 guibg=#151515 ctermfg=242 ctermbg=233
 "hi Comment guifg=#5f5a60 gui=italic
 hi Comment guifg=#888888 gui=none ctermfg=245 cterm=none
 hi Todo guifg=#808080 gui=bold ctermfg=244 ctermbg=none cterm=none
@@ -58,12 +58,12 @@ hi Identifier guifg=#c6b6ee
 " Type d: 'class'
 "hi Structure guifg=#9B859D gui=underline
 hi Structure guifg=#8fbfdc gui=none ctermfg=75 cterm=none
-hi Function guifg=#fad07a ctermfg=221
+hi Function guifg=#fad07a ctermfg=222
 " dylan: method, library, ... d: if, return, ...
 "hi Statement guifg=#7187a1 gui=NONE
 hi Statement guifg=#8197bf gui=none ctermfg=67 cterm=none
 " Keywords  d: import, module...
-hi PreProc guifg=#8fbfdc ctermfg=153
+hi PreProc guifg=#8fbfdc ctermfg=111
 
 hi link Operator Normal
 
@@ -103,10 +103,10 @@ hi StorageClass guifg=#c59f6f ctermfg=223
 " Ruby
 
 hi link rubySharpBang Comment
-hi rubyClass guifg=#447799 ctermfg=74
+hi rubyClass guifg=#447799 ctermfg=67
 hi rubyIdentifier guifg=#c6b6fe ctermfg=147
 
-hi rubyInstanceVariable guifg=#c6b6fe ctermfg=147
+hi rubyInstanceVariable guifg=#c6b6fe ctermfg=181
 "hi rubySymbol guifg=#6677ff
 hi rubySymbol guifg=#7697d6 ctermfg=74
 hi link rubyGlobalVariable rubyInstanceVariable
@@ -118,9 +118,9 @@ hi rubyControl guifg=#7597c6 ctermfg=74
 hi rubyStringDelimiter guifg=#556633 ctermfg=64
 hi link rubyInterpolationDelimiter Identifier
 
-hi rubyRegexpDelimiter guifg=#540063 ctermfg=89
-hi rubyRegexp guifg=#dd0093 ctermfg=200
-hi rubyRegexpSpecial guifg=#a40073 ctermfg=126
+hi rubyRegexpDelimiter guifg=#540063 ctermfg=179
+hi rubyRegexp guifg=#dd0093 ctermfg=223
+hi rubyRegexpSpecial guifg=#a40073 ctermfg=179
 
 hi rubyPredefinedIdentifier guifg=#de5577 ctermfg=204
 

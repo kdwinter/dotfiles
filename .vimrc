@@ -46,7 +46,6 @@ set mat=5               " duration to show matching brace
 set autoread            " reload files automagically
 set viminfo='1000,f1,:100,@100,/20
 set shm=atI             " disable intro screen
-set hi=50               " only store past 50 commands
 set ul=150              " only undo up to 150 times
 set lz                  " don't redraw screen during macros
 set tf                  " improves redrawing for newer computers
@@ -63,14 +62,13 @@ set vb                  " don't beep
 set t_vb=               " ^
 set foldenable          " allow folding code
 set foldmethod=marker   " marks foldstarts/ends with {{{ }}}
-set expandtab           " insert spaces instead of tab chars
 set tabstop=4           " a n-space tab width
 set shiftwidth=2        " allows the use of < and > for VISUAL indenting
 set softtabstop=2       " counts n spaces when DELETE or BCKSPCE is used
 set textwidth=76        " in new gvim windows
 set autoindent          " auto indents next new line
 set smartindent         " intelligent indenting -- DEPRECATED by cindent
-filetype indent on      " fix the f*cking indenting
+filetype plugin indent on      " fix the f*cking indenting
 set hlsearch            " highlight all search results
 set incsearch           " increment search
 set smartcase           " upper-case sensitive search

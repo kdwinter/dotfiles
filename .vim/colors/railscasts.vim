@@ -49,17 +49,24 @@ hi NonText                   guifg=#888888 ctermfg=244
 hi Cursor                    guifg=#000000 ctermfg=0 guibg=#FFFFFF ctermbg=15	
 hi CursorLine                guibg=#000000 ctermbg=236 cterm=NONE
 hi CursorColumn              guibg=#262626
-hi TabLine                   guifg=black guibg=#b0b8c0 gui=italic
+hi TabLine                   guifg=black guibg=#b0b8c0
+"gui=italic
 hi TabLineFill               guifg=#9098a0
-hi TabLineSel                guifg=black guibg=#f0f0f0 gui=italic,bold
+hi TabLineSel                guifg=black guibg=#f0f0f0 gui=bold 
+",italic
 hi Pmenu                     guifg=white guibg=#808080
-hi StatusLine                guifg=#f0f0f0 guibg=#444444 gui=italic
-hi StatusLineNC              guifg=#a0a0a0 guibg=#333333 gui=italic
-hi Folded                    guibg=#384048 guifg=#a0a8b0 gui=italic
+hi StatusLine                guifg=#f0f0f0 guibg=#444444
+"gui=italic
+hi StatusLineNC              guifg=#a0a0a0 guibg=#333333
+"gui=italic
+hi Folded                    guibg=#384048 guifg=#a0a8b0
+"gui=italic
 hi FoldColumn                guibg=#384048 guifg=#a0a8b0
 hi SignColumn                guibg=#384048 guifg=#a0a8b0
-hi VertSplit                 guifg=#181818 guibg=#181818 gui=italic
-hi Comment                   guifg=#BC9458 ctermfg=180 gui=italic
+hi VertSplit                 guifg=#181818 guibg=#181818
+"gui=italic
+hi Comment                   guifg=#BC9458 ctermfg=180
+"gui=italic
 hi Constant                  guifg=#6D9CBE ctermfg=73
 hi Define                    guifg=#CC7833 ctermfg=173
 hi Error                     guifg=#FFC66D ctermfg=221 guibg=#990000 ctermbg=88
@@ -71,7 +78,8 @@ hi Keyword                   guifg=#CC7833 ctermfg=173 cterm=NONE
 hi LineNr                    guifg=#DDDCDC ctermfg=242 ctermbg=235 guibg=#333333
 hi Number                    guifg=#A5C261 ctermfg=107
 hi PreProc                   guifg=#E6E1DC ctermfg=103
-hi Search                    guifg=NONE ctermfg=NONE guibg=#2b2b2b ctermbg=235 gui=italic cterm=underline
+hi Search                    guifg=NONE ctermfg=NONE guibg=#2b2b2b ctermbg=235 cterm=underline
+"gui=italic
 hi Statement                 guifg=#CC7833 ctermfg=173 gui=NONE cterm=NONE
 hi String                    guifg=#A5C261 ctermfg=107
 hi Title                     guifg=#FFFFFF ctermfg=15
@@ -99,8 +107,8 @@ hi xmlEndTag                 guifg=#E8BF6A ctermfg=179
 
 hi mailSubject               guifg=#A5C261 ctermfg=107
 hi mailHeaderKey             guifg=#FFC66D ctermfg=221
-hi mailEmail                 guifg=#A5C261 ctermfg=107 gui=italic cterm=underline
-
+hi mailEmail                 guifg=#A5C261 ctermfg=107 cterm=underline
+"gui=italic
 hi SpellBad                  guifg=#D70000 ctermfg=160 ctermbg=NONE cterm=underline
 hi SpellRare                 guifg=#D75F87 ctermfg=168 guibg=NONE ctermbg=NONE gui=underline cterm=underline
 hi SpellCap                  guifg=#D0D0FF ctermfg=189 guibg=NONE ctermbg=NONE gui=underline cterm=underline

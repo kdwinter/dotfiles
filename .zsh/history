@@ -1,0 +1,5001 @@
+v .Xdefaults
+xrdb .Xdefaults
+v .irssi/config
+c
+v .wmii-hg/config.
+v .wmii-hg/config.yaml
+v .wmii-hg/config.yaml
+gvim .wmii-hg/config.yaml
+exit
+cd .vimperator
+cd plugin
+ls
+remove buftabs.js
+ls
+rm buftabs.js
+ls
+..
+ls
+cd colors
+ls
+v droog.vimp
+..
+ls
+cd info
+ls
+cd default
+ls
+v local-marks
+v url-marks
+v quickmarks
+v history-command
+../..
+ls
+..
+ls
+exit
+spux
+exit
+exit
+exit
+exit
+v .Xdefaults
+xrdb .Xdefaults
+v .Xdefaults
+v .Xdefaults
+xrdb .Xdefaults
+v .Xdefaults
+exit
+cd code/ruby/projects
+ls
+c
+exit
+v .irssi/config
+c
+rinfo
+ls bin
+v bin/scrshot
+scrshot
+pacup
+aurb -u
+calculeer "4*771"
+c
+feh --bg-scale walls/rain1440_900.jpg
+c
+v tmp/bleachfillers.txt
+v .vimrc
+c
+ls .vim
+pacup
+cd code/ruby/projects/aurb
+git pull origin master
+ga bin/aurb
+ls
+ruby setup.rb install
+gc Remove __END__
+gl -p
+c
+cdc
+pacup
+calculeer "40*6"
+calculeer "9*6"
+v tmp/cookmats.txt
+calculeer "57*5"
+calculeer "57*4"
+calculeer "58*3"
+calculeer "58*6"
+calculeer "56*3"
+v tmp/cookmats.txt
+calculeer "54*4"
+calculeer "54*5"
+pacup
+v .vimrc
+v .vimrc
+v .vimrc
+v .vimrc
+v .wmii-hg/config.
+v .wmii-hg/config.yaml
+exit
+ls tmp
+v tmp/honmatchid.txt
+pacup
+pacup
+exit
+screen -RR
+ls
+c
+exit
+exit
+cd .wmii-hg
+ls
+rm -rf .git/
+c
+cp -r ~/tmp/.wmii-hg/.git .
+cp -r ~/tmp/.wmii-hg/.gitignore .
+ls
+v .gitignore
+git rm config.rb
+git rm -f config.rb
+ls
+gs
+git rm -f binds.txt
+ga config.yaml
+gs
+v .gitignore
+gs
+ga .gitignore wmiirc
+gs
+gc Updated to Rumai 3.1.0
+gpo master
+c
+ls
+v README
+pacup
+git pull origin master
+ls
+gs
+exit
+v .wmii-hg/config.
+v .wmii-hg/config.yaml
+v .wmii-hg/config.yaml
+v .wmii-hg/wmiirc.log
+exit
+wmii -r .wmii-hg/config.
+wmii -r .wmii-hg/wmiirc
+screen -RR
+v .irssi/config
+irssi
+v .Xdefaults
+c
+irssi
+exit
+sudo /etc/rc.d/xinetd
+sudo /etc/rc.d/xinetd start
+sudo /etc/rc.d/xinetd restart
+sensors
+htop
+sudo /opt/lampp/lampp stop
+htop
+killall mysqld_safe
+sudo killall mysqld_safe
+sudo htop
+c
+firefox
+w3m bbs.archlinux.org
+svim /etc/hal/fdi/policy/10-keymap.fdi
+svim /etc/rc.conf
+install setxkbmap
+setxkbmap
+setxkbmap -h
+setxkbmap
+setxkbmap
+src
+setxkbmap
+sudo /etc/rc.d/xinetd stpo
+sudo /etc/rc.d/xinetd stop
+while true; do
+aurb -d conky-cli
+cd abs/conky-cli
+makepkg -fi
+v .conkyrc
+conky | while true; read line; do xsetroot -name "$line"; done &
+v .conkyrc
+conky | while true; read line; do xsetroot -name "$line"; done &
+v .conkyrc
+cdc
+while true; do; xsetroot -name "$(date +'%a %b %d %H:%M')" ; sleep 1m; done &
+xsetroot -name "test"
+xsetroot -h
+killal conky
+c
+killal conky
+killal conky
+killall conky
+c
+pacup
+pacup
+screen -t irssi
+c
+ls
+cd abs/libxft-cleartype
+makepkg -fi
+../mumble
+makepkg -fi
+../oneswarm
+makepkg -fi
+../opera
+makepkg -fi
+../spux-svn
+makepkg -fi
+../ttf-vista-fonts/
+makepkg -fi
+../vicious-git
+makepkg -fi
+../virtualbox_bin
+makepkg -fi
+exit
+startx
+startx
+startx
+killall wmii
+killall wmiirc
+htop
+htop
+v .wmii-hg/config.
+v .wmii-hg/config.yaml
+startx
+v .xinitrc
+startx
+startx
+screen -RR
+reboot
+pacup
+reboot
+killall X
+killall X
+ls
+xrdb .Xdefaults
+exit
+ls
+v .config/awesome/rc.lua
+exit
+v .Xdefaults
+exit
+screen -RR
+exit
+aurb -u
+pacup
+irb
+exit
+v .wmii-hg/config.yaml
+exit
+v /usr/lib/ruby/site_ruby/1.8/amazing/widget.rb
+exit
+v .wmii-hg/widgets.rb
+exit
+screen -RR
+mountnet
+ruftp tmp/shares/torchlight.PNG
+mv tmp/shares/torchlight.PNG tmp/shares/torchlight.png
+cd tmp/shares
+ls
+ls
+ls
+ruftp torchlight.png
+ncftp
+c
+ruftp torchlight.png
+cdc
+pacup
+ruftp tmp/shares/ordrak.png
+ruftp tmp/shares/torchlight.png
+ruftp tmp/shares/torchlight.png
+ruftp tmp/shares/sharedstash.bin
+ruftp tmp/shares/da1.jpg tmp/shares/da2.jpg
+ruftp tmp/shares/da3.jpg tmp/shares/da4.jpg tmp/shares/da5.jpg
+pacup
+ls .wmii-hg
+cp config.widgets.yaml .wmii-hg
+rm config.widgets.yaml
+ls .wmii-hg
+exit
+v .wmii-hg/config.yaml
+exit
+exit
+v .wmii-hg/config.yaml
+exit
+v .wmii-hg/widgets.rb
+exit
+exit
+exit
+exit
+htop
+exit
+ls
+cd .wmii-hg
+ls
+cp config.yaml config.yaml.bak
+cp config.widgets.yaml config.yaml
+ls
+v config.yaml
+ls
+v config.widgets.yaml
+mv ../config.widgets.yaml config.widgets.yaml
+rm config.yaml
+mv config.widgets.yaml config.yaml
+v config.yaml
+rm config.widgets.yaml\~
+ls
+v config.yaml
+exit
+screen -RR
+exit
+mirage downloads/Screenshot20091110163031656.jpg
+exit
+mirage downloads/Screenshot20091110224525203.jpg
+exit
+mirage downloads/Screenshot20091111210037250.jpg
+exit
+htop
+exit
+ls
+ruftp tmp/shares/da6.jpg
+pacup
+pacup
+ruftp tmp/shares/da7.jpg
+pacup
+ruftp tmp/shares/da8.jpg tmp/shares/da9.jpg
+cd -
+ls
+cd .wmii-hg
+cd -
+cd .config
+cd awesome
+cd icons
+cd -
+cd --
+c
+xbindkeys
+v .xinitrc
+c
+pacup
+xrdb .Xdefaults
+c
+v .Xdefaults
+c
+exit
+ls
+xrdb .Xdefaults
+exit
+cd .wmii-hg
+ls
+v .gitignore
+gs
+ga .gitignore
+v config.yaml
+git reset --hard
+ls
+rm config.yaml.bak widgets.rb
+gs
+v config.yaml
+exit
+screen -RR
+nitrogen walls
+exit
+cd code/ruby/
+v widgets.rb
+v widgets.rb
+exit
+ls
+c
+v .wmii-hg/config.yaml
+v .wmii-hg/config.yaml
+install bastet
+aurb -s bastet
+aurb -d bastet
+cd abs/bastet
+makepkg -fi
+bastet
+ls
+cd src/bastet-0.43
+ls
+v main.cpp
+v ui.cpp
+v Ui.cpp
+c
+cdc
+raggle
+install raggle
+raggle
+v /usr/bin/raggle
+svim /usr/bin/raggle
+raggle
+v /usr/bin/raggle
+svim /usr/bin/raggle
+raggle
+svim /usr/bin/raggle
+raggle
+svim /usr/bin/raggle
+raggle
+svim /usr/bin/raggle
+raggle
+svim /usr/bin/raggle
+raggle
+c
+ls
+c
+c
+els
+ls
+exit
+exit
+exit
+v .wmii-hg/config.yaml
+v .wmii-hg/config.yaml
+c
+ls
+c
+rinfo
+c
+ls bin
+c
+cowsay -f tux '\\o/'
+c
+cowsay -f tux '\o/'
+uname -a
+scrshot
+exit
+v code/html/gigamo.be/index.html
+mirage screenshots/rvol.png
+exit
+pacup
+svim /etc/pacman.d/mirrorlist
+pacup
+ls
+c
+aurb -u
+cd abs/luaposix
+cd .
+cd ~
+v code/ruby/projects/aurb/bin/aurb
+cd code/ruby/projects
+ls
+cd aurb
+ruby setup.rb install
+aurb -h
+aurb -d blablal
+v bin/aurb
+v README.rdoc
+ls
+v LICENSE
+ls
+v bin/aurb
+aurb
+aurb -a
+v bin/aurb
+ruby setup.rb install
+cdc
+ls
+c
+cd code
+ls
+ls php
+ls scala
+v scala/examples/hello.scala
+v lua/colors.lua
+rm lua/colors.lua
+ls
+v java/HelloWorld.java
+v python/scripts/todo.py
+v python/scripts/pyftp.py
+v python/scripts/changevol.py
+cdc
+ls
+c
+ls
+c
+ls
+v .zshrc
+v .zsh/alias
+outside
+t ls
+c
+ls
+c
+aurb -s byobu
+cd code/html/gigamo.be
+cp index.html index.html.old
+v index.html
+ruftp index.html
+v index.html
+ruftp index.html
+ls
+cd css
+ls
+cp layout.css layout.css.old
+chmod -x *
+ls
+v layout.css
+ruftp layout.css
+..
+ruftp index.html
+ncftp
+ruftp index.html
+v /usr/bin/rvol
+locate rvol
+rumai
+wmii -r ~/.wmii-hg/wmiirc
+exit
+ruftp tmp/shares/da10.jpg
+pacup
+ls
+c
+ls
+c
+cp tmp/shares/\!\!Pictures/Wallpapers/2009/byousoku_5_centimetre.jpg ~/walls
+cd walls
+ls
+chmod -x byousoku_5_centimetre.jpg
+mv byousoku_5_centimetre.jpg 5cm.jpg
+cdc
+htop
+slurm
+exit
+c
+killall raggle
+c
+htop
+cd abs/luaposix
+makepkg -fi
+../php-gtk
+makepkg -fi
+install gtkhtml
+makepkg -fi
+install gtk2+extra
+makepkg -fi
+pacman -Q | grep php
+../pygtkmoz
+remove gtk2+extra gtkhtml
+makepkg -fi
+../spux-svn
+makepkg -fi
+cd -
+../uzbl-git
+makepkg -fi
+cdc
+ruftp tmp/shares/da11.jpg
+uptime
+pacup
+pacup
+ruftp tmp/shares/templararmor.png
+pacup
+screen -t mail alpine
+v .wmii-hg/config.yaml
+screen -RR
+c
+ls
+screen -RR
+urxvtc -e screen -RR
+exit
+gdb
+install gdb
+install gdb
+gdb
+c
+exit
+cd gitclones/defunkt/gist
+ls
+git pull
+which gist
+v gist.rb
+svim ~/bin/gist
+v ~/bin/gist
+exit
+feh --bg-scale walls/minori.jpg
+exit
+cd .wmii-hg
+ls
+gs
+ga config.yaml
+gc Updated
+gl -p
+git push origin master
+exit
+cd code/ruby/sinatra/ronin
+ls
+rm -rf entries
+exit
+okular downloads/sinatrapresentation.pdf
+xpdf downloads/sinatrapresentation.pdf
+rm downloads/sinatrapresentation.pdf
+exit
+cd downloads
+ex feedicons-standard.zip
+cp feed-icon-14x14.png ~/code/ruby/sinatra/ronin/public/img/feed.png
+exit
+cat .myXLog
+exit
+scrshot
+exit
+v tmp/timetest.rb
+rm tmp/timetest.rb
+exit
+cd abs/chromium-browser
+..
+cd abs/chromium-browser-bin
+ls
+cd chromium-browser-bin
+ls
+makepkg -fi
+chromium-browser
+chromium-browser
+chromium-browser
+scrshot chromium
+scrshot chromium2
+exit
+svim /etc/httpd/conf/httpd.conf
+chromium-browser
+rm -r Downloads
+exit
+aurb -u
+remove phoronix-test-suite
+remove php-gtk
+ls
+c
+cd /opt/lampp/htdocs
+su
+sudo /opt/lampp/lampp start
+sudo /opt/lampp/lampp stop
+cdc
+v .zsh/prompt
+src
+c
+v .zsh/prompt
+c
+src
+c
+mkdir httpd
+cd http
+cd httpd
+mkdir cgi-bin
+ls
+sudo /opt/lampp/lampp stop
+pacs mod_ruby
+aurb -s mod_ruby
+aurb -d mod_ruby
+chmod +X cgi-bin/hello.cgi
+chmod o+x cgi-bin
+mkmine cgi-bin
+ls
+cd cgi-bin
+ls
+chmod o+x hello.cgi
+ls
+ls
+..
+chmod 777 cgi-bin/*
+ls
+chmod 777 cgi-bin/
+touch index.html
+touch cgi-bin/index.html
+v index.html
+mv index.html index.rb
+v index.rb
+mv index.rb index.html
+cd cgi-bin
+ls
+v index.html
+ls
+..
+ls
+cd cgi-bin
+..
+chmod 777 cgi-bin
+ls cgi-bin
+cd cgi-bin
+chmod -x hello.cgi
+ls
+..
+ls
+chmod a+r cgi-bin/hello.cgi cgi-bin/index.html
+ls
+v index.html
+chmod 755 cgi-bin
+ll
+cd cgi-bin
+ls
+ll
+chmod 755 hello.cgi index.html
+ls
+rm index.html
+v hello.cgi
+ls
+chmod 755 cookie.cgi
+v cookie.cgi
+ls
+cp cookie.cgi cookie.rb
+ls
+rm *.cgi
+ls
+v ../index.html
+v hello.rb
+ls
+v hello.html.erb
+chmod 755 hello.html.erb
+ls
+v cookie.rb
+v hello.rb
+ls
+rm hello.html.erb
+ls
+ls ~/code/ruby/projects
+cd /opt/lampp/htdocs/giantframework
+ls
+cd /opt/lampp/htdocs/gianttest
+ls
+v index.php
+cdc
+cd code/ruby/sinatra/test
+ls
+ruby test.rb
+ruby test.rb
+ruby test.rb
+ruby test.rb
+ruby test.rb
+ruby test.rb
+ruby test.rb
+c
+..
+ls
+mv test/ ronin/
+ls
+cd ronin
+ruby ronin.rb
+c
+sudo gem install haml
+rm views/index.erb
+ls
+cd pu
+cd public
+ls
+cd css
+ls
+mv style.css style.sass
+v style.sass
+v style.sass
+mv style.sass ../../views
+..
+..
+ruby ronin.rb
+ruby ronin.rb
+ls
+ruby ronin.rb
+ruby ronin.rb
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup ronin.ru
+rackup ronin.ru
+c
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+ruby ronin.rb
+ruby ronin.rb
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+ruby ronin.Rb
+ruby ronin.Rb
+ruby ronin.rb
+ls
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+rackup ronin.ru
+ls
+mv ronin.ru config.ru
+cdc
+sudo gem install brianmario-yalj-ruby
+sudo gem search --local yajl
+sudo gem install gemcutter
+pacs rubygems
+install rubygems
+pacup
+cd code/ruby/projects/aurb
+ruby setup.rb install
+aurb -h
+aurb -s awesome
+./aurb -h
+./aurb -s awesome
+./aurb -s awesome
+./aurb -s awesome
+./aurb -s awesome
+./aurb -s awesome
+ruby setup.rb install
+aurb -h
+aurb -v
+gs
+ga .
+gc Now using Yajl
+gpo master
+ga README.rdoc
+gc Update README to reflect switch
+gpo master
+ga .
+gc Shorten that
+sensors
+sensors
+sensors
+sudo cpufreq-set -g powersave
+sudo cpufreq-set -c 1 -g powersave
+cpufreq-info
+sensors
+sensors
+sudo cpufreq-set -g ondemand
+sudo cpufreq-set -c 1 -g ondemand
+sudo gem install capistrano
+cd ~/gitclones/sinatra/scanty
+exit
+pacup
+pacup
+c
+pacup
+ls
+c
+cd code/ruby/projects
+ls
+mkdir gunbatsu
+ls
+cd gunbatsu
+git init
+ls
+v gunbatsu.rb
+sudo gem install thin
+sudo gem install rack
+sudo gem install thin
+thin start
+thin
+mongrel
+sudo gem install mongrel
+webrick
+sudo gem install webrick
+sudo gem search webrick
+sudo gem search --remote webrick
+killall firefox-bin
+htop
+v hello.cgi
+cp hello.cgi /opt/lampp/htdocs/ruby
+sudo cp hello.cgi /opt/lampp/htdocs/ruby
+src
+ls
+src
+ls
+src
+c
+ls
+rm gunbatsu.rb
+c
+v .zsh/pro
+c
+src
+c
+svim /etc/httpd/conf/httpd.conf
+v hello.cgi
+sudo /etc/rc.d/httpd start
+sudo /etc/rc.d/httpd start
+install httpd
+sudo /etc/rc.d/httpd start
+v hello.cgi
+svim /etc/httpd/conf/httpd.conf
+sudo /etc/rc.d/httpd start
+httpd -e DEBUg
+svim /etc/httpd/conf/httpd.conf
+sudo /etc/rc.d/httpd start
+httpd -e DEBUg
+svim /etc/httpd/conf/httpd.conf
+httpd -e DEBUg
+sudo /etc/rc.d/httpd start
+cp hello.cgi ~/httpd/cgi-bin
+cd ~/httpd/cgi-bin
+v hello.cgi
+svim /etc/httpd/conf/httpd.conf
+sudo /etc/rc.d/httpd restart
+ls /srv/http
+ls /etc/httpd/run
+svim /etc/httpd/conf/httpd.conf
+sudo /etc/rc.d/httpd restart
+sudo /etc/rc.d/httpd restart
+svim /etc/httpd/conf/httpd.conf
+ls
+cp hello.cgi hello.rb
+v hello.rb
+svim /etc/httpd/conf/httpd.conf
+sudo /etc/rc.d/httpd restart
+svim /etc/httpd/conf/httpd.conf
+ls
+mkdir gunbatsu
+cd gunbatsu
+ls
+v index.rb
+ls
+chmod 755 index.rb
+ls
+..
+cd gunbatsu
+..
+chmod 755 gunbatsu
+ls
+cd gunbatsu
+ll
+ls
+v index.rb
+svim /etc/httpd/conf/httpd.conf
+sudo /etc/rc.d/httpd restart
+ls
+v index.rb
+ls
+ll
+..
+ll
+chmod 755 gunbatsu/
+ls
+ll
+ls ..
+ll ../
+..
+ll
+cd cgi-bin
+ls
+cp gunbatsu/index.rb ./gunbatsu.rb
+ls
+rm -rf gunbatsu/
+ls
+v gunbatsu.rb
+ls
+mkdir gunbatsu
+chmod 755 gunbatsu
+mv gunbatsu.rb gunbatsu/
+ls
+cd gunbatsu
+ls
+mv gunbatsu.rb index.rb
+ls
+ls
+cp index.rb init.rb
+v init.rb
+ls
+rm init.rb
+ls
+v index.rb
+ls
+v index.rb
+cd ~/code/ruby/projects
+ls
+rm -rf gunbatsu
+ls
+..
+ls
+mkdir sinatra
+cd sinatra
+v test.rb
+sudo /etc/rc.d/httpd stop
+ruby test.rb
+ls
+mkdir test
+ls
+cd test
+ls
+mkdir public
+mkdir views
+cd public
+mkdir css
+ls
+cd css
+touch style.css
+ls
+..
+ls
+mkdir js
+..
+ls
+v test.rb
+ruby test
+ruby test.rb
+cd views
+ls
+touch index.erb
+v index.erb
+touch index.erb
+v index.erb
+..
+ruby test.rb
+v views/index.erb
+ruby test.rb
+v views/index.erb
+..
+cd ..
+ls
+cd ronin
+ls
+mv test.rb ronin.rb
+v ronin.rb
+cd app
+ls
+mkdir helpers
+mv helpers.rb helpers
+ls
+mkdir controllers
+mv ronin.rb controllers
+ls
+mv controllers/ronin.rb .
+ls
+mv ronin.rb ..
+ls
+rm -r controllers
+ls
+v libraries.rb
+mv libraries.rb ..
+ls
+..
+v ronin.rb
+ls
+ls app/helpers/helpers.rb
+ls
+v app/models/entry.rb
+v parsetest.rb
+c
+cdc
+cd gitclones
+ls
+mkdir sinatra
+cd sinatra
+ls
+git pull git://github.com/karmi/marley.git
+git clone git://github.com/karmi/marley.git
+git clone git://github.com/zapnap/sinatra-template.git
+git clone git://github.com/adamwiggins/scanty.git
+ls
+cd -
+cd -
+cdc
+cd code/ruby/projects/aurb
+v bin/aurb
+c
+cd ~/gitclones/sinatra/marley/
+ls
+ruby config.ru
+sudo gem install ftools
+v app/marley.rb
+sudo gem install ftools
+ruby config.ru
+sudo gem install activerecord
+ruby config.ru
+cp config/config.example.yml config/config.yml
+v config/config.yml
+ruby config.ru
+v README.rdoc
+rake app:install
+v Rakefile
+rake app:install
+ruby config.ru
+rake app:install
+rake app:install --trace
+v config/config.yml
+rake app:install
+v config/config.yml
+rake app:install
+ls
+v app/lib/post.rb
+ls
+mkdir data
+cp app/test/fixtures/001-test-article-one/test-article.txt .
+ls
+mv test-article.txt data
+ruby config.ru
+rackup config.ru
+v config.ru
+rackup config.ru
+v config.ru
+v config.ru
+rake app:install
+..
+rm -rf marley
+ls
+git clone git://github.com/karmi/marley.git
+cd scanty
+ls
+v README.rdoc
+ruby main.rb
+v README.rdoc
+v main.rb
+ruby main.rb
+v lib/post.rb
+exit
+killall X
+c
+c
+src
+c
+sc
+c
+src
+c
+cd abs/mod_ruby
+makepkg -fi
+cd ~/httpd
+ls
+chmod 755 cgi-bin/cookie.rb cgi-bin/gunbatsu cgi-bin/hello.rb
+chmod 755 index.html
+ls
+chmod 755 cgi-bin/gunbatsu/*
+ls cgi-bin/gunbatsu
+ls
+ll
+cd cgi-bin/gunbatsu
+ll
+gist -p < index.rb
+gist -p < index.rb
+v ~/bin/gist
+v ~/bin/gist
+pacup
+sudo gem install fcgi
+sudo gem install sinatra
+cd ~/gitclones/
+mkdir tpope
+cd tpope
+git clone git://github.com/tpope/vim-haml.git
+cd vim-haml
+ls
+cp ftdetect/haml.vim ~/.vim/ftdetect
+cp ftplugin/haml.vim ftplugin/sass.vim ~/.vim/ftplugin
+cp indent/haml.vim indent/sass.vim ~/.vim/indent
+cp syntax/haml.vim syntax/sass.vim ~/.vim/syntax
+cdc
+pacup
+sudo gem install rackup
+cd code/ruby/sinatra/ronin
+ls
+gs
+git init
+ga .
+gs
+gc Initial commit
+gs
+ga ronin.rb
+gl -p
+gl -p
+gc Fix views
+gl -p
+ga ronin.rb
+gc Set Sass to Compressed
+ls
+ls views
+ls public
+cd public
+ls
+rm -r css/
+git rm -r css/
+rm -r css/
+ls
+..
+gs
+ls
+ls public/js/jquery.js
+ga .
+gs
+gc Include jQuery
+ga views/index.haml
+gc Now if I wasn\'t stupid
+gs
+git remote add master git@gitorious.org:ronin-sinatra/ronin-sinatra.git
+git push origin master
+git remote add origin git@gitorious.org:ronin-sinatra/ronin-sinatra.git
+git remote del master
+git remote rm master
+git push origin master
+git push origin master
+v ~/.ssh/id_rsa
+v ~/.ssh/id_rsa.pub
+v ~/.ssh/id_rsa.pub
+c
+git push origin master
+git remote rm origin
+v ~/.ssh/id_rsa.pub
+git remote add origin ssh://repo.or.cz/srv/git/ronin-sinatra.git
+git push origin master
+git push origin master
+git remote rm origin
+git remote add origin ssh://repo.or.cz/srv/git/ronin-sinatra.git
+git push origin
+v ~/.gitconfig
+git push origin master
+git remote rm origin
+c
+gs
+ga ronin.rb
+gc Include helpers
+cd public
+mkdir css
+v css/reset.css
+..
+ls
+ga public/css/reset.css
+aurb -u
+gs
+ga .
+gc Added 404, 500, reset.css
+ga views/style.sass
+gs
+ga .
+ls
+gs
+ga .
+git remote ls
+git remote add origin git@gitorious.org:ronin-sinatra/ronin-sinatra.git
+git push origin master
+ls
+ls
+mkdir app
+mv ronin.rb app
+mv posts.rb app
+ls
+rm config.yaml
+mv config.ru ronin.ru
+mv helpers.rb app
+cd app
+ls
+mkdir controllers
+mv posts.rb controllers
+ls
+mkdir helpers
+mv helpers.rb helpers/
+ls
+ls
+..
+ls
+mv libraries.rb app
+ls
+ls
+v ronin.ru
+mv app/libraries.rb .
+mv app/ronin.rb .
+ls
+mv app/helpers/helpers.rb .
+mv app/controllers/posts.rb .
+ls
+rm -rf app
+ls
+rm posts.rb
+rm entries.rb
+ls views
+mv views/index.haml views/home.haml
+mv test.haml views
+rm helpers.rb
+ls
+rm home.haml index.haml layout.haml
+ls views
+v views/home.haml
+ls views
+rm views/test.haml
+ls
+rm entry.rb
+ls
+mkdir app
+ls
+mv helpers.rb app
+mv ronin.rb app
+mv libraries.rb app
+mv views app
+ls
+cd app
+v ronin.rb
+v ../ronin.ru
+v ../ronin.ru
+ls
+mkdir controllers
+..
+cd app
+ls
+rm -r controllers
+mkdir models
+cd ..
+ls
+ls
+mkdir entries
+v entries/1.txt
+sudo gem install sequel
+ruby create_db.rb
+sudo gem install libsqlite3-ruby
+pacs libsqlite
+aurb -s libsqlite
+aurb -s libsqlite
+aurb -h
+aurb -s awesome
+gem search --remote sqlite
+sudo gem install sqlite3 sqlite3-ruby
+sudo gem install sqlite3 sqlite3-ruby
+ruby create_db.rb
+ls
+v blog.db
+rm blog.db
+ruby create_db.rb
+ls app/views
+rm create_db.rb blog.db config.yml
+ls
+rm app/views/edit.haml app/views/new.haml
+cd app/views
+ls
+cd -
+ls
+mkdir entries
+rm -r app/models
+ls
+ls app
+cd app
+ls
+mkdir models
+cd models
+v entry.rb
+c:q
+ls
+v entry.rb
+..
+ls
+..
+ls
+v entries/hello
+gist -p < entries/hello
+v entries/hello
+ls
+v .gitignore
+ls
+gs
+git rm config.ru
+git rm helpers.rb
+git rm views/404.haml views/500.haml views/index.haml views/style.sass
+git rm views/
+gs
+ga .gitignore
+ga ronin.ru
+ga ronin.rb libraries.rb
+gs
+ga app/*
+gs
+gc Many changes woooosh
+sudo gem install rdiscount
+v entries/hello
+ls
+cd app
+ls
+git rm -rf helpers/
+ls
+gs
+..
+ls
+rm -rf parsetest.rb
+ls
+gs
+ga .
+gc This actually works
+v entries/hello
+gs
+ga .
+gc Final touches
+..
+roll
+v ~/.zsh/function
+roll ronin.tar.gz ronin
+ls
+ruftp ronin.tar.gz
+cd ronin
+ls
+which rackup
+ruftp app/models/entry.rb
+gs
+ga .
+gc More touches
+ls
+cd app/en
+cd entries
+ls
+mv more-info-for-you additional-info
+v additional-info
+pacup
+sudo gem install pony
+aurb -s pony
+sudo gem search --remote pony
+sudo gem install pony
+sudo gem install tmail
+sudo gem install kucello-pony
+cd ~/gitclones
+mkdir pony
+cd pony
+git clone git://github.com/benprew/pony.git
+cd pony
+ls
+gem build pony.gemspec
+sudo gem install pony-0.4.1.gem
+ls
+cd lib
+ls
+..
+..
+ls
+git clone git://github.com/mikel/tmail.git
+cd tmail/ext/tmailscanner/
+ls
+cd tmail
+ls
+v tmailscanner.c
+cd -
+ls
+../..
+ls
+..
+ls
+cd tmail
+ls
+cp ~/downloads/tmail-1.2.2.gem .
+sudo gem install tmail-1.2.2.gem
+..
+rm -rf tmail
+ls
+git clone git://github.com/thedonvaughn/tmail.git
+cd tmail
+ls
+sudo ruby setup.rb
+..
+rm -rf tmail
+git clone git://github.com/bjornblomqvist/tmail.git
+ls
+cp ~/downloads/bjornblomqvist-tmail-20fa2ab.tar.gz .
+rm ~/downloads/tmail-1.2.2.gem
+ls
+ex bjornblomqvist-tmail-20fa2ab.tar.gz
+ls
+tar -xvvf bjornblomqvist-tmail-20fa2ab.tar.gz
+ls
+ls
+rm bjornblomqvist-tmail-20fa2ab.tar.gz
+rm /home/gig/downloads/bjornblomqvist-tmail-20fa2ab.tar.gz /home/gig/downloads/bjornblomqvist-tmail-20fa2ab.zip
+cd ~/code/ruby/sinatra/ronin
+ls
+cd app
+mkdir helpers
+ls
+rm helpers/entry.rb
+..
+ls
+v entries/hello
+sudo gem install builder
+rm app/views/feed.rxml
+gs
+ga .
+gc Added feeds and more touches
+sudo gem install emk-sinatra-url-for
+ga .
+gc Fixed RSS feed
+ls public
+cd public
+mkdir img
+ls
+..
+rm ../ronin.tar.gz
+ga .
+gs
+gc Tidied up
+..
+ls
+roll ronin.tar.gz ronin/
+ls
+ruftp ronin.tar.gz
+gl -p
+cd ronin
+gl -p
+c
+ls
+v .gitignore
+gs
+cd entries
+ls
+v Sample
+ls
+v sample-entry
+rm hello
+ls
+mv additional-info ..
+ls
+..
+ls
+mv additional-info ..
+ls
+gs
+ga .
+gc Final touches
+gs
+v entries/sample-entry
+ls
+ls
+cd entries
+ls
+cp sample-entry sample-entry-2
+ls
+v sample-entry-2
+v sample-entry-2
+v sample-entry
+gs
+ga .
+gc Fixed blog sorting, added TODO, general layout tweaks
+scrshot test
+v sample-entry
+pacs chromium
+aurb -s chromium-browser
+aurb -d chromium-browser-bin
+ls ~/abs
+../..
+ls
+rm ronin.tar.gz additional-info
+rm test.rb
+ls
+roll ronin.tar.gz ronin
+ls
+cd ronin
+gs
+ga .
+gs
+gc Some tweaks
+gl -p
+..
+ls
+rm ronin.tar.gz
+roll ronin.tar.gz ronin
+ruftp ronin.tar.gz
+sudo gem install passenger
+sudo passenger-install-apache2-module
+sudo /etc/rc.d/httpd start
+chmod 755 ronin
+ls
+cd ronin
+cd ronin
+ls
+chmod -r 755 .git .gitignore TODO app entries libraries.rb public ronin.rb ronin.ru
+chmod -r 755 TODO app entries libraries.rb public ronin.rb ronin.ru
+chmod 755 TODO app entries libraries.rb public ronin.rb ronin.ru
+chmod -h
+chmod --help
+chmod -R 755 TODO app entries libraries.rb public ronin.rb ronin.ru
+sudo /etc/rc.d/httpd restart
+cd entries
+ls
+v sample-entry-2
+ll
+ls
+..
+gs
+git reset --hard
+gs
+sudo /etc/rc.d/httpd stop
+cdc
+cd gitclones
+mkdir gemcutter
+cd gemcutter
+git clone git://github.com/benprew/pony.git
+git clone git://github.com/brianmario/yajl-ruby.git
+cd yajl-ruby
+gem build yajl-ruby.gemspec
+sudo gem install yajl-ruby-0.6.5.gem
+../pony
+gem build pony.gemspec
+sudo gem install pony-0.4.1.gem
+cdc
+exit
+v .wmii-hg/config.yaml
+killall X
+thunar
+screen -RR
+reboot
+startx
+startx
+startx
+htop
+startx
+stkillall X
+htop
+startx
+startx
+startx
+startx
+cd code/ruby/projects/aurb
+v bin/aurb
+ruby setup.rb install
+exit
+cd code/ruby/projects/aurb
+v bin/aurb
+exit
+cd gitclones/sinatra/scanty
+ls
+ls
+pacup
+aurb -u
+aurb -u
+pacup
+svim /etc/pacman.conf
+vim /etc/X11/xorg.conf
+v main.rb
+v lib/post.rb
+pacup
+aurb -s newsleecher
+cd ~/code/ruby/projects/aurb
+gs
+ga bin/aurb
+gs
+gc Uh
+gl -p
+v bin/aurb
+./aurb -h
+v bin/aurb
+./aurb -h
+v bin/aurb
+./aurb -h
+v bin/aurb
+./aurb -h
+v bin/aurb
+./aurb -h
+v bin/aurb
+v bin/aurb
+v bin/aurb
+./aurb -h
+v bin/aurb
+./aurb -h
+v bin/aurb
+./aurb -h
+v bin/aurb
+./aurb -h
+./aurb -s awesome
+./aurb -s aurb
+./aurb -s gentoo
+./aurb -d aurb
+v bin/aurb
+./aurb -u
+ruby setup.rb install
+aurb -h
+v bin/aurb
+v aurb.gemspec
+./aurb -v
+v README.rdoc
+gs
+ls
+v setup.rb
+ruby setup.rb install
+aurb -v
+v bin/aurb
+v aurb.gemspec
+gs
+ga .
+ruby setup.rb install
+ls
+gs
+gc Some tweaks and shortenings
+gpo master
+./aurb -s aurb
+./aurb -s aurb --no-color
+cd ../..
+cd sinatra
+ls
+mkdir beachp
+cd beachp
+v oud.rb
+v views/500.haml
+rm views/edit.erb
+rm development.db
+rm development.db
+exit
+cd gitclones/sinatra/scanty
+ruby main.rb
+ruby main.rb
+ruby main.rb
+rm blog.db
+ruby main.rb
+ls
+ls vendor
+ls
+cp -r vendor/sequel ~/code/ruby/sinatra/beachp/vendor
+exit
+cd public
+ls
+cd code/ruby/sinatra/beachp
+ls
+cd pu
+cd public
+ls
+mkdir css
+ls
+mv main.css css
+c
+../views
+ls
+mv root.haml index.haml
+c
+..
+rackup config.ru
+rm lib/profile.rb
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+ls
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+ls
+mkdir vendor
+ls vendor
+ls
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+ls
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+exit
+cd code/ruby/sinatra/beachp/
+ls
+ls
+v views/layout.haml
+cd ~/gitclones/sinatra/scanty
+ls
+v main.rb
+cd ~/code/ruby/sinatra/
+roll beachparty.tar.gz beachp
+ruftp beachparty.tar.gz
+v beachp/environment.rb
+exit
+cd code/ruby/sinatra/beachp
+cp -r ~/gitclones/sinatra/sinatra-template/* .
+ls
+gs
+gl -p
+ls
+rm -rf .git/
+ls
+rm MIT-LICENSE
+ls
+v README.rdoc
+rm README.rdoc
+v Rakefile
+rm Rakefile
+ls
+v environment.rb
+v application.rb
+v views/layout.erb
+ls
+cd views
+ls
+rm 404.haml 500.haml archive.haml auth.haml edit.haml index.haml layout.haml news.haml post.haml
+ls
+v layout.erb
+v auth.erb
+v auth.erb
+v news.erb
+..
+ls
+rm oud.rb
+v config.ru
+gs
+git init
+gs
+v spec/application_spec.rb
+v Rakefile
+rake test
+v Rakefile
+rake test
+v Rakefile
+v Rakefile
+rake test
+rake gems
+v Rakefile
+rake gems:install
+v Rakefile
+rake gems:install
+v Rakefile
+rake test
+sudo gem install test-unit
+rake test
+v spec/spec_helper.rb
+v spec/spec_helper.rb
+rake test
+v Rakefile
+rm spec/profile_spec.rb
+rake test
+v spec/application_spec.rb
+rake test
+ls
+gs
+v .gitignore
+gs
+ga .
+gs
+gc Initial Commit
+gs
+v views/index.erb
+v application.rb
+rm -rf .git
+ls
+git init
+gs
+ga .
+gs
+gc Initial commit
+gs
+v environment.rb
+ga environment.rb
+gc Niet wij, maar ons\!
+gs
+gl -p
+v views/index.erb
+v views/layout.erb
+gs
+ga views/layout.erb
+gc Niet overal Nieuws
+v application.rb
+ga views/layout.erb
+v views/layout.erb
+ga views/layout.erb
+gc Lol, ik leef in \'t verleden
+gs
+gl -p
+v views/news.erb
+v application.rb
+exit
+ls code/ruby/sinatra/beachp/vendor/sequel
+cd gitclones/sinatra/scanty
+ruby main.rb
+cdc
+ls
+rm -rf .phoronix-test-suite
+cdc
+v code/ruby/sinatra/beachp/vendor/sequel/sequel.rb
+v code/ruby/sinatra/beachp/vendor/sequel/sequel_core
+v code/ruby/sinatra/beachp/vendor/sequel/sequel_model
+v code/ruby/sinatra/beachp/vendor/sequel/sequel_model.rb
+cdc
+pacup
+v .zsh/alias
+ls
+xit
+exit
+cd abs/nitrogen-git
+makepkg -fi
+../opera
+makepkg -fi
+../vicious-git
+makepkg -fi
+../virtualbox_bin
+makepkg -fi
+sudo gem install gettext
+pacup
+exit
+screen -RR
+shutdown
+zetaf
+startx
+firefox
+exit
+cd code/ruby/sinatra/beachp
+ls
+v application.rb
+vim ~/.Xdefaults
+xrdb .Xde
+xrdb ~/.Xdefaults
+exit
+cd /etc/network.d/
+ls
+svim wireless-giant
+sudo netcfg wireless-giant
+svim wireless-gi
+svim wireless-giant
+exit
+ipconfig
+iwconfig wlan0
+ifconfig wlan0
+exit
+thunar
+exit
+v tmp/test.rb
+exit
+cd /etc/network.d/examples
+..
+svim wireless-giant
+ls
+cd ~/code/ruby/sinatra/beachp
+ls
+rake test
+v spec/application_spec.rb
+irb
+sudo netcfg wireless-giant
+sudo iwlist scan
+svim /etc/httpd/conf/httpd.conf
+install wicd
+sudo iwlist scan
+exit
+sudo netcfg wireless-giant
+cd code/ruby/sinatra/beachp
+ls
+ruby config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+sudo /etc/rc.d/httpd start
+sudo /etc/rc.d/httpd start
+sudo /etc/rc.d/httpd stop
+rackup config.ru
+ruby application.rb
+mv public/css/main.css public/css/old.css
+rackup config.ru
+rackup config.ru
+mv public/css/old.css public/css/main.css
+mv public/css/old.css public/css/main.css
+rackup config.ru
+exit
+cd code/ruby/sinatra/beachp
+ifconfig wlan0
+iwconfig
+iwlist scan
+iwlist scan wlan0
+sudo iwlist scan wlan0
+sudo iwlist wlan0 scan
+sudo iwlist wlan0 scan
+sudo iwlist wlan0 scan
+v application.rb
+exit
+cplay downloads/Cartman_-_Poker_Face.mp3
+ncmpcpp
+c
+ncmpcpp
+exit
+reboot
+startx
+ls
+sudo iwlist wlan0 scan
+ping -c 3 www.google.com
+sudo netcfg wireless-giant
+svim /etc/network.d/wireless-giant
+sudo netcfg wireless-giant
+cd /var/abs/core/iwlwifi-3945-ucode
+ls
+v PKGBUILD
+tail -f /var/pacman.log
+sudo tail -f /var/pacman.log
+locate pacman.log
+sudo tail -f /var/log/pacman.log
+svim /etc/pacman.d/mirrorlist
+ls
+v PKGBUILD
+sudo netcfg wired
+ping -c 3 www.google.com
+svim PKGBUILD
+sudo tail -f /var/log/pacman.log
+makepkg
+sudo makepkg
+sudo makepkg --asroot
+sudo pacman -U iwlwifi-3945-ucode-15.28.2.8-1-i686.pkg.tar.gz
+svim /etc/rc.conf
+svim /etc/network.d/wireless-giant
+exit
+reboot
+sudo iwlist scan
+exit
+svim /etc/modprobe.d/iwl3945
+sudo rmmod -f iwl3945
+sudo modprobe iwl3945 disable_hw_scan=1
+ifconfig wlan0 up
+sudo ifconfig wlan0 up
+sudo netcfg wireless-giant
+sudo iwlist wlan0 scan
+sudo rm /etc/modprobe.d/iwl3945
+install wicd
+pacup
+wicd
+sudo wicd
+wicd-client
+wicd-client
+install trayer
+trayer
+exit
+wicd-client
+vim .gtkrc-2.0
+wicd-client
+exit
+htop
+sudo htop
+sudo htop
+exit
+sudo htop
+exit
+sudo htpo
+sudo htop
+exit
+wicd-client
+wicd -h
+wicd-client -h
+wicd-client --no-tray
+exit
+ncmpcpp
+exit
+cd gitclones/defunkt
+ls
+git clone git://github.com/defunkt/hurl.git
+exit
+cd code/ruby/projects/sin
+cd code/ruby/sinatra/beachp
+v lib/post.rb
+irb
+sudo irb
+cd /usr/lib/ruby/gems/1.9.1/gems/sequel-3.6.0/doc/
+ls
+..
+ls
+v Rakefile
+rake rdoc
+sudo rake rdoc
+ls
+ls rdoc
+cd ~/gitclones/defunkt/
+../sinatra/data
+ls
+cd ~/gitclones/defunkt/
+sudo netcfg wired
+ping -c 3 www.google.com
+sudo /etc/rc.d/wicd stop
+sudo /etc/rc.d/net-profiles start
+sudo /etc/rc.d/net-profiles restart
+sudo /etc/rc.d/net-profiles start
+cd ~/code/ruby/sinatra/
+cd beachp
+v application.rb
+git status
+v application.rb
+gs
+ga .
+gc Kweet nimeer
+gl -p
+ls
+gs
+v application.rb
+exit
+cd gitclones/defunkt/hurl/public/js
+ls
+cp jquery.form.js
+v jquery.form.js
+v jquery.autocomplete.js
+v jquery.min.js
+cp jquery.min.js ~/code/ruby/sinatra/beachp/public/
+cd ~/code/ruby/sinatra/beachp/public
+ls
+mkdir js
+ls
+mv jquery.min.js js/
+ls
+v js/beachp.js
+..
+ls
+ruby config.ru
+ls
+ruby application.rb
+ls
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+exit
+svim /etc/httpd/conf/httpd.conf
+sudo /etc/rc.d/httpd start
+sudo /etc/rc.d/httpd stop
+cdc
+cd code/ruby/sinatra/beachp
+rackup config.ru
+remove wicd
+v application.rb
+rackup config.ru
+v ~/gitclones/defunkt/hurl/hurl.rb
+rackup config.ru
+rackup config.ru
+v ~/gitclones/defunkt/hurl/hurl.rb
+ls
+rm development.db
+rm development.db
+rm development.db
+ls
+v config.ru
+exit
+zetaf
+ls
+ping -c 3 www.google.cmo
+ping -c 3 www.google.com
+sudo netcfg wireless-giant
+sudo iwlist scan
+sudo netcfg wired
+startx
+cd code/ruby/sinatra/beachp
+rm public/img/rainbow.png
+exit
+screen -RR
+cd code/ruby/sinatra
+cd beachp
+v application.rb
+cd public/css
+ls
+rm main.css
+touch main.css
+cdc
+cd -
+../..
+ls
+v views/layout.erb
+rm views/organisation.erb
+v application.rb
+gs
+v application.rb
+git reset --hard
+v application.rb
+exit
+cd code/ruby/sinatra/beachp
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+exit
+scrshot fotos
+exit
+cd tmp/beachptest
+ruby test.rb
+exit
+xrdb .Xdefaults
+exit
+ls
+exit
+xrdb .Xdefaults
+exit
+ls
+xrdb .Xdefaults
+exit
+ls
+exit
+xrdb .Xdefaults
+exit
+ls
+exit
+xrdb .Xdefaults
+exit
+ls
+v .vimrc
+xrdb .Xdefaults
+exit
+exit
+xrdb .Xdefaults
+exit
+ls
+xrdb .Xdefaults
+exit
+ls
+wmiir xwrite /ctl "font xft:Liberation Mono-8"
+rumai
+exit
+v .vimrc
+gvim .vimrc
+v .Xdefaults
+exit
+v .wmii-hg/config.yaml
+exit
+v .wmii-hg/config.yaml
+v .Xdefaults
+xrdb .Xdefaults
+exit
+ls
+exit
+cd code/ruby/sinatra/beachp
+ls
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+a\
+
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+exit
+cd code/ruby/sinatra/beachp
+c
+v public/css/main.css
+v application.rb
+..
+rm beachparty.tar.gz
+roll beachp.tar.gz beachp
+ls
+rm ronin.tar.gz
+cd beachp
+ruftp ../beachp.tar.gz
+gs
+ga .
+gc Euhm
+gl -p
+v application.rb
+git rm -rf vendor/sequel/
+ls
+ls vendor
+ls
+gs
+v lib/post.rb
+ls
+ls vendor
+cd vendor
+ls
+ls sequel
+rm -r sequel
+ls
+..
+ls
+ls vendor
+v Rakefile
+v environment.rb
+gs
+ga .
+gc Use sinatra-sequel
+gs
+..
+ls
+rm -rf beachp.tar.gz
+roll beachp.tar.gz beachp
+ruftp beachp.tar.gz
+cd beachp
+v views/layout.erb
+gs
+ga views/layout.erb
+gc Add feed
+..
+ls
+rm beachp.tar.gz
+roll beachp.tar.gz beachp
+ruftp beachp.tar.gz
+v beachp/views/layout.erb
+cd beachp
+ga views/layout.erb
+gc Change tab to space
+..
+rm beachp.tar.gz
+roll beachp.tar.gz beachp
+ruftp beachp.tar.gz
+ifconfig
+cd beachp
+v views/news.erb
+ga .
+gc Add some headers
+..
+rm beachp.tar.gz
+roll beachp.tar.gz beachp
+ruftp beachp.tar.gz
+cd beachp
+v views/edit.erb
+gs
+ga .
+gc Hulp toegevoegd voor opmaak
+..
+rm beachp.tar.gz
+roll beachp.tar.gz beachp
+ruftp beachp.tar.gz
+cd beachp
+ls
+v lib/photos.rb
+v README
+v TODO
+cd public/photo/
+cp ~/downloads/beachparty.jpg 2008
+cp ~/downloads/beachparty.jpg 2009
+cp ~/downloads/beachparty.jpg 2010
+../..
+gs
+ga .
+gc Added Photo model
+cp -r public/photo/* ~/tmp/beachptest
+v lib/photo.rb
+c
+v lib/photo.rb
+v application.rb
+gs
+ga .
+gc Gallery 90% done
+gs
+..
+rm beachp.tar.gz
+roll beachp.tar.gz beachp
+ruftp beachp.tar.gz
+pacup
+cd beachp
+v lib/photo.rb
+gs
+v .gitignore
+v .gitignore
+gs
+ga .
+gc Fix photo album
+v views/layout.erb
+exit
+screen -RR
+cd code/ruby/sinatra/beachp/public
+ls
+ls img
+exit
+screen -RR
+cd code/ruby/sinatra/beachp
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+exit
+aurb -s helvetica
+v gitclones/sinatra/scanty/public/main.css
+cd gitclones/sinatra/scanty/views
+v post.erb
+ls
+v archive.erb
+v auth.erb
+v edit.erb
+v post.erb
+cdc
+v temp.rb
+cd code/ruby/sinatra/beachp
+ls
+cd pu
+cd public
+ls
+mkdir img
+cp ~/downloads/buttonbg.png img
+v css/old.css
+cp ~/downloads/rainbow.png ./img
+v css/old.css
+v ~/.Xdefaults
+xrdb ~/.Xdefaults
+c
+cd ~/downloads
+ex jquery.countdown.package-1.5.5.zip
+ls jquery.countdown
+ls jquery
+ls
+rm jquery.countdown-*.js
+y
+rm jquery.countdown-*.js
+ls
+v jquery.countdown.css
+rm jquery.countdown.css
+rm jquery.countdown.js jquery.countdown.min.js jquery.countdown.pack.js
+mkdir jquery-countdown
+mv jquery.countdown.package-1.5.5.zip jquery-countdown
+cd jquery-countdown
+ls
+ex jquery.countdown.package-1.5.5.zip
+ls
+cp jquery.countdown-nl.js ~/code/ruby/sinatra/beachp/public/js
+v jquery.countdown-nl.js
+v jquery.countdown.min.js ~/code/ruby/sinatra/beachp/public/js
+cp jquery.countdown.min.js ~/code/ruby/sinatra/beachp/public/js
+cd ~/code/ruby/sinatra/beachp/public/js
+ls
+ls
+rm jquery.countdown*
+ls
+cp ~/downloads/jquery-countdown/jquery.countdown.min.js .
+cp ~/downloads/jquery-countdown/jquery.countdown-nl.js .
+c
+rm jquery.countdown-nl.js jquery.countdown.js jquery.countdown.min.js
+rm jquery.countdown-nl.js jquery.countdown.js jquery.countdown.min.js
+ls
+../..
+gs
+ga .
+gs
+git rm public/css/old.css
+git rm -f public/css/old.css
+gs
+gc Andere layout
+c
+sudo gem install sinatra-sequel
+cd pu
+cd public
+ls
+cd img
+ls
+..
+ls
+mkdir fotoalbums
+ls
+cd fotoalbums
+ls
+mkdir 2008
+mkdir 2008
+mkdir 2009
+mkdir 2010
+ls
+..
+cd ~/downloads
+wget http://topfunky.net/svn/gullery/pkg/gullery-0.0.1.tgz
+ex gullery-0.0.1.tgz
+ls
+v README
+ls
+cd public/images
+ls
+cdc
+cd code/ruby/sinatra/beachp
+rm lib/photos.rb
+ls lib
+gs
+ga .
+gc Add some confirms
+..
+rm beachp.tar.gz
+roll beachp.tar.gz beachp
+ruftp beachp.tar.gz
+cd beachp/public
+ls
+rm -rf fotoalbums
+mkdir photo
+cd photo
+ls
+mkdir 2008
+mkdir 2009
+mkdir 2010
+ls
+.
+..
+ls
+..
+ls
+irb
+sudo gem search --remote rmagick
+sudo gem install rmagick
+irb
+cd ~/downloads
+ls
+v rainbow.rb
+ruby rainbow.rb
+v rainbow.rb
+ruby rainbow.rb
+irb
+cd ~/screenshots
+ls
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+mkdir test
+ls
+cp -d.png -dt.png almost.png almostt.png antiword.png antiwordt.png aurb.png aurbt.png aurbu.png aurbupdate.png aurbupdatet.png chromium.png chromium2.png chromium2t.png chromiumt.png code.png currentdesk.png currentdeskt.png emacs.png emacst.png envy.png gvim.png gvimt.png hijolts.png hijoltst.png jolts.png joltst.png kk.png linuxphp.png linuxphpt.png lulz.png lulzt.png naut.png nautt.png raggle.png ragglet.png railscasts.png redcar.png redcart.png ruftp.png ruftpt.png rvol.png sampleaurboutput.png sampleaurboutputt.png sindri_filenames.png sindri_selection.png spotify.png spotifyt.png spwnedinterm.png spwnedintermt.png subtle.png subtlet.png sup.png supt.png template.png test.png test2.png testt.png w3m.png w3mt.png wcminterm.png wcminterm.png.png wcmintermt.png whisper.png whispert.png wmii.png wmii2.png wmii2t.png wmiibinds.png wmiibindst.png wmiipidgin.png wmiipidgint.png wmiit.png test/
+rm -d.png
+thunar
+cp almost.png almostt.png antiword.png antiwordt.png aurb.png aurbt.png aurbu.png aurbupdate.png aurbupdatet.png chromium.png chromium2.png chromium2t.png chromiumt.png code.png currentdesk.png currentdeskt.png emacs.png emacst.png envy.png gvim.png gvimt.png hijolts.png hijoltst.png jolts.png joltst.png kk.png linuxphp.png linuxphpt.png lulz.png lulzt.png naut.png nautt.png raggle.png ragglet.png railscasts.png redcar.png redcart.png ruftp.png ruftpt.png rvol.png sampleaurboutput.png sampleaurboutputt.png sindri_filenames.png sindri_selection.png spotify.png spotifyt.png spwnedinterm.png spwnedintermt.png subtle.png subtlet.png sup.png supt.png template.png test.png test2.png testt.png w3m.png w3mt.png wcminterm.png wcminterm.png.png wcmintermt.png whisper.png whispert.png wmii.png wmii2.png wmii2t.png wmiibinds.png wmiibindst.png wmiipidgin.png wmiipidgint.png wmiit.png test/
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+v test.rb
+ruby test.rb
+v test.rb
+v test.rb
+ruby test.rb
+v test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+ls
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.
+v test.rb
+v test.
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+mv test.rb ~/tmp
+cd ~/tmp
+rm test.rb
+mv test.rb\~ test.rb
+mkdir beachptest
+mv test.rb beachptest
+cd beachptest
+ls
+mkdir photo
+mv 2008 2009 2010 photo
+ls
+v test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+ls
+..
+roll beachptest.tar.gz beachptest
+ruftp beachptest.tar.gz
+v test
+cd beachptest
+v test.rb
+ruby test.rb
+v test.rb
+cp ~/downloads/Sunset\ Beach.jpg ~/code/ruby/sinatra/beachp/public/photo/2009/
+cd ~/code/ruby/sinatra/beachp/public/photo
+ls
+cd 2009
+ls
+cp Sunset\ Beach.jpg ~/tmp/beachptest
+cd ~/tmp/beachptest
+ls
+ls photo/20
+mv Sunset\ Beach.jpg photo/2009
+ruby test.rb
+v test.rb
+mv photo/2009/Sunset\ Beach.jpg photo/2009/sunsetbeach.jpg
+ruby test.rb
+v test.rb
+ruby test.rb
+v test.rb
+v test.rb
+cd ~/code/ruby/sinatra/beachp/public/photo
+cd 2009
+ls
+rm Sunset\ Beach.jpg
+screen -t mail alpine
+cd ~/code/ruby/sinatra/ronin/public/img
+ls
+chmod -x feed.png
+cp feed.png ../../../beachp/public/img/
+cd ~/abs/fontconfig-ubuntu
+makepkg -fi
+../freetype2-ubuntu
+makepkg -fi
+remove freetype2
+sudo pacman -U freetype2-ubuntu-2.3.11-1-i686.pkg.tar.gz
+../fontconfig-ubuntu
+makepkg -fi
+../libxft-ubuntu
+makepkg -fi
+../cairo-ubuntu
+makepkg -fi
+exit
+htop
+htop
+exit
+cd code/ruby/sinatra/beachp
+ls
+..
+rm beachp.tar.gz
+roll beachp.tar.gz beachp
+ruftp beachp.tar.gz
+exit
+cd code/ruby/sinatra/beachp
+vim application.rb
+gs
+ga .
+gc Fix the broken edit and add feed icon
+ga public/img/feed.png
+ga -f public/img/feed.png
+gs
+gc Add the actual icon
+aurb -s ubuntu
+aurb -d fontconfig-ubuntu libxft-ubuntu cairo-ubuntu
+aurb -d 'fontconfig-ubuntu libxft-ubuntu cairo-ubuntu'
+aurb -s freetype
+aurb -d freetype2-ubuntu
+pacman -Q | grep cairo
+remove cairo libxft freetype2 fontconfig
+pacman -Q | grep libxft
+remove libxft-cleartype
+pacman -Q | grep cleartype
+remove cairo
+pacman -Q | grep fontconfig
+remove fontconfig-ubuntu fontconfig-lcd
+pacup
+screen -RR
+reboot
+killall X
+ping -c 3 www.google.com
+iwmlsit
+iwlist
+iwlist scanning
+iwlist wlan0 scan
+startx
+zetaf
+thunar
+v .gktrc.mine
+ls
+v .gtkrc.mine
+thunar
+pidgin
+exit
+v .irssi/config
+exit
+exit
+exit
+gvim .vimrc
+xfontsel
+exit
+v .wmii-hg/config.yaml
+exit
+scrshot msn
+exit
+v .Xdefaults
+xrdb .Xdefaults
+exit
+ls
+exit
+cd gitclones/sinatra
+git clone git://github.com/derobins/wmd.git
+ls
+cd wmd
+ls
+v readme.txt
+ls
+v wmd.js
+cd images
+ls
+..
+v wmd.css
+cp wmd.css ~/code/ruby/sinatra/beachp/public/css/
+cp showdown.js wmd.js ~/code/ruby/sinatra/beachp/public/js
+cp images/wmd-buttons.png ~/code/ruby/sinatra/beachp/public/img
+exit
+ls downloads
+exit
+scrshot wmiidev
+cd downloads
+mkdir wmd
+mv wmd-1.0.1.zip wmd
+cd wmd
+ex wmd-1.0.1.zip
+ls
+v readme.txt
+cd wmd
+ls
+cp wmd-base.js wmd-plus.js wmd.js ~/code/ruby/sinatra/beachp/public/js/
+cp showdown.js ~/code/ruby/sinatra/beachp/public/js/
+v readme.txt
+v ../readme.txt
+ls
+..
+ls
+v minimalExample.html
+firefox minimalExample.html
+v minimalExample.html
+v apiExample.html
+v optionsExample.html
+cd ~/code/ruby/sinatra/beachp
+ls
+cd public/js
+ls
+rm wmd-base.js wmd-plus.js wmd.js showdown.js
+ls
+../..
+gs
+ga .
+gc Added wmd
+gs
+ga .
+gc Fix some layout shit
+ls public/photo/2010/
+rm public/photo/2010/038.JPG
+rm public/photo/2010/viking-tux.png
+ls public/photo/2010/
+rm public/photo/2010/alizee1.jpg
+ls public/photo/2010/
+rm public/photo/2010/alizee1.jpg
+rm public/photo/2010/alizee1.jpg
+ls public/photo/2010/
+mirage public/photo/2008/aurbt.png
+rm public/photo/2008/aurbt.png
+ls public/photo/2010/
+ls public/photo/2008
+rm public/photo/2008/aurbt.png
+ls public/photo/2008
+src
+exit
+screen -RR
+v .vimperatorrc
+v .vimperator/colors/droog.vimp
+v .vimperatorrc
+v .vimperator/colors/droog.vimp
+exit
+recordmydesktop -h
+exit
+c
+aurb -s recordmydesktop
+pacs recordmydesktop
+install recordmydesktop
+recordmydesktop -h
+recordmydesktop -o tmp/beachp.ogv
+mountnet
+cp tmp/beachp.ogv ~/tmp/shares
+ls tmp/shares
+ll tmp/shares
+cd tmp/shares
+ll
+mplayer beachp.ogv
+mplayer beachp.ogv
+mplayer beachp.ogv
+ls
+cd ~/tmp
+ll
+mplayer beachptest
+mplayer beachp.ogv
+c
+exit
+rm tmp/beachp.ogv
+exit
+ls tmp
+recordmydesktop -h
+recordmydesktop --height 800 --width 1280 -v_quality 58 -s_quality -1 -o tmp/beachparty.ogv
+mplayer tmp/beachparty.ogv
+cp tmp/beachparty.ogv ~/tmp/shares
+rm tmp/beachparty.ogv
+exit
+scrshot beachppost
+scrshot beachpnews
+scrshot beachpedit
+scrshot beachpgallery
+scrshot beachpphoto
+exit
+ls .themes
+thunar
+exit
+v .gtkrc.mine
+v .gtkrc-2.0
+exit
+wifi-select
+sudo wifi-select
+sudo wifi-select wlan0
+exit
+chromium-browser
+chromium-browser
+exit
+screen -RR
+cd code/ruby/sinatra/beachp
+v application.rb
+exit
+cd code/ruby/sinatra/beachp
+v views/layout.erb
+exit
+cd code/ruby/sinatra/beachp
+v TODO
+ga .
+gc Changed layout a bit
+gs
+ga .
+gs
+gc Fixed file upload
+gl -p
+..
+rm beachp.tar.gz
+roll beachp.tar.gz beachp
+ruftp beachp.tar.gz
+cd beachp
+ga .
+gc Fix widtsh
+gs
+ls
+echo $RACK_ENV
+v ~/.zshenv
+src
+echo $RACK_ENV
+irb
+gs
+ga environment.rb
+gc Set environments
+ls
+ga .
+gc In an uglier manner
+git log -p
+git reset --hard
+gs
+ga environment.rb
+gc Or maybe not..
+v .gitignore
+gs
+ga .
+gc Added Logger
+gl -p
+c
+..
+rm beachp.tar.gz
+roll beachp.tar.gz beachp
+ruftp beachp.tar.gz
+gs
+cd beachp
+gs
+gs
+rackup config.ru
+rackup config.ru
+gs
+ga .
+gc Moved upload code into model
+v beachp.log
+mkdir log
+gs
+ga .
+gc Remove log line
+ls
+rm beachp.log
+gs
+rackup -h
+gs
+ga .
+gc Some style tweaks
+git checkout master
+git remote add origin git@gitorious.org:beachp/beachp.git
+git remote rm origin
+git remote add gitorious git@gitorious.org:beachp/beachp.git
+git push gitorious master
+v /home/gig/.ssh/known_hosts
+git push gitorious master
+ruby script/console
+c
+gs
+ga lib/photo.rb
+gc Remove useless method
+gpg master
+ls
+v TODO
+v Rakefile
+v Rakefile
+rake
+rake --hepl
+rake --help
+c
+exit
+cd code/ruby/projects/be
+cd code/ruby/sinatra/beachp
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+git revert 31360679f414221ec5c3187a87ced9622e3536c2
+git revert 31360679f414221ec5c3187a87ced9622e3536c2
+git revert 31360679f414221ec5c3187a87ced9622e3536c2
+git revert -f 31360679f414221ec5c3187a87ced9622e3536c2
+git revert 31360679f414221ec5c3187a87ced9622e3536c2
+git revert 31360679f414221ec5c3187a87ced9622e3536c2
+rackup config.ru
+shotgun config.ru
+v ~/.zsh/alias
+src
+shotgun
+v ~/.zsh/alias
+shotgun
+shotgun --port=9292
+shotgun --port=9292 --server=thin
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup -h
+rackup --server thin config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+exit
+cd code/ruby/sinatra/beachp
+v lib/photo.rb
+exit
+v .xinitrc
+exit
+v .gtkrc-2.0
+exit
+fusion-icon
+v .gtkrc.mine
+exit
+gconftool-2 --type bool --set /apps/metacity/general/compositing_manager false
+exit
+ls
+cd downloads
+ls
+ll
+mkdir mac4lin
+mv Mac4Lin_Install_v1.0.zip mac4lin
+cd mac4lin
+ex Mac4Lin_Install_v1.0.zip
+ls
+v Mac4Lin_Install_v1.0.sh
+./Mac4Lin_Install_v1.0.sh
+exit
+v .gtkrc-2.0
+exit
+killall firefox
+exit
+cd .gnome2
+ls
+v panel-fontrc
+v ~/.themes/Mac4Lin_GTK_Aqua_v1.0/index.theme
+v ~/.themes/Mac4Lin_GTK_Aqua_v1.0/gtk-2.0/gtkrc
+exit
+v .xinitrc
+exit
+ls .themes
+thunar
+thunar
+exit
+cd downloads/mac4lin
+ls
+cd Mac4Lin_Install_v1.0
+./Mac4Lin_Uninstall_v1.0.sh
+exit
+thunar
+v .gtkrc-2.0
+exit
+thunar
+exit
+ls
+v .gtkrc-2.0
+exit
+ls
+exit
+sakura
+xrdb .Xdefaults
+exit
+v .Xdefaults
+exit
+ls
+exit
+cd code/ruby/sinatra/beachp
+v application.rb
+exit
+cd code/ruby/sinatra/beachp
+c
+rake test
+scrshot
+exit
+cd code/ruby/sinatra/beachp
+v lib/photo.rb
+exit
+cd code/ruby/sinatra/beachp
+v public/css/main.css
+exit
+thunar
+v .gtkrc.mine
+v .gtkrc-2.0
+screen -RR
+cd tmp/shares/\!Videos/Anime/Bleach
+ls
+cd DB_Bleach_1-225
+ls
+mplayer \[DB\]_Bleach_231_\[5FF9DB67\].avi
+exit
+v .wmii-hg/config.yaml
+exit
+v .wmii-hg/config.yaml
+exit
+v .vimrc
+gvim bin/aurb
+gvim bin/aurb
+v .vimrc
+c
+v .gvimrc
+c
+scrshot monaco
+c
+scrshot gvimlight
+gvim bin/aurb
+exit
+cd code/ruby/sinatra/beachp
+v public/css/main.css
+gvim public/css/main.css
+exit
+cd code/ruby/sinatra/beachp
+v lib/photo.rb
+gvim lib/photo.rb
+exit
+cd code/ruby/sinatra/beachp
+v application.rb
+gvim application.rb
+exit
+cd abs/html2ps
+makepkg -fi
+exit
+gvim tmp/magicktest.rb
+cd tmp
+ruby magicktest.rb layla.png
+ruby magicktest.rb tmp.lua
+ruby magicktest.rb awesome.tar.gz
+ruby magicktest.rb layla.png
+ruby magicktest.rb layla.png
+irb
+ruby magicktest.rb layla.png
+ruby magicktest.rb layla.png
+ruby magicktest.rb Mormel.jpg
+ruby magicktest.rb cookmats.txt
+ruby magicktest.rb tmp.lua
+ruby magicktest.rb jstest.html
+install html2ps
+aurb -s html2ps
+aurb -d html2ps
+ruby magicktest.rb jstest.html
+ruby magicktest.rb fortest.rb
+ruby magicktest.rb jstest.html
+ruby magicktest.rb fortest.rb
+ruby magicktest.rb jstest.html
+ruby magicktest.rb tmp.lua
+ruby magicktest.rb awesome.tar.gz
+ruby magicktest.rb 198343.php
+ruby magicktest.rb vimrubycolors.vim
+locate *.gif
+locate .gif
+ruby magicktest.rb ~/abs/xulrunner-1.8/src/xulrunner-1.8.1.14/extensions/cview/resources/skin/images/method.gif
+\:q
+ruby magicktest.rb 198343.php
+ruby magicktest.rb jstest.html
+ruby magicktest.rb jstest.html
+ruby magicktest.rb jstest.html
+ruby magicktest.rb jstest.html
+ruby magicktest.rb 198343.php
+ruby magicktest.rb 198343.php
+ruby magicktest.rb jstest.html
+ruby magicktest.rb jstest.html
+ruby magicktest.rb 198343.php
+ruby magicktest.rb jstest.html
+ruby magicktest.rb vimrubycolors.vim
+ruby magicktest.rb layla.png
+ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
+irb
+ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
+ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
+c
+ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
+ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
+ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
+ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
+ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
+ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
+ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
+ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
+ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
+ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
+ruby magicktest.rb /tmp/RackMultipart20091201-22909-19qyjm6-0
+exit
+cat code/ruby/sinatra/beachp/log/beachp.log
+tail -f code/ruby/sinatra/beachp/log/beachp.log
+exit
+v tmp/classtest.rb
+exit
+gnome-appearance-properties
+exit
+cd code/ruby/sinatra/beachp
+c
+rake test
+scrshot
+ls log
+cat log/beachp.log
+sudo gem install heroku
+gs
+ga .
+gc I has fixed content type checking
+gpg master
+tail -f log/beachp.log
+gs
+ga .
+gc Added \[\] method to Photo instances, and use it
+gpg master
+exit
+c
+chromium-browser
+chromium-browser
+exit
+screen -RR
+exit
+cd code/ruby/sinatra/beachp
+v public/css/main.css
+gvim views/layout.erb
+gvim ~/.vimrc
+gvim views/layout.erb
+gvim public/css/main.css
+exit
+cd code/ruby/sinatra/beachp
+v lib/photo.rb
+gvim -p lib/photo.rb lib/post.rb
+exit
+cd code/ruby/projects/be
+cd code/ruby/sinatra/beachp
+gvim -p application.rb environment.rb
+gvim -p public/css/main.css views/layout.erb
+gvim -p lib/photo.rb lib/post.rb
+c
+c
+v application.rb
+gvim -p application.rb environment.rb
+exit
+cd code/ruby/projects/aurb
+./aurb -h
+./aurb -s beach
+./aurb -u
+pacup
+v bin/aurb
+v bin/aurb
+exi
+exi
+exit
+cd code/ruby/projects/aurb
+./aurb
+./aurb -h
+./aurb -s awesome
+./aurb -s awesome
+./aurb -s awesome
+./aurb -s awesome
+ruby setup.rb install
+aurb -h
+aurb -v
+gs
+ga .
+gc Changed startup structure
+gl -p
+./aurb -h
+./aurb -s awesome
+gs
+ruby setup.rb install
+gs
+ga .
+gc Forgot to remove those
+gpo master
+exit
+v .vimrc
+c
+cdf
+df
+exit
+cd abs/virtualbox_bin
+makepkg -fi
+exit
+chromium-browser
+exit
+v code/ruby/sinatra/beachp/application.rb
+gvim code/ruby/sinatra/beachp/application.rb
+exit
+sudo cpufreq-set -g powersave
+sudo cpufreq-set -c 1 -g powersave
+cpufreq-info
+sudo cpufreq-set -g ondemand
+sudo cpufreq-set -c 1 -g ondemand
+exit
+cd code/ruby/examples
+ls
+v choice.rb
+rm choice.rb
+v attr_example.rb
+v class_instance_methods.rb
+v forloop.rb
+v gistit.rb
+v mandelbrot.rb
+v predefined
+v predefinedconstants.rb
+v predefinedvariables.rb
+v testclass.rb
+v tinywm.rb
+v wx.rb
+v xmessageit.rb
+ls
+..
+ls
+roll examples.tar.gz examples
+rm logfile.log
+v logger.rb
+rm blog.db
+ls
+v widgets.rb
+cd ruby19
+ls
+v lambdatest.rb
+..
+ls
+mv examples.tar.gz ruby-examples.tar.gz
+ruftp ruby-examples.tar.gz
+exit
+sensors
+wmii -r ~/.wmii-hg/wmiirc
+exit
+thunar
+pacs selector
+aurb -s theme-selector
+aurb -s selector
+pacs gtk-theme
+install gtk-theme-switch2
+gtk-theme-switch2
+sudo updatedb
+exit
+v .gtkrc-2.0
+exit
+cd code/ruby/rails
+ls
+rm -rf blog/
+rails blog
+sudo gem install rails
+rails blog
+cd blog
+ruby script/generate scaffold Post title:string body:text
+sudo gem update --system
+ruby script/generate scaffold Post title:string body:text
+rake db:migrate
+ruby script/server
+v app/models/post.rb
+ruby script/server
+cdc
+screen -RR
+v .xinitrc
+sonata
+exit
+screen -RR
+gtk-chtheme
+v .wmii-hg/config.yaml
+exit
+exit
+vexit
+exit
+exit
+exit
+install gtk-chtheme
+gtk-chtheme
+v .gtkrc-2.0
+exit
+sonata
+thunar
+exit
+sonata
+gtk-chtheme
+exit
+exit
+v .xinitrc
+exit
+cd /usr/share/pixmaps/pidgin
+ls
+install pidgin
+ls
+ll
+exit
+cd ~/Mac4Lin_v1.0
+ls
+ls
+cd Backup
+ls
+ex pidgin_backup.tar.gz
+ls
+exit
+cd downloads/mac4lin
+v Mac4Lin_Install_v1.0/Mac4Lin_Install_v1.0.sh
+exit
+rm -rf Mac4Lin_v1.0
+exit
+v .vimperatorrc
+exit
+empathy
+pacs empathy
+empathy -h
+aurb -s empathy
+empathy
+empathy
+empathy --help
+empathy --help-all
+ls
+exit
+cd code/ruby/sinatra/beachp
+ls
+v lib/photo.rb
+gs
+ga .
+gc Oiiii
+gpg master
+exit
+cd code/ruby/projects/aurb
+ls
+v bin/aurb
+gvim bin/aurb
+..
+ls
+cd rbmpd
+ls
+rake spec
+rake test
+v spec/spec_mpd.rb
+rbmpd
+ls
+v client.rb
+ruby client.rb
+v lib/rbmpd/mpd.rb
+ruby client.rb
+v lib/rbmpd/mpd.rb
+ruby client.rb
+v lib/rbmpd/mpd.rb
+ls
+gs
+gs
+ga .
+gc Brokennn
+c
+..
+ls
+cd rawr
+ls
+v rawr.rb
+ruby rawr.rb
+ls
+sudo gem install isaac
+v rawr.rb
+ruby rawr.rb
+v rawr.rb
+ruby rawr.rb
+exit
+cd code/ruby/projects/ra
+cd code/ruby/projects/rawr
+v rawr.rb
+gvim rawr.rb
+exit
+exit
+cd code/ruby/rails/blog
+script/generate scaffold Post name:string title:string content:text
+rake db:migrate
+cdc
+exit
+cd code/ruby/rails/blog
+ruby script/server
+exit
+cd downloads
+mkdir multifileupload
+mv multiFlashRailsFileUpload.zip multifileupload
+cd multifileupload
+ex multiFlashRailsFileUpload.zip
+ls
+cd upload
+ls
+exit
+cd code/html/gigamo.be
+v index.html
+firefox index.html
+ruftp css/layout.css
+v css/layout.css
+ruftp css/layout.css
+v index.html
+ruftp index.html
+exit
+v tmp/htmlcolors
+exit
+sonata
+c
+pacs empathy
+install empathy
+install telepathy-butterfly telepathy-idle telepathy-gabble
+install telepathy-gaze
+install telepathy-haze
+pacup
+aurb -h
+aurb -s sonata
+pacs sonata
+notify-send 'test'
+c
+c
+ll
+ll
+ls .mjolnir
+v .mjolnir/config.yml
+t ls
+v .zshenv
+cp .zhenv .zprofile
+cp .zshenv .zprofile
+gvim .zshenv
+c
+gvim bin/gist
+gvim bin/rubytorrent
+c
+cd code/ruby/rails
+ls
+rm -rf blog
+rails blog
+cd blog
+rake db:create
+v Rakefile
+$ script/generate controller home index
+script/generate controller home index
+v app/views/home/index.html.erb
+rm public/index.html
+gvim config/routes.rb
+cdc
+c
+v code/ruby/projects/rawr/rawr.rb
+v code/ruby/projects/rawr/rawr.rb
+c
+c
+ls
+v .gemrc
+v .irbrc
+irb
+v .irbrc
+irb
+c
+irb
+c
+ls
+v .gvimrc
+v .viminfo
+v .viminfo
+rush
+sudo gem install rush
+c
+gem search --remote httpauth
+c
+pacup
+cd downloads
+cd Ensiferum
+ls
+..
+mv Ensiferum ~/music/
+mpd --update-db
+mpc update
+c
+ls
+cdc
+aurb -u
+htop
+htop
+c
+exit
+ls
+v .zshenv
+sudo gem install wirble
+c
+exit
+cd code/ruby/projects/rawr
+c
+ruby rawr.rb
+ruby rawr.rb
+ruby rawr.rb
+ruby rawr.rb
+ruby rawr.rb
+ruby rawr.rb
+exit
+cd code/ruby/sinatra/beachp
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+rackup config.ru
+c
+exit
+rm .rtorrent_session
+rm -rf .rtorrent_session
+screen -t torrent rtorrent
+rtorrent
+mkdir .rtorrent_session
+rtorrent
+screen -t torrent rtorrent
+pacup
+sudo cpufreq-set -g powersave
+sudo cpufreq-set -c 1 -g powersave
+cpufreq-info
+sudo cpufreq-set -c 1 -g ondemand
+sudo cpufreq-set -g ondemand
+sudo cpufreq-set -c 1 -g powersave
+sudo cpufreq-set -c 1 -g ondemand
+sudo cpufreq-set -c 1 -g powersave
+sudo cpufreq-set -g powersave
+sudo cpufreq-set -c 1 -g ondemand
+sudo cpufreq-set -g ondemand
+v tmp/htmlcolors
+sudo gem install shotgun
+pacup
+aurb -u
+aurb -d wifi-select
+aurb -s wifi-select
+pacs wifi-select
+install wifi-select
+install gnome
+install compiz-fusion
+screen -t zsh
+screen -t mail alpine
+sudo cpufreq-set -g powersave
+sudo cpufreq-set -c 1 -g powersave
+sudo cpufreq-set -g ondemand
+sudo cpufreq-set -c 1 -g ondemand
+cpufreq-info
+pacup
+screen -t music cmus
+mplayer tmp/shares/\!Videos/Anime/The\ Melancholy\ of\ Haruhi\ Suzumiya/Melancholy\ of\ Haruhi\ Suzumiya/\[a.f.k.\]\ The\ Melancholy\ of\ Haruhi\ Suzumiya\ -\ 06.avi
+install sonata
+v .vimrc
+c
+mplayer downloads/rails_blog_2.mov
+screen -t zsh zsh
+c
+exit
+screen -RR
+exit
+v .irssi/config
+exit
+killall X
+killall X
+pacup
+zetaf
+startx
+startx
+startx
+startx
+startx
+startx
+startx
+startx
+startx
+startx
+startx
+ls
+bastet
+v .wmii-hg/config.yaml
+man ifconfig
+ifconfig wlan0 down
+sudo ifconfig wlan0 down
+sudo ifconfig wlan0 up
+v .zprofile
+traceroute --help
+traceroute -g
+traceroute --help
+v .wmii-hg/wmiirc
+v .wmii-hg/config.yaml
+exit
+cd code/ruby/rails/blog
+ls
+v config/database.yml
+c
+../../projects/aurb
+ls
+gvim bin/aurb
+cd ~/downloads/South.Park.S13E07.HDTV.XviD-aAF
+ls
+ex aaf-sp.s13e07.rar
+mplayer aaf-sp.s13e07.avi
+sudo netcfg wired
+sudo /etc/rc.d/net-profiles restart
+ping -c 3 www.gigamo.be
+c
+ls
+exit
+cd code/ruby/sinatra/beachp
+v lib/photo.rb
+c
+sonata
+exit
+sudo netcfg2 wireless-giant
+sudo netcfg2 wireless-giant
+ls
+v .irbrc
+ri puts
+sudo ri puts
+ifconfig wlan0
+sudo netcfg2 wireless-giant
+sudo netcfg2 wireless-giant
+cd code/ruby/rails/bitswiki
+ls
+ruby script/server
+..
+ls
+cd blog
+ls
+..
+rm -rf blog
+rails blog
+cd blog
+ruby script/server
+c
+c
+ifconfig
+c
+ls
+ls
+c
+ls
+ruby script/server
+install wicd
+pacs wicd
+aurb -s wicd
+install python-wpactrl python-iwscan python-notify
+calculeer "160/3"
+ls
+v Rakefile
+c
+c
+ls
+c
+exit
+svim /etc/pacman.conf
+svim /etc/pacman.d/mirrorlist
+c
+ls
+v .irbc
+irb
+exit
+cd downloads/South.Park.S13E07.HDTV.XviD-aAF
+mplayer aaf-sp.s13e07.avi
+exit
+cd tmp
+mkdir giantshares
+exit
+sudo mount -t cifs //192.168.1.11/\!GEDEELD /home/gig/tmp/giantshares -o iocharset=utf8,file_mode=0777,dir_mode=0777
+c
+exit
+cd code/ruby/sinatra/beachp
+git revert f633b7ea5cc4405fece98c7b003834148cb5583c
+gpg master
+ls
+gs
+git rm test readme
+ls
+gs
+ga .
+gc WEG ERMEEEEEE
+gpg master
+gpg master
+git tag 0.0.1
+gs
+git log -p
+gpg master
+ls
+ls
+v config.ru
+v environment.rb
+c
+cat log/beachp.log
+pacs umbrello
+ls
+v ~/.zsh/alias
+v ~/.zsh/alias
+cd ../../rails/blog
+ls
+nautilus
+v .zsh/ali
+v ~/.zsh/alias
+exit
+ls
+install wicd
+c
+ls
+ls
+cd code/ruby/examples
+ls
+..
+ls
+sudo iwlist wlan0 scan
+sudo iwlist wlan0 scan
+sudo iwlist --help
+sudo iwlist wlan0 scan
+iwconfig
+svim /etc/network.d/wireless-gi
+svim /etc/network.d/wireless-giant
+c
+ls
+rm ruby-examples.tar.gz
+ls
+v widgets.rb
+v sinatra/beachp/application.rb
+cd sinatra/beachp
+gvim application.rb
+exit
+cd code/ruby/sinatra/beachp
+rackup config.ru
+exit
+irb
+cd code/ruby/sinatra/beachp
+gs
+gpg master
+ls
+gs
+cd public
+ls
+cd img
+ls
+ga wmd-buttons.png
+ga -f wmd-buttons.png feed.png buttonbg.png
+gs
+gc Added wmd-buttons
+gpg master
+gem search --remote rmagick
+which Magick-config
+../..
+git pull
+git pull origin master
+git pull gitorious master
+v ~/.zsh/function
+c
+git pull origin master
+git pull gitorious master
+ls
+git revert HEAD
+git log -p
+c
+exit
+zetaf
+ls
+vim .vimrc
+c
+ls
+ping -c www.google.com
+ping -c 3 www.google.com
+sudo netcfg wireless-giant
+wicd-curses
+startx
+exit
+irb
+exit
+cd pub
+cd code/ruby/sinatra/beachp/public
+ls
+mkdir stylesheets
+mv css/main.css css/reset.css css/wmd.css stylesheets
+rm -rf css/
+cd stylesheets
+ls
+mv main.css main.sass
+mv wmd.css wmd.sass
+ls
+css2sass main.sass
+ls
+css2sass reset.css
+ls
+v main.sass
+mv main.sass main.css
+mv wmd.sass wmd.css
+css2sass main.css main.sass
+css2sass reset.css reset.sass
+css2sass wmd.css wmd.sass
+rm main.css wmd.css reset.css
+rm reset.sass
+ls
+ls
+..
+..
+v views/layout.erb
+ls
+cd public
+ls
+cd stylesheets
+mv main.sass wmd.sass ../../views
+ls
+..
+rm -rf stylesheets
+ls
+rm -rf photo
+ls
+..
+ls
+cd views
+ls
+mkdir stylesheets
+mv wmd.sass main.sass stylesheets
+exit
+cd .vim
+mkdir backup
+mkdir swap
+exit
+v .vimrc
+c
+exit
+useradd -G hal gig
+exit
+thunar
+sudo thunar
+exit
+sudo thunar
+install thunar-volman
+pacup
+gimp code/ruby/sinatra/beachp/public/img/bg.jpg
+exit
+cd code/ruby/sinatra/beachp
+ls
+rm views/sidebar.erb
+exit
+cd code/ruby/rails/blog/
+cd db
+ls
+..
+ls
+script/generate scaffold Post title:string body:text
+v db/migrate/20091204184923_create_posts.rb
+..
+ls
+cd blog
+rake db:migrate
+cd blog
+ls
+cd db
+ls
+v schema.rb
+ls
+v development.sqlite3
+ls
+v seeds.rb
+..
+v Rakefile
+v db/migrate/20091204184923_create_posts.rb
+exit
+cd code/ruby/rails/blog
+v config/database.yml
+v app/controllers/posts_controller.rb
+pacs sqlite
+install sqlitebrowser
+sqlitebrowser
+exit
+cd code/ruby/sinatra/beachp
+ls
+mv development.db .
+mv development.db ..
+ls
+mkdir db
+cd db
+mkdir migrate
+cd migrate
+ls
+20091204_create_posts.rb
+v 20091204_create_posts.rb
+..
+ls
+v schema.rb
+ls
+..
+v Rakefile
+ls
+rm -rf spec/
+git rm -rf spec/
+ls
+gs
+rake db:migrate
+sudo gem install sinatra-activerecord
+v Rakefile
+rake db:migrate
+v Rakefile
+rake db:migrate
+rake db:migrate
+rake db:migrate
+rake db:create_migration NAME=create_posts
+cd db
+ls
+rm schema.rb
+cd migrate
+ls
+rm 20091204185824_create_posts.rb
+rm 20091204_create_posts.rb
+..
+..
+rake db:create_migration NAME=create_posts
+cd db
+ls
+cd migrate
+ls
+v 20091204185854_create_posts.rb
+..
+..
+ls
+rake db:migrate
+ls
+rake db:migrate
+v config/database.yml
+ls
+rake db:migrate
+ls db
+ls
+rm development.db
+ls db
+ls
+rake db:migrate
+ls
+ls
+rake db:migrate
+rake db:migrate
+cat db/sch
+v db/migrate/20091204185854_create_posts.rb
+v db/migrate/20091204185854_create_posts.rb
+v db/migrate/20091204185854_create_posts.rb
+v db/migrate/20091204185854_create_posts.rb
+ls
+rm development.db
+mv ../development.db .
+exit
+togit .vimrc
+cd github/dotfiles
+gpo master
+exit
+scshot beachp2
+scrshot beachp2
+exit
+mountnet
+exit
+cp -r music/Ensiferum tmp/shares/Music
+exit
+v .vimrc
+exit
+v .vimrc
+exit
+killall firefox
+exit
+t add pagezones maken met sinatra en activerecord
+t add beachp omzetten naar activerecord en misschien mysql
+cdc
+t ls
+v .todo/todo.txt
+t ls
+t help
+t ls
+cd code/ruby/sinatra/beachp
+ls
+git pull origin master
+git pull gitorious master
+gl -p
+c
+v views/index.erb
+v views/index.erb
+v views/news.erb
+gvim views/stylesheets/main.sass
+c
+scrshot gvim
+gs
+ga views/stylesheets/main.sass
+gc Don\'t make it *too* big
+gc "Don\'t make it *too* big"
+gpg next
+gs
+ga views/stylesheets/ma
+ga views/stylesheets/main.sass
+gc Increase overall font size a bit
+gpg next
+ruftp ~/tmp/shares/beachp3.png
+gs
+ga .
+gc Layout changes ;o
+gpg next
+exit
+cd code/ruby/sinatra/beachp
+ls
+v application.rb
+gs
+ga .
+gc Added countdown
+gpg master
+v lib/post.rb
+gs
+ga lib/post.rb
+gc Specify table
+gpg master
+git branch next
+git checkout next
+gs
+ls
+mkdir config
+mv config.ru config/rackup.ru
+v config/rackup.ru
+ls
+mv application.rb beachp.rb
+v environment.rb
+ls
+git rm environment.rb
+ls
+gs
+v Rakefile
+ls
+cd vendor
+ls
+..
+ls
+rm test.db
+ls
+gs
+v beachp.rb
+cd views
+ls
+rm album.erb gallery.erb organisation.erb photo.erb upload.erb
+y
+c
+ls
+..
+ls
+mv header.erb menu.erb views
+ls
+cd views
+ls
+v sidebar.erb
+v be
+..
+v beachp.rb
+cd views/stylesheets
+ls
+cp main.sass main.old
+v main.old
+mv main.old main.old.css
+v main.old.css
+mv main.old.css main.old.sass
+v main.old.sass
+../..
+v beachp.rb
+ls
+git rm TODO
+v beachp.rb
+ls
+v Rakefile
+git rm Rakefile
+git rm -f Rakefile
+ls
+cd views
+ls
+..
+ls
+v config/database.yml
+rm config/database.yml
+ls
+gs
+rm -rf db/
+ls
+gs
+git commit -ma "Initial 'next' commit"
+git add .
+gs
+gc "Initial 'next' commit"
+gpg next
+ls
+gs
+git rm -rf application.rb config.ru public/css/main.css public/css/reset.css public/css/wmd.css public/css public/photo views/album.erb views/gallery.erb views/organisation.erb views/photo.erb views/upload.erb
+gs
+ga .
+gc And I forgot a bunch of stuff
+gpg next
+gvim beachp.rb
+git rm views/stylesheets/main.old.sass
+gc Argh
+gpg netx
+gpg next
+gs
+ga beachp.rb views/stylesheets/main.sass
+gc Added some log messages and fixed meta css class
+gpg next
+v TOD
+v README
+ga README
+gc Fixed up README
+gpg next
+ls
+git diff --help
+gs
+ga .
+gc Some style tweaks
+gpg next
+gs
+ga views/index.erb
+gc Strikethrough countdown
+gpg next
+gs
+ga views/layout.erb
+gc Add gitorious link
+gpg next
+gs
+ga views/layout.erb
+gc Baffles me
+gpg next
+tail -f log/beachp.log
+exit
+cd code/ruby/sinatra/beachp
+v log/beachp.log
+exit
+irb
+exit
+cd code/ruby/sinatra/beachp
+gvim lib/photo.rb
+exit
+v .vimrc
+v test.rb
+exit
+eightball test
+eightball test
+eightball test
+eightball test
+rm bin/eightball y
+exit
+v bin/eightball
+v bin/eightball
+v bin/eightball
+chmod +x bin/eightball
+eightball
+v bin/eightball
+eightball should I kill all jews
+v bin/eightball
+eightball should I kill all jews
+eightball should I kill all jews
+v bin/eightball
+eightball should I kill all jews
+eightball should jolts get pro at ruby
+v bin/eightball
+eightball should jolts get pro at ruby
+v bin/eightball
+eightball should jolts get pro at ruby
+v bin/eightball
+eightball should jolts get pro at ruby
+v bin/eightball
+ls bin
+exit
+exit
+uzbl-browser
+htop
+ls
+uzbl --help
+uzbl-core
+exit
+VirtualBox
+ls .VirtualBox/Machines/Windows\ 7
+cd .VirtualBox/Machines/Windows\ 7
+ls
+cd Snapshots
+ls
+rm \{4badc5b5-c717-4112-86f2-1f9dde1f1a92\}.vdi \{94dd34cb-d730-4b07-a98d-0247bb81a2ca\}.sav
+VirtualBox
+ls
+..
+ls
+rm Snapshots
+rm -r Snapshots
+VirtualBox
+ls
+..
+ls
+..
+ls
+cd HardDisks
+ls
+cd Mac
+cd ../Machines
+ls
+rm -rf Hackintosh
+VirtualBox
+ls
+rm -rf Windows\ 7
+ls
+..
+ls
+cd HardDisks
+ls
+rm Win7.vdi
+ls
+aurb -s vmware
+exit
+cd code/ruby/sinatra/beachp
+gvim views/stylesheets/main.sass
+gs
+c
+gs
+ga .
+gc Added current menu highlighting
+gpg next
+ls
+gs
+gs
+ga beachp.rb
+gc Added some PH
+gpg next
+v ~/.gvimrc
+gs
+exit
+cd code/ruby/sinatra
+ls
+mkdir gigamo.be
+cd gigamo.be
+git init
+ls
+v config.ru
+exit
+cd code/ruby/sinatra/gigamo.be
+ls
+..
+mv gigamo.be/ gigamo
+cd gig
+cd code/ruby/sinatra/gigamo
+ls
+cp ../beachp/public/img/buttonbg.png .
+ls
+mv buttonbg.png public
+cd public
+ls
+mkdir img
+mv buttonbg.png img
+gs
+gs
+ga .
+gc Finalize layout for now
+gp heroku master
+gs
+ga .
+gc Finalize layout for now, again
+gs
+..
+ga .
+gc Finalize layout for now, again
+gs
+gp heroku master
+ga views/edit.haml
+gc Fix edit view
+gp heroku master
+gc Fix edit view
+ga views/edit.haml
+gc Fix edit view, now maybe
+gp heroku master
+gs
+ga views/post.haml
+gc Fix post
+gp heroku master
+ls
+rm -r vendor/
+gs
+ls
+ls
+..
+cp -r gigamo ~/tmp/gigamoblog
+cd ~/tmp/gigamoblog
+ls
+v application.rb
+ls
+rm .gems
+rm development.db
+ls
+rm -rf .git
+ls
+rm .gitignore
+ls
+..
+roll blog.tar.gz gigamoblog
+ruftp blog.tar.gz
+cd gigamoblog
+ls
+v application.rb
+c
+cd ~/code/ruby/sinatra/gigamo
+v .gems
+v views/about.haml
+v views/layout.haml
+v views/index.haml
+v lib/post.rb
+gem search sqlite3
+c
+ls
+rm views/footer.haml
+rm views/header.haml
+rm views/about.haml
+gs
+git rm views/about.haml views/footer.haml views/header.haml
+ga .
+gc Change layout
+git push heroku master
+cd ~/gitclones/sinatra/scanty
+ls
+v lib/post.rb
+ls
+v views/index.erb
+qls
+ls
+v views/index.erb
+cd ~/code/ruby/sinatra/gigamo
+gs
+ga .
+gc Added disqus
+gp heroku master
+ga .
+gc Fix nesting
+gp heroku master
+gs
+ga .
+gc Remove disqus
+gp heroku master
+ga .
+gc Add home links to error pages
+gp heroku master
+exit
+cd code/ruby/sinatra/gigamo.be/i
+cd code/ruby/sinatra/gigamo.be/
+ls
+mkdir lib
+mkdir vendor
+mkdir views
+ls ../beachp
+mkdir public
+v .gitignore
+ls
+ls
+cd views
+v index.haml
+ls
+mkdir stylesheets
+v index.haml
+v layout.haml
+ls
+v stylesheets/main.sass
+ls
+..
+ls
+cd public
+ls
+mkdir js
+cp ../../beachp/public/js/jquery.min.js .
+ls
+mv jquery.min.js js/jquery.js
+gs
+ga .
+gs
+..
+ga .
+gs
+gc Initial commit
+heroku create
+git push heroku master
+v config.ru
+gs
+ga config.ru
+gc Fixed
+git push heroku master
+heroku rename gigamo
+heroku rename newname http://gigamo.heroku.com | git@heroku.com:gigamo.git
+heroku rename gigamo --app gentle-earth-18
+git remote rm heroku
+git remote add heroku git@heroku.com:gigamo.git
+gs
+ga config.ru
+gc Maybe for real now
+git push heroku master
+ruby config.ru
+ruby config.ru
+ruby -rubygems config.ru
+ruby -rubygems config.ru
+ruby -rubygems config.ru
+gs
+ga application.rb
+gc Maybe now..
+git push heroku master
+rackup config.ru
+rackup config.ru --port=9393
+v views/layout.haml
+v views/404.haml
+v views/500.haml
+gs
+ga .
+gc Sigh
+git push heroku master
+ls
+v .gems
+ls
+v .gitignore
+ls
+ga .
+gc Added .gems file
+git push heroku master
+ls
+ls views/stylesheets
+gs
+ga application.rb
+gc Fixed stylesheets
+gp heroku master
+gs
+ga .
+gc Added Auth
+gp heroku master
+ga application.rb
+gc And fix error.....
+gp heroku master
+gs
+ga .
+rackup config.ru --port=9393
+ls
+gs
+gc Added some
+gp heroku master
+rackup config.ru --port=9393
+gs
+ga lib/post.rb views/index.haml
+gc Change index listing
+gp heroku master
+ls
+ga development.db
+gc Added DB
+gp heroku master
+rackup config.ru --port=9393
+gs
+ga .
+gc Maybe db works now
+gp heroku master
+rackup config.ru --port=9393
+rackup config.ru --port=9393
+ls
+gs
+ga .
+gc Added most functionality
+gp heroku master
+gs
+ga views/header.haml
+gc Fix header link
+gp heroku master
+rm views/footer.haml
+gs
+git rm views/footer.haml
+gs
+gc Remove footer
+rackup config.ru --port=9393
+gs
+ga views/layout.haml views/stylesheets/main.sass
+gc First layout
+gp heroku master
+rackup config.ru --port=9393
+rackup config.ru --port=9393
+rackup config.ru --port=9393
+exit
+cd code/ruby/sinatra/gigamo
+gvim application.rb
+exit
+v code/ruby/sinatra/beachp/views/stylesheets/main.sass
+cd code/ruby/sinatra/beachp
+gs
+ga .
+gc Change font
+gpg next
+exit
+cp -r .vim/ ~/tmp
+exit
+cd gitclones
+mkdir rtomayko
+cd rtomayko
+git clone git://github.com/rtomayko/dotfiles.git
+cd dotfiles
+ls
+cp -rf .vim/ ~/
+vim
+v test.rb
+v test.rb
+v test.haml
+v .vimrc
+v ~/.vim/colors/vividchalk.vim
+cp ~/tmp/.vim/colors/vividchalk.vim ~/.vim/colors
+v .vimrc
+gvim .vimrc
+exit
+cd code/ruby/sinatra/gigamo
+sqlitebrowser
+ls
+mkdir db
+cd db
+ls
+touch database.yml
+v 001_posts_tags.rb
+ls
+rm database.yml
+ls
+v 001_posts_tags.rb
+v 001_posts_tags.rb
+c
+gs
+..
+gs
+cd db
+ls
+..
+rm -rf db/
+ls
+gs
+ga .
+gc Uh some changes I guess\?
+gp heroku master
+gs
+ga views/stylesheets/main.sass
+gc Change font
+git push heroku master
+gs
+ga .
+gc Layout tweaks
+gp heroku master
+ga .
+gs
+gc Added about etc
+gp heroku master
+exit
+cd code/ruby/sinatra/gigamo
+rackup config.ru
+rackup config.ru --port=9393
+rackup config.ru --port=9393
+exit
+aurb -u
+cd abs/uzbl-git
+makepkg -fi
+uzbl-tabbed
+cd ~/.config/uzbl
+ls
+..
+ls
+rm -rf uzbl
+..
+cd .local/share
+ls
+rm -rf uzbl
+cdc
+uzbl-browser
+htop
+c
+ri Hash
+sudo ri Hash
+sudo ri 'Hash#map'
+cdc
+ls
+pacup
+sudo gem install heroku
+pacs testing/kernel26
+pacs kernel26
+pacup
+svim /etc/pacman.conf
+install testing/kernel26
+sudo pacman -Sy
+install testing/kernel26
+install testing/nvidia testing/ndiswrapper
+cd /etc/modprobe.d
+ls
+sudo rm framebuffer_blacklist.pacsave
+sudo rm uvesafb.pacsave
+ls
+..
+ls
+v modprobe.conf
+cp modprobe.conf modprobe.d
+sudo cp modprobe.conf modprobe.d
+cd modprobe.d
+ls
+v modprobe.conf
+rm ../modprobe.conf
+sudo rm ../modprobe.conf
+..
+ls modprobe.
+sudo rm modprobe.conf.pacnew
+c
+cd ~/gitclones/rtomayko/dotfiles
+ls
+v .bashrc
+c
+exit
+cd code/ruby/projects/rawr
+ruby rawr.rb
+ruby rawr.rb
+ruby rawr.rb
+exit
+cd code/ruby/sinatra/beachp
+rackup config.ru
+rackup config.ru
+git branch test
+gs
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+rackup config/rackup.ru
+exit
+screen -t spwned
+screen -t rackup
+pacup
+sudo pacman optimize && sudo sync
+sudo pacman-optimize && sudo sync
+pacup
+pacup
+exit
+screen -RR
+exit
+exit
+startx
+reboot
+exit
+cd code/ruby/sinatra/beachp
+ls
+v views/stylesheets/main.sass
+gs
+ga .
+gc Remove uppercase
+gpg next
+exit
+uname -a
+cd code/ruby/sinatra/gigamo
+c
+gvim application.rb
+exit
+exit
+cd tmp
+ls
+cd gigamoblog
+ls
+..
+rm -rf gigamoblog
+ls
+rm blog.tar.gz
+mkdir gigamoblog
+ls
+cd gigamoblog
+ls
+cd gigamo
+ls
+rm -rf .git/
+rm .gitignore
+ls
+v application.rb
+ls
+..
+ls
+roll blog.tar.gz gigamo
+ruftp blog.tar.gz
+gs
+exit
+cd code/ruby/projects/rbmpd
+ls
+rake spec
+rake test
+ruby client.rb
+v lib/rbmpd/mpd.rb
+ruby client.rb
+exit
+exit
+exit
+exit
+cd code/ruby/projects/rbmpd
+ls
+gs
+v .gitignore
+mkdir examples
+cp client.rb examples/shellclient.rb
+cd examples
+ls
+v shellclient.rb
+exit
+v .screenrc
+exit
+cd code/ruby/projects/rbmpd
+gs
+git reset --hard
+gp origin master
+git pull origin master
+ls
+rm lib/rbmpd/mpd.rb
+git pull origin master
+git reset --hard
+ls
+rm lib/rbmpd/mpd.rb
+git pull origin master
+ls
+git reset --hard
+git rm lib/rbmpd/mpd.rb
+git pull origin master
+gs
+git reset --hard
+gs
+v lib/rbmpd/mpd.rb
+ls
+gs
+ga .
+gc Fucking fuck
+gs
+v lib/rbmpd/mpd.rb
+exit
+cd tmp/shares
+mountnet
+ls
+..
+cd shares
+ls
+cp cabayo_default.jpg cabayo_night.jpg ~/walls
+exit
+v .wmii-hg/config.yaml
+nitrogen ~/walls
+exit
+cd downloads/Dexter.S04E11.HDTV.XviD-SYS
+ls
+ex dexter.411.hdtv.xvid-sys.rar
+c
+mplayer dexter.411.hdtv.xvid-sys.avi
+exit
+cd code/ruby/projects/rbmpd
+ls
+git push origin master
+exit
+v tmp/jolts.py
+exit
+exit
+exit
+exit
+exit

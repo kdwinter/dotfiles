@@ -21,18 +21,15 @@ setprompt () {
     autoload -U colors zsh/terminfo
     colors
     setopt prompt_subst
-
+    PR_NO_COLOR="%{$terminfo[sgr0]%}"
     for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
         eval PR_$color='%{$terminfo[bold]$fg[${(L)color}]%}'
         eval PR_LIGHT_$color='%{$fg[${(L)color}]%}'
     done
-    PR_NO_COLOR="%{$terminfo[sgr0]%}"
-    PR_USER="%n"
-    PR_DATE="%T"
-    PR_DIR="%~"
 
-    PROMPT=$'${PR_USER} ${PR_DIR} ${PR_YELLOW}»${PR_NO_COLOR} '
-    RPROMPT=$'${PR_YELLOW}«${PR_NO_COLOR} ${PR_DATE}'
+    PROMPT=$'${PR_LIGHT_RED}%n${PR_NO_COLOR}@${PR_LIGHT_BLUE}%m${PR_NO_COLOR}> '
+    RPROMPT=$'${PR_LIGHT_GREEN}%~${PR_NO_COLOR}'
+    #export PS1="$(print '%{\e[0;33m%}[%~]%{\e[0;31m%}%#%{\e[0m%} ')"
 }
 
 setprompt
