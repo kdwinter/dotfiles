@@ -20,7 +20,8 @@ Xcursor.theme: neutral
 
 !URxvt*font:             xft:MonteCarlo:pixelsize=12
 !URxvt*font:             xft:Profont:pixelsize=12
-!URxvt*font:             xft:Liberation Mono:pixelsize=11
+!URxvt*font:             xft:DejaVu Sans Mono:bold:size=10
+!URxvt*boldFont:         xft:DejaVu Sans Mono:bold:size=10
 !URxvt*font:             xft:Envy Code R:pixelsize=11
 URxvt*font:             xft:Monaco:size=7.5
 
@@ -39,7 +40,8 @@ URxvt*cutchars:         `"()'*<>[]{|}
 URxvt*visualBell:       true
 URxvt*keysym.C-u:       perl:matcher
 URxvt*urgentOnBell:     true
-URxvt*cursorColor:      #6dacd8
+urxvt*cursorColor: #b092a4
+!URxvt*cursorColor:      #6dacd8
 !URxvt*inheritPixmap:    true
 !URxvt*tintColor:        #EEEEEE
 URxvt*background:       #222222
@@ -183,22 +185,77 @@ URxvt*foreground:       #e1e2db
 !*color7: #DDEEDD
 !*color15: #6C887A
 
-*color0: #040404
-*color1: #ba7373
-*color2: #739456
-*color3: #a4712e
-*color4: #7985a3
-*color5: #6f4f70
-*color6: #b0c4de
-*color7: #d0d0d0
-*color8: #554444
-*color9: #c14b4b
-*color10: #6ca318
-*color11: #7f672e
-*color12: #537595
-*color13: #a971a7
-*color14: #70999a
-*color15: #cacaca
+! Daisuke newest
+!*color0: #040404
+!*color1: #ba7373
+!*color2: #739456
+!*color3: #a4712e
+!*color4: #7985a3
+!*color5: #6f4f70
+!*color6: #b0c4de
+!*color7: #d0d0d0
+!*color8: #554444
+!*color9: #c14b4b
+!*color10: #6ca318
+!*color11: #7f672e
+!*color12: #537595
+!*color13: #a971a7
+!*color14: #70999a
+!*color15: #cacaca
+
+!milomouse
+!*background: #151515
+! *foreground: #c3c2c5
+!!black
+! *color0:  #050505
+! *color8:  #555753
+!!red
+! *color1:  #9c8093
+! *color9:  #ffadcc
+!!green
+! *color2:  #9ed3d7
+! *color10: #67d797
+!!yellow
+! *color3:  #ccc9a5
+! *color11: #c4c497
+!!blue
+! *color4:  #3f4f60
+! *color12: #98a7b6
+!!magenta
+! *color5:  #a488d9
+! *color13: #b7a7bc
+!!cyan
+! *color6:  #8d9fa6
+! *color14: #b8ddea
+!!white
+! *color7:  #665c64
+! *color15: #787a76
+
+! Daisuke 2
+! Black
+*color0:        #000000
+*color8:        #555753
+! Red
+*color1:        #ff6565
+*color9:        #ff8d8d
+! Green
+*color2:        #93d44f
+*color10:       #c8e7a8
+! Yellow
+*color3:        #eab93d
+*color11:       #ffc123
+! Blue
+*color4:        #204a87
+*color12:       #3465a4
+! Mangenta
+*color5:        #ce5c00
+*color13:       #f57900
+! Cyan
+*color6:        #89b6e2
+*color14:       #46a4ff
+! White
+*color7:        #cccccc
+*color15:       #ffffff
 
 ! Daisuke
 !URxvt*background:       #000000
