@@ -10,7 +10,7 @@ if tty -s ; then
 fi
 
 # Exports
-export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/opt/mozilla/bin:/opt/java/jre/bin:/home/gig/bin:/opt/OneSwarm
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/opt/mozilla/bin:/opt/java/jre/bin:/home/gig/bin:/opt/OneSwarm:/opt/google/chrome
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LOCALE=en_US.UTF-8
@@ -24,7 +24,7 @@ export IGNOREEOF=3
 export WMII_ADDRESS=/tmp/ns.gig.:0/wmii
 export JAVA_HOME=/opt/java
 export J2SDKDIR=/opt/java
-export RACK_ENV='development'
+export RACK_ENV=development
 
 # watch for people
 watch=(notme)                   # watch for everybody but me

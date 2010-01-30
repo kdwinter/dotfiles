@@ -18,12 +18,19 @@ Xcursor.theme: neutral
 
 !URxvt*font:             -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
 
+!URxvt*font:             -misc-fixed-medium-r-normal-*-9-*-*-*-*-*-*-*
+!URxvt*boldFont:         -misc-fixed-medium-r-normal-*-9-*-*-*-*-*-*-*
+
 !URxvt*font:             xft:MonteCarlo:pixelsize=12
-!URxvt*font:             xft:Profont:pixelsize=12
+URxvt*font:             xft:Profont:size=8
 !URxvt*font:             xft:DejaVu Sans Mono:bold:size=10
 !URxvt*boldFont:         xft:DejaVu Sans Mono:bold:size=10
 !URxvt*font:             xft:Envy Code R:pixelsize=11
-URxvt*font:             xft:Monaco:size=7.5
+
+!URxvt*font:             xft:Monaco:size=8.6
+!!!!URxvt*font:             xft:Monaco:size=7.5
+!URxvt*font:             xft:Monaco:size=9
+!URxvt*font:             -*-lucidatypewriter-medium-*-*-*-12-*-*-*-*-*-*-*
 
 URxvt*saveLines:        32767
 URxvt*scrollBar:        false
@@ -42,8 +49,8 @@ URxvt*keysym.C-u:       perl:matcher
 URxvt*urgentOnBell:     true
 urxvt*cursorColor: #b092a4
 !URxvt*cursorColor:      #6dacd8
-!URxvt*inheritPixmap:    true
-!URxvt*tintColor:        #EEEEEE
+URxvt*inheritPixmap:    true
+URxvt*tintColor:        #EEEEEE
 URxvt*background:       #222222
 URxvt*foreground:       #e1e2db
 
@@ -231,31 +238,48 @@ URxvt*foreground:       #e1e2db
 ! *color7:  #665c64
 ! *color15: #787a76
 
-! Daisuke 2
+*color0:        #303030
+*color1:        #c03000
+*color2:        #b1d631
+*color3:        #fecf35
+*color4:        #426870
+*color5:        #6d506d
+*color6:        #4bb5c1
+*color7:        #e2e2e5
+*color8:        #5f5f5f
+*color9:        #ff3a78
+*color10:       #a6cd07
+*color11:       #b5c865
+*color12:       #4a7781
+*color13:       #ff3b77
+*color14:       #4bb5c1
+*color15:       #e2e2e5
+
+!!!! Daisuke 2
 ! Black
-*color0:        #000000
-*color8:        #555753
+!*color0:        #000000
+!*color8:        #555753
 ! Red
-*color1:        #ff6565
-*color9:        #ff8d8d
+!*color1:        #ff6565
+!*color9:        #ff8d8d
 ! Green
-*color2:        #93d44f
-*color10:       #c8e7a8
+!*color2:        #93d44f
+!*color10:       #c8e7a8
 ! Yellow
-*color3:        #eab93d
-*color11:       #ffc123
+!*color3:        #eab93d
+!*color11:       #ffc123
 ! Blue
-*color4:        #204a87
-*color12:       #3465a4
+!*color4:        #204a87
+!*color12:       #3465a4
 ! Mangenta
-*color5:        #ce5c00
-*color13:       #f57900
+!*color5:        #ce5c00
+!*color13:       #f57900
 ! Cyan
-*color6:        #89b6e2
-*color14:       #46a4ff
+!*color6:        #89b6e2
+!*color14:       #46a4ff
 ! White
-*color7:        #cccccc
-*color15:       #ffffff
+!*color7:        #cccccc
+!*color15:       #ffffff
 
 ! Daisuke
 !URxvt*background:       #000000

@@ -1,8 +1,8 @@
-"rvol -t"
+"dvol -t"
     m:0x0 + c:121
 
-"rvol -d 2"
+"dvol -d 2"
     m:0x0 + c:122
 
-"rvol -i 2"
+"dvol -i 2"
     m:0x0 + c:123

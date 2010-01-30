@@ -1,3 +1,6 @@
-include "/home/gig/.themes/Crazy Mothafucka(GTK)/gtk-2.0/gtkrc"
+# -- THEME AUTO-WRITTEN DO NOT EDIT
+include "/home/gig/.themes/royalty/gtk-2.0/gtkrc"
 
 include "/home/gig/.gtkrc.mine"
+
+# -- THEME AUTO-WRITTEN DO NOT EDIT
