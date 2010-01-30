@@ -15,6 +15,13 @@ function src() {
                 source ~/.zshrc
 }
 
+function add-alias() {
+    local name=$1 value="$2"
+    echo "alias $name='$value'" >> ~/.zsh/alias
+    eval "alias $name='$value'"
+    alias $name
+}
+
 # git functions
 function ga() { git add $* }
 function gl() { git log $* }
@@ -22,6 +29,13 @@ function gs() { git status $* }
 function gp() { git push $* }
 function gc() { git commit -m "$*" }
 function gpl() { git pull $* }
+function gco() {
+    if [ -z "$1" ]; then
+        git checkout master
+    else
+        git checkout $1
+    fi
+}
 
 function pastie {
   url=$(curl http://pastie.caboo.se/pastes/create \
