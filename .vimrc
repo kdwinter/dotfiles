@@ -144,6 +144,9 @@ let NERDTreeHijackNetrw=1
 let NERDTreeMouseMode=1
 map <F12> :NERDTreeToggle<CR>
 
+" Fuzzy
+map <leader>t :FuzzyFinderTextMate<CR>
+
 " TVO
 let otl_install_menu=1
 let no_otl_maps=0

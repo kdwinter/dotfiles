@@ -1,8 +1,65 @@
 set titlestring=Vimperator
 set defsearch=google
 
+loadplugins
+
+source ~/.vimperator/styles/styles.js
+
 map <C-r> :restart<CR>
 
-echo ".vimperatorrc sourced"
+" Statusbar and commandline styling
+hi StatusLine background: #141414; color: #9FBC00; font-family: terminus; font-size: 10pt; font-weight: normal;
+hi StatusLineBroken background: #1a1414; color: #9FBC00; font-family: terminus; font-size: 10pt; font-weight: normal;
+hi StatusLineExtended background: #141a14; color: #9FBC00; font-family: terminus; font-size: 10pt; font-weight: normal;
+hi StatusLineSecure background: #14141a; color: #9FBC00; font-family: terminus; font-size: 10pt; font-weight: normal;
+
+hi CmdLine height: 0px; padding: 0px; font-family: terminus; font-size: 10pt; font-weight: normal; color: white; background: #141414;
+hi Normal background: #141414; color: white;
+hi Question background: #141414; color: white;
+
+" Completion from zenburn
+hi CompDesc             color: #d0d0d0; width: 50%;font-size: 10pt;
+hi CompGroup:not(:first-of-type)    margin-top: .5em;
+hi CompIcon             width: 16px; min-width: 16px; display: inline-block; margin-right: .5ex;
+hi CompIcon>img         max-width: 16px; max-height: 16px; vertical-align: middle;
+hi CompItem             font-size: 11px;
+hi CompItem>*           padding: 0 .5ex;
+hi CompItem[selected]   color: #ffffd7; background: #444444;
+hi CompLess             text-align: center; height: 0; line-height: .5ex; padding-top: 1ex;
+hi CompLess::after      content: "\2303" /* Unicode up arrowhead */
+hi CompMore             text-align: center; height: .5ex; line-height: .5ex; margin-bottom: -.5ex;
+hi CompMore::after      content: "\2304" /* Unicode down arrowhead */
+hi CompMsg              font-style: italic; margin-left: 16px;
+hi CompResult           width: 45%; overflow: hidden;font-size: 10pt; font-family: monospace; font-weight: normal;
+hi CompTitle            color: #87af87; background: #242421; font-weight: bold;
+hi CompTitle>*          padding: 0 .5ex;
+
+" Youtube settings on load
+au -js PageLoad http://(www\.)?youtube\.com/watch.* loadYoutube(args.tab)
+js <<EOF
+loadYoutube = function (tab)
+{
+    let doc = tabs.getTab(tab-1).linkedBrowser.contentDocument;
+    let player = doc.getElementById("movie_player");
+    let base = doc.getElementById("baseDiv");
+
+    if (base)
+    {
+        // Wide mode by default
+        base.className = (base.className || "")+" watch-wide-mode"
+    }
+
+    if (player)
+    {
+        player = player.wrappedJSObject;
+
+        // Try the highest quality
+        player.setPlaybackQuality("hd720");
+
+        // Don't start playing
+        player.pauseVideo();
+    }
+}
+EOF
 
 " vim: ft=vimperator

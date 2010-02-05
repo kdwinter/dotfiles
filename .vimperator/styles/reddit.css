@@ -1,0 +1,282 @@
+/* Reddit minimal style */
+
+body
+{
+    margin:0 auto 8px auto !important;
+    background: #141414 !important;
+    color: #888888 !important;
+}
+
+div.content
+{
+    border-left:0px solid #cccccc !important;
+    border-right:0px solid #cccccc !important;
+    margin:0 !important;
+    padding:10px 20px 0 10px !important;
+}
+
+div.infobar
+{
+    background: #242424 !important;
+    color: white !important;
+    border: 1px solid #1a1a1a !important;
+}
+
+div.content a
+{
+    color: #608baa !important;
+}
+
+div.entryi
+{
+    border-bottom:1px solid #dddddd !important;
+    padding:0 0 15px !important;
+}
+
+div.md
+{
+    max-width:1400px !important;
+    color: #e0e0e0 !important;
+    border-color: #9fbc00 !important;
+}
+
+div#siteTable div.md
+{
+    background: #141414 !important;
+}
+
+.message.new > .entry
+{
+    background: #141414 !important;
+    border: 0 !important;
+}
+
+div.md a:visited
+{
+    color:white !important;
+}
+
+div.md blockquote
+{
+    border-left:6px solid #343434 !important;
+    margin:0 0 5px 20px !important;
+    padding:0 0 0 10px !important;
+}
+
+div.md blockquote p
+{
+    color:white !important;
+    font-family:Verdana,sans-serif !important;
+    font-size:12px !important;
+}
+div.md li
+{
+    font-size:13px !important;
+}
+
+div.md p
+{
+    margin:5px 0 10px 0 !important;
+}
+
+div.sitetable textarea
+{
+    height:300px !important;
+}
+
+p.title a
+{
+    color:#9fbc00 !important;
+    font-size:15px !important;
+}
+
+p.title a:visited
+{
+    color:white !important;
+}
+
+textarea
+{
+    background:#eeeeee !important;
+    font-family:Verdana,sans-serif !important;
+    font-size:12px !important;
+    line-height:1.6 !important;
+    padding:5px !important;
+    width:900px !important;
+}
+
+ul.flat-list a
+{
+    font-size:11px !important;
+    font-weight:normal !important;
+}
+
+ul.flat-list li.first a:visited
+{
+    color:white !important;
+}
+
+.link.last-clicked
+{
+    border:none !important;
+}
+
+div.entry
+{
+    padding-bottom: 15px !important;
+    padding-left: 5px !important;
+    color: white !important;
+    border-bottom: 1px solid #343434;
+}
+
+.usertext-body, .usertext-body blockquote
+{
+    line-height: 1.7 !important;
+    color: #e0e0e0 !important;
+    background: none !important;
+}
+
+.message.new {
+    background-color: #141414 !important;
+}
+
+div.expando-button
+{
+    background: none !important;
+    color: #bc9c00;
+}
+
+div.expando-button.selftext:before
+{
+    content: "Self";
+}
+
+div.expando-button.video:before
+{
+    content: "Vid";
+}
+
+.footer-parent, .side, #sr-header-area, .share, .report-button, .hide-button, .save-button
+{
+    display: none !important;
+
+}
+
+#header
+{
+    margin-top: 2px !important;
+    padding-bottom: 2px !important;
+    border-bottom: 1px solid #9fbc00 !important;
+    color: white !important;
+}
+
+#header,#header-bottom-right,#header a
+{
+    background-color: black !important;
+    color: white !important;
+}
+
+#header-img-a, #header .tabmenu, .rank
+{
+    display: none !important;
+}
+
+.arrow.up, .arrow.down
+{
+    background:none!important;
+}
+
+.arrow.upmod, .arrow.downmod
+{
+    opacity: 0.5 !important;
+}
+
+.nohavemail img
+{
+    display: none;
+}
+
+.nohavemail:before
+{
+    content: "No Mail";
+}
+
+a.author
+{
+    color: #ff8b60 !important;
+}
+
+.comment .child
+{
+}
+
+textarea, input, button
+{
+    -moz-appearance: none !important;
+    background: #141414 !important;
+    color: white !important;
+    border: 2px solid #343434 !important;
+}
+
+a.author.submitter
+{
+    color: #bb4040 !important;
+}
+
+a.author.moderator
+{
+    color: #40bb40 !important;
+}
+
+a.author[href="http://www.reddit.com/user/GGLucas"]
+{
+    color: #7060cc !important;
+}
+
+.nsfw-stamp
+{
+    background: #341414 !important;
+    border-color: #541414 !important;
+}
+
+.nsfw-stamp acronym
+{
+    color: white !important;
+}
+
+/* Comment boxes */
+div.comment, div.message {
+    margin: 0px 5px 5px 0px !important;
+    border-left: 2px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+div.comment {
+    padding-top: 5px !important;
+}
+
+div.comment div.entry {
+    border-bottom: none !important;
+}
+
+div.comment div.comment,
+div.comment div.comment div.comment div.comment,
+div.comment div.comment div.comment div.comment div.comment div.comment,
+div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
+div.message div.message,
+div.message div.message div.message div.message,
+div.message div.message div.message div.message div.message div.message,
+div.message div.message div.message div.message div.message div.message div.message div.message {
+	background-color: #0f0f0f !important;
+}
+
+div.comment div.comment div.comment,
+div.comment div.comment div.comment div.comment div.comment,
+div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
+div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
+div.message div.message div.message,
+div.message div.message div.message div.message div.message,
+div.message div.message div.message div.message div.message div.message div.message,
+div.message div.message div.message div.message div.message div.message div.message div.message div.message {
+	background-color: #121212 !important;
+}
