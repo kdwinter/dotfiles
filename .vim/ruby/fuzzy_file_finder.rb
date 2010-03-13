@@ -38,7 +38,7 @@ class FuzzyFileFinder
     MAJOR = 1
     MINOR = 0
     TINY  = 4
-    STRING = [MAJOR, MINOR, TINY].join(".")
+    STRING = [MAJOR, MINOR, TINY].join('.').freeze
   end
 
   # This is the exception that is raised if you try to scan a
@@ -109,16 +109,16 @@ class FuzzyFileFinder
   # given +directories+, using +ceiling+ as the maximum number
   # of entries to scan. If there are more than +ceiling+ entries
   # a TooManyEntries exception will be raised.
-  def initialize(directories=['.'], ceiling=10_000, ignores=nil)
+  def initialize(directories = ['.'], ceiling = 10_000, ignores = nil)
     directories = Array(directories)
-    directories << "." if directories.empty?
+    directories << '.' if directories.empty?
 
     # expand any paths with ~
     root_dirnames = directories.map { |d| File.expand_path(d) }.select { |d| File.directory?(d) }.uniq
 
     @roots = root_dirnames.map { |d| Directory.new(d, true) }
     @shared_prefix = determine_shared_prefix
-    @shared_prefix_re = Regexp.new("^#{Regexp.escape(shared_prefix)}" + (shared_prefix.empty? ? "" : "/"))
+    @shared_prefix_re = Regexp.new("^#{Regexp.escape(shared_prefix)}" + (shared_prefix.empty? ? '' : '/'))
 
     @files = []
     @ceiling = ceiling
@@ -171,17 +171,17 @@ class FuzzyFileFinder
   #   pattern matches the file exactly.
   def search(pattern, &block)
     pattern.strip!
-    path_parts = pattern.split("/")
-    path_parts.push "" if pattern[-1,1] == "/"
+    path_parts = pattern.split('/')
+    path_parts.push '' if pattern[-1,1] == '/'
 
-    file_name_part = path_parts.pop || ""
+    file_name_part = path_parts.pop || ''
 
     if path_parts.any?
-      path_regex_raw = "^(.*?)" + path_parts.map { |part| make_pattern(part) }.join("(.*?/.*?)") + "(.*?)$"
+      path_regex_raw = '^(.*?)' + path_parts.map { |part| make_pattern(part) }.join('(.*?/.*?)') + '(.*?)$'
       path_regex = Regexp.new(path_regex_raw, Regexp::IGNORECASE)
     end
 
-    file_regex_raw = "^(.*?)" << make_pattern(file_name_part) << "(.*)$"
+    file_regex_raw = '^(.*?)' << make_pattern(file_name_part) << '(.*)$'
     file_regex = Regexp.new(file_regex_raw, Regexp::IGNORECASE)
 
     path_matches = {}
@@ -196,7 +196,7 @@ class FuzzyFileFinder
   # Takes the given +pattern+ (which must be a string, formatted as
   # described in #search), and returns up to +max+ matches in an
   # Array. If +max+ is nil, all matches will be returned.
-  def find(pattern, max=nil)
+  def find(pattern, max = nil)
     results = []
     search(pattern) do |match|
       results << match
@@ -207,7 +207,7 @@ class FuzzyFileFinder
 
   # Displays the finder object in a sane, non-explosive manner.
   def inspect #:nodoc:
-    "#<%s:0x%x roots=%s, files=%d>" % [self.class.name, object_id, roots.map { |r| r.name.inspect }.join(", "), files.length]
+    '#<%s:0x%x roots=%s, files=%d>' % [self.class.name, object_id, roots.map { |r| r.name.inspect }.join(', '), files.length]
   end
 
   private
@@ -216,14 +216,14 @@ class FuzzyFileFinder
     # beneath it, depth-first.
     def follow_tree(directory)
       Dir.entries(directory.name).each do |entry|
-        next if entry[0,1] == "."
+        next if entry[0,1] == '.'
         raise TooManyEntries if files.length > ceiling
 
         full = File.join(directory.name, entry)
 
         if File.directory?(full)
           follow_tree(Directory.new(full))
-        elsif !ignore?(full.sub(@shared_prefix_re, ""))
+        elsif !ignore?(full.sub(@shared_prefix_re, ''))
           files.push(FileSystemEntry.new(directory, entry))
         end
       end
@@ -240,11 +240,11 @@ class FuzzyFileFinder
     # a regular expression.
     def make_pattern(pattern)
       pattern = pattern.split(//)
-      pattern << "" if pattern.empty?
+      pattern << '' if pattern.empty?
 
-      pattern.inject("") do |regex, character|
-        regex << "([^/]*?)" if regex.length > 0
-        regex << "(" << Regexp.escape(character) << ")"
+      pattern.inject('') do |regex, character|
+        regex << '([^/]*?)' if regex.length > 0
+        regex << '(' << Regexp.escape(character) << ')'
       end
     end
 
@@ -263,7 +263,7 @@ class FuzzyFileFinder
           # even-numbered captures are matches between the pattern's elements.
           inside = index % 2 != 0
 
-          total_chars += capture.gsub(%r(/), "").length # ignore '/' delimiters
+          total_chars += capture.gsub(%r(/), '').length # ignore '/' delimiters
           inside_chars += capture.length if inside
 
           if runs.last && runs.last.inside == inside
@@ -295,8 +295,8 @@ class FuzzyFileFinder
     def match_path(path, path_matches, path_regex, path_segments)
       return path_matches[path] if path_matches.key?(path)
 
-      name_with_slash = path.name + "/" # add a trailing slash for matching the prefix
-      matchable_name = name_with_slash.sub(@shared_prefix_re, "")
+      name_with_slash = path.name + '/' # add a trailing slash for matching the prefix
+      matchable_name = name_with_slash.sub(@shared_prefix_re, '')
       matchable_name.chop! # kill the trailing slash
 
       if path_regex
@@ -316,7 +316,7 @@ class FuzzyFileFinder
       if file_match = file.name.match(file_regex)
         match_result = build_match_result(file_match, 1)
         full_match_result = path_match[:result].empty? ? match_result[:result] : File.join(path_match[:result], match_result[:result])
-        shortened_path = path_match[:result].gsub(/[^\/]+/) { |m| m.index("(") ? m : m[0,1] }
+        shortened_path = path_match[:result].gsub(/[^\/]+/) { |m| m.index('(') ? m : m[0,1] }
         abbr = shortened_path.empty? ? match_result[:result] : File.join(shortened_path, match_result[:result])
 
         result = { :path => file.path,
@@ -342,7 +342,7 @@ class FuzzyFileFinder
 
       segments.times do |segment|
         if !split_roots.all? { |root| root[segment] == master[segment] }
-          return master[0,segment].join("/")
+          return master[0,segment].join('/')
         end
       end
 

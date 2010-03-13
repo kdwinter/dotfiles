@@ -3,4 +3,5 @@
 "colo idleFingers
 "colo molokai
 "colo railscasts
-colo digerati
+"colo digerati
+colo wombat
