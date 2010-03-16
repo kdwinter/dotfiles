@@ -37,28 +37,25 @@ hi CompTitle>*          padding: 0 .5ex;
 " Youtube settings on load
 au -js PageLoad http://(www\.)?youtube\.com/watch.* loadYoutube(args.tab)
 js <<EOF
-loadYoutube = function (tab)
-{
-    let doc = tabs.getTab(tab-1).linkedBrowser.contentDocument;
-    let player = doc.getElementById("movie_player");
-    let base = doc.getElementById("baseDiv");
+loadYoutube = function (tab) {
+  let doc = tabs.getTab(tab-1).linkedBrowser.contentDocument;
+  let player = doc.getElementById("movie_player");
+  let base = doc.getElementById("baseDiv");
 
-    if (base)
-    {
-        // Wide mode by default
-        base.className = (base.className || "")+" watch-wide-mode"
-    }
+  if (base) {
+    // Wide mode by default
+    base.className = (base.className || "")+" watch-wide-mode"
+  }
 
-    if (player)
-    {
-        player = player.wrappedJSObject;
+  if (player) {
+    player = player.wrappedJSObject;
 
-        // Try the highest quality
-        player.setPlaybackQuality("hd720");
+    // Try the highest quality
+    player.setPlaybackQuality("hd720");
 
-        // Don't start playing
-        player.pauseVideo();
-    }
+    // Don't start playing
+    player.pauseVideo();
+  }
 }
 EOF
 

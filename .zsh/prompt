@@ -27,8 +27,9 @@ setprompt () {
         eval PR_LIGHT_$color='%{$fg[${(L)color}]%}'
     done
 
-    PROMPT=$'${PR_LIGHT_RED}%n${PR_NO_COLOR}@${PR_LIGHT_BLUE}%m${PR_NO_COLOR}> '
-    RPROMPT=$'${PR_LIGHT_GREEN}%~${PR_NO_COLOR}'
+    PROMPT=$'%n${PR_RED}@${PR_NO_COLOR}%m | ${PR_BLUE}%~${PR_NO_COLOR}
+${PR_RED}»${PR_NO_COLOR} '
+    #RPROMPT=$'${PR_LIGHT_GREEN}%~${PR_NO_COLOR}'
     #export PS1="$(print '%{\e[0;33m%}[%~]%{\e[0;31m%}%#%{\e[0m%} ')"
 }
 
