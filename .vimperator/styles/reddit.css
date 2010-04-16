@@ -221,6 +221,7 @@ textarea, input, button
 a.author.submitter
 {
     color: #bb4040 !important;
+    background: inherit !important;
 }
 
 a.author.moderator

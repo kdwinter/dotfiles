@@ -1,0 +1,88 @@
+#gbar, #guser,
+#prs, #logo,
+.mbEnd, .clr, .gbh, .csb,
+.nobr.xsm, .lsb
+{
+    display: none !important;
+}
+
+#sft
+{
+    margin: 0 !important;
+}
+
+#sff
+{
+    padding-right: 16px !important;
+}
+
+#ssb
+{
+    position: absolute !important;
+    right: 16px !important;
+    top: 16px !important;
+    background: none !important;
+}
+
+body,
+#resultStats,
+#wikibox
+{
+    background: #141414 !important;
+    color: #e0e0e0 !important;
+}
+
+#wikibox
+{
+    border-left: 2px solid #343434 !important;
+}
+
+*
+{
+    font-family: "bitstream vera sans" !important;
+}
+
+#nav td
+{
+    min-width: 20px !important;
+}
+
+#resultStats, #ssb
+{
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+a
+{
+    color: #608BCC !important;
+    text-decoration: none !important;
+}
+
+cite
+{
+    color: #888 !important;
+}
+
+li.g
+{
+    margin-top: 30px !important;
+}
+
+.osl a
+{
+    color: #CC608B !important;
+}
+
+.gl a
+{
+    color: #8BCC60 !important;
+}
+
+input, textarea, select
+{
+    background-color: #242424 !important;
+    border: 1px solid #343434 !important;
+    color: #e0e0e0 !important;
+    -moz-appearance: none !important;
+}
