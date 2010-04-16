@@ -54,6 +54,13 @@ syn keyword htmlTagName contained select small strike sub sup
 syn keyword htmlTagName contained table td textarea th tr tt ul var xmp
 syn match htmlTagName contained "\<\(b\|i\|u\|h[1-6]\|em\|strong\|head\|body\|title\)\>"
 
+" new html 5 tag names
+syn keyword htmlTagName contained header footer nav section article
+syn keyword htmlTagName contained aside audio canvas video command time
+syn keyword htmlTagName contained datalist details embed figcaption
+syn keyword htmlTagName contained figure hgroup keygen mark meter output
+syn keyword htmlTagName contained progress rp rt ruby source summary
+
 " new html 4.0 tags
 syn keyword htmlTagName contained abbr acronym bdo button col label
 syn keyword htmlTagName contained colgroup del fieldset iframe ins legend

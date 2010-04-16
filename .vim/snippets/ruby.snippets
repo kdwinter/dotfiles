@@ -1,7 +1,7 @@
 # #!/usr/bin/ruby
 snippet #!
 	#!/usr/bin/ruby
-	
+
 # New Block
 snippet =b
 	=begin rdoc
@@ -11,7 +11,7 @@ snippet y
 	:yields: ${1:arguments}
 snippet rb
 	#!/usr/bin/env ruby -wKU
-	
+
 snippet req
 	require "${1}"${2}
 snippet #
@@ -410,3 +410,6 @@ snippet tas
 	task :${2:task_name => [:dependent, :tasks]} do
 		${3}
 	end
+# rails shit
+snippet flash
+	flash[:${1:type}] = ${2:message}

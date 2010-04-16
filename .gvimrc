@@ -4,4 +4,7 @@
 "colo molokai
 "colo railscasts
 "colo digerati
-colo wombat
+"colo wombat
+"colo twilight
+"colo vividchalk
+colo sunburst
