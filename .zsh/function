@@ -2,24 +2,24 @@
 #
 # reload zshrc
 function src() {
-        autoload -U zrecompile
-                [[ -f ~/.zshrc ]] && zrecompile -p ~/.zshrc
-				for i in "$(find ~/.zsh/ -type f)"; do
-					[[ -f $i ]] && zrecompile -p $i
-					[[ -f $i.zwc.old ]] && rm -f $i.zwc.old
-				done
-                [[ -f ~/.zcompdump ]] && zrecompile -p ~/.zcompdump
-                [[ -f ~/.zcompdump ]] && zrecompile -p ~/.zcompdump
-                [[ -f ~/.zshrc.zwc.old ]] && rm -f ~/.zshrc.zwc.old
-                [[ -f ~/.zcompdump.zwc.old ]] && rm -f ~/.zcompdump.zwc.old
-                source ~/.zshrc
+  autoload -U zrecompile
+  [[ -f ~/.zshrc ]] && zrecompile -p ~/.zshrc
+  for i in "$(find ~/.zsh/ -type f)"; do
+    [[ -f $i ]] && zrecompile -p $i
+    [[ -f $i.zwc.old ]] && rm -f $i.zwc.old
+  done
+  [[ -f ~/.zcompdump ]] && zrecompile -p ~/.zcompdump
+  [[ -f ~/.zcompdump ]] && zrecompile -p ~/.zcompdump
+  [[ -f ~/.zshrc.zwc.old ]] && rm -f ~/.zshrc.zwc.old
+  [[ -f ~/.zcompdump.zwc.old ]] && rm -f ~/.zcompdump.zwc.old
+  source ~/.zshrc
 }
 
 function add-alias() {
-    local name=$1 value="$2"
-    echo "alias $name='$value'" >> ~/.zsh/alias
-    eval "alias $name='$value'"
-    alias $name
+  local name=$1 value="$2"
+  echo "alias $name='$value'" >> ~/.zsh/alias
+  eval "alias $name='$value'"
+  alias $name
 }
 
 # git functions
@@ -30,132 +30,66 @@ function gp() { git push $* }
 function gc() { git commit -m "$*" }
 function gpl() { git pull $* }
 function gco() {
-    if [ -z "$1" ]; then
-        git checkout master
-    else
-        git checkout $1
-    fi
+  if [ -z "$1" ]; then
+    git checkout master
+  else
+    git checkout $1
+  fi
 }
-
-function pastie {
-  url=$(curl http://pastie.caboo.se/pastes/create \
-    -H "Expect:" \
-    -F "paste[parser]=plain_text" \
-    -F "paste[body]=<-" \
-    -F "paste[authorization]=burger" \
-    -s -L -o /dev/null -w "%{url_effective}")
-  echo -n "$url" | xclip
-  echo "$url"
-}
-
-extract_archive () {
-    local old_dirs current_dirs lower
-    lower=${(L)1}
-    old_dirs=( *(N/) )
-    if [[ $lower == *.tar.gz || $lower == *.tgz ]]; then
-        tar xvzf $1
-    elif [[ $lower == *.gz ]]; then
-        gunzip $1
-    elif [[ $lower == *.tar.bz2 || $lower == *.tbz ]]; then
-        tar xvjf $1
-    elif [[ $lower == *.bz2 ]]; then
-        bunzip2 $1
-    elif [[ $lower == *.zip ]]; then
-        unzip $1
-    elif [[ $lower == *.rar ]]; then
-        unrar e $1
-    elif [[ $lower == *.tar ]]; then
-        tar xvf $1
-    elif [[ $lower == *.lha ]]; then
-        lha e $1
-    else
-        print "Unknown archive type: $1"
-        return 1
-    fi
-    # Change in to the newly created directory, and
-    # list the directory contents, if there is one.
-    current_dirs=( *(N/) )
-    for i in {1..${#current_dirs}}; do
-        if [[ $current_dirs[$i] != $old_dirs[$i] ]]; then
-            cd $current_dirs[$i]
-            break
-        fi
-    done
-}
-
-roll () {
-    FILE=$1
-    case $FILE in
-        *.tar.bz2) shift && tar cjf $FILE $* ;;
-        *.tar.gz) shift && tar czf $FILE $* ;;
-        *.tgz) shift && tar czf $FILE $* ;;
-        *.zip) shift && zip $FILE $* ;;
-        *.rar) shift && rar $FILE $* ;;
-    esac
-}
-
-function mkcd() { mkdir "$1" && cd "$1"; }
-function hex2dec { awk 'BEGIN { printf "%d\n",0x$1}'; }
-function dec2hex { awk 'BEGIN { printf "%x\n",$1}'; }
 
 function mkmine() { sudo chown -R ${USER} ${1:-.}; }
-# sanitize - set file/directory owner and permissions to normal values (644/755)
 # Usage: sanitize <file>
 function sanitize() {
     chmod -R u=rwX,go=rX "$@"
     chown -R ${USER}.users "$@"
 }
 
-function calculeer() { echo "$@" | bc }
-
-function git_info {
-    local g="$(git rev-parse --git-dir 2>/dev/null)"
-    if [ -n "$g" ]; then
-      local r
-      local b
-      if [ -d "$g/../.dotest" ]
-      then
-        if test -f "$g/../.dotest/rebasing"
-        then
-          r="|REBASE"
-        elif test -f "$g/../.dotest/applying"
-        then
-          r="|AM"
-        else
-          r="|AM/REBASE"
-        fi
-        b="$(git symbolic-ref HEAD 2>/dev/null)"
-      elif [ -f "$g/.dotest-merge/interactive" ]
-      then
-        r="|REBASE-i"
-        b="$(cat "$g/.dotest-merge/head-name")"
-      elif [ -d "$g/.dotest-merge" ]
-      then
-        r="|REBASE-m"
-        b="$(cat "$g/.dotest-merge/head-name")"
-      elif [ -f "$g/MERGE_HEAD" ]
-      then
-        r="|MERGING"
-        b="$(git symbolic-ref HEAD 2>/dev/null)"
-      else
-        if [ -f "$g/BISECT_LOG" ]
-        then
-          r="|BISECTING"
-        fi
-        if ! b="$(git symbolic-ref HEAD 2>/dev/null)"
-        then
-          if ! b="tag: $(git describe --exact-match HEAD 2>/dev/null)"
-          then
-            b="$(cut -c1-7 "$g/HEAD")..."
-          fi
-        fi
-      fi
-     
-      if [ -n "$1" ]; then
-        printf "$1" "${b##refs/heads/}$r"
-      else
-        printf "[%s]" "${b##refs/heads/}$r"
-      fi
-    fi
+roll() {
+  FILE=$1
+  case $FILE in
+    *.tar.bz2) shift && tar cjf $FILE $* ;;
+    *.tar.gz) shift && tar czf $FILE $* ;;
+    *.tgz) shift && tar czf $FILE $* ;;
+    *.zip) shift && zip $FILE $* ;;
+    *.rar) shift && rar $FILE $* ;;
+  esac
 }
-#compdef '_files -g "*.gz *.tgz *.bz2 *.tbz *.zip *.rar *.tar *.lha"' extract_archive
+
+extract_archive() {
+  local old_dirs current_dirs lower
+  lower=${(L)1}
+  old_dirs=( *(N/) )
+  if [[ $lower == *.tar.gz || $lower == *.tgz ]]; then
+    tar xvzf $1
+  elif [[ $lower == *.gz ]]; then
+    gunzip $1
+  elif [[ $lower == *.tar.bz2 || $lower == *.tbz ]]; then
+    tar xvjf $1
+  elif [[ $lower == *.bz2 ]]; then
+    bunzip2 $1
+  elif [[ $lower == *.zip ]]; then
+    unzip $1
+  elif [[ $lower == *.rar ]]; then
+    unrar e $1
+  elif [[ $lower == *.tar ]]; then
+    tar xvf $1
+  elif [[ $lower == *.lha ]]; then
+    lha e $1
+  else
+    print "Unknown archive type: $1"
+    return 1
+  fi
+  # Change in to the newly created directory, and
+  # list the directory contents, if there is one.
+  current_dirs=( *(N/) )
+  for i in {1..${#current_dirs}}; do
+    if [[ $current_dirs[$i] != $old_dirs[$i] ]]; then
+      cd $current_dirs[$i]
+      break
+    fi
+  done
+}
+
+cd() {
+  builtin cd "$@"; ls
+}

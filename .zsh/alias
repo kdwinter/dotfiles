@@ -1,30 +1,19 @@
 #!/bin/zsh
-#
-# change default behaviors for the basics
 
 . ~/.zsh/vars
 
-alias outside='weatherget -s BEXX0008 -m'
-alias mv='mv -v --backup=existing'
+alias mv='mv -v'
 alias mmv='noglob zmv -W'
 alias rm='rm -iv'
 alias cp='cp -v'
-alias firefox='/usr/bin/firefox'
 alias mplayer='mplayer -idx'
 alias wget='wget --timeout 10'
 alias grep='grep --color=auto'
 
-#function call
-alias ex=extract_archive
-
-# basics
 alias c='clear'
-alias ll='ls -ahl --color | more; echo "\e[1;32m --[\e[1;34m Dirs:\e[1;36m `ls -al | egrep \"^drw\" | wc -l` \e[1;32m|\e[1;35m Files: \e[1;31m`ls -al | egrep -v \"^drw\" | grep -v total | wc -l` \e[1;32m]--"'
+alias ll='ls -ahl | more; echo "\e[1;32m --[\e[1;34m Dirs:\e[1;36m `ls -al | egrep \"^drw\" | wc -l` \e[1;32m|\e[1;35m Files: \e[1;31m`ls -al | egrep -v \"^drw\" | grep -v total | wc -l` \e[1;32m]--"'
 alias cdc='cd; clear'
-alias ls='ls -hF -a --color=auto'
-
-alias conngig='sudo iwlist wlan0 scan && sudo netcfg wireless-gigamo'
-alias connmarina='sudo iwlist wlan0 scan && sudo netcfg wireless-marina'
+alias ls='ls -GF'
 
 # auto open images
 alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}='mirage'
@@ -38,30 +27,12 @@ alias -s {html,php,com,net,org,gov}='firefox'
 alias -s txt='vim'
 alias -s pdf='xpdf'
 
-alias mountnet='sudo mount -t cifs //192.168.1.32/E-Disk /home/gig/tmp/shares -o iocharset=utf8,file_mode=0777,dir_mode=0777'
 alias wcat='wget -q -O -'
-alias pacman='sudo pacman'
-alias pacup='pacman -Syu'
-alias install='pacman -S'
-alias remove='pacman -Rd'
-alias sysup='sudo abs && yaourt -Syu --aur --devel'
-alias startx='dbus-launch --exit-with-session ck-launch-session startx'
-alias zetaf='sudo shutdown -h now'
-alias reboot='sudo reboot'
 alias svim='sudo vim'
 alias sv='svim'
-alias v='vim'
-alias netcfg='netcfg2'
-alias nautilus='nautilus --no-desktop'
-alias spotify='wine ~/.wine/drive_c/Program\ Files/Spotify/spotify.exe'
-alias synergy='synergyc --name gignote 192.168.1.5'
+alias v='mvim'
 alias cmake='cmake -DCMAKE_INSTALL_PREFIX=/usr -DSYSCONFDIR=/etc'
-alias slurm='slurm -i wlan0'
-alias dmenu='dmenu_run -fn "-adobe-helvetica-medium-r-normal-*-10-*-*-*-*-*-*-*" -nb "#1E1E1E" -nf "#C4C4C4" -sb "#333333" -sf "#3579A8"'
-alias gpo='gp origin'
-alias gpg='gp gitorious'
-alias t='todo'
 alias hosteurope='ssh root@83.169.21.36'
-alias mongod='sudo /usr/local/mongodb/bin/mongod --config /usr/local/mongodb/mongod.conf'
-alias esltv='/home/gig/downloads/octoshape/OctoshapeClient -url:ESL.oph350'
-alias esltv2='/home/gig/downloads/octoshape/OctoshapeClient -url:tetv.cebit1'
+#alias esltv='/home/gig/downloads/octoshape/OctoshapeClient -url:ESL.oph350'
+#alias esltv2='/home/gig/downloads/octoshape/OctoshapeClient -url:tetv.cebit1'
+alias run='open -a'
