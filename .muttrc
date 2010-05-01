@@ -1,0 +1,108 @@
+# Credits to Thayer Williams (cinderwick.ca) for this one
+#
+source ~/.mutt/colors.vimbrant
+
+set realname = "Gigamo"
+set from = "username@gmail.com"
+set imap_user = "username@gmail.com"
+set imap_pass = "password"
+set smtp_url = "smtp://username@smtp.gmail.com:587/"
+set smtp_pass = "password"
+
+source ~/.mutt_private # Sensitive info overwritten in here
+
+set certificate_file = ~/.mutt/certificates
+set ssl_force_tls
+set hidden_host
+unset beep
+set beep_new
+set quit = ask-yes
+set delete = yes
+unset confirmappend
+set charset = UTF8
+set send_charset = "utf-8:iso-8859-1"
+set read_inc = 50
+set write_inc = 50
+set time_inc = 500
+set net_inc = 20
+unset arrow_cursor
+
+set timeout = 15
+set mail_check = 60
+set sort = threads
+set sort = last-date-received
+set strict_threads
+set sort_re
+set sort_browser = alpha
+set sort_alias = unsorted
+unset move
+unset mark_old
+unset markers
+set menu_scroll
+set smart_wrap
+set tilde
+unset narrow_tree
+
+set pager_index_lines = 8
+set pager_context = 5
+set pager_stop
+set status_on_top
+
+ignore *
+unignore From: To: CC: Date: Subject: User-Agent: X-Mailer
+hdr_order From: To: CC: Date: Subject: User-Agent: X-Mailer
+
+set index_format = "%4C  %Z   %[%F  %H:%M]  %-22.22L  %s  %*    (%-4.4c)"
+set pager_format = "[%C/%m] %b  %> %1L (%P)"
+set folder_format = "%2C %t %N %8s %d %f"
+set status_format = "%r %?M?%M/?%m total, %?n?%n new, ?%?u?%u unread, ?%?p?%p drafts, ?%?t?%t +tagged, ?%?d?%d deleted, ?(%f %l)  %?b?%b unread messages. ?%>  %V   sort by: %s/%S  (%P) %r"
+
+set editor="vim +':set tw=77' +':set spell' +':set wrap' +\`awk '/^$/ {print i+2; exit} {i++}' %s\` %s"
+
+set use_from
+set use_envelope_from
+set tmpdir = ~/.mutt/tmp
+set edit_headers
+set fast_reply
+unset reply_self
+unset askcc
+unset write_bcc
+set abort_nosubject = ask-yes
+set abort_unmodified = ask-yes
+set include = yes
+set forward_format = "Fwd: %s"
+set fcc_attach
+set forward_quote
+set mime_forward = ask-yes
+set postpone = ask-yes
+set recall = ask-no
+
+set date_format = "%b %d, %Y at %H:%M"
+set attribution = "On %D, %f wrote:"
+set implicit_autoview
+auto_view text/html application/x-pgp-message
+
+alternative_order text/plain text/html text
+
+set folder = imaps://imap.gmail.com:993
+set spoolfile = +INBOX
+set mbox = "+[Gmail]/All Mail"
+set postponed = "+[Gmail]/Drafts"
+set record = "+[Gmail]/Sent Mail"
+set header_cache = ~/.mutt/cache/headers
+set message_cachedir = ~/.mutt/cache/bodies
+unset copy
+unset message_cache_clean
+set imap_keepalive = 300
+
+macro index,pager d "<save-message>+[Gmail]/Trash<enter>" "move to trash"
+macro index,pager S "<save-message>+[Gmail]/Spam<enter>" "mark as spam"
+
+macro index,pager gi    "<change-folder>!<enter>"                  "go to inbox"
+macro index,pager ga    "<change-folder>><enter>"                  "go to archived mail"
+macro index,pager gf    "<change-folder>+[Gmail]/Starred<enter>"   "go to flagged"
+macro index,pager gs    "<change-folder>+[Gmail]/Spam<enter>"      "go to spam"
+macro index,pager gd    "<change-folder>+[Gmail]/Drafts<enter>"    "go to drafts"
+macro index,pager go    "<change-folder><<enter>"                  "go to sent mail"
+macro index,pager gt    "<change-folder>+[Gmail]/Trash<enter>"     "go to trash"
+macro index,pager gl    "<change-folder>-<enter>"                  "go to last folder"
