@@ -5,19 +5,25 @@ if v:version >= 700
   set cursorline
 endif
 if has('gui_running')
+  winpos 0 0
   set guicursor=a:blinkon0
-  set guioptions=tmaegr
-  set columns=78
-  set lines=40
+  "set guioptions=tmaegr
+  set guitablabel=%t\ %m
+  set guioptions=gemc
+  set columns=89
+  set lines=55
   if has('win32')
     set guifont=DejaVu_Sans_Mono:h8:cANSI
   elseif has('mac')
     set guifont=Inconsolata:h14
     "set guifont=Panic\ Sans:h12
-    colo sunburst
+    "set guifont=Monaco:h12
+    set transparency=10
   else
     set guifont=DejaVu\ Sans\ Mono\ 8.6
   endif
+  "colo sunburst
+  colo vimbrant
 "elseif (&term =~ 'screen' || &term =~ 'linux')
 elseif (&term =~ 'linux')
   set t_Co=16
@@ -25,13 +31,17 @@ elseif (&term =~ 'linux')
   set nocursorline
   colo desert
 else
-  ""set t_Co=256
-  ""colo wombat256
-  colo desert
+  "set t_Co=256
+  "colo wombat256
+  "colo desert
+  "colo slate2
+  "colo miromiro
+  colo vimbrant
   set mouse=a
   set termencoding=utf-8
 endif
 
+set listchars=eol:¬,trail:…
 set expandtab           " expand tabs to spaces
 set nosmarttab          " fuck tabs
 set nolazyredraw        " turn off lazy redraw
@@ -104,7 +114,7 @@ filetype plugin indent on      " fix the f*cking indenting
 fun! <SID>SetStatusLine()
   let l:s1="%-3.3n\\ %f\\ %h%m%r%w"
   let l:s2="[%{strlen(&filetype)?&filetype:'?'},%{&encoding},%{&fileformat}]"
-  let l:s3="%=\\ 0x%-8B\\ \\ %-14.(%l,%c%V%)\\ %<%P"
+  let l:s3="%=\\ \\ %-14.(%l,%c%V%)\\ %<%P"
   execute "set statusline=" . l:s1 . l:s2 . l:s3
 endfun
 set laststatus=2
@@ -188,6 +198,8 @@ if has('autocmd')
   " Others..
   au BufRead,BufNewFile *.sql set ft=pgsql
   au BufRead,BufNewFile *.svg set ft=svg
+
+  au BufRead,BufNewFile *.vimp set ft=vimperator
 
   au BufRead,BufNewFile *.md set ft=mkd tw=72 ts=2 sw=2 expandtab
   au BufRead,BufNewFile *.markdown set ft=mkd tw=72 ts=2 sw=2 expandtab

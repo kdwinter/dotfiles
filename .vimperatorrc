@@ -1,13 +1,20 @@
 set runtimepath=/Users/gig/.vimperator
 set titlestring=Vimperator
 set defsearch=google
+"set defsearch=duck
 set go+=B
 set wildmode=list:longest,full
-set wildoptions=sort
+set wildoptions=auto
+set showstatuslinks=2
 set visualbell
-"set complete=l
+set complete=sl
 set focuscontent
 set fileencoding=UTF-8
+set verbose=3
+set ignorecase
+set smartcase
+set showtabline=1
+set laststatus=2
 
 set! browser.urlbar.filter.javascript=false
 set! browser.urlbar.maxRichResults=20
@@ -18,6 +25,10 @@ set! ui.key.generalAccessKey=0
 
 map <C-c> Y
 noremap b :bmarks!
+noremap j 5j
+noremap k 5k
+noremap J <C-d>
+noremap K <C-u>
 cnoremap <up> <s-tab>
 cnoremap <c-up> <up>
 cnoremap <down> <tab>
@@ -25,27 +36,11 @@ cnoremap <c-down> <down>
 
 "colorscheme griff
 colorscheme bigchu-mini
+"colorscheme bigchu
 
 au LocationChange .* js modes.passAllKeys = /google\.com\/(reader|calendar|mail|a)/.test(buffer.URL);
 
-au -js PageLoad http://(www\.)?youtube\.com/watch.* loadYoutube(args.tab)
-js <<EOF
-loadYoutube = function(tab) {
-  let doc = tabs.getTab(tab-1).linkedBrowser.contentDocument;
-  let player = doc.getElementById('movie_player');
-  let base = doc.getElementById('baseDiv');
-  if (base) {
-    base.className = (base.className || '')+' watch-wide-mode'
-  }
-  if (player) {
-    player = player.wrappedJSObject;
-    player.setPlaybackQuality('hd1080');
-    player.pauseVideo();
-  }
-}
-EOF
-
-loadplugins
-source ~/.vimperator/styles/styles.js
+"loadplugins
+"source ~/.vimperator/styles/styles.js
 
 " vim: ft=vimperator

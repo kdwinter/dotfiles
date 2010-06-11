@@ -1,5 +1,5 @@
 #!/bin/zsh
-#
+
 # reload zshrc
 function src() {
   autoload -U zrecompile
@@ -40,45 +40,45 @@ function gco() {
 function mkmine() { sudo chown -R ${USER} ${1:-.}; }
 # Usage: sanitize <file>
 function sanitize() {
-    chmod -R u=rwX,go=rX "$@"
-    chown -R ${USER}.users "$@"
+  chmod -R u=rwX,go=rX "$@"
+  chown -R ${USER}.users "$@"
 }
 
-roll() {
+function roll() {
+  local FILE
   FILE=$1
   case $FILE in
-    *.tar.bz2) shift && tar cjf $FILE $* ;;
-    *.tar.gz) shift && tar czf $FILE $* ;;
-    *.tgz) shift && tar czf $FILE $* ;;
-    *.zip) shift && zip $FILE $* ;;
-    *.rar) shift && rar $FILE $* ;;
+    *.tar.bz2)  shift && tar cjf $FILE $* ;;
+    *.tbz2)     shift && tar cjf $FILE $* ;;
+    *.tar.gz)   shift && tar czf $FILE $* ;;
+    *.tgz)      shift && tar czf $FILE $* ;;
+    *.zip)      shift && zip $FILE $*     ;;
+    *.rar)      shift && rar $FILE $*     ;;
   esac
 }
 
-extract_archive() {
+function extract_archive() {
   local old_dirs current_dirs lower
   lower=${(L)1}
   old_dirs=( *(N/) )
-  if [[ $lower == *.tar.gz || $lower == *.tgz ]]; then
-    tar xvzf $1
-  elif [[ $lower == *.gz ]]; then
-    gunzip $1
-  elif [[ $lower == *.tar.bz2 || $lower == *.tbz ]]; then
-    tar xvjf $1
-  elif [[ $lower == *.bz2 ]]; then
-    bunzip2 $1
-  elif [[ $lower == *.zip ]]; then
-    unzip $1
-  elif [[ $lower == *.rar ]]; then
-    unrar e $1
-  elif [[ $lower == *.tar ]]; then
-    tar xvf $1
-  elif [[ $lower == *.lha ]]; then
-    lha e $1
-  else
-    print "Unknown archive type: $1"
-    return 1
-  fi
+  case $lower in
+    *.tar.bz2)  tar xvjf $1   ;;
+    *.tar.gz)   tar xvzf $1   ;;
+    *.tar.xz)   tar xvJf $1   ;;
+    *.bz2)      bunzip2 $1    ;;
+    *.rar)      unrar x $1    ;;
+    *.gz)       gunzip $1     ;;
+    *.tar)      tar xvf $1    ;;
+    *.tbz2)     tar xvjf $1   ;;
+    *.tgz)      tar xvzf $1   ;;
+    *.zip)      unzip $1      ;;
+    *.Z)        uncompress $1 ;;
+    *.7z)       7z x $1       ;;
+    *.xz)       unxz $1       ;;
+    *.exe)      cabextract $1 ;;
+    *.lha)      lha e $1      ;;
+    *) echo "Unknown archive type: $1" || return 1 ;;
+  esac
   # Change in to the newly created directory, and
   # list the directory contents, if there is one.
   current_dirs=( *(N/) )
@@ -90,6 +90,6 @@ extract_archive() {
   done
 }
 
-cd() {
+function cd() {
   builtin cd "$@"; ls
 }

@@ -16,16 +16,16 @@ alias cdc='cd; clear'
 alias ls='ls -GF'
 
 # auto open images
-alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}='mirage'
+alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}='open -a Preview'
 # auto open movies
-alias -s {mpg,mpeg,avi,ogm,wmv,m4v,mp4,mov}='mplayer -idx'
+alias -s {mpg,mpeg,avi,ogm,wmv,m4v,mp4,mov}='open -a MPlayer\ OSX\ Extended'
 # auto open audio
-alias -s {mp3,ogg,wav,flac}='cmus'
+alias -s {mp3,ogg,wav,flac}='open -a Vox'
 # auto open web addresses
-alias -s {html,php,com,net,org,gov}='firefox'
+alias -s {html,php,com,net,org,gov}='open -a Firefox'
 # auto open regular files
 alias -s txt='vim'
-alias -s pdf='xpdf'
+alias -s pdf='open -a Preview'
 
 alias wcat='wget -q -O -'
 alias svim='sudo vim'
@@ -33,6 +33,10 @@ alias sv='svim'
 alias v='mvim'
 alias cmake='cmake -DCMAKE_INSTALL_PREFIX=/usr -DSYSCONFDIR=/etc'
 alias hosteurope='ssh root@83.169.21.36'
+alias tunneledhosteurope='ssh -t administrator@10.28.1.81 ssh root@83.169.21.36'
+alias jewvps='ssh -l gigamo -p 18763 jefferson.sharpcode.se'
+alias lokvps='ssh administrator@10.28.1.81'
 #alias esltv='/home/gig/downloads/octoshape/OctoshapeClient -url:ESL.oph350'
 #alias esltv2='/home/gig/downloads/octoshape/OctoshapeClient -url:tetv.cebit1'
 alias run='open -a'
+alias redis='redis-server /usr/local/etc/redis.conf'

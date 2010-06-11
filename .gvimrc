@@ -7,4 +7,5 @@
 "colo wombat
 "colo twilight
 "colo vividchalk
-colo sunburst
+"colo sunburst
+colo vimbrant

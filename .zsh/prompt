@@ -2,8 +2,8 @@
 
 case $TERM in
   *xterm*|rxvt|rxvt-unicode|rxvt-256color|(dt|k|E)term)
-    precmd () { print -Pn "\e]0;$TERM - %n %# %~\a" }
-    preexec () { print -Pn "\e]0;$TERM - %n %# %~ ($1)\a" }
+    precmd () { print -Pn "\e]0;%n %# %~\a" }
+    preexec () { print -Pn "\e]0;%n %# %~ ($1)\a" }
   ;;
   screen)
     precmd () {
@@ -22,15 +22,16 @@ setprompt () {
   colors
   setopt prompt_subst
   PR_NO_COLOR="%{$terminfo[sgr0]%}"
-  for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
+  for color in BLACK RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
     eval PR_$color='%{$terminfo[bold]$fg[${(L)color}]%}'
     eval PR_LIGHT_$color='%{$fg[${(L)color}]%}'
   done
 
-  PROMPT=$'%n %# ${PR_BLUE}%~${PR_NO_COLOR}
-${PR_RED}»${PR_NO_COLOR} '
+  #PROMPT=$'${PR_LIGHT_BLACK}[${PR_LIGHT_YELLOW}%n${PR_LIGHT_BLACK}][${PR_LIGHT_RED}%~${PR_LIGHT_BLACK}] %#${PR_NO_COLOR} '
   #RPROMPT=$'${PR_LIGHT_GREEN}%~${PR_NO_COLOR}'
-  #export PS1="$(print '%{\e[0;33m%}[%~]%{\e[0;31m%}%#%{\e[0m%} ')"
+  #PROMPT=$'${PR_LIGHT_YELLOW}%n${PR_LIGHT_CYAN}@${PR_LIGHT_GREEN}%m${PR_LIGHT_WHITE}:${PR_LIGHT_RED}%#${PR_LIGHT_CYAN}->${PR_LIGHT_YELLOW}%~${PR_LIGHT_WHITE} (${PR_LIGHT_GREEN}%?${PR_LIGHT_CYAN})
+#> ${PR_NO_COLOR}'
+  PROMPT=$'[${PR_LIGHT_GREEN}%n${PR_NO_COLOR}][${PR_LIGHT_CYAN}%~${PR_NO_COLOR}] ${PR_LIGHT_GREEN}>>${PR_NO_COLOR} '
 }
 
 if [ -n "$TERM" ]; then

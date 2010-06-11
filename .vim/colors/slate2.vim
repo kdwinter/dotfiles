@@ -32,6 +32,7 @@ else
     hi Normal ctermbg=0 ctermfg=15 guibg=#181b1f guifg=#d0d0d0 gui=none
 
     hi Cursor guibg=#c6e2ff guifg=#000000 gui=bold
+    hi CursorLine cterm=none ctermfg=none ctermbg=black
     hi FoldColumn guibg=#363d45 guifg=fg gui=none
     hi Folded guibg=#48525d guifg=fg gui=none
     hi LineNr guibg=#24292e guifg=#a7a7a7 gui=none

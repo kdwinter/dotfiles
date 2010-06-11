@@ -1,0 +1,8 @@
+# Write your default config options here!
+double='yes'
+font='Inconsolata'
+unicode='yes'
+utf8='yes'
+zoom='yes'
+quiet='yes'
+really-quiet='1'

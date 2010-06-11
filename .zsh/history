@@ -1,5001 +1,5012 @@
-v .Xdefaults
-xrdb .Xdefaults
-v .irssi/config
-c
-v .wmii-hg/config.
-v .wmii-hg/config.yaml
-v .wmii-hg/config.yaml
-gvim .wmii-hg/config.yaml
-exit
-cd .vimperator
-cd plugin
+gs
+vim config/environments/development.rb
+vim config/environments/development.rb
+gs
+script/Console
+script/console
+vim public/javascripts/prickle/application.js
+gs
+ga .
+gc Fixes
+git push origin openvld
 ls
-remove buftabs.js
-ls
-rm buftabs.js
-ls
-..
-ls
-cd colors
-ls
-v droog.vimp
-..
-ls
-cd info
-ls
-cd default
-ls
-v local-marks
-v url-marks
-v quickmarks
-v history-command
-../..
-ls
-..
-ls
-exit
-spux
-exit
-exit
-exit
-exit
-v .Xdefaults
-xrdb .Xdefaults
-v .Xdefaults
-v .Xdefaults
-xrdb .Xdefaults
-v .Xdefaults
-exit
-cd code/ruby/projects
-ls
-c
-exit
-v .irssi/config
-c
-rinfo
-ls bin
-v bin/scrshot
-scrshot
-pacup
-aurb -u
-calculeer "4*771"
-c
-feh --bg-scale walls/rain1440_900.jpg
-c
-v tmp/bleachfillers.txt
-v .vimrc
-c
-ls .vim
-pacup
-cd code/ruby/projects/aurb
-git pull origin master
-ga bin/aurb
-ls
-ruby setup.rb install
-gc Remove __END__
+gs
+vim config/deploy.rb
+gs
+ga .
+gc Fix deploy for cvg
+git push origin openvld
+hosteurope
+vim config/deploy.rb
+vim config/deploy.rb
+ga .
+gc Fix deploy again
+git push origin openvld
+git checkout master
+vim config/deploy.rb
+gs
+cap deploy
+vim config/deploy.rb
+cap deploy
+gs
+cap deploy:setup
+cap deploy
+git checkout openvld
+cap deploy:setup
+vim config/deploy.rb
+cap deploy:setup
+cap deploy
+cap deploy
+cap deploy
+cap deploy
+gs
+ga .
+gc Fix deploy
+git push origin openvld
+cap deploy
+vim config/deploy.rb
+cap deploy:setup
+vim config/deploy.rb
+cap deploy
+vim config/deploy.rb
+cap deploy
+vim config/deploy.rb
+cap deploy
+vim config/deploy.rb
+cap deploy
+git ls-remote ssh://root@83.169.21.36/var/git/prickle.git openvld
+vim config/deploy.rb
+cap deploy
+vim config/deploy.rb
+vim config/deploy.rb
+cap deploy
+gs
+ga .
+gc Fix deploy
+gs
+git rm -rf vendor/plugins/dummy_extension/
+gs
+ga .
+gc Remove dummy
+git push origin openvld
+git checkout master
+vim db/seeds.rb
+gs
+ga .
+gc Fix seed
+git checkout openvld
+git merge master
+gs
 gl -p
-c
-cdc
-pacup
-calculeer "40*6"
-calculeer "9*6"
-v tmp/cookmats.txt
-calculeer "57*5"
-calculeer "57*4"
-calculeer "58*3"
-calculeer "58*6"
-calculeer "56*3"
-v tmp/cookmats.txt
-calculeer "54*4"
-calculeer "54*5"
-pacup
-v .vimrc
-v .vimrc
-v .vimrc
-v .vimrc
-v .wmii-hg/config.
-v .wmii-hg/config.yaml
-exit
-ls tmp
-v tmp/honmatchid.txt
-pacup
-pacup
-exit
-screen -RR
-ls
-c
-exit
-exit
-cd .wmii-hg
-ls
-rm -rf .git/
-c
-cp -r ~/tmp/.wmii-hg/.git .
-cp -r ~/tmp/.wmii-hg/.gitignore .
-ls
-v .gitignore
-git rm config.rb
-git rm -f config.rb
-ls
-gs
-git rm -f binds.txt
-ga config.yaml
-gs
-v .gitignore
-gs
-ga .gitignore wmiirc
-gs
-gc Updated to Rumai 3.1.0
-gpo master
-c
-ls
-v README
-pacup
-git pull origin master
-ls
-gs
-exit
-v .wmii-hg/config.
-v .wmii-hg/config.yaml
-v .wmii-hg/config.yaml
-v .wmii-hg/wmiirc.log
-exit
-wmii -r .wmii-hg/config.
-wmii -r .wmii-hg/wmiirc
-screen -RR
-v .irssi/config
-irssi
-v .Xdefaults
-c
-irssi
-exit
-sudo /etc/rc.d/xinetd
-sudo /etc/rc.d/xinetd start
-sudo /etc/rc.d/xinetd restart
-sensors
-htop
-sudo /opt/lampp/lampp stop
-htop
-killall mysqld_safe
-sudo killall mysqld_safe
-sudo htop
-c
-firefox
-w3m bbs.archlinux.org
-svim /etc/hal/fdi/policy/10-keymap.fdi
-svim /etc/rc.conf
-install setxkbmap
-setxkbmap
-setxkbmap -h
-setxkbmap
-setxkbmap
-src
-setxkbmap
-sudo /etc/rc.d/xinetd stpo
-sudo /etc/rc.d/xinetd stop
-while true; do
-aurb -d conky-cli
-cd abs/conky-cli
-makepkg -fi
-v .conkyrc
-conky | while true; read line; do xsetroot -name "$line"; done &
-v .conkyrc
-conky | while true; read line; do xsetroot -name "$line"; done &
-v .conkyrc
-cdc
-while true; do; xsetroot -name "$(date +'%a %b %d %H:%M')" ; sleep 1m; done &
-xsetroot -name "test"
-xsetroot -h
-killal conky
-c
-killal conky
-killal conky
-killall conky
-c
-pacup
-pacup
-screen -t irssi
-c
-ls
-cd abs/libxft-cleartype
-makepkg -fi
-../mumble
-makepkg -fi
-../oneswarm
-makepkg -fi
-../opera
-makepkg -fi
-../spux-svn
-makepkg -fi
-../ttf-vista-fonts/
-makepkg -fi
-../vicious-git
-makepkg -fi
-../virtualbox_bin
-makepkg -fi
-exit
-startx
-startx
-startx
-killall wmii
-killall wmiirc
-htop
-htop
-v .wmii-hg/config.
-v .wmii-hg/config.yaml
-startx
-v .xinitrc
-startx
-startx
-screen -RR
-reboot
-pacup
-reboot
-killall X
-killall X
-ls
-xrdb .Xdefaults
-exit
-ls
-v .config/awesome/rc.lua
-exit
-v .Xdefaults
-exit
-screen -RR
-exit
-aurb -u
-pacup
-irb
-exit
-v .wmii-hg/config.yaml
-exit
-v /usr/lib/ruby/site_ruby/1.8/amazing/widget.rb
-exit
-v .wmii-hg/widgets.rb
-exit
-screen -RR
-mountnet
-ruftp tmp/shares/torchlight.PNG
-mv tmp/shares/torchlight.PNG tmp/shares/torchlight.png
-cd tmp/shares
-ls
-ls
-ls
-ruftp torchlight.png
-ncftp
-c
-ruftp torchlight.png
-cdc
-pacup
-ruftp tmp/shares/ordrak.png
-ruftp tmp/shares/torchlight.png
-ruftp tmp/shares/torchlight.png
-ruftp tmp/shares/sharedstash.bin
-ruftp tmp/shares/da1.jpg tmp/shares/da2.jpg
-ruftp tmp/shares/da3.jpg tmp/shares/da4.jpg tmp/shares/da5.jpg
-pacup
-ls .wmii-hg
-cp config.widgets.yaml .wmii-hg
-rm config.widgets.yaml
-ls .wmii-hg
-exit
-v .wmii-hg/config.yaml
-exit
-exit
-v .wmii-hg/config.yaml
-exit
-v .wmii-hg/widgets.rb
-exit
-exit
-exit
-exit
-htop
-exit
-ls
-cd .wmii-hg
-ls
-cp config.yaml config.yaml.bak
-cp config.widgets.yaml config.yaml
-ls
-v config.yaml
-ls
-v config.widgets.yaml
-mv ../config.widgets.yaml config.widgets.yaml
-rm config.yaml
-mv config.widgets.yaml config.yaml
-v config.yaml
-rm config.widgets.yaml\~
-ls
-v config.yaml
-exit
-screen -RR
-exit
-mirage downloads/Screenshot20091110163031656.jpg
-exit
-mirage downloads/Screenshot20091110224525203.jpg
-exit
-mirage downloads/Screenshot20091111210037250.jpg
-exit
-htop
-exit
-ls
-ruftp tmp/shares/da6.jpg
-pacup
-pacup
-ruftp tmp/shares/da7.jpg
-pacup
-ruftp tmp/shares/da8.jpg tmp/shares/da9.jpg
-cd -
-ls
-cd .wmii-hg
-cd -
-cd .config
-cd awesome
-cd icons
-cd -
-cd --
-c
-xbindkeys
-v .xinitrc
-c
-pacup
-xrdb .Xdefaults
-c
-v .Xdefaults
-c
-exit
-ls
-xrdb .Xdefaults
-exit
-cd .wmii-hg
-ls
-v .gitignore
-gs
-ga .gitignore
-v config.yaml
-git reset --hard
-ls
-rm config.yaml.bak widgets.rb
-gs
-v config.yaml
-exit
-screen -RR
-nitrogen walls
-exit
-cd code/ruby/
-v widgets.rb
-v widgets.rb
-exit
-ls
-c
-v .wmii-hg/config.yaml
-v .wmii-hg/config.yaml
-install bastet
-aurb -s bastet
-aurb -d bastet
-cd abs/bastet
-makepkg -fi
-bastet
-ls
-cd src/bastet-0.43
-ls
-v main.cpp
-v ui.cpp
-v Ui.cpp
-c
-cdc
-raggle
-install raggle
-raggle
-v /usr/bin/raggle
-svim /usr/bin/raggle
-raggle
-v /usr/bin/raggle
-svim /usr/bin/raggle
-raggle
-svim /usr/bin/raggle
-raggle
-svim /usr/bin/raggle
-raggle
-svim /usr/bin/raggle
-raggle
-svim /usr/bin/raggle
-raggle
-c
-ls
-c
-c
-els
-ls
-exit
-exit
-exit
-v .wmii-hg/config.yaml
-v .wmii-hg/config.yaml
-c
-ls
-c
-rinfo
-c
-ls bin
-c
-cowsay -f tux '\\o/'
-c
-cowsay -f tux '\o/'
-uname -a
-scrshot
-exit
-v code/html/gigamo.be/index.html
-mirage screenshots/rvol.png
-exit
-pacup
-svim /etc/pacman.d/mirrorlist
-pacup
-ls
-c
-aurb -u
-cd abs/luaposix
-cd .
-cd ~
-v code/ruby/projects/aurb/bin/aurb
-cd code/ruby/projects
-ls
-cd aurb
-ruby setup.rb install
-aurb -h
-aurb -d blablal
-v bin/aurb
-v README.rdoc
-ls
-v LICENSE
-ls
-v bin/aurb
-aurb
-aurb -a
-v bin/aurb
-ruby setup.rb install
-cdc
-ls
-c
-cd code
-ls
-ls php
-ls scala
-v scala/examples/hello.scala
-v lua/colors.lua
-rm lua/colors.lua
-ls
-v java/HelloWorld.java
-v python/scripts/todo.py
-v python/scripts/pyftp.py
-v python/scripts/changevol.py
-cdc
-ls
-c
-ls
-c
-ls
-v .zshrc
-v .zsh/alias
-outside
-t ls
-c
-ls
-c
-aurb -s byobu
-cd code/html/gigamo.be
-cp index.html index.html.old
-v index.html
-ruftp index.html
-v index.html
-ruftp index.html
-ls
-cd css
-ls
-cp layout.css layout.css.old
-chmod -x *
-ls
-v layout.css
-ruftp layout.css
-..
-ruftp index.html
-ncftp
-ruftp index.html
-v /usr/bin/rvol
-locate rvol
-rumai
-wmii -r ~/.wmii-hg/wmiirc
-exit
-ruftp tmp/shares/da10.jpg
-pacup
-ls
-c
-ls
-c
-cp tmp/shares/\!\!Pictures/Wallpapers/2009/byousoku_5_centimetre.jpg ~/walls
-cd walls
-ls
-chmod -x byousoku_5_centimetre.jpg
-mv byousoku_5_centimetre.jpg 5cm.jpg
-cdc
-htop
-slurm
-exit
-c
-killall raggle
-c
-htop
-cd abs/luaposix
-makepkg -fi
-../php-gtk
-makepkg -fi
-install gtkhtml
-makepkg -fi
-install gtk2+extra
-makepkg -fi
-pacman -Q | grep php
-../pygtkmoz
-remove gtk2+extra gtkhtml
-makepkg -fi
-../spux-svn
-makepkg -fi
-cd -
-../uzbl-git
-makepkg -fi
-cdc
-ruftp tmp/shares/da11.jpg
-uptime
-pacup
-pacup
-ruftp tmp/shares/templararmor.png
-pacup
-screen -t mail alpine
-v .wmii-hg/config.yaml
-screen -RR
-c
-ls
-screen -RR
-urxvtc -e screen -RR
-exit
-gdb
-install gdb
-install gdb
-gdb
-c
-exit
-cd gitclones/defunkt/gist
-ls
-git pull
-which gist
-v gist.rb
-svim ~/bin/gist
-v ~/bin/gist
-exit
-feh --bg-scale walls/minori.jpg
-exit
-cd .wmii-hg
-ls
-gs
-ga config.yaml
-gc Updated
-gl -p
+git push origin openvld
+git checkout master
 git push origin master
-exit
-cd code/ruby/sinatra/ronin
-ls
-rm -rf entries
-exit
-okular downloads/sinatrapresentation.pdf
-xpdf downloads/sinatrapresentation.pdf
-rm downloads/sinatrapresentation.pdf
-exit
-cd downloads
-ex feedicons-standard.zip
-cp feed-icon-14x14.png ~/code/ruby/sinatra/ronin/public/img/feed.png
-exit
-cat .myXLog
-exit
-scrshot
-exit
-v tmp/timetest.rb
-rm tmp/timetest.rb
-exit
-cd abs/chromium-browser
-..
-cd abs/chromium-browser-bin
-ls
-cd chromium-browser-bin
-ls
-makepkg -fi
-chromium-browser
-chromium-browser
-chromium-browser
-scrshot chromium
-scrshot chromium2
-exit
-svim /etc/httpd/conf/httpd.conf
-chromium-browser
-rm -r Downloads
-exit
-aurb -u
-remove phoronix-test-suite
-remove php-gtk
-ls
-c
-cd /opt/lampp/htdocs
-su
-sudo /opt/lampp/lampp start
-sudo /opt/lampp/lampp stop
-cdc
-v .zsh/prompt
-src
-c
-v .zsh/prompt
-c
-src
-c
-mkdir httpd
-cd http
-cd httpd
-mkdir cgi-bin
-ls
-sudo /opt/lampp/lampp stop
-pacs mod_ruby
-aurb -s mod_ruby
-aurb -d mod_ruby
-chmod +X cgi-bin/hello.cgi
-chmod o+x cgi-bin
-mkmine cgi-bin
-ls
-cd cgi-bin
-ls
-chmod o+x hello.cgi
-ls
-ls
-..
-chmod 777 cgi-bin/*
-ls
-chmod 777 cgi-bin/
-touch index.html
-touch cgi-bin/index.html
-v index.html
-mv index.html index.rb
-v index.rb
-mv index.rb index.html
-cd cgi-bin
-ls
-v index.html
-ls
-..
-ls
-cd cgi-bin
-..
-chmod 777 cgi-bin
-ls cgi-bin
-cd cgi-bin
-chmod -x hello.cgi
-ls
-..
-ls
-chmod a+r cgi-bin/hello.cgi cgi-bin/index.html
-ls
-v index.html
-chmod 755 cgi-bin
-ll
-cd cgi-bin
-ls
-ll
-chmod 755 hello.cgi index.html
-ls
-rm index.html
-v hello.cgi
-ls
-chmod 755 cookie.cgi
-v cookie.cgi
-ls
-cp cookie.cgi cookie.rb
-ls
-rm *.cgi
-ls
-v ../index.html
-v hello.rb
-ls
-v hello.html.erb
-chmod 755 hello.html.erb
-ls
-v cookie.rb
-v hello.rb
-ls
-rm hello.html.erb
-ls
-ls ~/code/ruby/projects
-cd /opt/lampp/htdocs/giantframework
-ls
-cd /opt/lampp/htdocs/gianttest
-ls
-v index.php
-cdc
-cd code/ruby/sinatra/test
-ls
-ruby test.rb
-ruby test.rb
-ruby test.rb
-ruby test.rb
-ruby test.rb
-ruby test.rb
-ruby test.rb
-c
-..
-ls
-mv test/ ronin/
-ls
-cd ronin
-ruby ronin.rb
-c
-sudo gem install haml
-rm views/index.erb
-ls
-cd pu
-cd public
-ls
-cd css
-ls
-mv style.css style.sass
-v style.sass
-v style.sass
-mv style.sass ../../views
-..
-..
-ruby ronin.rb
-ruby ronin.rb
-ls
-ruby ronin.rb
-ruby ronin.rb
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup ronin.ru
-rackup ronin.ru
-c
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-ruby ronin.rb
-ruby ronin.rb
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-ruby ronin.Rb
-ruby ronin.Rb
-ruby ronin.rb
-ls
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-rackup ronin.ru
-ls
-mv ronin.ru config.ru
-cdc
-sudo gem install brianmario-yalj-ruby
-sudo gem search --local yajl
-sudo gem install gemcutter
-pacs rubygems
-install rubygems
-pacup
-cd code/ruby/projects/aurb
-ruby setup.rb install
-aurb -h
-aurb -s awesome
-./aurb -h
-./aurb -s awesome
-./aurb -s awesome
-./aurb -s awesome
-./aurb -s awesome
-./aurb -s awesome
-ruby setup.rb install
-aurb -h
-aurb -v
+git push origin openvld
+git checkout openvld
+gs
+cap deploy
+vim TODO
 gs
 ga .
-gc Now using Yajl
-gpo master
-ga README.rdoc
-gc Update README to reflect switch
-gpo master
+gc TODO update
+script/generate migration add_layout_to_sections layout:string
+vim db/migrate/20100516191957_add_layout_to_sections.rb
+gs
+rake db:migrate
+script/console
+gs
+git checkout master
+git add db/schema.rb db/migrate/*
+gs
+gc gs
+gs
+git checkout master
+gs
 ga .
-gc Shorten that
-sensors
-sensors
-sensors
-sudo cpufreq-set -g powersave
-sudo cpufreq-set -c 1 -g powersave
-cpufreq-info
-sensors
-sensors
-sudo cpufreq-set -g ondemand
-sudo cpufreq-set -c 1 -g ondemand
-sudo gem install capistrano
-cd ~/gitclones/sinatra/scanty
-exit
-pacup
-pacup
+gc Fix page finding
+gs
+git push origin master
+git checkout openvld
+git merge master
+git push origin openvld
+gs
+cap deploy
+cap deploy:migrate
+gs
+script/console
+gs
+ga .
+gc Section specific layout
+gs
+ga .
+gc Comment
+git push origin openvld
+cap deploy
+cap deploy
+gs
+git mv themes/breeze/ themes/cvg
+ls
+ls themes
+script/console
+gs
+gc Renamed theme
+git push origin openvld
+cap deploy && cap deploy:cleanup
+script/console
+gs
+git checkout master
+gs
+ga .
+gc Use a case statement
+git push origin master
+git checkout openvld
+git merge master
+gs
+git push origin openvld
+git log -p
 c
-pacup
+sudo gem install delayed_job
 ls
+gs
+vim config/environment.rb
+vim Rakefile
+script/generate delayed_job
+rake db:migrate
+vim vendor/plugins/newsletters/app/controllers/admin
+gs
+ga .
+gc Add delayed job
+git push origin openvld
+cap deploy && cap deploy:migrate
+ls scrit
+ls script
+git add script/delayed_job
+gs
+vim config/deploy.rb
+v config/deploy.rb
+gs
+ga .
+gc Add delayedjob to deploy
+git push origin openvld
+cap deploy
+vim config/environments/development.rb
+gs
+ga .
+gc Setup mail config
+git push origin openvld
+gs
+cap deploy
+gs
+vim vendor/plugins/newsletters/app/controllers/admin/subscribers_controller.rb
+gs
+ga .
+gc Does this work then
+git push origin openvld
+cap deploy
+script/delayed_job start
+script/delayed_job stop
+vim config/database.
+vim config/database.yml
+rake jobs:work
+gs
+ga .
+gc Fix mailer settings
+git push origin openvld
+cap deploy
+rake jobs:work
+gs
+cap deploy:migrate
+cap -T
+cap delayed_job:restart
+vim config/deploy.rb
+cap delayed_job:restart
+gs
+ga .
+gc Fix deploy
+git push origin openvld
+gs
+ga .
+gc Set reply_to
+git push origin openvld
+cap deploy
+v themes/cvg/views/layouts/application.html.haml
+vim public/javascripts/prickle/application.js
 c
-cd code/ruby/projects
+vim ~/Code/html/cvgstart/index.html
+script/console
+cp ~/Code/html/cvgstart/stylesheets/application.css themes/cvg/stylesheets/home.css
+vim themes/cvg/stylesheets/home.css
+gs
+ga .
+gc Add temporary home layout
+git push origin openvld
+cap deploy
+gs
+ga .
+gc Nu heeftem toch plaats
+gs
+ga .
+gc Fix
+git push origin openvld
+cap deploy
+cd themes/cvg
+rm stylesheets/application.css
+rm stylesheets/application.css
+touch stylesheets/application.css
+mv ~/Downloads/cvg.png images
+gs
+ga .
+gc Layout updates
+git push origin openvld
+cap deploy
+gs
+ga .
+gc Style fix
+cap deploy
+gs
+git push origin openvld
+cap deploy
+mv ~/Downloads/cvg_lendeloos.png images/cvg.png
+gs
+ga .
+gc Fixed
+git push origin openvld
+cap deploy
+vim ~/Code/html/lokeren.be/index.html
+vim ~/Code/html/lokeren.be/stylesheets/application.css
+vim ~/Dropbox/Stage/UiTinLokeren3/stylesheets/application.css
+mv ~/Downloads/headers.zip .
 ls
-mkdir gunbatsu
+extract_archive headers.zip
 ls
-cd gunbatsu
-git init
-ls
-v gunbatsu.rb
-sudo gem install thin
-sudo gem install rack
-sudo gem install thin
-thin start
-thin
-mongrel
-sudo gem install mongrel
-webrick
-sudo gem install webrick
-sudo gem search webrick
-sudo gem search --remote webrick
-killall firefox-bin
-htop
-v hello.cgi
-cp hello.cgi /opt/lampp/htdocs/ruby
-sudo cp hello.cgi /opt/lampp/htdocs/ruby
-src
-ls
-src
-ls
-src
+rm headers.zip
+mv header_* images
+gs
+ga .
+gc Fuck
+git push origin openvld
+cap deploy
+gs
+ga .
+gc Try
+git pus
+git pus
+git push
+git push origin openvld
+cap deploy
+gs
+ga .
+gc Fix
+git push origin openvld
+cap deploy
+gs
+ga stylesheets/application.css views/admin/content/show.html.haml
+gc Fixes
+git checkout master
+gs
+cd ../..
+git checkout master
+gs
+ga .
+gc Bugfix
+git checkout master
+vim app/controllers/admin/content_controller.rb
+vim app/controllers/admin/content_controller.rb
+git checkout openvld
+git push origin openvld
+cap deploy && cap deploy:cleanup
+gs
+ga .
+gc Fix width
+git push origin openvld
+cap deploy && cap deploy:cleanup
+gs
+git checkout master
+gs
+ga .
+gc Fix
+git push origin master
+git checkout openvld
+git merge master
+git push origin openvld
+cap deploy
+gs
+ga .
+gc Fix
+git push origin openvld
+gs
+ga .
+gc Swap header colors
+git push origin openvld
+cap deploy
+git status
+git log
+git checkout master
+gs
+script/generate migration add_layout_to_sections layout:string
+vim db/migrate/20100517162459_add_layout_to_sections.rb
+gs
+ga .
+gc Layout per section
+git push origin master
+git checkout openvld
+gs
+ga .
+gc Ist zo beter
+git push origin openvld
+cap deploy
+cp ~/Downloads/social_networking_iconpack/facebook_32.png themes/cvg/images
+cp ~/Downloads/social_networking_iconpack/twitter_32.png themes/cvg/images
+cp ~/Downloads/social_networking_iconpack/linkedin_32.png themes/cvg/images
+gs
+ga .
+gc Social media icons
+git push origin openvld
+gs
+ga .
+gc Fix minheight
+git push origin openvld
+cap deploy
+gs
+git pull origin openvld
+git rm database.yml
+git rm app/models/user.rb~
+gs
+ga .
+gc Trash
+git push origin openvld
+gs
+vim themes/cvg/stylesheets/home.css
+gs
+ga .
+gc Fixes
+git push origin openvld
+cap deploy
+vim vendor/plugins/newsletters/app/controllers/admin/subscribers_controller.rb
+vim public/stylesheets/prickle/application.css
+gs
+ga .
+gc Fix flashes
+git push origin openvld
+git checkout master
+vim public/javascripts/prickle/application.js
+gs
+ga .
+gc Fix
+git push origin master
+git checkout openvld
+cap deploy
+gs
+git checkout master
+gs
+ga .
+gc Allow section paths too
+git push origin master
+git checkout openvld
+git merge master
+git push origin openvld
+git rm db/migrate/20100517162459_add_layout_to_sections.rb
+gs
+ga .
+gc Not that
+git push origin openvld
+cap deploy && cap deploy:cleanup
+vim vendor/plugins/dutch_language_pack/config/locales/nl.yml
 c
+git describe
+gs
+ga .
+gc Tighten dat up
+git describe --tags
+git push origin openvld
+gs
+ga .
+gc Use git describe for version
+git push origin openvld
+cap deploy
+gs
+ga .
+gc Oh boy
+git push origin openvld
+cap deploy
+git checkout master
+vim lib/prickle/version.rb
+v lib/prickle/version.rb
+vim lib/prickle.rb
+gs
+ga .
+gc Use git describe for version
+git describe --tags
+git push origin master && cap deploy
+git checkout openvld
+git checkout master
+vim app/views/layouts/admin/_footer.html.haml
+gs
+ga .
+gc God damn it
+git push origin master && cap deploy && cap deploy:cleanup && git checkout openvld
+mv ~/Desktop/Screen\ shot\ 2010-05-18\ at\ 18.06.17.png ~/Pictures/mvimprefs.png
+ruftp ~/Pictures/mvimprefs.png
+rm ~/Pictures/mvimprefs.png
 ls
-rm gunbatsu.rb
-c
-v .zsh/pro
-c
-src
-c
-svim /etc/httpd/conf/httpd.conf
-v hello.cgi
-sudo /etc/rc.d/httpd start
-sudo /etc/rc.d/httpd start
-install httpd
-sudo /etc/rc.d/httpd start
-v hello.cgi
-svim /etc/httpd/conf/httpd.conf
-sudo /etc/rc.d/httpd start
-httpd -e DEBUg
-svim /etc/httpd/conf/httpd.conf
-sudo /etc/rc.d/httpd start
-httpd -e DEBUg
-svim /etc/httpd/conf/httpd.conf
-httpd -e DEBUg
-sudo /etc/rc.d/httpd start
-cp hello.cgi ~/httpd/cgi-bin
-cd ~/httpd/cgi-bin
-v hello.cgi
-svim /etc/httpd/conf/httpd.conf
-sudo /etc/rc.d/httpd restart
-ls /srv/http
-ls /etc/httpd/run
-svim /etc/httpd/conf/httpd.conf
-sudo /etc/rc.d/httpd restart
-sudo /etc/rc.d/httpd restart
-svim /etc/httpd/conf/httpd.conf
+rm -rf /Applications/MacVim.app
+mv ~/Downloads/MacVim-snapshot-52/MacVim.app /Applications
+v themes/cvg/views/layouts/application.html.haml
+gs
+ga .
+gc Yield it instead
+gl -p
+vim vendor/plugins/newsletters/app/controllers/admin/subscribers_controller.rb
+gs
+ga .
+gc Wtf
+git push origin openvld
+cap deploy && cap deploy:cleanup
+v ~/tmp/Sekishi.txt
+gs
+ga .
+gc Interpolate n stuff
+git log -p
+gs
+git reset --hardt
+git reset --hard
+gs
+git checkout master
+grep -H Are you sure */**/*.html.erb
+grep -H "Are you sure" */**/*.html.erb
+gs
+ga .
+gc Translate confirmations
+git checkout openvld
+git merge master
+gl -p
+gs
+git checkout master
+gs
+ga .
+gc Bugfix
+git checkout openvld
+git merge master
+sudo gem install resque --no-ri --no-rdoc
+gs
+git checkout master
+git checkout master -f
+gs
+gs
+ga .
+gc JS tweaks
+git checkout openvld
+git merge master
+git checkout master
+vim config/locales/en.yml
+gs
+ga .
+gc Lol
+git checkout openvld
+git merge master
+git checkout master
+gs
+ga .
+gc Woah
+git checkout openvld
+git merge master
+gs
+git checkout master
+vim config/environment.rb
+gs
+cp ~/Downloads/famfamfam_silk_icons_v013/icons/package.png public/images/famfamfam
+cp ~/Downloads/famfamfam_silk_icons_v013/icons/package_add.png public/images/famfamfam
+cp ~/Downloads/famfamfam_silk_icons_v013/icons/package_edit.png public/images/famfamfam
+cp ~/Downloads/famfamfam_silk_icons_v013/icons/package_delete.png public/images/famfamfam
 ls
-cp hello.cgi hello.rb
-v hello.rb
-svim /etc/httpd/conf/httpd.conf
-sudo /etc/rc.d/httpd restart
-svim /etc/httpd/conf/httpd.conf
+gs
+ga .
+gc Add attachment starting point
+gs
+git checkout openvld
+vim vendor/plugins/newsletters/app/controllers/admin/subscribers_controller.rb
+gs
+ga .
+gc Bugfix
+git checkout master
+gs
+vim config/environment.rb
+gs
+ga .
+vim config/environment.rb
+ga .
+gc Fix
+script/generate migration create_attachments_table
+vim db/migrate/20100519103024_create_attachments_table.rb
+gs
+rake db:migrate
+gs
+ga .
+gc Attachment migration
+git checkout openvld
+git merge master
+vim config/environment.rb
+gs
+ga config/environment.rb
+gc Fix conflict
+gs
+gl -p
+gs
+rake db:migrate
+gs
+ga .
+gc Modified Schema
+gs
+script/console
+git checkout master
+gs
+script/generate migration add_node_to_attachments node_id:integer node_type:string
+vim db/migrate/20100519104407_add_node_to_attachments.rb
+gs
+ga .
+gc Fixes
+git checkout openvld
+git merge master
+rake db:migrate
+git checkout master
+gs
+ga .
+gc Schema
+git checkout master
+script/console
+gs
+ga .
+gc Fixes
+git checkout openvld
+git merge master
+git checkout master
+mkdir app/views/admin/attachments
+script/console
+ls public/system/files/1/original/MacBook_Pro.txt
+script/console
+ls public
+ls public/attachments/files/2/original/MacBook_Pro.txt
+vim .gitignore
+vim db/seeds.rb
+gs
+vim app/views/admin/users/index.html.haml
+gs
+ga .
+gc Fix attachments
+git checkout openvld
+git merge master
+vim config/deploy.rb
+git checkout master
+script/console
+gs
+ga .
+gc Fix show action
+git checkout openvld
+git merge master
+git checkout master
+gs
+ga .
+gc Fix
+git checkout openvld
+git merge master
+script/console
+script/console
+git checkout master
+script/console
+vim app/views/admin/groups/_form.html.haml
+vim app/views/admin/groups/_form.html.haml
+script/generate migration add_userstamps_to_attachments creator_id:integer updater_id:integer
+gs
+ga .
+gc Fixsjies
+git checkout openvld
+rake db:migrate
+ga .
+gc Schema
+git checkout master
+gs
+ga .
+gc Fix
+git checkout openvld
+git merge master
+rake db:migrate
+gs
+ga .
+gc Schema
+git checkout master
+vim public/javascripts/prickle/application.js
+script/console
+git reset --hard
+gs
+gs
+script/generate migration drop_columns_from_attachments
+vim db/migrate/20100519133352_drop_columns_from_attachments.rb
+gs
+ga .
+gc Fix attachments
+git checkout openvld
+git merge master
+rake db:migrate
+git merge master
+gs
+ga .
+gc Fix em for real
+gs
+git revert HEAD
+gs
+gs
+ga .
+gc Fix user stamps
+git log -p
+gs
+gs
+rake db:migrate
+gs
+ga .
+gc Fix schema
+git checkout master
+gs
+ga .
+gc Forgot that
+git checkout openvld
+git merge master
+git checkout master
 ls
-mkdir gunbatsu
-cd gunbatsu
+cd ..
+scp -rf prickle administrator@10.28.1.81:/home/administrator
+roll prickle.tar.gz prickle
+rm prickle.tar.gz
+roll prickle.tar.gz prickle
 ls
-v index.rb
-ls
-chmod 755 index.rb
-ls
-..
-cd gunbatsu
-..
-chmod 755 gunbatsu
-ls
-cd gunbatsu
 ll
-ls
-v index.rb
-svim /etc/httpd/conf/httpd.conf
-sudo /etc/rc.d/httpd restart
-ls
-v index.rb
+rm prickle.tar.gz
+cd prickle
 ls
 ll
-..
+cd log
 ll
-chmod 755 gunbatsu/
+cd ..
+cd db
+ll
+cd ..
+cd public
+ll
+ja
+cd javascripts
 ls
 ll
-ls ..
-ll ../
-..
+cd ro
+cd rogue
+ls
+cd wymeditor
 ll
-cd cgi-bin
+cd lang
+ll
+cd -
+cd ..
+cd ..
 ls
-cp gunbatsu/index.rb ./gunbatsu.rb
+cd ..
+cd attachments
+ll
+cd ..
+cd ..
+ll
+cd vendor
 ls
-rm -rf gunbatsu/
-ls
-v gunbatsu.rb
-ls
-mkdir gunbatsu
-chmod 755 gunbatsu
-mv gunbatsu.rb gunbatsu/
-ls
-cd gunbatsu
-ls
-mv gunbatsu.rb index.rb
-ls
-ls
-cp index.rb init.rb
-v init.rb
-ls
-rm init.rb
-ls
-v index.rb
-ls
-v index.rb
-cd ~/code/ruby/projects
-ls
-rm -rf gunbatsu
-ls
-..
-ls
-mkdir sinatra
-cd sinatra
-v test.rb
-sudo /etc/rc.d/httpd stop
-ruby test.rb
-ls
-mkdir test
+cd plugins
+cd ../..
 ls
 cd test
+ll
+cd ..
+cd tmp
 ls
-mkdir public
-mkdir views
-cd public
-mkdir css
-ls
-cd css
-touch style.css
-ls
-..
-ls
-mkdir js
-..
-ls
-v test.rb
-ruby test
-ruby test.rb
-cd views
-ls
-touch index.erb
-v index.erb
-touch index.erb
-v index.erb
-..
-ruby test.rb
-v views/index.erb
-ruby test.rb
-v views/index.erb
-..
+cd cache
+ll
+cd ../pids
+ll
+cd ../sessions
+ll
+cd ..
 cd ..
 ls
-cd ronin
-ls
-mv test.rb ronin.rb
-v ronin.rb
-cd app
-ls
-mkdir helpers
-mv helpers.rb helpers
-ls
-mkdir controllers
-mv ronin.rb controllers
-ls
-mv controllers/ronin.rb .
-ls
-mv ronin.rb ..
-ls
-rm -r controllers
-ls
-v libraries.rb
-mv libraries.rb ..
-ls
-..
-v ronin.rb
-ls
-ls app/helpers/helpers.rb
-ls
-v app/models/entry.rb
-v parsetest.rb
-c
-cdc
-cd gitclones
-ls
-mkdir sinatra
-cd sinatra
-ls
-git pull git://github.com/karmi/marley.git
-git clone git://github.com/karmi/marley.git
-git clone git://github.com/zapnap/sinatra-template.git
-git clone git://github.com/adamwiggins/scanty.git
-ls
-cd -
-cd -
-cdc
-cd code/ruby/projects/aurb
-v bin/aurb
-c
-cd ~/gitclones/sinatra/marley/
-ls
-ruby config.ru
-sudo gem install ftools
-v app/marley.rb
-sudo gem install ftools
-ruby config.ru
-sudo gem install activerecord
-ruby config.ru
-cp config/config.example.yml config/config.yml
-v config/config.yml
-ruby config.ru
-v README.rdoc
-rake app:install
-v Rakefile
-rake app:install
-ruby config.ru
-rake app:install
-rake app:install --trace
-v config/config.yml
-rake app:install
-v config/config.yml
-rake app:install
-ls
-v app/lib/post.rb
-ls
-mkdir data
-cp app/test/fixtures/001-test-article-one/test-article.txt .
-ls
-mv test-article.txt data
-ruby config.ru
-rackup config.ru
-v config.ru
-rackup config.ru
-v config.ru
-v config.ru
-rake app:install
-..
-rm -rf marley
-ls
-git clone git://github.com/karmi/marley.git
-cd scanty
-ls
-v README.rdoc
-ruby main.rb
-v README.rdoc
-v main.rb
-ruby main.rb
-v lib/post.rb
-exit
-killall X
-c
-c
-src
-c
-sc
-c
-src
-c
-cd abs/mod_ruby
-makepkg -fi
-cd ~/httpd
-ls
-chmod 755 cgi-bin/cookie.rb cgi-bin/gunbatsu cgi-bin/hello.rb
-chmod 755 index.html
-ls
-chmod 755 cgi-bin/gunbatsu/*
-ls cgi-bin/gunbatsu
-ls
-ll
-cd cgi-bin/gunbatsu
-ll
-gist -p < index.rb
-gist -p < index.rb
-v ~/bin/gist
-v ~/bin/gist
-pacup
-sudo gem install fcgi
-sudo gem install sinatra
-cd ~/gitclones/
-mkdir tpope
-cd tpope
-git clone git://github.com/tpope/vim-haml.git
-cd vim-haml
-ls
-cp ftdetect/haml.vim ~/.vim/ftdetect
-cp ftplugin/haml.vim ftplugin/sass.vim ~/.vim/ftplugin
-cp indent/haml.vim indent/sass.vim ~/.vim/indent
-cp syntax/haml.vim syntax/sass.vim ~/.vim/syntax
-cdc
-pacup
-sudo gem install rackup
-cd code/ruby/sinatra/ronin
-ls
-gs
-git init
-ga .
-gs
-gc Initial commit
-gs
-ga ronin.rb
-gl -p
-gl -p
-gc Fix views
-gl -p
-ga ronin.rb
-gc Set Sass to Compressed
-ls
-ls views
-ls public
-cd public
-ls
-rm -r css/
-git rm -r css/
-rm -r css/
-ls
-..
-gs
-ls
-ls public/js/jquery.js
-ga .
-gs
-gc Include jQuery
-ga views/index.haml
-gc Now if I wasn\'t stupid
-gs
-git remote add master git@gitorious.org:ronin-sinatra/ronin-sinatra.git
-git push origin master
-git remote add origin git@gitorious.org:ronin-sinatra/ronin-sinatra.git
-git remote del master
-git remote rm master
-git push origin master
-git push origin master
-v ~/.ssh/id_rsa
-v ~/.ssh/id_rsa.pub
-v ~/.ssh/id_rsa.pub
-c
-git push origin master
-git remote rm origin
-v ~/.ssh/id_rsa.pub
-git remote add origin ssh://repo.or.cz/srv/git/ronin-sinatra.git
-git push origin master
-git push origin master
-git remote rm origin
-git remote add origin ssh://repo.or.cz/srv/git/ronin-sinatra.git
-git push origin
-v ~/.gitconfig
-git push origin master
-git remote rm origin
-c
-gs
-ga ronin.rb
-gc Include helpers
-cd public
-mkdir css
-v css/reset.css
-..
-ls
-ga public/css/reset.css
-aurb -u
-gs
-ga .
-gc Added 404, 500, reset.css
-ga views/style.sass
-gs
-ga .
-ls
-gs
-ga .
-git remote ls
-git remote add origin git@gitorious.org:ronin-sinatra/ronin-sinatra.git
-git push origin master
-ls
-ls
-mkdir app
-mv ronin.rb app
-mv posts.rb app
-ls
-rm config.yaml
-mv config.ru ronin.ru
-mv helpers.rb app
-cd app
-ls
-mkdir controllers
-mv posts.rb controllers
-ls
-mkdir helpers
-mv helpers.rb helpers/
-ls
-ls
-..
-ls
-mv libraries.rb app
-ls
-ls
-v ronin.ru
-mv app/libraries.rb .
-mv app/ronin.rb .
-ls
-mv app/helpers/helpers.rb .
-mv app/controllers/posts.rb .
-ls
-rm -rf app
-ls
-rm posts.rb
-rm entries.rb
-ls views
-mv views/index.haml views/home.haml
-mv test.haml views
-rm helpers.rb
-ls
-rm home.haml index.haml layout.haml
-ls views
-v views/home.haml
-ls views
-rm views/test.haml
-ls
-rm entry.rb
-ls
-mkdir app
-ls
-mv helpers.rb app
-mv ronin.rb app
-mv libraries.rb app
-mv views app
-ls
-cd app
-v ronin.rb
-v ../ronin.ru
-v ../ronin.ru
-ls
-mkdir controllers
-..
-cd app
-ls
-rm -r controllers
-mkdir models
+cd doc
 cd ..
-ls
-ls
-mkdir entries
-v entries/1.txt
-sudo gem install sequel
-ruby create_db.rb
-sudo gem install libsqlite3-ruby
-pacs libsqlite
-aurb -s libsqlite
-aurb -s libsqlite
-aurb -h
-aurb -s awesome
-gem search --remote sqlite
-sudo gem install sqlite3 sqlite3-ruby
-sudo gem install sqlite3 sqlite3-ruby
-ruby create_db.rb
-ls
-v blog.db
-rm blog.db
-ruby create_db.rb
-ls app/views
-rm create_db.rb blog.db config.yml
-ls
-rm app/views/edit.haml app/views/new.haml
-cd app/views
-ls
-cd -
-ls
-mkdir entries
-rm -r app/models
-ls
-ls app
-cd app
-ls
-mkdir models
-cd models
-v entry.rb
-c:q
-ls
-v entry.rb
-..
-ls
-..
-ls
-v entries/hello
-gist -p < entries/hello
-v entries/hello
-ls
-v .gitignore
-ls
-gs
-git rm config.ru
-git rm helpers.rb
-git rm views/404.haml views/500.haml views/index.haml views/style.sass
-git rm views/
-gs
-ga .gitignore
-ga ronin.ru
-ga ronin.rb libraries.rb
-gs
-ga app/*
-gs
-gc Many changes woooosh
-sudo gem install rdiscount
-v entries/hello
-ls
-cd app
-ls
-git rm -rf helpers/
-ls
-gs
-..
-ls
-rm -rf parsetest.rb
-ls
+cd ..
+scp -r prickle administrator@10.28.1.81:/home/administrator
+cd pric
+cd prickle
+gem list | grep sqlite
+vim config/deploy.rb
 gs
 ga .
-gc This actually works
-v entries/hello
+gc Fix deploy
+gs
+vim db/schema.rb
+ls
+gs
+git pull origin master
+gs
+vim public/javascripts/common/prickle.js
+git rebase --continue
 gs
 ga .
-gc Final touches
-..
-roll
-v ~/.zsh/function
-roll ronin.tar.gz ronin
-ls
-ruftp ronin.tar.gz
-cd ronin
-ls
-which rackup
-ruftp app/models/entry.rb
+git rebase --continue
 gs
-ga .
-gc More touches
-ls
-cd app/en
-cd entries
-ls
-mv more-info-for-you additional-info
-v additional-info
-pacup
-sudo gem install pony
-aurb -s pony
-sudo gem search --remote pony
-sudo gem install pony
-sudo gem install tmail
-sudo gem install kucello-pony
-cd ~/gitclones
-mkdir pony
-cd pony
-git clone git://github.com/benprew/pony.git
-cd pony
-ls
-gem build pony.gemspec
-sudo gem install pony-0.4.1.gem
-ls
-cd lib
-ls
-..
-..
-ls
-git clone git://github.com/mikel/tmail.git
-cd tmail/ext/tmailscanner/
-ls
-cd tmail
-ls
-v tmailscanner.c
-cd -
-ls
-../..
-ls
-..
-ls
-cd tmail
-ls
-cp ~/downloads/tmail-1.2.2.gem .
-sudo gem install tmail-1.2.2.gem
-..
-rm -rf tmail
-ls
-git clone git://github.com/thedonvaughn/tmail.git
-cd tmail
-ls
-sudo ruby setup.rb
-..
-rm -rf tmail
-git clone git://github.com/bjornblomqvist/tmail.git
-ls
-cp ~/downloads/bjornblomqvist-tmail-20fa2ab.tar.gz .
-rm ~/downloads/tmail-1.2.2.gem
-ls
-ex bjornblomqvist-tmail-20fa2ab.tar.gz
-ls
-tar -xvvf bjornblomqvist-tmail-20fa2ab.tar.gz
-ls
-ls
-rm bjornblomqvist-tmail-20fa2ab.tar.gz
-rm /home/gig/downloads/bjornblomqvist-tmail-20fa2ab.tar.gz /home/gig/downloads/bjornblomqvist-tmail-20fa2ab.zip
-cd ~/code/ruby/sinatra/ronin
-ls
-cd app
-mkdir helpers
-ls
-rm helpers/entry.rb
-..
-ls
-v entries/hello
-sudo gem install builder
-rm app/views/feed.rxml
+git commit
 gs
-ga .
-gc Added feeds and more touches
-sudo gem install emk-sinatra-url-for
-ga .
-gc Fixed RSS feed
-ls public
-cd public
-mkdir img
-ls
-..
-rm ../ronin.tar.gz
-ga .
-gs
-gc Tidied up
-..
-ls
-roll ronin.tar.gz ronin/
-ls
-ruftp ronin.tar.gz
-gl -p
-cd ronin
-gl -p
-c
-ls
-v .gitignore
-gs
-cd entries
-ls
-v Sample
-ls
-v sample-entry
-rm hello
-ls
-mv additional-info ..
-ls
-..
-ls
-mv additional-info ..
-ls
-gs
-ga .
-gc Final touches
-gs
-v entries/sample-entry
-ls
-ls
-cd entries
-ls
-cp sample-entry sample-entry-2
-ls
-v sample-entry-2
-v sample-entry-2
-v sample-entry
-gs
-ga .
-gc Fixed blog sorting, added TODO, general layout tweaks
-scrshot test
-v sample-entry
-pacs chromium
-aurb -s chromium-browser
-aurb -d chromium-browser-bin
-ls ~/abs
-../..
-ls
-rm ronin.tar.gz additional-info
-rm test.rb
-ls
-roll ronin.tar.gz ronin
-ls
-cd ronin
-gs
-ga .
-gs
-gc Some tweaks
-gl -p
-..
-ls
-rm ronin.tar.gz
-roll ronin.tar.gz ronin
-ruftp ronin.tar.gz
-sudo gem install passenger
-sudo passenger-install-apache2-module
-sudo /etc/rc.d/httpd start
-chmod 755 ronin
-ls
-cd ronin
-cd ronin
-ls
-chmod -r 755 .git .gitignore TODO app entries libraries.rb public ronin.rb ronin.ru
-chmod -r 755 TODO app entries libraries.rb public ronin.rb ronin.ru
-chmod 755 TODO app entries libraries.rb public ronin.rb ronin.ru
-chmod -h
-chmod --help
-chmod -R 755 TODO app entries libraries.rb public ronin.rb ronin.ru
-sudo /etc/rc.d/httpd restart
-cd entries
-ls
-v sample-entry-2
-ll
-ls
-..
-gs
-git reset --hard
-gs
-sudo /etc/rc.d/httpd stop
-cdc
-cd gitclones
-mkdir gemcutter
-cd gemcutter
-git clone git://github.com/benprew/pony.git
-git clone git://github.com/brianmario/yajl-ruby.git
-cd yajl-ruby
-gem build yajl-ruby.gemspec
-sudo gem install yajl-ruby-0.6.5.gem
-../pony
-gem build pony.gemspec
-sudo gem install pony-0.4.1.gem
-cdc
-exit
-v .wmii-hg/config.yaml
-killall X
-thunar
-screen -RR
-reboot
-startx
-startx
-startx
-htop
-startx
-stkillall X
-htop
-startx
-startx
-startx
-startx
-cd code/ruby/projects/aurb
-v bin/aurb
-ruby setup.rb install
-exit
-cd code/ruby/projects/aurb
-v bin/aurb
-exit
-cd gitclones/sinatra/scanty
-ls
-ls
-pacup
-aurb -u
-aurb -u
-pacup
-svim /etc/pacman.conf
-vim /etc/X11/xorg.conf
-v main.rb
-v lib/post.rb
-pacup
-aurb -s newsleecher
-cd ~/code/ruby/projects/aurb
-gs
-ga bin/aurb
-gs
-gc Uh
-gl -p
-v bin/aurb
-./aurb -h
-v bin/aurb
-./aurb -h
-v bin/aurb
-./aurb -h
-v bin/aurb
-./aurb -h
-v bin/aurb
-./aurb -h
-v bin/aurb
-v bin/aurb
-v bin/aurb
-./aurb -h
-v bin/aurb
-./aurb -h
-v bin/aurb
-./aurb -h
-v bin/aurb
-./aurb -h
-./aurb -s awesome
-./aurb -s aurb
-./aurb -s gentoo
-./aurb -d aurb
-v bin/aurb
-./aurb -u
-ruby setup.rb install
-aurb -h
-v bin/aurb
-v aurb.gemspec
-./aurb -v
-v README.rdoc
-gs
-ls
-v setup.rb
-ruby setup.rb install
-aurb -v
-v bin/aurb
-v aurb.gemspec
-gs
-ga .
-ruby setup.rb install
-ls
-gs
-gc Some tweaks and shortenings
-gpo master
-./aurb -s aurb
-./aurb -s aurb --no-color
-cd ../..
-cd sinatra
-ls
-mkdir beachp
-cd beachp
-v oud.rb
-v views/500.haml
-rm views/edit.erb
-rm development.db
-rm development.db
-exit
-cd gitclones/sinatra/scanty
-ruby main.rb
-ruby main.rb
-ruby main.rb
-rm blog.db
-ruby main.rb
-ls
-ls vendor
-ls
-cp -r vendor/sequel ~/code/ruby/sinatra/beachp/vendor
-exit
-cd public
-ls
-cd code/ruby/sinatra/beachp
-ls
-cd pu
-cd public
-ls
-mkdir css
-ls
-mv main.css css
-c
-../views
-ls
-mv root.haml index.haml
-c
-..
-rackup config.ru
-rm lib/profile.rb
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-ls
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-ls
-mkdir vendor
-ls vendor
-ls
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-ls
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-exit
-cd code/ruby/sinatra/beachp/
-ls
-ls
-v views/layout.haml
-cd ~/gitclones/sinatra/scanty
-ls
-v main.rb
-cd ~/code/ruby/sinatra/
-roll beachparty.tar.gz beachp
-ruftp beachparty.tar.gz
-v beachp/environment.rb
-exit
-cd code/ruby/sinatra/beachp
-cp -r ~/gitclones/sinatra/sinatra-template/* .
-ls
-gs
-gl -p
-ls
-rm -rf .git/
-ls
-rm MIT-LICENSE
-ls
-v README.rdoc
-rm README.rdoc
-v Rakefile
-rm Rakefile
-ls
-v environment.rb
-v application.rb
-v views/layout.erb
-ls
-cd views
-ls
-rm 404.haml 500.haml archive.haml auth.haml edit.haml index.haml layout.haml news.haml post.haml
-ls
-v layout.erb
-v auth.erb
-v auth.erb
-v news.erb
-..
-ls
-rm oud.rb
-v config.ru
-gs
-git init
-gs
-v spec/application_spec.rb
-v Rakefile
-rake test
-v Rakefile
-rake test
-v Rakefile
-v Rakefile
-rake test
-rake gems
-v Rakefile
-rake gems:install
-v Rakefile
-rake gems:install
-v Rakefile
-rake test
-sudo gem install test-unit
-rake test
-v spec/spec_helper.rb
-v spec/spec_helper.rb
-rake test
-v Rakefile
-rm spec/profile_spec.rb
-rake test
-v spec/application_spec.rb
-rake test
-ls
-gs
-v .gitignore
-gs
-ga .
-gs
-gc Initial Commit
-gs
-v views/index.erb
-v application.rb
-rm -rf .git
-ls
-git init
-gs
-ga .
-gs
-gc Initial commit
-gs
-v environment.rb
-ga environment.rb
-gc Niet wij, maar ons\!
-gs
-gl -p
-v views/index.erb
-v views/layout.erb
-gs
-ga views/layout.erb
-gc Niet overal Nieuws
-v application.rb
-ga views/layout.erb
-v views/layout.erb
-ga views/layout.erb
-gc Lol, ik leef in \'t verleden
-gs
-gl -p
-v views/news.erb
-v application.rb
-exit
-ls code/ruby/sinatra/beachp/vendor/sequel
-cd gitclones/sinatra/scanty
-ruby main.rb
-cdc
-ls
-rm -rf .phoronix-test-suite
-cdc
-v code/ruby/sinatra/beachp/vendor/sequel/sequel.rb
-v code/ruby/sinatra/beachp/vendor/sequel/sequel_core
-v code/ruby/sinatra/beachp/vendor/sequel/sequel_model
-v code/ruby/sinatra/beachp/vendor/sequel/sequel_model.rb
-cdc
-pacup
-v .zsh/alias
-ls
-xit
-exit
-cd abs/nitrogen-git
-makepkg -fi
-../opera
-makepkg -fi
-../vicious-git
-makepkg -fi
-../virtualbox_bin
-makepkg -fi
-sudo gem install gettext
-pacup
-exit
-screen -RR
-shutdown
-zetaf
-startx
-firefox
-exit
-cd code/ruby/sinatra/beachp
-ls
-v application.rb
-vim ~/.Xdefaults
-xrdb .Xde
-xrdb ~/.Xdefaults
-exit
-cd /etc/network.d/
-ls
-svim wireless-giant
-sudo netcfg wireless-giant
-svim wireless-gi
-svim wireless-giant
-exit
-ipconfig
-iwconfig wlan0
-ifconfig wlan0
-exit
-thunar
-exit
-v tmp/test.rb
-exit
-cd /etc/network.d/examples
-..
-svim wireless-giant
-ls
-cd ~/code/ruby/sinatra/beachp
-ls
-rake test
-v spec/application_spec.rb
-irb
-sudo netcfg wireless-giant
-sudo iwlist scan
-svim /etc/httpd/conf/httpd.conf
-install wicd
-sudo iwlist scan
-exit
-sudo netcfg wireless-giant
-cd code/ruby/sinatra/beachp
-ls
-ruby config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-sudo /etc/rc.d/httpd start
-sudo /etc/rc.d/httpd start
-sudo /etc/rc.d/httpd stop
-rackup config.ru
-ruby application.rb
-mv public/css/main.css public/css/old.css
-rackup config.ru
-rackup config.ru
-mv public/css/old.css public/css/main.css
-mv public/css/old.css public/css/main.css
-rackup config.ru
-exit
-cd code/ruby/sinatra/beachp
-ifconfig wlan0
-iwconfig
-iwlist scan
-iwlist scan wlan0
-sudo iwlist scan wlan0
-sudo iwlist wlan0 scan
-sudo iwlist wlan0 scan
-sudo iwlist wlan0 scan
-v application.rb
-exit
-cplay downloads/Cartman_-_Poker_Face.mp3
-ncmpcpp
-c
-ncmpcpp
-exit
-reboot
-startx
-ls
-sudo iwlist wlan0 scan
-ping -c 3 www.google.com
-sudo netcfg wireless-giant
-svim /etc/network.d/wireless-giant
-sudo netcfg wireless-giant
-cd /var/abs/core/iwlwifi-3945-ucode
-ls
-v PKGBUILD
-tail -f /var/pacman.log
-sudo tail -f /var/pacman.log
-locate pacman.log
-sudo tail -f /var/log/pacman.log
-svim /etc/pacman.d/mirrorlist
-ls
-v PKGBUILD
-sudo netcfg wired
-ping -c 3 www.google.com
-svim PKGBUILD
-sudo tail -f /var/log/pacman.log
-makepkg
-sudo makepkg
-sudo makepkg --asroot
-sudo pacman -U iwlwifi-3945-ucode-15.28.2.8-1-i686.pkg.tar.gz
-svim /etc/rc.conf
-svim /etc/network.d/wireless-giant
-exit
-reboot
-sudo iwlist scan
-exit
-svim /etc/modprobe.d/iwl3945
-sudo rmmod -f iwl3945
-sudo modprobe iwl3945 disable_hw_scan=1
-ifconfig wlan0 up
-sudo ifconfig wlan0 up
-sudo netcfg wireless-giant
-sudo iwlist wlan0 scan
-sudo rm /etc/modprobe.d/iwl3945
-install wicd
-pacup
-wicd
-sudo wicd
-wicd-client
-wicd-client
-install trayer
-trayer
-exit
-wicd-client
-vim .gtkrc-2.0
-wicd-client
-exit
-htop
-sudo htop
-sudo htop
-exit
-sudo htop
-exit
-sudo htpo
-sudo htop
-exit
-wicd-client
-wicd -h
-wicd-client -h
-wicd-client --no-tray
-exit
-ncmpcpp
-exit
-cd gitclones/defunkt
-ls
-git clone git://github.com/defunkt/hurl.git
-exit
-cd code/ruby/projects/sin
-cd code/ruby/sinatra/beachp
-v lib/post.rb
-irb
-sudo irb
-cd /usr/lib/ruby/gems/1.9.1/gems/sequel-3.6.0/doc/
-ls
-..
-ls
-v Rakefile
-rake rdoc
-sudo rake rdoc
-ls
-ls rdoc
-cd ~/gitclones/defunkt/
-../sinatra/data
-ls
-cd ~/gitclones/defunkt/
-sudo netcfg wired
-ping -c 3 www.google.com
-sudo /etc/rc.d/wicd stop
-sudo /etc/rc.d/net-profiles start
-sudo /etc/rc.d/net-profiles restart
-sudo /etc/rc.d/net-profiles start
-cd ~/code/ruby/sinatra/
-cd beachp
-v application.rb
-git status
-v application.rb
-gs
-ga .
-gc Kweet nimeer
-gl -p
-ls
-gs
-v application.rb
-exit
-cd gitclones/defunkt/hurl/public/js
-ls
-cp jquery.form.js
-v jquery.form.js
-v jquery.autocomplete.js
-v jquery.min.js
-cp jquery.min.js ~/code/ruby/sinatra/beachp/public/
-cd ~/code/ruby/sinatra/beachp/public
-ls
-mkdir js
-ls
-mv jquery.min.js js/
-ls
-v js/beachp.js
-..
-ls
-ruby config.ru
-ls
-ruby application.rb
-ls
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-exit
-svim /etc/httpd/conf/httpd.conf
-sudo /etc/rc.d/httpd start
-sudo /etc/rc.d/httpd stop
-cdc
-cd code/ruby/sinatra/beachp
-rackup config.ru
-remove wicd
-v application.rb
-rackup config.ru
-v ~/gitclones/defunkt/hurl/hurl.rb
-rackup config.ru
-rackup config.ru
-v ~/gitclones/defunkt/hurl/hurl.rb
-ls
-rm development.db
-rm development.db
-rm development.db
-ls
-v config.ru
-exit
-zetaf
-ls
-ping -c 3 www.google.cmo
-ping -c 3 www.google.com
-sudo netcfg wireless-giant
-sudo iwlist scan
-sudo netcfg wired
-startx
-cd code/ruby/sinatra/beachp
-rm public/img/rainbow.png
-exit
-screen -RR
-cd code/ruby/sinatra
-cd beachp
-v application.rb
-cd public/css
-ls
-rm main.css
-touch main.css
-cdc
-cd -
-../..
-ls
-v views/layout.erb
-rm views/organisation.erb
-v application.rb
-gs
-v application.rb
-git reset --hard
-v application.rb
-exit
-cd code/ruby/sinatra/beachp
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-exit
-scrshot fotos
-exit
-cd tmp/beachptest
-ruby test.rb
-exit
-xrdb .Xdefaults
-exit
-ls
-exit
-xrdb .Xdefaults
-exit
-ls
-xrdb .Xdefaults
-exit
-ls
-exit
-xrdb .Xdefaults
-exit
-ls
-exit
-xrdb .Xdefaults
-exit
-ls
-v .vimrc
-xrdb .Xdefaults
-exit
-exit
-xrdb .Xdefaults
-exit
-ls
-xrdb .Xdefaults
-exit
-ls
-wmiir xwrite /ctl "font xft:Liberation Mono-8"
-rumai
-exit
-v .vimrc
-gvim .vimrc
-v .Xdefaults
-exit
-v .wmii-hg/config.yaml
-exit
-v .wmii-hg/config.yaml
-v .Xdefaults
-xrdb .Xdefaults
-exit
-ls
-exit
-cd code/ruby/sinatra/beachp
-ls
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-a\
-
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-exit
-cd code/ruby/sinatra/beachp
-c
-v public/css/main.css
-v application.rb
-..
-rm beachparty.tar.gz
-roll beachp.tar.gz beachp
-ls
-rm ronin.tar.gz
-cd beachp
-ruftp ../beachp.tar.gz
-gs
-ga .
-gc Euhm
-gl -p
-v application.rb
-git rm -rf vendor/sequel/
-ls
-ls vendor
-ls
-gs
-v lib/post.rb
-ls
-ls vendor
-cd vendor
-ls
-ls sequel
-rm -r sequel
-ls
-..
-ls
-ls vendor
-v Rakefile
-v environment.rb
-gs
-ga .
-gc Use sinatra-sequel
-gs
-..
-ls
-rm -rf beachp.tar.gz
-roll beachp.tar.gz beachp
-ruftp beachp.tar.gz
-cd beachp
-v views/layout.erb
-gs
-ga views/layout.erb
-gc Add feed
-..
-ls
-rm beachp.tar.gz
-roll beachp.tar.gz beachp
-ruftp beachp.tar.gz
-v beachp/views/layout.erb
-cd beachp
-ga views/layout.erb
-gc Change tab to space
-..
-rm beachp.tar.gz
-roll beachp.tar.gz beachp
-ruftp beachp.tar.gz
-ifconfig
-cd beachp
-v views/news.erb
-ga .
-gc Add some headers
-..
-rm beachp.tar.gz
-roll beachp.tar.gz beachp
-ruftp beachp.tar.gz
-cd beachp
-v views/edit.erb
-gs
-ga .
-gc Hulp toegevoegd voor opmaak
-..
-rm beachp.tar.gz
-roll beachp.tar.gz beachp
-ruftp beachp.tar.gz
-cd beachp
-ls
-v lib/photos.rb
-v README
-v TODO
-cd public/photo/
-cp ~/downloads/beachparty.jpg 2008
-cp ~/downloads/beachparty.jpg 2009
-cp ~/downloads/beachparty.jpg 2010
-../..
-gs
-ga .
-gc Added Photo model
-cp -r public/photo/* ~/tmp/beachptest
-v lib/photo.rb
-c
-v lib/photo.rb
-v application.rb
-gs
-ga .
-gc Gallery 90% done
-gs
-..
-rm beachp.tar.gz
-roll beachp.tar.gz beachp
-ruftp beachp.tar.gz
-pacup
-cd beachp
-v lib/photo.rb
-gs
-v .gitignore
-v .gitignore
-gs
-ga .
-gc Fix photo album
-v views/layout.erb
-exit
-screen -RR
-cd code/ruby/sinatra/beachp/public
-ls
-ls img
-exit
-screen -RR
-cd code/ruby/sinatra/beachp
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-exit
-aurb -s helvetica
-v gitclones/sinatra/scanty/public/main.css
-cd gitclones/sinatra/scanty/views
-v post.erb
-ls
-v archive.erb
-v auth.erb
-v edit.erb
-v post.erb
-cdc
-v temp.rb
-cd code/ruby/sinatra/beachp
-ls
-cd pu
-cd public
-ls
-mkdir img
-cp ~/downloads/buttonbg.png img
-v css/old.css
-cp ~/downloads/rainbow.png ./img
-v css/old.css
-v ~/.Xdefaults
-xrdb ~/.Xdefaults
-c
-cd ~/downloads
-ex jquery.countdown.package-1.5.5.zip
-ls jquery.countdown
-ls jquery
-ls
-rm jquery.countdown-*.js
-y
-rm jquery.countdown-*.js
-ls
-v jquery.countdown.css
-rm jquery.countdown.css
-rm jquery.countdown.js jquery.countdown.min.js jquery.countdown.pack.js
-mkdir jquery-countdown
-mv jquery.countdown.package-1.5.5.zip jquery-countdown
-cd jquery-countdown
-ls
-ex jquery.countdown.package-1.5.5.zip
-ls
-cp jquery.countdown-nl.js ~/code/ruby/sinatra/beachp/public/js
-v jquery.countdown-nl.js
-v jquery.countdown.min.js ~/code/ruby/sinatra/beachp/public/js
-cp jquery.countdown.min.js ~/code/ruby/sinatra/beachp/public/js
-cd ~/code/ruby/sinatra/beachp/public/js
-ls
-ls
-rm jquery.countdown*
-ls
-cp ~/downloads/jquery-countdown/jquery.countdown.min.js .
-cp ~/downloads/jquery-countdown/jquery.countdown-nl.js .
-c
-rm jquery.countdown-nl.js jquery.countdown.js jquery.countdown.min.js
-rm jquery.countdown-nl.js jquery.countdown.js jquery.countdown.min.js
-ls
-../..
-gs
-ga .
-gs
-git rm public/css/old.css
-git rm -f public/css/old.css
-gs
-gc Andere layout
-c
-sudo gem install sinatra-sequel
-cd pu
-cd public
-ls
-cd img
-ls
-..
-ls
-mkdir fotoalbums
-ls
-cd fotoalbums
-ls
-mkdir 2008
-mkdir 2008
-mkdir 2009
-mkdir 2010
-ls
-..
-cd ~/downloads
-wget http://topfunky.net/svn/gullery/pkg/gullery-0.0.1.tgz
-ex gullery-0.0.1.tgz
-ls
-v README
-ls
-cd public/images
-ls
-cdc
-cd code/ruby/sinatra/beachp
-rm lib/photos.rb
-ls lib
-gs
-ga .
-gc Add some confirms
-..
-rm beachp.tar.gz
-roll beachp.tar.gz beachp
-ruftp beachp.tar.gz
-cd beachp/public
-ls
-rm -rf fotoalbums
-mkdir photo
-cd photo
-ls
-mkdir 2008
-mkdir 2009
-mkdir 2010
-ls
-.
-..
-ls
-..
-ls
-irb
-sudo gem search --remote rmagick
-sudo gem install rmagick
-irb
-cd ~/downloads
-ls
-v rainbow.rb
-ruby rainbow.rb
-v rainbow.rb
-ruby rainbow.rb
-irb
-cd ~/screenshots
-ls
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-mkdir test
-ls
-cp -d.png -dt.png almost.png almostt.png antiword.png antiwordt.png aurb.png aurbt.png aurbu.png aurbupdate.png aurbupdatet.png chromium.png chromium2.png chromium2t.png chromiumt.png code.png currentdesk.png currentdeskt.png emacs.png emacst.png envy.png gvim.png gvimt.png hijolts.png hijoltst.png jolts.png joltst.png kk.png linuxphp.png linuxphpt.png lulz.png lulzt.png naut.png nautt.png raggle.png ragglet.png railscasts.png redcar.png redcart.png ruftp.png ruftpt.png rvol.png sampleaurboutput.png sampleaurboutputt.png sindri_filenames.png sindri_selection.png spotify.png spotifyt.png spwnedinterm.png spwnedintermt.png subtle.png subtlet.png sup.png supt.png template.png test.png test2.png testt.png w3m.png w3mt.png wcminterm.png wcminterm.png.png wcmintermt.png whisper.png whispert.png wmii.png wmii2.png wmii2t.png wmiibinds.png wmiibindst.png wmiipidgin.png wmiipidgint.png wmiit.png test/
-rm -d.png
-thunar
-cp almost.png almostt.png antiword.png antiwordt.png aurb.png aurbt.png aurbu.png aurbupdate.png aurbupdatet.png chromium.png chromium2.png chromium2t.png chromiumt.png code.png currentdesk.png currentdeskt.png emacs.png emacst.png envy.png gvim.png gvimt.png hijolts.png hijoltst.png jolts.png joltst.png kk.png linuxphp.png linuxphpt.png lulz.png lulzt.png naut.png nautt.png raggle.png ragglet.png railscasts.png redcar.png redcart.png ruftp.png ruftpt.png rvol.png sampleaurboutput.png sampleaurboutputt.png sindri_filenames.png sindri_selection.png spotify.png spotifyt.png spwnedinterm.png spwnedintermt.png subtle.png subtlet.png sup.png supt.png template.png test.png test2.png testt.png w3m.png w3mt.png wcminterm.png wcminterm.png.png wcmintermt.png whisper.png whispert.png wmii.png wmii2.png wmii2t.png wmiibinds.png wmiibindst.png wmiipidgin.png wmiipidgint.png wmiit.png test/
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-v test.rb
-ruby test.rb
-v test.rb
-v test.rb
-ruby test.rb
-v test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-ls
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.
-v test.rb
-v test.
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-mv test.rb ~/tmp
-cd ~/tmp
-rm test.rb
-mv test.rb\~ test.rb
-mkdir beachptest
-mv test.rb beachptest
-cd beachptest
-ls
-mkdir photo
-mv 2008 2009 2010 photo
-ls
-v test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-ls
-..
-roll beachptest.tar.gz beachptest
-ruftp beachptest.tar.gz
-v test
-cd beachptest
-v test.rb
-ruby test.rb
-v test.rb
-cp ~/downloads/Sunset\ Beach.jpg ~/code/ruby/sinatra/beachp/public/photo/2009/
-cd ~/code/ruby/sinatra/beachp/public/photo
-ls
-cd 2009
-ls
-cp Sunset\ Beach.jpg ~/tmp/beachptest
-cd ~/tmp/beachptest
-ls
-ls photo/20
-mv Sunset\ Beach.jpg photo/2009
-ruby test.rb
-v test.rb
-mv photo/2009/Sunset\ Beach.jpg photo/2009/sunsetbeach.jpg
-ruby test.rb
-v test.rb
-ruby test.rb
-v test.rb
-v test.rb
-cd ~/code/ruby/sinatra/beachp/public/photo
-cd 2009
-ls
-rm Sunset\ Beach.jpg
-screen -t mail alpine
-cd ~/code/ruby/sinatra/ronin/public/img
-ls
-chmod -x feed.png
-cp feed.png ../../../beachp/public/img/
-cd ~/abs/fontconfig-ubuntu
-makepkg -fi
-../freetype2-ubuntu
-makepkg -fi
-remove freetype2
-sudo pacman -U freetype2-ubuntu-2.3.11-1-i686.pkg.tar.gz
-../fontconfig-ubuntu
-makepkg -fi
-../libxft-ubuntu
-makepkg -fi
-../cairo-ubuntu
-makepkg -fi
-exit
-htop
-htop
-exit
-cd code/ruby/sinatra/beachp
-ls
-..
-rm beachp.tar.gz
-roll beachp.tar.gz beachp
-ruftp beachp.tar.gz
-exit
-cd code/ruby/sinatra/beachp
-vim application.rb
-gs
-ga .
-gc Fix the broken edit and add feed icon
-ga public/img/feed.png
-ga -f public/img/feed.png
-gs
-gc Add the actual icon
-aurb -s ubuntu
-aurb -d fontconfig-ubuntu libxft-ubuntu cairo-ubuntu
-aurb -d 'fontconfig-ubuntu libxft-ubuntu cairo-ubuntu'
-aurb -s freetype
-aurb -d freetype2-ubuntu
-pacman -Q | grep cairo
-remove cairo libxft freetype2 fontconfig
-pacman -Q | grep libxft
-remove libxft-cleartype
-pacman -Q | grep cleartype
-remove cairo
-pacman -Q | grep fontconfig
-remove fontconfig-ubuntu fontconfig-lcd
-pacup
-screen -RR
-reboot
-killall X
-ping -c 3 www.google.com
-iwmlsit
-iwlist
-iwlist scanning
-iwlist wlan0 scan
-startx
-zetaf
-thunar
-v .gktrc.mine
-ls
-v .gtkrc.mine
-thunar
-pidgin
-exit
-v .irssi/config
-exit
-exit
-exit
-gvim .vimrc
-xfontsel
-exit
-v .wmii-hg/config.yaml
-exit
-scrshot msn
-exit
-v .Xdefaults
-xrdb .Xdefaults
-exit
-ls
-exit
-cd gitclones/sinatra
-git clone git://github.com/derobins/wmd.git
-ls
-cd wmd
-ls
-v readme.txt
-ls
-v wmd.js
-cd images
-ls
-..
-v wmd.css
-cp wmd.css ~/code/ruby/sinatra/beachp/public/css/
-cp showdown.js wmd.js ~/code/ruby/sinatra/beachp/public/js
-cp images/wmd-buttons.png ~/code/ruby/sinatra/beachp/public/img
-exit
-ls downloads
-exit
-scrshot wmiidev
-cd downloads
-mkdir wmd
-mv wmd-1.0.1.zip wmd
-cd wmd
-ex wmd-1.0.1.zip
-ls
-v readme.txt
-cd wmd
-ls
-cp wmd-base.js wmd-plus.js wmd.js ~/code/ruby/sinatra/beachp/public/js/
-cp showdown.js ~/code/ruby/sinatra/beachp/public/js/
-v readme.txt
-v ../readme.txt
-ls
-..
-ls
-v minimalExample.html
-firefox minimalExample.html
-v minimalExample.html
-v apiExample.html
-v optionsExample.html
-cd ~/code/ruby/sinatra/beachp
-ls
-cd public/js
-ls
-rm wmd-base.js wmd-plus.js wmd.js showdown.js
-ls
-../..
-gs
-ga .
-gc Added wmd
-gs
-ga .
-gc Fix some layout shit
-ls public/photo/2010/
-rm public/photo/2010/038.JPG
-rm public/photo/2010/viking-tux.png
-ls public/photo/2010/
-rm public/photo/2010/alizee1.jpg
-ls public/photo/2010/
-rm public/photo/2010/alizee1.jpg
-rm public/photo/2010/alizee1.jpg
-ls public/photo/2010/
-mirage public/photo/2008/aurbt.png
-rm public/photo/2008/aurbt.png
-ls public/photo/2010/
-ls public/photo/2008
-rm public/photo/2008/aurbt.png
-ls public/photo/2008
-src
-exit
-screen -RR
-v .vimperatorrc
-v .vimperator/colors/droog.vimp
-v .vimperatorrc
-v .vimperator/colors/droog.vimp
-exit
-recordmydesktop -h
-exit
-c
-aurb -s recordmydesktop
-pacs recordmydesktop
-install recordmydesktop
-recordmydesktop -h
-recordmydesktop -o tmp/beachp.ogv
-mountnet
-cp tmp/beachp.ogv ~/tmp/shares
-ls tmp/shares
-ll tmp/shares
-cd tmp/shares
-ll
-mplayer beachp.ogv
-mplayer beachp.ogv
-mplayer beachp.ogv
-ls
-cd ~/tmp
-ll
-mplayer beachptest
-mplayer beachp.ogv
-c
-exit
-rm tmp/beachp.ogv
-exit
-ls tmp
-recordmydesktop -h
-recordmydesktop --height 800 --width 1280 -v_quality 58 -s_quality -1 -o tmp/beachparty.ogv
-mplayer tmp/beachparty.ogv
-cp tmp/beachparty.ogv ~/tmp/shares
-rm tmp/beachparty.ogv
-exit
-scrshot beachppost
-scrshot beachpnews
-scrshot beachpedit
-scrshot beachpgallery
-scrshot beachpphoto
-exit
-ls .themes
-thunar
-exit
-v .gtkrc.mine
-v .gtkrc-2.0
-exit
-wifi-select
-sudo wifi-select
-sudo wifi-select wlan0
-exit
-chromium-browser
-chromium-browser
-exit
-screen -RR
-cd code/ruby/sinatra/beachp
-v application.rb
-exit
-cd code/ruby/sinatra/beachp
-v views/layout.erb
-exit
-cd code/ruby/sinatra/beachp
-v TODO
-ga .
-gc Changed layout a bit
-gs
-ga .
-gs
-gc Fixed file upload
-gl -p
-..
-rm beachp.tar.gz
-roll beachp.tar.gz beachp
-ruftp beachp.tar.gz
-cd beachp
-ga .
-gc Fix widtsh
-gs
-ls
-echo $RACK_ENV
-v ~/.zshenv
-src
-echo $RACK_ENV
-irb
-gs
-ga environment.rb
-gc Set environments
-ls
-ga .
-gc In an uglier manner
-git log -p
-git reset --hard
-gs
-ga environment.rb
-gc Or maybe not..
-v .gitignore
-gs
-ga .
-gc Added Logger
-gl -p
-c
-..
-rm beachp.tar.gz
-roll beachp.tar.gz beachp
-ruftp beachp.tar.gz
-gs
-cd beachp
-gs
-gs
-rackup config.ru
-rackup config.ru
-gs
-ga .
-gc Moved upload code into model
-v beachp.log
-mkdir log
-gs
-ga .
-gc Remove log line
-ls
-rm beachp.log
-gs
-rackup -h
-gs
-ga .
-gc Some style tweaks
 git checkout master
-git remote add origin git@gitorious.org:beachp/beachp.git
-git remote rm origin
-git remote add gitorious git@gitorious.org:beachp/beachp.git
-git push gitorious master
-v /home/gig/.ssh/known_hosts
-git push gitorious master
-ruby script/console
-c
 gs
-ga lib/photo.rb
-gc Remove useless method
-gpg master
+git pull origin master
+rm -rf .git/rebase-apply
+git pull origin master
+vim public/javascripts/common/prickle.js
+git status
+git commit -am "Fix"
+git status
+git add public/javascripts/common/prickle.js
+git status
+git rebase --continue
+git rebase --skip
+git rebase --skip
+git rebase --skip
+git rebase --skip
+git rebase --skip
+git rebase --skip
+git rebase --skip
+git rebase --skip
+gs
+gl -p
+git checkout openvld
+git pull origin openvld
+git checkout master
+git checkout openvld
+rake db:migrate
+gs
+git checkout master
+gs
+git log -p
+vim app/models/attachment.rb
+gs
+git push origin master
 ls
-v TODO
-v Rakefile
-v Rakefile
-rake
-rake --hepl
-rake --help
-c
-exit
-cd code/ruby/projects/be
-cd code/ruby/sinatra/beachp
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-git revert 31360679f414221ec5c3187a87ced9622e3536c2
-git revert 31360679f414221ec5c3187a87ced9622e3536c2
-git revert 31360679f414221ec5c3187a87ced9622e3536c2
-git revert -f 31360679f414221ec5c3187a87ced9622e3536c2
-git revert 31360679f414221ec5c3187a87ced9622e3536c2
-git revert 31360679f414221ec5c3187a87ced9622e3536c2
-rackup config.ru
-shotgun config.ru
+gs
+vim Capfile
+vim config/deploy.rb
+gs
+ga .
+gc Rename deploy method
+git push origin master
+git checkout openvld
+git merge master
+vim db/schema.rb
+gs
+ga db/schema.rb
+git commit -m "Fix"
+gs
+gl -p
+git push origin openvld
+head db/seeds.rb
+sudo gem install resque
+brew install redis
+vim ~/.zsh/alias
 v ~/.zsh/alias
 src
-shotgun
-v ~/.zsh/alias
-shotgun
-shotgun --port=9292
-shotgun --port=9292 --server=thin
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup -h
-rackup --server thin config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-exit
-cd code/ruby/sinatra/beachp
-v lib/photo.rb
-exit
-v .xinitrc
-exit
-v .gtkrc-2.0
-exit
-fusion-icon
-v .gtkrc.mine
-exit
-gconftool-2 --type bool --set /apps/metacity/general/compositing_manager false
-exit
 ls
-cd downloads
-ls
-ll
-mkdir mac4lin
-mv Mac4Lin_Install_v1.0.zip mac4lin
-cd mac4lin
-ex Mac4Lin_Install_v1.0.zip
-ls
-v Mac4Lin_Install_v1.0.sh
-./Mac4Lin_Install_v1.0.sh
-exit
-v .gtkrc-2.0
-exit
-killall firefox
-exit
-cd .gnome2
-ls
-v panel-fontrc
-v ~/.themes/Mac4Lin_GTK_Aqua_v1.0/index.theme
-v ~/.themes/Mac4Lin_GTK_Aqua_v1.0/gtk-2.0/gtkrc
-exit
-v .xinitrc
-exit
-ls .themes
-thunar
-thunar
-exit
-cd downloads/mac4lin
-ls
-cd Mac4Lin_Install_v1.0
-./Mac4Lin_Uninstall_v1.0.sh
-exit
-thunar
-v .gtkrc-2.0
-exit
-thunar
-exit
-ls
-v .gtkrc-2.0
-exit
-ls
-exit
-sakura
-xrdb .Xdefaults
-exit
-v .Xdefaults
-exit
-ls
-exit
-cd code/ruby/sinatra/beachp
-v application.rb
-exit
-cd code/ruby/sinatra/beachp
-c
-rake test
-scrshot
-exit
-cd code/ruby/sinatra/beachp
-v lib/photo.rb
-exit
-cd code/ruby/sinatra/beachp
-v public/css/main.css
-exit
-thunar
-v .gtkrc.mine
-v .gtkrc-2.0
-screen -RR
-cd tmp/shares/\!Videos/Anime/Bleach
-ls
-cd DB_Bleach_1-225
-ls
-mplayer \[DB\]_Bleach_231_\[5FF9DB67\].avi
-exit
-v .wmii-hg/config.yaml
-exit
-v .wmii-hg/config.yaml
-exit
-v .vimrc
-gvim bin/aurb
-gvim bin/aurb
-v .vimrc
-c
-v .gvimrc
-c
-scrshot monaco
-c
-scrshot gvimlight
-gvim bin/aurb
-exit
-cd code/ruby/sinatra/beachp
-v public/css/main.css
-gvim public/css/main.css
-exit
-cd code/ruby/sinatra/beachp
-v lib/photo.rb
-gvim lib/photo.rb
-exit
-cd code/ruby/sinatra/beachp
-v application.rb
-gvim application.rb
-exit
-cd abs/html2ps
-makepkg -fi
-exit
-gvim tmp/magicktest.rb
-cd tmp
-ruby magicktest.rb layla.png
-ruby magicktest.rb tmp.lua
-ruby magicktest.rb awesome.tar.gz
-ruby magicktest.rb layla.png
-ruby magicktest.rb layla.png
-irb
-ruby magicktest.rb layla.png
-ruby magicktest.rb layla.png
-ruby magicktest.rb Mormel.jpg
-ruby magicktest.rb cookmats.txt
-ruby magicktest.rb tmp.lua
-ruby magicktest.rb jstest.html
-install html2ps
-aurb -s html2ps
-aurb -d html2ps
-ruby magicktest.rb jstest.html
-ruby magicktest.rb fortest.rb
-ruby magicktest.rb jstest.html
-ruby magicktest.rb fortest.rb
-ruby magicktest.rb jstest.html
-ruby magicktest.rb tmp.lua
-ruby magicktest.rb awesome.tar.gz
-ruby magicktest.rb 198343.php
-ruby magicktest.rb vimrubycolors.vim
-locate *.gif
-locate .gif
-ruby magicktest.rb ~/abs/xulrunner-1.8/src/xulrunner-1.8.1.14/extensions/cview/resources/skin/images/method.gif
-\:q
-ruby magicktest.rb 198343.php
-ruby magicktest.rb jstest.html
-ruby magicktest.rb jstest.html
-ruby magicktest.rb jstest.html
-ruby magicktest.rb jstest.html
-ruby magicktest.rb 198343.php
-ruby magicktest.rb 198343.php
-ruby magicktest.rb jstest.html
-ruby magicktest.rb jstest.html
-ruby magicktest.rb 198343.php
-ruby magicktest.rb jstest.html
-ruby magicktest.rb vimrubycolors.vim
-ruby magicktest.rb layla.png
-ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
-irb
-ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
-ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
-c
-ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
-ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
-ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
-ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
-ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
-ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
-ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
-ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
-ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
-ruby magicktest.rb /tmp/RackMultipart20091201-22909-gmg44o-0
-ruby magicktest.rb /tmp/RackMultipart20091201-22909-19qyjm6-0
-exit
-cat code/ruby/sinatra/beachp/log/beachp.log
-tail -f code/ruby/sinatra/beachp/log/beachp.log
-exit
-v tmp/classtest.rb
-exit
-gnome-appearance-properties
-exit
-cd code/ruby/sinatra/beachp
-c
-rake test
-scrshot
-ls log
-cat log/beachp.log
-sudo gem install heroku
+vim config/locales/en.yml
 gs
 ga .
-gc I has fixed content type checking
-gpg master
-tail -f log/beachp.log
+gc Fix view when no attachments present
+v ~/.vim/ftplugin/haml.vim
+vim ~/.vimrc
+c
+exit
+cd Code/ruby/prickle
 gs
 ga .
-gc Added \[\] method to Photo instances, and use it
-gpg master
-exit
-c
-chromium-browser
-chromium-browser
-exit
-screen -RR
-exit
-cd code/ruby/sinatra/beachp
-v public/css/main.css
-gvim views/layout.erb
-gvim ~/.vimrc
-gvim views/layout.erb
-gvim public/css/main.css
-exit
-cd code/ruby/sinatra/beachp
-v lib/photo.rb
-gvim -p lib/photo.rb lib/post.rb
-exit
-cd code/ruby/projects/be
-cd code/ruby/sinatra/beachp
-gvim -p application.rb environment.rb
-gvim -p public/css/main.css views/layout.erb
-gvim -p lib/photo.rb lib/post.rb
-c
-c
-v application.rb
-gvim -p application.rb environment.rb
-exit
-cd code/ruby/projects/aurb
-./aurb -h
-./aurb -s beach
-./aurb -u
-pacup
-v bin/aurb
-v bin/aurb
-exi
-exi
-exit
-cd code/ruby/projects/aurb
-./aurb
-./aurb -h
-./aurb -s awesome
-./aurb -s awesome
-./aurb -s awesome
-./aurb -s awesome
-ruby setup.rb install
-aurb -h
-aurb -v
+gc GVD
+git push
+cap deploy
 gs
 ga .
-gc Changed startup structure
-gl -p
-./aurb -h
-./aurb -s awesome
-gs
-ruby setup.rb install
+gc DSGQH
+git push
+cap deploy
 gs
 ga .
-gc Forgot to remove those
-gpo master
-exit
-v .vimrc
-c
-cdf
-df
-exit
-cd abs/virtualbox_bin
-makepkg -fi
-exit
-chromium-browser
-exit
-v code/ruby/sinatra/beachp/application.rb
-gvim code/ruby/sinatra/beachp/application.rb
-exit
-sudo cpufreq-set -g powersave
-sudo cpufreq-set -c 1 -g powersave
-cpufreq-info
-sudo cpufreq-set -g ondemand
-sudo cpufreq-set -c 1 -g ondemand
-exit
-cd code/ruby/examples
+gc Fix article activity notation
+git push
+cap deploy && cap deploy:cleanup
 ls
-v choice.rb
-rm choice.rb
-v attr_example.rb
-v class_instance_methods.rb
-v forloop.rb
-v gistit.rb
-v mandelbrot.rb
-v predefined
-v predefinedconstants.rb
-v predefinedvariables.rb
-v testclass.rb
-v tinywm.rb
-v wx.rb
-v xmessageit.rb
+mkdir themes
 ls
-..
+vim db/seeds.rb
 ls
-roll examples.tar.gz examples
-rm logfile.log
-v logger.rb
-rm blog.db
+cd themes
 ls
-v widgets.rb
-cd ruby19
-ls
-v lambdatest.rb
-..
-ls
-mv examples.tar.gz ruby-examples.tar.gz
-ruftp ruby-examples.tar.gz
-exit
-sensors
-wmii -r ~/.wmii-hg/wmiirc
-exit
-thunar
-pacs selector
-aurb -s theme-selector
-aurb -s selector
-pacs gtk-theme
-install gtk-theme-switch2
-gtk-theme-switch2
-sudo updatedb
-exit
-v .gtkrc-2.0
-exit
-cd code/ruby/rails
-ls
-rm -rf blog/
-rails blog
-sudo gem install rails
-rails blog
-cd blog
-ruby script/generate scaffold Post title:string body:text
-sudo gem update --system
-ruby script/generate scaffold Post title:string body:text
-rake db:migrate
-ruby script/server
-v app/models/post.rb
-ruby script/server
-cdc
-screen -RR
-v .xinitrc
-sonata
-exit
-screen -RR
-gtk-chtheme
-v .wmii-hg/config.yaml
-exit
-exit
-vexit
-exit
-exit
-exit
-install gtk-chtheme
-gtk-chtheme
-v .gtkrc-2.0
-exit
-sonata
-thunar
-exit
-sonata
-gtk-chtheme
-exit
-exit
-v .xinitrc
-exit
-cd /usr/share/pixmaps/pidgin
-ls
-install pidgin
-ls
-ll
-exit
-cd ~/Mac4Lin_v1.0
-ls
-ls
-cd Backup
-ls
-ex pidgin_backup.tar.gz
-ls
-exit
-cd downloads/mac4lin
-v Mac4Lin_Install_v1.0/Mac4Lin_Install_v1.0.sh
-exit
-rm -rf Mac4Lin_v1.0
-exit
-v .vimperatorrc
-exit
-empathy
-pacs empathy
-empathy -h
-aurb -s empathy
-empathy
-empathy
-empathy --help
-empathy --help-all
-ls
-exit
-cd code/ruby/sinatra/beachp
-ls
-v lib/photo.rb
-gs
-ga .
-gc Oiiii
-gpg master
-exit
-cd code/ruby/projects/aurb
-ls
-v bin/aurb
-gvim bin/aurb
-..
-ls
-cd rbmpd
-ls
-rake spec
-rake test
-v spec/spec_mpd.rb
-rbmpd
-ls
-v client.rb
-ruby client.rb
-v lib/rbmpd/mpd.rb
-ruby client.rb
-v lib/rbmpd/mpd.rb
-ruby client.rb
-v lib/rbmpd/mpd.rb
-ls
-gs
-gs
-ga .
-gc Brokennn
-c
-..
-ls
-cd rawr
-ls
-v rawr.rb
-ruby rawr.rb
-ls
-sudo gem install isaac
-v rawr.rb
-ruby rawr.rb
-v rawr.rb
-ruby rawr.rb
-exit
-cd code/ruby/projects/ra
-cd code/ruby/projects/rawr
-v rawr.rb
-gvim rawr.rb
-exit
-exit
-cd code/ruby/rails/blog
-script/generate scaffold Post name:string title:string content:text
-rake db:migrate
-cdc
-exit
-cd code/ruby/rails/blog
-ruby script/server
-exit
-cd downloads
-mkdir multifileupload
-mv multiFlashRailsFileUpload.zip multifileupload
-cd multifileupload
-ex multiFlashRailsFileUpload.zip
-ls
-cd upload
-ls
-exit
-cd code/html/gigamo.be
-v index.html
-firefox index.html
-ruftp css/layout.css
-v css/layout.css
-ruftp css/layout.css
-v index.html
-ruftp index.html
-exit
-v tmp/htmlcolors
-exit
-sonata
-c
-pacs empathy
-install empathy
-install telepathy-butterfly telepathy-idle telepathy-gabble
-install telepathy-gaze
-install telepathy-haze
-pacup
-aurb -h
-aurb -s sonata
-pacs sonata
-notify-send 'test'
-c
-c
-ll
-ll
-ls .mjolnir
-v .mjolnir/config.yml
-t ls
-v .zshenv
-cp .zhenv .zprofile
-cp .zshenv .zprofile
-gvim .zshenv
-c
-gvim bin/gist
-gvim bin/rubytorrent
-c
-cd code/ruby/rails
-ls
-rm -rf blog
-rails blog
-cd blog
-rake db:create
-v Rakefile
-$ script/generate controller home index
-script/generate controller home index
-v app/views/home/index.html.erb
-rm public/index.html
-gvim config/routes.rb
-cdc
-c
-v code/ruby/projects/rawr/rawr.rb
-v code/ruby/projects/rawr/rawr.rb
-c
-c
-ls
-v .gemrc
-v .irbrc
-irb
-v .irbrc
-irb
-c
-irb
-c
-ls
-v .gvimrc
-v .viminfo
-v .viminfo
-rush
-sudo gem install rush
-c
-gem search --remote httpauth
-c
-pacup
-cd downloads
-cd Ensiferum
-ls
-..
-mv Ensiferum ~/music/
-mpd --update-db
-mpc update
-c
-ls
-cdc
-aurb -u
-htop
-htop
-c
-exit
-ls
-v .zshenv
-sudo gem install wirble
-c
-exit
-cd code/ruby/projects/rawr
-c
-ruby rawr.rb
-ruby rawr.rb
-ruby rawr.rb
-ruby rawr.rb
-ruby rawr.rb
-ruby rawr.rb
-exit
-cd code/ruby/sinatra/beachp
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-rackup config.ru
-c
-exit
-rm .rtorrent_session
-rm -rf .rtorrent_session
-screen -t torrent rtorrent
-rtorrent
-mkdir .rtorrent_session
-rtorrent
-screen -t torrent rtorrent
-pacup
-sudo cpufreq-set -g powersave
-sudo cpufreq-set -c 1 -g powersave
-cpufreq-info
-sudo cpufreq-set -c 1 -g ondemand
-sudo cpufreq-set -g ondemand
-sudo cpufreq-set -c 1 -g powersave
-sudo cpufreq-set -c 1 -g ondemand
-sudo cpufreq-set -c 1 -g powersave
-sudo cpufreq-set -g powersave
-sudo cpufreq-set -c 1 -g ondemand
-sudo cpufreq-set -g ondemand
-v tmp/htmlcolors
-sudo gem install shotgun
-pacup
-aurb -u
-aurb -d wifi-select
-aurb -s wifi-select
-pacs wifi-select
-install wifi-select
-install gnome
-install compiz-fusion
-screen -t zsh
-screen -t mail alpine
-sudo cpufreq-set -g powersave
-sudo cpufreq-set -c 1 -g powersave
-sudo cpufreq-set -g ondemand
-sudo cpufreq-set -c 1 -g ondemand
-cpufreq-info
-pacup
-screen -t music cmus
-mplayer tmp/shares/\!Videos/Anime/The\ Melancholy\ of\ Haruhi\ Suzumiya/Melancholy\ of\ Haruhi\ Suzumiya/\[a.f.k.\]\ The\ Melancholy\ of\ Haruhi\ Suzumiya\ -\ 06.avi
-install sonata
-v .vimrc
-c
-mplayer downloads/rails_blog_2.mov
-screen -t zsh zsh
-c
-exit
-screen -RR
-exit
-v .irssi/config
-exit
-killall X
-killall X
-pacup
-zetaf
-startx
-startx
-startx
-startx
-startx
-startx
-startx
-startx
-startx
-startx
-startx
-ls
-bastet
-v .wmii-hg/config.yaml
-man ifconfig
-ifconfig wlan0 down
-sudo ifconfig wlan0 down
-sudo ifconfig wlan0 up
-v .zprofile
-traceroute --help
-traceroute -g
-traceroute --help
-v .wmii-hg/wmiirc
-v .wmii-hg/config.yaml
-exit
-cd code/ruby/rails/blog
-ls
-v config/database.yml
-c
-../../projects/aurb
-ls
-gvim bin/aurb
-cd ~/downloads/South.Park.S13E07.HDTV.XviD-aAF
-ls
-ex aaf-sp.s13e07.rar
-mplayer aaf-sp.s13e07.avi
-sudo netcfg wired
-sudo /etc/rc.d/net-profiles restart
-ping -c 3 www.gigamo.be
-c
-ls
-exit
-cd code/ruby/sinatra/beachp
-v lib/photo.rb
-c
-sonata
-exit
-sudo netcfg2 wireless-giant
-sudo netcfg2 wireless-giant
-ls
-v .irbrc
-ri puts
-sudo ri puts
-ifconfig wlan0
-sudo netcfg2 wireless-giant
-sudo netcfg2 wireless-giant
-cd code/ruby/rails/bitswiki
-ls
-ruby script/server
-..
-ls
-cd blog
-ls
-..
-rm -rf blog
-rails blog
-cd blog
-ruby script/server
-c
-c
-ifconfig
-c
-ls
-ls
-c
-ls
-ruby script/server
-install wicd
-pacs wicd
-aurb -s wicd
-install python-wpactrl python-iwscan python-notify
-calculeer "160/3"
-ls
-v Rakefile
-c
-c
-ls
-c
-exit
-svim /etc/pacman.conf
-svim /etc/pacman.d/mirrorlist
-c
-ls
-v .irbc
-irb
-exit
-cd downloads/South.Park.S13E07.HDTV.XviD-aAF
-mplayer aaf-sp.s13e07.avi
-exit
-cd tmp
-mkdir giantshares
-exit
-sudo mount -t cifs //192.168.1.11/\!GEDEELD /home/gig/tmp/giantshares -o iocharset=utf8,file_mode=0777,dir_mode=0777
-c
-exit
-cd code/ruby/sinatra/beachp
-git revert f633b7ea5cc4405fece98c7b003834148cb5583c
-gpg master
-ls
-gs
-git rm test readme
-ls
-gs
-ga .
-gc WEG ERMEEEEEE
-gpg master
-gpg master
-git tag 0.0.1
-gs
-git log -p
-gpg master
-ls
-ls
-v config.ru
-v environment.rb
-c
-cat log/beachp.log
-pacs umbrello
-ls
-v ~/.zsh/alias
-v ~/.zsh/alias
-cd ../../rails/blog
-ls
-nautilus
-v .zsh/ali
-v ~/.zsh/alias
-exit
-ls
-install wicd
-c
-ls
-ls
-cd code/ruby/examples
-ls
-..
-ls
-sudo iwlist wlan0 scan
-sudo iwlist wlan0 scan
-sudo iwlist --help
-sudo iwlist wlan0 scan
-iwconfig
-svim /etc/network.d/wireless-gi
-svim /etc/network.d/wireless-giant
-c
-ls
-rm ruby-examples.tar.gz
-ls
-v widgets.rb
-v sinatra/beachp/application.rb
-cd sinatra/beachp
-gvim application.rb
-exit
-cd code/ruby/sinatra/beachp
-rackup config.ru
-exit
-irb
-cd code/ruby/sinatra/beachp
-gs
-gpg master
-ls
-gs
-cd public
-ls
-cd img
-ls
-ga wmd-buttons.png
-ga -f wmd-buttons.png feed.png buttonbg.png
-gs
-gc Added wmd-buttons
-gpg master
-gem search --remote rmagick
-which Magick-config
-../..
-git pull
-git pull origin master
-git pull gitorious master
-v ~/.zsh/function
-c
-git pull origin master
-git pull gitorious master
-ls
-git revert HEAD
-git log -p
-c
-exit
-zetaf
-ls
-vim .vimrc
-c
-ls
-ping -c www.google.com
-ping -c 3 www.google.com
-sudo netcfg wireless-giant
-wicd-curses
-startx
-exit
-irb
-exit
-cd pub
-cd code/ruby/sinatra/beachp/public
+mkdir breeze
 ls
 mkdir stylesheets
-mv css/main.css css/reset.css css/wmd.css stylesheets
-rm -rf css/
-cd stylesheets
-ls
-mv main.css main.sass
-mv wmd.css wmd.sass
-ls
-css2sass main.sass
-ls
-css2sass reset.css
-ls
-v main.sass
-mv main.sass main.css
-mv wmd.sass wmd.css
-css2sass main.css main.sass
-css2sass reset.css reset.sass
-css2sass wmd.css wmd.sass
-rm main.css wmd.css reset.css
-rm reset.sass
+mkdir images
+mkdir views
 ls
 ls
-..
-..
-v views/layout.erb
+mv images breeze
+mv stylesheets breeze
+mv views breeze
+cd breeze/views
+mkdir layouts
 ls
-cd public
 ls
-cd stylesheets
-mv main.sass wmd.sass ../../views
 ls
-..
-rm -rf stylesheets
 ls
-rm -rf photo
+cd -
+cd ..
+v app/models/theme.rb
+gs
+rm app/models/theme.rb
+git reset --hard
+gs
+gs
 ls
-..
-ls
-cd views
-ls
-mkdir stylesheets
-mv wmd.sass main.sass stylesheets
-exit
-cd .vim
-mkdir backup
-mkdir swap
-exit
-v .vimrc
+vim public/stylesheets/prickle/application.css
+vim app/views/admin/content/show.html.haml
+gs
+ga .
+gc Newest articles first
+vim public/stylesheets/prickle/application.css
 c
-exit
-useradd -G hal gig
-exit
-thunar
-sudo thunar
-exit
-sudo thunar
-install thunar-volman
-pacup
-gimp code/ruby/sinatra/beachp/public/img/bg.jpg
-exit
-cd code/ruby/sinatra/beachp
 ls
-rm views/sidebar.erb
-exit
-cd code/ruby/rails/blog/
-cd db
+v app/views/layouts/admin/application.html.haml
+brew install unix2dos
+brew search dos
+brew search unix
+gs
+ga .
+gc Fix login errors
+git push
+scp administrator@10.28.1.81:/srv/www/crmlogger/db/crm_logs.sqlite3 ~/tmp
+vim ~/Dropbox/Stage/CRMLogging/config.ru
+script/console
+rm lib/prickle/themes.rb
+rm app/models/theme.rb
 ls
-..
+cd public/stylesheets
 ls
-script/generate scaffold Post title:string body:text
-v db/migrate/20091204184923_create_posts.rb
-..
+mv common/0_reset.css ../../themes/breeze/stylesheets/reset.css
+mv common/960.css ../../themes/breeze/stylesheets/960.css
 ls
-cd blog
+rm -rf bundle_common.css common
+cd ..
+cd ..
+rake bundle:all
+cd public/images
+cd ../stylesheets
+ls
+ls rogue
+cd ..
+ls
+cd ..
+ls
+cd app/views/layouts
+ls
+ls
+cp application.html.haml ../../../themes/breeze/views/layouts
+ls
+mv application.html.haml ..
+rm ../application.html.haml
+ls
+ls
+cd ../../..
+cd themes/breeze/views/
+ls
+mkdir -p aadmin/content
+ls
+mv aadmin/ admin
+ls
+ls admin
+mv ~/Code/ruby/prickle/app/views/admin/content/show.html.haml admin/content/
+cp admin/content/show.html.haml ~/Code/ruby/prickle/app/views/admin/content/
+cp layouts/application.html.haml ~/Code/ruby/prickle/app/views/layouts/
+ls
+cd layouts
+ls
+mv application.html.haml ..
+mv ../application.html.haml .
+ls
+ls
+cd ..
+cd ..
+ls
+ls stylesheets
+cd ..
+ls
+cd ..
+ls
+script/console
+gs
+ga .
+gc Basic themes
+hosteurope
+git rm public/stylesheets/common/*
+git rm public/stylesheets/common/0_reset.css
+git rm public/stylesheets/common/960.css
+git rm public/stylesheets/common/application.css
+gs
+ga .
+gc Ugh
+ls
+git rm themes/breeze/stylesheets/960.css
+gs
+gs
+ga .
+gc Drop 960gs
+script/console
+vim themes/breeze/views/layouts/application.html.haml
+vim public/javascripts/prickle/application.js
+c
+vim config/locales/en.yml
+gs
+ga c
+ga .
+gc Fuck it
+gs
+ga .
+gc Ok
+gs
+ga .
+gc Old require
+ls
+git rm themes/breeze/stylesheets/reset.css
+gs
+ga .
+gc Bai reset
+ls
+cd themes
+mkdir test/stylesheets
+ls
+mkdir test
+mkdir test/stylesheets
+cd test
+l
+ls
+rm -r stylesheets
+mkdir -p views/layouts
+ls
+cd ..
+rm -rf test
+cd ..
+ls
+git push
+cap deploy && cap deploy:cleanup
+hosteurope
+ga .
+gc Setting layout fix
+git push
+cap deploy && cap deploy:cleanup
+gs
+ga .
+gc Pluralize menu node labels
+git push
+cap deploy && cap deploy:cleanup
+v ~/.zsh/prompt
+src
+c
+hosteurope
+vim db/seeds.rb
+c
+gs
+ga .
+gc Fix seeds
+git push
+ls public/cache
+gs
+vim lib/prickle/version.rb
+gs
+ga .
+gc Version bump
+git tag v0.2.1
+git push --tags
+git push
+gs
+ga .
+gc Fix status checkers classname
+git push
+cap deploy && cap deploy:cleanup
+v ~/tmp/Sekishi.txt
+git remote
+git remote origin
+git remote show origin
+vim db/seeds.rb
+RAILS_ENV=production rake db:create
+RAILS_ENV=production rake db:drop
+RAILS_ENV=production rake db:create
+RAILS_ENV=production rake db:schema:load
+RAILS_ENV=production rake db:schema:load --trace
+vim config/environments/production.rb
+RAILS_ENV=production rake db:schema:load
+RAILS_ENV=production rake db:seed
+gs
+ga .
+gc Remove dat
+git push
+RAILS_ENV=production script/console
+vim db/seeds.rb
+RAILS_ENV=production rake db:drop
+RAILS_ENV=production rake db:create
+RAILS_ENV=production rake db:schema:load
+RAILS_ENV=production rake db:seed
+RAILS_ENV=production rake db:seed --trace
+RAILS_ENV=production rake db:seed
+ls
+vim db/seeds.rb
+RAILS_ENV=production rake db:drop
+RAILS_ENV=production rake db:create
+RAILS_ENV=production rake db:schema:load
+RAILS_ENV=production rake db:seed
+RAILS_ENV=production script/console
+gs
+ga .
+gc Seed bugfix
+git push
+v ~/tmp/Sekishi.txt
+gs
+ga .
+gc Fixes
+git push
+cap deploy
+script/console
+c
+grep -H "find_by_name_path" */**/*.rb
+cp -r ~/Downloads/famfamfam_silk_icons_v013/icons/key.png public/images/famfamfam
+gs
+ga .
+gc Indicate whether a section is viewable to guests or not
+git push
+cap deploy
+gs
+ga .
+gc Add some more user agent detection
+git push
+cap deploy && cap deploy:cleanup
+mv ~/.vim/ftplugin/mail.vim ~/tmp
+vim ~/.vimperatorrc
+rake notes
+gs
+ga .
+gc Fixes
+git push
+cap deploy && cap deploy:cleanup
+ga public/javascripts/prickle/application.js
+gc Fix moving
+ls app/controllers
+ls app/controllers/admin
+cat app/controllers/admin/settings_controller.rb
+cat app/controllers/admin/groups_controller.rb
+cat app/controllers/admin/users_controller.rb
+gs
+ga .
+gc Localize some things
+git push
+cap deploy
+ls
+ls app/views/admin
+script/console
+script/console
+gs
+ga .
+gc More localization examples
+git push
+cap deploy && cap deploy:cleanup
+gs
+ga .
+gc Forgot
+git push
+cap deploy && cap deploy:cleanup
+gs
+ga .
+gc Another forgotten translation
+git push
+cap deploy
+gs
+ga .
+gc Ik nederlands spreken
+git push
+cap deploy && cap deploy:cleanup
+gs
+ga .
+gc More localisations
+git push
+cap deploy
+cap deploy:cleanup
+cap deploy:restart
+gs
+ga .
+gc Moar localizashuns
+git push
+cap deploy
+gs
+ga .
+gc Finish up localization of content types
+git push
+cap deploy
+gs
+ga .
+gc Finish redirects localization
+git push
+cap deploy
+script/console
+script/generate migration remove_description_from_permissions
+vim db/migrate/20100514153732_remove_description_from_permissions.rb
 rake db:migrate
-cd blog
+script/console
+grep -H for_module */**/*.rb
+vim public/javascripts/prickle/application.js
+gs
+ga .
+gc Finish groups localization
+git push
+cap deploy
+gs
+ga .
+gc Finalize localization
+git push
+cap deploy
+cap deploy:cleanup
+gs
+ga .
+gc Nasty fix
+git push
+cap deploy
+script/generate migration create_links_table name:string path:string
+vim db/migrate/20100515124500_create_links_table.rb
+rake db:migrate
+vim db/schema.rb
+c
 ls
-cd db
+script/console
+mkdir app/views/admin/links
+cp ~/Downloads/famfamfam_silk_icons_v013/icons/link_add.png public/images/famfamfam
+cp ~/Downloads/famfamfam_silk_icons_v013/icons/link_edit.png public/images/famfamfam
+cp ~/Downloads/famfamfam_silk_icons_v013/icons/link_delete.png public/images/famfamfam
+gs
+ga .
+gc Add Link content type
+git push
+cap deploy
+cap deploy:migrate
+cap deploy:cleanup
+cap deploy:restart
+hosteurope
+gs
+ga .
+gc Fix
+git push
+cap deploy
+script/generate migration add_new_window_to_links new_window:boolean
+vim db/migrate/20100515132703_add_new_window_to_links.rb
+rake db:migrate
+cp ~/Downloads/famfamfam_silk_icons_v013/icons/link_go.png public/images/famfamfam
+gs
+ga .
+gc Add new_window boolean to links
+git push
+cap deploy && cap deploy:migrate && cap deploy:cleanup && cap deploy:restart
+gs
+ga .
+gc Fix new window
+git push
+cap deploy
+gs
+vim lib/prickle/version.rb
+gs
+ga .
+gc Version bump
+git tag v0.2.2
+git push
+git push --tags
+cap deploy && cap deploy:cleanup
+gs
+ga .
+gc Forgotten
+git push
+cap deploy && cap deploy:cleanup
+script/console
+script/console
+script/console
+script/console
+gs
+ga .
+gc Add boolean_attributes method to ActiveRecord Base
+git push
+gs
+cap deploy
+git rm -rf vendor/plugins/dummy_extension/
+cd vendor/plugins
+mkdir -p newsletter/config
+mkdir -p newsletter/app/views/admin
+mkdir -p newsletter/app/controllers/admin
+mkdir -p newsletter/app/models
+cd -
+vim vendor/plugins/dutch_language_pack/init.rb
+cd vendor/plugins
 ls
-v schema.rb
-ls
-v development.sqlite3
-ls
-v seeds.rb
-..
-v Rakefile
-v db/migrate/20091204184923_create_posts.rb
-exit
-cd code/ruby/rails/blog
-v config/database.yml
-v app/controllers/posts_controller.rb
-pacs sqlite
-install sqlitebrowser
-sqlitebrowser
-exit
-cd code/ruby/sinatra/beachp
-ls
-mv development.db .
-mv development.db ..
+mv newsletter newsletters
+cd ..
+cd ..
+ls vendor/plugins/newsletters/app/models/`
+ls vendor/plugins/newsletters/app/models/
+gs
+cd vendor/plugins/newsletters/
 ls
 mkdir db
-cd db
-mkdir migrate
-cd migrate
-ls
-20091204_create_posts.rb
-v 20091204_create_posts.rb
-..
-ls
-v schema.rb
-ls
-..
-v Rakefile
-ls
-rm -rf spec/
-git rm -rf spec/
+script
+exit
+cd Code/ruby/prickle
 ls
 gs
-rake db:migrate
-sudo gem install sinatra-activerecord
-v Rakefile
-rake db:migrate
-v Rakefile
-rake db:migrate
-rake db:migrate
-rake db:migrate
-rake db:create_migration NAME=create_posts
-cd db
-ls
-rm schema.rb
-cd migrate
-ls
-rm 20091204185824_create_posts.rb
-rm 20091204_create_posts.rb
-..
-..
-rake db:create_migration NAME=create_posts
-cd db
-ls
-cd migrate
-ls
-v 20091204185854_create_posts.rb
-..
-..
-ls
-rake db:migrate
-ls
-rake db:migrate
-v config/database.yml
-ls
-rake db:migrate
-ls db
-ls
-rm development.db
-ls db
-ls
-rake db:migrate
-ls
-ls
-rake db:migrate
-rake db:migrate
-cat db/sch
-v db/migrate/20091204185854_create_posts.rb
-v db/migrate/20091204185854_create_posts.rb
-v db/migrate/20091204185854_create_posts.rb
-v db/migrate/20091204185854_create_posts.rb
-ls
-rm development.db
-mv ../development.db .
 exit
-togit .vimrc
-cd github/dotfiles
-gpo master
+cd Code/ruby/prickle
+cd ~/Dropbox/Stage/UiTinLokeren3
+v javascripts/application.js
+v ~/tmp/Sekishi.txt
+v ~/tmp/Sekishi.txt
+v ~/tmp/Sekishi.txt
+v ~/tmp/Sekishi.txt
+src
+c
+c
+src
+c
 exit
-scshot beachp2
-scrshot beachp2
+cd Code/ruby/prickle
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+src
+c
+c
+c
+script/server thin
+git rm lib/prickle/core_extensions/active_record.rb
+rm lib/prickle/core_extensions/active_record.rb
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
 exit
-mountnet
-exit
-cp -r music/Ensiferum tmp/shares/Music
-exit
-v .vimrc
-exit
-v .vimrc
-exit
-killall firefox
-exit
-t add pagezones maken met sinatra en activerecord
-t add beachp omzetten naar activerecord en misschien mysql
-cdc
-t ls
-v .todo/todo.txt
-t ls
-t help
-t ls
-cd code/ruby/sinatra/beachp
 ls
-git pull origin master
-git pull gitorious master
+exit
+exit
+cd Downloads/famfamfam_silk_icons_v013/icons
+cp page_white_acrobat.png page_white_excel.png page_white_flash.png page_white_office.png page_white_paint.png page_white_powerpoint.png page_white_ruby.png page_white_text.png ~/Code/ruby/prickle/public/images/famfamfam
+exit
+exit
+lokvps
+exit
+lokvps
+exit
+irssi
+run MPlayer\ OSX\ Extended Downloads/\[DB\]_Bleach_271_\[4253AB7D\].avi
+exit
+mutt\
+\
+\
+\
+\
+\
+
+mutt\
+\
+\
+\
+\
+\
+
+exit
+hosteurope
+exit
+exit
+exit
+lokvps
+exit
+cd tmp
+scp administrator@10.28.1.81:/srv/www/crmlogger/db/crm_logs.sqlite3
+scp administrator@10.28.1.81:/srv/www/crmlogger/db/crm_logs.sqlite3 .
+scp administrator@10.28.1.81:/srv/www/crmlogger/db/crm_logs.sqlite3 .
+scp administrator@10.28.1.81:/srv/www/crmlogger/db/crm_logs.sqlite3 .
+scp administrator@10.28.1.81:/srv/www/crmlogger/db/crm_logs.sqlite3 .
+scp administrator@10.28.1.81:/srv/www/crmlogger/db/crm_logs.sqlite3 .
+scp administrator@10.28.1.81:/srv/www/crmlogger/db/crm_logs.sqlite3 .
+exit
+cd Code/ruby/prickle
+v ~/.vimperatorrc
+vim app/views/admin/attachments/index.html.haml
+c
+gs
+ga .
+gc Type and better
+gs
+vim TODO
+v TODO
+gs
+ga .
+gc Update TODO
+rake stats
+rake notes
+rake notes
+rake notes
+gs
+ga .
+gc Bugfix\?
+gs
+git checkout master
+vim app/models/user.rb
+gs
+ga .
+gc Bugfix\?
+git checkout openvld
+git merge master
+gs
 gl -p
+s
+ls
 c
-v views/index.erb
-v views/index.erb
-v views/news.erb
-gvim views/stylesheets/main.sass
-c
-scrshot gvim
-gs
-ga views/stylesheets/main.sass
-gc Don\'t make it *too* big
-gc "Don\'t make it *too* big"
-gpg next
-gs
-ga views/stylesheets/ma
-ga views/stylesheets/main.sass
-gc Increase overall font size a bit
-gpg next
-ruftp ~/tmp/shares/beachp3.png
+ls
+vim log/delayed_job.log
+ls
 gs
 ga .
-gc Layout changes ;o
-gpg next
-exit
-cd code/ruby/sinatra/beachp
-ls
-v application.rb
+git reset --hard
+gs
+vim vendor/plugins/newsletters/config/locales/en.yml
 gs
 ga .
-gc Added countdown
-gpg master
-v lib/post.rb
-gs
-ga lib/post.rb
-gc Specify table
-gpg master
-git branch next
-git checkout next
-gs
-ls
-mkdir config
-mv config.ru config/rackup.ru
-v config/rackup.ru
-ls
-mv application.rb beachp.rb
-v environment.rb
-ls
-git rm environment.rb
-ls
-gs
-v Rakefile
-ls
-cd vendor
-ls
-..
-ls
-rm test.db
-ls
-gs
-v beachp.rb
-cd views
-ls
-rm album.erb gallery.erb organisation.erb photo.erb upload.erb
-y
+gc Like that
 c
+cd public/images/famfamfam
+chmod -x *
+gs
+cd ../../..
+cp ~/Downloads/famfamfam_silk_icons_v013/icons/page_white_picture.png public/images/famfamfam
+chmod -x public/images/famfamfam/page_white_picture.png
+gs
+run Preview public/images/famfamfam/page_white_office.png
+run Preview public/images/famfamfam/page_white_office.png
+cp ~/Downloads/famfamfam_silk_icons_v013/icons/page_white_word.png public/images/famfamfam/
+chmod -x public/images/famfamfam/page_white_word.png
+cp ~/Downloads/famfamfam_silk_icons_v013/icons/page_white_zip.png public/images/famfamfam
+chmod -x public/images/famfamfam/page_white_zip.png
+cp ~/Downloads/famfamfam_silk_icons_v013/icons/application.png public/images/famfamfam
+chmod -x public/images/famfamfam/*
+gs
+cp ~/Downloads/famfamfam_silk_icons_v013/icons/page_white_code.png public/images/famfamfam
+chmod -x public/images/famfamfam
+gs
+chmod -x public/images/famfamfam/*
+gs
+cd public/images/famfamfam
+gs
 ls
-..
+cd public/images/famfamfam
+sudo chown -R gig .
+gs
 ls
-mv header.erb menu.erb views
+ll
+cd public/images
 ls
-cd views
+sudo chown -R gig:staff famfamfam/*
 ls
-v sidebar.erb
-v be
-..
-v beachp.rb
-cd views/stylesheets
-ls
-cp main.sass main.old
-v main.old
-mv main.old main.old.css
-v main.old.css
-mv main.old.css main.old.sass
-v main.old.sass
-../..
-v beachp.rb
-ls
-git rm TODO
-v beachp.rb
-ls
-v Rakefile
-git rm Rakefile
-git rm -f Rakefile
-ls
-cd views
-ls
-..
-ls
-v config/database.yml
-rm config/database.yml
+cd famfamfam
+builtin cd famfamfam
+ls famfamfam
+sudo ls famfamfam
+sudo cd famfamfam
+sudo chmod -x *
+cd ..
 ls
 gs
-rm -rf db/
-ls
+cd ..
 gs
-git commit -ma "Initial 'next' commit"
+sudo chmod +x public/images/famfamfam
+gs
+sudo chmod +x public/images
+gs
+sudo chmod +x public/images/admin
+gs
+cp ~/Downloads/famfamfam_silk_icons_v013/icons/attach.png public/images/famfamfam
+chmod -x public/images/famfamfam/attach.png
+gs
+vim app/views/admin/blogs/show.html.haml
+vim config/locales/en.yml
+vim vendor/plugins/dutch_language_pack/config/locales/nl.yml
+c
+vim config/locales/en.yml
+c
+gs
+ga .
+gc Fixes
+gs
+git checkout master
+git cherry-pick
+git cherry-pick 5108d47
+gs
+rm vendor/plugins/newsletters/app/views/admin/subscribers/index.html.haml
+gs
+ls
+ls vendor/plugins/newsletters
+rm -rf vendor/plugins/newsletters
+gs
+vim app/views/admin/attachments/index.html.haml
 git add .
+git rm vendor/plugins/newsletters/app/views/admin/subscribers/index.html.haml
+git add .
+git commit -c 5108d47
 gs
-gc "Initial 'next' commit"
-gpg next
-ls
+git checkout openvld
 gs
-git rm -rf application.rb config.ru public/css/main.css public/css/reset.css public/css/wmd.css public/css public/photo views/album.erb views/gallery.erb views/organisation.erb views/photo.erb views/upload.erb
-gs
-ga .
-gc And I forgot a bunch of stuff
-gpg next
-gvim beachp.rb
-git rm views/stylesheets/main.old.sass
-gc Argh
-gpg netx
-gpg next
-gs
-ga beachp.rb views/stylesheets/main.sass
-gc Added some log messages and fixed meta css class
-gpg next
-v TOD
-v README
-ga README
-gc Fixed up README
-gpg next
-ls
-git diff --help
+v ~/tmp/script.vbs
+v ~/tmp/script.vbs
+v ~/tmp/script.vbs
+git checkout master
 gs
 ga .
-gc Some style tweaks
-gpg next
+gc Fix
+git checkout openvld
+git merge openvld
+git merge master
 gs
-ga views/index.erb
-gc Strikethrough countdown
-gpg next
 gs
-ga views/layout.erb
-gc Add gitorious link
-gpg next
+ls
+cd ..
+ls
+scp -r prickle administrator@10.28.1.81:/home/administrator
+scp -r prickle administrator@10.28.1.81:/home/administrator
+scp -r prickle/config/deploy.rb administrator@10.28.1.81:/home/administrator
+git reset --hard
+cd prickle
+v public/stylesheets/prickle/application.css
+git reset --hard
 gs
-ga views/layout.erb
-gc Baffles me
-gpg next
-tail -f log/beachp.log
-exit
-cd code/ruby/sinatra/beachp
-v log/beachp.log
-exit
-irb
-exit
-cd code/ruby/sinatra/beachp
-gvim lib/photo.rb
-exit
-v .vimrc
-v test.rb
-exit
-eightball test
-eightball test
-eightball test
-eightball test
-rm bin/eightball y
-exit
-v bin/eightball
-v bin/eightball
-v bin/eightball
-chmod +x bin/eightball
-eightball
-v bin/eightball
-eightball should I kill all jews
-v bin/eightball
-eightball should I kill all jews
-eightball should I kill all jews
-v bin/eightball
-eightball should I kill all jews
-eightball should jolts get pro at ruby
-v bin/eightball
-eightball should jolts get pro at ruby
-v bin/eightball
-eightball should jolts get pro at ruby
-v bin/eightball
-eightball should jolts get pro at ruby
-v bin/eightball
-ls bin
-exit
-exit
-uzbl-browser
-htop
-ls
-uzbl --help
-uzbl-core
-exit
-VirtualBox
-ls .VirtualBox/Machines/Windows\ 7
-cd .VirtualBox/Machines/Windows\ 7
-ls
-cd Snapshots
-ls
-rm \{4badc5b5-c717-4112-86f2-1f9dde1f1a92\}.vdi \{94dd34cb-d730-4b07-a98d-0247bb81a2ca\}.sav
-VirtualBox
-ls
-..
-ls
-rm Snapshots
-rm -r Snapshots
-VirtualBox
-ls
-..
-ls
-..
-ls
-cd HardDisks
-ls
-cd Mac
-cd ../Machines
-ls
-rm -rf Hackintosh
-VirtualBox
-ls
-rm -rf Windows\ 7
-ls
-..
-ls
-cd HardDisks
-ls
-rm Win7.vdi
-ls
-aurb -s vmware
-exit
-cd code/ruby/sinatra/beachp
-gvim views/stylesheets/main.sass
+git checkout master
+cd app/views/admin/blogs
+mv show.html.haml ../articles/index.html.haml
 gs
+cd -
+gs
+mkdir ~/tmp/new-prickle
+cp -r app/controllers/admin/articles_controller.rb app/controllers/admin/blogs_controller.rb app/views/admin/section_nodes/_node.html.haml config/locales/en.yml config/routes.rb public/javascripts/prickle/application.js public/stylesheets/prickle/application.css vendor/plugins/dutch_language_pack/config/locales/nl.yml app/views/admin/articles/index.html.haml ~/tmp/new-prickle
+cd ~/tmp/new-prickle
+cd ..
+scp -r administrator@10.28.1.81:/home/administrator/prickle .
+ls
+ls new-prickle
+cp new-prickle/_node.html.haml prickle/app/views/admin/section_nodes/_node.html.haml
+cd prickle/
+gs
+git reset --hard
+git checkout master
+gl -p
+cd ..
+ls
+cp new-prickle/_node.html.haml prickle/app/views/admin/section_nodes/_node.html.haml
+ls new-prickle
+cp new-prickle/application.css prickle/public/stylesheets/prickle/application.css
+cp new-prickle/application.js prickle/public/javascripts/prickle/application.js
+cp new-prickle/articles_controller.rb prickle/app/controllers/admin/articles_controller.rb
+cp new-prickle/blogs_controller.rb prickle/app/controllers/admin/blogs_controller.rb
+cp new-prickle/en.yml prickle/config/locales/en.yml
+cp new-prickle/index.html.haml prickle/app/views/admin/articles/
+cp new-prickle/routes.rb prickle/config/routes.rb
+cp new-prickle/nl.yml prickle/vendor/plugins/dutch_language_pack/config/locales/nl.yml
+cd prickle
+gs
+git rm app/views/admin/blogs/show.html.haml
+gs
+git add app/views/admin/articles/index.html.haml
+gs
+ga .
+gc New
+gl -p
+vim config/locales/en.yml
+vim vendor/plugins/dutch_language_pack/config/locales/nl.yml
+gs
+ga .
+gc Refix
+gs
+git checkout openvld
+git merge master
+cd ..
+scp -r prickle administrator@10.28.1.81:/home/administrator
+ls
+cd prickle
+script/console
+script/console
+cd ..
+rm -rf prickle new-prickle lokeren
+ls
+rm -rf uitinlokeren.psd twitter.png script.vbs mail.vim lokeren.png facebook.png crm_logs.sqlite3 content-background.psd collage.gif admin.php
+ls
+cd ~/Downloads
+ls
+rm -rf social_networking_iconpack.zip
+rm -rf peepcode-peepopen-code-1*
+ls
+rm -rf nl* feedicons-standard.zip drupal-6.16.tar.gz breeze*
+ls
+rm -rf basic-6.x-2.10.tar.gz MacVim-snapshot-52.tbz Kopie\ van\ Scan0017.JPG Ciel_picture003.jpg 2010-5-9_14-18-53.JPG
+ls
+rm -f 1k.JPG
+ls
+cdc
+cd Code/ruby/prickle
+gs
+git reset --hard
+git checkout openvld
+vim themes/cvg/stylesheets/home.css
+scp -r public/stylesheets/prickle/application.css administrator@10.28.1.81:/home/administrator/prickle/stylesheets/prickle/application.css
+scp -r public/stylesheets/prickle/application.css administrator@10.28.1.81:/home/administrator/prickle/public/stylesheets/prickle/application.css
+scp -r public/stylesheets/prickle/tipsy.css administrator@10.28.1.81:/home/administrator/prickle/public/stylesheets/prickle/tipsy.css
+git status
+git reset --hard
+vim themes/cvg/stylesheets/home.css
+vim themes/cvg/stylesheets/application.css
+git reset --hard
+gs
+git pull origin openvld
+rm app/views/admin/articles/index.html.haml
+rm app/views/admin/articles/index.html.haml
+git pull origin openvld
+git checkout master
+git pull origin master
+gs
+git log -p
+git checkout openvld
+git checkout master
+vim app/views/admin/articles/index.html.haml
+vim app/views/admin/articles/_form.html.haml
+gs
+ga .
+gc Bugfix
+git push origin master
+cap deploy && cap deploy:cleanup
+git checkout openvld
+git merge master
+git push origin openvld
+cap deploy && cap deploy:cleanup
+vim ~/.vim/syntax/css.vim
+v ~/tmp/Sekishi.txt
+gs
+gs
+cd themes/cvg/views/layouts
+ls
+cp home.html.haml collage.html.haml
+vim collage.html.haml
+cd ../..
+cd stylesheets
+touch collage.css
+cp home.css collage.css
+vim collage.css
+gs
+cd ..
+cd ..
+cd ..
+gs
+ga .
+gc Fix styles
+git push origin openvld
+cap deploy
+gs
+vim themes/cvg/stylesheets/collage.css
+gs
+ga .
+gc Fix for real
+git push origin openvld
+cap deploy && cap deploy:cleanup
+gs
+mv ~/tmp/collage.gif themes/cvg/images
+gs
+ga .
+gc Add it there
+git push origin openvld
+cap deploy && cap deploy:cleanup
+ping www.google.com
+ping www.google.com
+v app/controllers/admin/application_controller.rb
+v app/controllers/admin/application_controller.rb
+v app/controllers/admin/application_controller.rb
+v app/controllers/admin/application_controller.rb
+git checkout master
+v app/controllers/admin/application_controller.rb
+script/console
+gs
+ga .
+gc Comments to app controller
+gs
+git add app/controllers/admin/resource_controller.rb
+gc Comments to resource controller
+git add app/controllers/admin/base_controller.rb
+gc Comments to base controller
+gs
+ga .
+gc Use build_object in attachments controller
+vim db/schema.rb
+gs
+ga .
+gc Add fields to models in comments
+gs
+git checkout openvld
+git merge master
+git log -p
+git checkout master
+git log
+git revert 050ba81c59f18c89ed67104a6e1717ab94ce0b47
+gs
+git checkout openvld
+git merge master
+git log -p
 c
+git checkout master
 gs
 ga .
-gc Added current menu highlighting
-gpg next
-ls
+gc Try, not send
+git checkout openvld
+git merge master
+script/console
+script/console
+git checkout master
 gs
+ga .
+gc Refix
+git checkout openvld
+git merge master
+v vendor/plugins/newsletters/init.rb
 gs
-ga beachp.rb
-gc Added some PH
-gpg next
-v ~/.gvimrc
+vim lib/prickle/admin_ui.rb
+vim lib/prickle/behaviors/hiding.rb
 gs
+git push origin openvld
+git log -p
+git checkout master
+git push origin master
+git checkout openvld
 exit
-cd code/ruby/sinatra
 ls
-mkdir gigamo.be
-cd gigamo.be
-git init
-ls
-v config.ru
+cd Code/ruby/prickle
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
 exit
-cd code/ruby/sinatra/gigamo.be
-ls
-..
-mv gigamo.be/ gigamo
-cd gig
-cd code/ruby/sinatra/gigamo
-ls
-cp ../beachp/public/img/buttonbg.png .
-ls
-mv buttonbg.png public
-cd public
-ls
-mkdir img
-mv buttonbg.png img
-gs
-gs
-ga .
-gc Finalize layout for now
-gp heroku master
-gs
-ga .
-gc Finalize layout for now, again
-gs
-..
-ga .
-gc Finalize layout for now, again
-gs
-gp heroku master
-ga views/edit.haml
-gc Fix edit view
-gp heroku master
-gc Fix edit view
-ga views/edit.haml
-gc Fix edit view, now maybe
-gp heroku master
-gs
-ga views/post.haml
-gc Fix post
-gp heroku master
-ls
-rm -r vendor/
-gs
-ls
-ls
-..
-cp -r gigamo ~/tmp/gigamoblog
-cd ~/tmp/gigamoblog
-ls
-v application.rb
-ls
-rm .gems
-rm development.db
-ls
-rm -rf .git
-ls
-rm .gitignore
-ls
-..
-roll blog.tar.gz gigamoblog
-ruftp blog.tar.gz
-cd gigamoblog
-ls
-v application.rb
-c
-cd ~/code/ruby/sinatra/gigamo
-v .gems
-v views/about.haml
-v views/layout.haml
-v views/index.haml
-v lib/post.rb
-gem search sqlite3
-c
-ls
-rm views/footer.haml
-rm views/header.haml
-rm views/about.haml
-gs
-git rm views/about.haml views/footer.haml views/header.haml
-ga .
-gc Change layout
-git push heroku master
-cd ~/gitclones/sinatra/scanty
-ls
-v lib/post.rb
-ls
-v views/index.erb
-qls
-ls
-v views/index.erb
-cd ~/code/ruby/sinatra/gigamo
-gs
-ga .
-gc Added disqus
-gp heroku master
-ga .
-gc Fix nesting
-gp heroku master
-gs
-ga .
-gc Remove disqus
-gp heroku master
-ga .
-gc Add home links to error pages
-gp heroku master
+run MPlayer\ OSX\ Extended Downloads/\[DB\]_Bleach_271_\[5FF99426\].avi
 exit
-cd code/ruby/sinatra/gigamo.be/i
-cd code/ruby/sinatra/gigamo.be/
+mutt
+exit
+irssi
+exit
+mv ~/Desktop/Screen\ shot\ 2010-05-22\ at\ 02.20.57.png ~/Pictures/Screenshots/cms.png
+ruftp Pictures/Screenshots/cms.png
+exit
+exit
+cd Dropbox/Stage/UiTinLokeren3
+ls
+cd assets
+cd ..
+cd images
+ls
+ls
+cd ..
+cp javascripts/jquery.facebox.js ~/Code/ruby/prickle/public/javascripts/prickle/plugins/
+ls
+ls stylesheets
+cp stylesheets/facebox.css ~/Code/ruby/prickle/public/stylesheets/prickle/
+cp images/closelabel.png images/loading.gif ~/Code/ruby/prickle/public/images/admin
+vim javascripts/application.js
+gs
+vim javascripts/application.js
+gs
+hosteurope
+exit
+cd Code/ruby/prickle
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+vim config/environment.rb
+script/server thin
+script/server thin
+git status
+vim config/environment.rb
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+sudo gem update --system
+brew update
+sudo rm /usr/local/Library/Formula/rxvt-unicode.rb
+brew update
+brew install bash imagemagick irssi mongodb node rtorrent ruby
+brew install rtorrent ruby
+exit
+cd Code/ruby/hymir
+ls public/javascripts
+exit
+hosteurope
+cd Downloads
+cd jquery-lightbox-0.5
+ls css
+cp css/jquery.lightbox-0.5.css ~/Code/ruby/prickle/themes/cvg/stylesheets/lightbox.css
+cp js/jquery.lightbox-0.5.js ~/Code/ruby/prickle/themes/cvg/javascripts/jquery.lightbox.js
+ls images
+cp images/lightbox-blank.gif images/lightbox-btn-close.gif images/lightbox-btn-next.gif images/lightbox-btn-prev.gif images/lightbox-ico-loading.gif ~/Code/ruby/prickle/themes/cvg/images
+exit
+hosteurope
+exit
+hosteurope
+run MPlayer\ OSX\ Extended Downloads/Trigun\ 01-26\ \[Dual\ Audio\]\ Mixed/\[AHQ\]\ Trigun\ -\ 01\ -\ The\ \$\$60\ billion\ man.mkv
+run MPlayer\ OSX\ Extended Downloads/\[DB\]_Bleach_271_\[5FF99426\].avi
+exit
+vim .gitconfig
+v .gitconfig
+exit
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+exit
+hosteurope
+hosteurope
+exit
+cd Dropbox/Stage/
+ls
+rm -rf CRMLogging
+scp -r administrator@10.28.1.81:/home/administrator
+scp -r 10.28.1.81:/home/administrator
+scp -r administrator@10.28.1.81:/home/administrator CRMLogging
+ls
+rm -rf CRMLogging
+scp -r administrator@10.28.1.81:/srv/www/crmlogger CRMLogging
+ls
+cd CRMLogging
+ls
+vim public
+vim log.rb
+ls
+vim minify.rb
+vim Rakefile
+rake min
+rake minify
+rake
+ls
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify
+rake minify:all
+ls
+ls public
+vim Rakefile
+rake minify:all
+ls
+vim public/all.js
+vim public/all.css
+vim Rakefile
+rake minify:all
+vim Rakefile
+cp ~/Code/ruby/prickle/lib/yuicompressor-2.4.2.jar .
 ls
 mkdir lib
-mkdir vendor
-mkdir views
-ls ../beachp
-mkdir public
-v .gitignore
+mv yuicompressor-2.4.2.jar lib
 ls
-ls
-cd views
-v index.haml
-ls
-mkdir stylesheets
-v index.haml
-v layout.haml
-ls
-v stylesheets/main.sass
-ls
-..
-ls
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+vim Rakefile
 cd public
 ls
-mkdir js
-cp ../../beachp/public/js/jquery.min.js .
+mkdir minified
+rm all.js all.css
 ls
-mv jquery.min.js js/jquery.js
+cd ..
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake minify:all
+ls
+vim public/application.js
+vim Rakefile
+rake minify:all
+vim Rakefile
+rake
+vim Rakefile
+rake
+vim Rakefile
+vim Rakefile
+rake
+vim Rakefile
+rake
+vim Rakefile
+rake
+vim Rakefile
+rake
+vim Rakefile
+rake
+vim Rakefile
+ls
+scp public/ Rakefile administrator@10.28.1.81:/home/administrator
+scp -r public/ Rakefile administrator@10.28.1.81:/home/administrator
+scp index.html administrator@10.28.1.81:/home/administrator
+scp public/index.html administrator@10.28.1.81:/home/administrator
+scp lib/yuicompressor-2.4.2.jar administrator@10.28.1.81:/home/administrator
+cd ..
+rm -rf CRMLogging
+exit
+cd Do
+ls
+cd Downloads
+extract_archive tickle.7z
+ls
+cp tickle/new_tickle_logo_77x30.png ~/Code/ruby/prickle/public/images/ticklelogo_mini.png
+ls tickle
+cp tickle/new_tickle_logo_86x30.png ~/Code/ruby/prickle/public/images/ticklelogo_mini.png
+cp tickle/new_tickle_logo_200x77.png ~/Code/ruby/prickle/public/images/ticklelogo.png
+exit
+lokvps
+exit
+hosteurope
+gs
+gs
+mv ~/Desktop/Screen\ shot\ 2010-05-26\ at\ 22.59.25.png ~/Pictures/Screenshots/articlestatus.png
+ruftp Pictures/Screenshots/articles
+ruftp Pictures/Screenshots/articlestatus.png
+gs
+cd Code/ruby/aurb
+ls
+ruby bin/aurb search aurb
+ruby bin/aurb info aurb
+lokvps
+exit
+rvm
+rvm use head
+ls .rvm
+ll .rvm
+cd .rvm
+ll
+cd scripts
+ll
+cd ..
+rvm notes
+vim bin/rvm
+q
+ls
+rvm
+rvm update
+ls
+cd ..
+sudo chown -R $(whoami) .rvm/
+sudo chown -R $(whoami) .rvm/**/*
+rvm notes
+rm -rf .rvm
+ls
+mkdir -p ~/.rvm/src/ && cd ~/.rvm/src && rm -rf ./rvm/ && git clone git://github.com/wayneeseguin/rvm.git && cd rvm && ./install
+exit
+which ruby
+exi
+exit
+cd Code/ruby/pro
+cd Code/ruby/prickle
+v app/views/layouts/admin/application.html.haml
+git status
 gs
 ga .
+gc Een keer iets proberen
+git push origin openvld
+cap deploy
 gs
-..
 ga .
+gc Misschien zo
+git push origin master
 gs
-gc Initial commit
-heroku create
-git push heroku master
-v config.ru
-gs
-ga config.ru
-gc Fixed
-git push heroku master
-heroku rename gigamo
-heroku rename newname http://gigamo.heroku.com | git@heroku.com:gigamo.git
-heroku rename gigamo --app gentle-earth-18
-git remote rm heroku
-git remote add heroku git@heroku.com:gigamo.git
-gs
-ga config.ru
-gc Maybe for real now
-git push heroku master
-ruby config.ru
-ruby config.ru
-ruby -rubygems config.ru
-ruby -rubygems config.ru
-ruby -rubygems config.ru
-gs
-ga application.rb
-gc Maybe now..
-git push heroku master
-rackup config.ru
-rackup config.ru --port=9393
-v views/layout.haml
-v views/404.haml
-v views/500.haml
+vim config/initializers/encoding.rb
+v config/initializers/encoding.rb
 gs
 ga .
 gc Sigh
-git push heroku master
-ls
-v .gems
-ls
-v .gitignore
-ls
-ga .
-gc Added .gems file
-git push heroku master
-ls
-ls views/stylesheets
+git push origin openvld && cap deploy
+vim config/environment
+vim config/environment.rb
 gs
-ga application.rb
-gc Fixed stylesheets
-gp heroku master
+git rm config/initializers/encoding.rb
 gs
 ga .
-gc Added Auth
-gp heroku master
-ga application.rb
-gc And fix error.....
-gp heroku master
+gc Fix
+gl -p
+git checkout master
+vim config/database.example.yml
 gs
 ga .
-rackup config.ru --port=9393
-ls
-gs
-gc Added some
-gp heroku master
-rackup config.ru --port=9393
-gs
-ga lib/post.rb views/index.haml
-gc Change index listing
-gp heroku master
-ls
-ga development.db
-gc Added DB
-gp heroku master
-rackup config.ru --port=9393
-gs
-ga .
-gc Maybe db works now
-gp heroku master
-rackup config.ru --port=9393
-rackup config.ru --port=9393
-ls
-gs
-ga .
-gc Added most functionality
-gp heroku master
-gs
-ga views/header.haml
-gc Fix header link
-gp heroku master
-rm views/footer.haml
-gs
-git rm views/footer.haml
-gs
-gc Remove footer
-rackup config.ru --port=9393
-gs
-ga views/layout.haml views/stylesheets/main.sass
-gc First layout
-gp heroku master
-rackup config.ru --port=9393
-rackup config.ru --port=9393
-rackup config.ru --port=9393
-exit
-cd code/ruby/sinatra/gigamo
-gvim application.rb
-exit
-v code/ruby/sinatra/beachp/views/stylesheets/main.sass
-cd code/ruby/sinatra/beachp
-gs
-ga .
-gc Change font
-gpg next
-exit
-cp -r .vim/ ~/tmp
-exit
-cd gitclones
-mkdir rtomayko
-cd rtomayko
-git clone git://github.com/rtomayko/dotfiles.git
-cd dotfiles
-ls
-cp -rf .vim/ ~/
-vim
-v test.rb
-v test.rb
-v test.haml
-v .vimrc
-v ~/.vim/colors/vividchalk.vim
-cp ~/tmp/.vim/colors/vividchalk.vim ~/.vim/colors
-v .vimrc
-gvim .vimrc
-exit
-cd code/ruby/sinatra/gigamo
-sqlitebrowser
-ls
-mkdir db
-cd db
-ls
-touch database.yml
-v 001_posts_tags.rb
-ls
-rm database.yml
-ls
-v 001_posts_tags.rb
-v 001_posts_tags.rb
-c
-gs
-..
-gs
-cd db
-ls
-..
-rm -rf db/
-ls
-gs
-ga .
-gc Uh some changes I guess\?
-gp heroku master
-gs
-ga views/stylesheets/main.sass
-gc Change font
-git push heroku master
-gs
-ga .
-gc Layout tweaks
-gp heroku master
-ga .
-gs
-gc Added about etc
-gp heroku master
-exit
-cd code/ruby/sinatra/gigamo
-rackup config.ru
-rackup config.ru --port=9393
-rackup config.ru --port=9393
-exit
-aurb -u
-cd abs/uzbl-git
-makepkg -fi
-uzbl-tabbed
-cd ~/.config/uzbl
-ls
-..
-ls
-rm -rf uzbl
-..
-cd .local/share
-ls
-rm -rf uzbl
-cdc
-uzbl-browser
-htop
-c
-ri Hash
-sudo ri Hash
-sudo ri 'Hash#map'
-cdc
-ls
-pacup
-sudo gem install heroku
-pacs testing/kernel26
-pacs kernel26
-pacup
-svim /etc/pacman.conf
-install testing/kernel26
-sudo pacman -Sy
-install testing/kernel26
-install testing/nvidia testing/ndiswrapper
-cd /etc/modprobe.d
-ls
-sudo rm framebuffer_blacklist.pacsave
-sudo rm uvesafb.pacsave
-ls
-..
-ls
-v modprobe.conf
-cp modprobe.conf modprobe.d
-sudo cp modprobe.conf modprobe.d
-cd modprobe.d
-ls
-v modprobe.conf
-rm ../modprobe.conf
-sudo rm ../modprobe.conf
-..
-ls modprobe.
-sudo rm modprobe.conf.pacnew
-c
-cd ~/gitclones/rtomayko/dotfiles
-ls
-v .bashrc
-c
-exit
-cd code/ruby/projects/rawr
-ruby rawr.rb
-ruby rawr.rb
-ruby rawr.rb
-exit
-cd code/ruby/sinatra/beachp
-rackup config.ru
-rackup config.ru
-git branch test
-gs
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-rackup config/rackup.ru
-exit
-screen -t spwned
-screen -t rackup
-pacup
-sudo pacman optimize && sudo sync
-sudo pacman-optimize && sudo sync
-pacup
-pacup
-exit
-screen -RR
-exit
-exit
-startx
-reboot
-exit
-cd code/ruby/sinatra/beachp
-ls
-v views/stylesheets/main.sass
-gs
-ga .
-gc Remove uppercase
-gpg next
-exit
-uname -a
-cd code/ruby/sinatra/gigamo
-c
-gvim application.rb
-exit
-exit
-cd tmp
-ls
-cd gigamoblog
-ls
-..
-rm -rf gigamoblog
-ls
-rm blog.tar.gz
-mkdir gigamoblog
-ls
-cd gigamoblog
-ls
-cd gigamo
-ls
-rm -rf .git/
-rm .gitignore
-ls
-v application.rb
-ls
-..
-ls
-roll blog.tar.gz gigamo
-ruftp blog.tar.gz
-gs
-exit
-cd code/ruby/projects/rbmpd
-ls
-rake spec
-rake test
-ruby client.rb
-v lib/rbmpd/mpd.rb
-ruby client.rb
-exit
-exit
-exit
-exit
-cd code/ruby/projects/rbmpd
-ls
-gs
-v .gitignore
-mkdir examples
-cp client.rb examples/shellclient.rb
-cd examples
-ls
-v shellclient.rb
-exit
-v .screenrc
-exit
-cd code/ruby/projects/rbmpd
-gs
-git reset --hard
-gp origin master
-git pull origin master
-ls
-rm lib/rbmpd/mpd.rb
-git pull origin master
-git reset --hard
-ls
-rm lib/rbmpd/mpd.rb
-git pull origin master
-ls
-git reset --hard
-git rm lib/rbmpd/mpd.rb
-git pull origin master
-gs
-git reset --hard
-gs
-v lib/rbmpd/mpd.rb
-ls
-gs
-ga .
-gc Fucking fuck
-gs
-v lib/rbmpd/mpd.rb
-exit
-cd tmp/shares
-mountnet
-ls
-..
-cd shares
-ls
-cp cabayo_default.jpg cabayo_night.jpg ~/walls
-exit
-v .wmii-hg/config.yaml
-nitrogen ~/walls
-exit
-cd downloads/Dexter.S04E11.HDTV.XviD-SYS
-ls
-ex dexter.411.hdtv.xvid-sys.rar
-c
-mplayer dexter.411.hdtv.xvid-sys.avi
-exit
-cd code/ruby/projects/rbmpd
-ls
+gc Forgot
 git push origin master
+git checkout openvld
+git merge master
+git pull origin openvld
+git push origin openvld
+cap deploy
+git checkout master
+git checkout openvld
+git checkout master
+git checkout openvld
+vim config/locales/en.yml
+git checkout master
+git checkout openvld
+gs
+git checkout master
+gs
+ga .
+gc Add a help link
+git push origin master
+cap deploy
+ls config/initializers
+cap deploy
+git checkout openvld
+git merge master
+git push origin openvld
+cap deploy
+git checkout master
+gs
+ga .
+gc Add a line to gravatar mouseover
+git checkout openvld
+git merge master
+git checkout master
+vim public/stylesheets/prickle/facebox.css
+vim public/javascripts/prickle/plugins/jquery.facebox.js
+git checkout openvld
+ls
+gs
+ga .
+gc Add facebox
+git checkout openvld
+git merge master
+gs
+git checkout master
+gs
+ga .
+gc Remove the rel from help
+git checkout openvld
+git merge master
+git checkout master
+git checkout openvld
+gs
+touch public/images/famfamfam/newspaper_edit.png
+touch public/images/famfamfam/package_edit.png
+gs
+gs
+ga .
+gc Add some content to the help facebox
+git checkout openvld
+git merge master
+gs
+git push origin openvld
+git checkout master
+git push origin master
+cap deploy
+git checkout openvld
+cap deploy
+git checkout master
+gs
+ga .
+gc Remove the hash href
+git push origin master
+cap deploy && cap deploy:cleanup
+cap deploy:cleanup
+git checkout openvld
+git merge master
+git push origin openvld
+cap deploy && cap deploy:cleanup
+git checkout master
+vim config/locales/en.yml
+gs
+ga .
+gc Slight restyling of viewsite and viewhelp buttons
+git push origin master
+git checkout openvld
+git merge master
+git push origin openvld
+git checkout master
+vim TODO
+ls
+mkdir app/metal
+git mv lib/theme_server.rb app/metal
+vim config/environment.rb
+vim config/environment.rb
+gs
+vim config/environment
+vim config/environment.rb
+mkdir app/middleware
+git mv app/metal/theme_server.rb app/middleware
+gs
+rm -r app/metal
+script/generate metal waitress
+vim TODO
+vim ~/Code/ruby/git-wiki/git-wiki.rb
+rm app/views/layouts/admin/_help.html.haml
+vim app/controllers/admin/application_controller.rb
+vim ~/Code/ruby/git-wiki/git-wiki.rb
+vim app/controllers/admin/application_controller.rb
+vim ~/Code/ruby/git-wiki/git-wiki.rb
+vim public/stylesheets/prickle/application.css
+gs
+ga .
+gc Move theme server into middleware and use a sinatra app for help serving
+gs
+git push origin master
+git checkout openvld
+git merge master
+git push origin openvld
+git checkout master
+cap deploy
+gs
+ga .
+gc Fix that
+gs
+git push origin master
+cap deploy
+gs
+git checkout openvld
+git push origin openvld
+git merge master
+git merge master
+git push origin openvld
+cap deploy
+vim ~/Dropbox/Stage/UiTinLokeren3/javascripts/jquery.facebox.js
+ls public/images/admin
+gs
+git checkout master
+gs
+ga .
+gc Fixies
+git push origin master
+git checkout openvld
+git merge master
+git push origin openvld
+gl -p
+vim config/environment.rb
+git checkout master
+git checkout master -f
+vim config/environment.rb
+gs
+ga
+ga .
+gc Use markdown for help
+git push origin master
+git checkout openvld
+git merge master
+git push origin openvld
+vim app/views/admin/pages/_form.html.haml
+gs
+ga .
+git checkout master
+gc Populate help a bit
+git checkout master
+git cherry-pick 71e6147
+gs
+git push origin master
+git checkout openvld
+git push origin openvld
+git checkout master
+cap deploy && cap deploy:cleanup
+git checkout openvld
+cap deploy && cap deploy:cleanup
+sudo gem install rails
+vim config/environment.rb
+vim config/boot.rb
+gs
+git checkout master
+vim config/environment.rb
+git checkout master
+vim app/views/admin/pages/_form.html.haml
+cd ../
+rails test
+cd test
+vim config/environment.rb
+vim config/boot.rb
+vim config/initializers/new_rails_defaults.rb
+gs
+cd ..
+rm -rf test
+cd prickle
+sudo gem install haml
+sudo gem install rails_xss
+vim app/views/admin/pages/_form.html.haml
+svim /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/gems/1.9.1/gems/actionpack-2.3.6/lib/action_view/helpers/text_helper.rb
+gs
+vim app/metal/waitress.rb
+git add app/metal/waitress.rb
+gs
+gc Remove login reqs from waitress for now
+gl -p
+gs
+git checkout openvld
+gs
+git branch rails-2.3.6
+git checkout rails-2.3.6
+gs
+ga .
+gc Rails 2.3.6 initialization
+git checkout master
+git push origin master
+git checkout openvld
+git merge master
+vim app/metal/waitress.rb
+gs
+ga .
+gc Fix conflict
+gs
+gl -p
+gs
+git push origin openvld
+git checkout rails-2.3.6
+git push origin rails-2.3.6
+gs
+git checkout master
+gs
+git merge rails-2.3.6
+gs
+git branch -d rails-2.3.6
+git branch -d assets
+git branch -d tinymce
+git branch -d layout
+gs
+git branch
+gs
+git push origin master
+git checkout openvld
+git merge master
+gl -p
+git push origin openvld
+git checkout master
+vim config/environment.rb
+gs
+sudo gem install haml
+gs
+ga .
+gc Haml needs to be version 3.0.5 to work with Rails 2.3.6
+git push origin master
+cap deploy
+cap deploy
+cap deploy
+git checkout openvld
+git merge master
+vim config/environment.rb
+gs
+ga .
+gc Fix conflict
+git push origin openvld
+cap deploy
+git checkout master
+gs
+ga .
+gc Use alert instead of error in flash hash
+git push origin master
+gs
+cap deploy && cap deploy:cleanup
+gs
+git checkout openvld
+git merge master
+gs
+git push origin openvld
+cap deploy && cap deploy:cleanup
+git checkout openvld
+cap -T
+cap -e deploy:rollback
+cap deploy:rollback 20100522234930
+cap -e deploy:rollback:revision
+cap deploy:rollback:revision 20100522234930
+cap deploy:restart
+gs
+git checkout master
+script/generate migration rename_layout_column
+vim db/migrate/20100523130047_rename_layout_column.rb
+gs
+ga .
+gc Migration
+git checkout openvld
+git merge master
+rake db:migrate
+gs
+git checkout master
+vim db/schema.rb
+v db/schema.rb
+git checkout -f master
+gs
+rake db:migrate
+gs
+vim app/controllers/admin/content_controller.rb
+gs
+ga .
+gc Whatever
+git checkout openvld
+git merge master
+v db/schema.rb
+gs
+rake db:migrate
+gs
+ga .
+gc Fix conflicts etc
+gs
+vim app/controllers/admin/content_controller.rb
+cap deploy && cap deploy:migrate
+git push origin openvld
+cap deploy && cap deploy:migrate
+gs
+git checkout master
+gs
+git push origin master
+cap deploy && cap deploy:migrate
+git checkout openvld
+script/console
+vim public/stylesheets/prickle/application.css
+gs
+ga .
+gc Add back button to collage
+script/console
+vim db/schema.rb
+gs
+git checkout master
+vim db/schema.rb
+script/generate migration remove layout column from sections
+script/generate migration remove layout column from sections
+script/generate migration remove_layout_from_sections
+vim db/migrate/20100523151417_remove_layout_from_sections.rb
+gs
+rake db:migrate
+gs
+ga .
+gc Deprecated column
+git checkout openvld
+git merge master
+rake db:migrate
+gs
+vim db/schema.rb
+gs
+gl -p
+c
+cd themes/cvg
+ls
+mkdir javascripts
+cd -
+vim app/helpers/admin/content_helper.rb
+cd themes/cvg/images
+git rm collage.gif
+chmod -x cvg.png facebook_32.png header_left.png header_right.png lightbox-blank.gif lightbox-btn-close.gif lightbox-btn-next.gif lightbox-btn-prev.gif lightbox-ico-loading.gif linkedin_32.png twitter_32.png
+gs
+cd ..
+vim javascripts/jquery.lightbox.js
+vim stylesheets/lightbox.css
+ls
+ls
+vim views/layouts/collage.html.haml
+cp ~/Code/ruby/prickle/public/javascripts/dev/jquery-1.4.2.min.js javascripts/jquery.min.js
+vim javascripts/collage.js
+vim views/layouts/collage.html.haml
+gs
+cd ..
+cd ..
+gs
+a .
+gc Push lightbox
+git push origin openvld
+ga .
+gc Push lightbox ..
+git push origin openvld
+cap deploy
+vim themes/cvg/javascripts/collage.js
+gs
+ga .
+gc Fix lightbox
+git push origin openvld && cap deploy
+vim public/javascripts/prickle/application.js
+vim public/javascripts/prickle/application.js
+v public/javascripts/dev/jquery-ui-1.8.custom.min.js
+gs
+ga .
+gc Wymeditor tweaks
+git push origin openvld
+git checkout master
+git cherry-pick a96a8a2
+git push origin master
+git push origin master
+git checkout openvld
+cap deploy
+gs
+git checkout master
+gs
+ga .
+gc Use only one javascript_include_tag call
+git push origin master
+git checkout openvld
+git merge master
+vim app/views/admin/articles/_form.html.haml
+vim app/views/admin/pages/_form.html.haml
+gs
+ga .
+gc Fix conflict
+gs
+ls
+cd themes/cvg/
+cp ~/Downloads/ImageFlow_1.3-1.0/imageflow.css stylesheets
+cp ~/Downloads/ImageFlow_1.3-1.0/imageflow.js javascripts
+cp ~/Downloads/ImageFlow_1.3-1.0/*.png images
+vim stylesheets/imageflow.css
+vim javascripts/imageflow.js
+cp views/layouts/collage.html.haml views/layouts/biografie.html.haml
+script/console
+ls
+vim views/layouts/biografie.html.haml
+git mv stylesheets/collage.css stylesheets/simple.css
+vim views/layouts/collage.html.haml
+vim stylesheets/simple.css
+vim views/layouts/biografie.html.haml
+vim javascripts/imageflow.js
+cd ..
+cd ..
+gs
+ga .
+gc Add imageflow
+git push origin openvld
+cap deploy
+sudo gem install rails haml --no-ri --no-rdoc
+gs
+git checkout master
+vim config/environment.rb
+gs
+ga .
+gc Update to rails 2.3.7
+git push origin master
+cap deploy
+git checkout openvld
+git merge master
+vim themes/cvg/javascripts/imageflow.js
+gs
+ga .
+gc Try now
+git push origin openvld
+cap deploy
+gs
+cd themes/cvg
+vim views/layouts/collage.html.haml
+vim views/layouts/biografie.html.haml
+vim stylesheets/simple.css
+git mv stylesheets/simple.css stylesheets/collage.css
+cp stylesheets/collage.css stylesheets/biografie.css
+vim stylesheets/biografie.css
+cd ../..
+gs
+ga .
+gc Fix
+git push origin openvld
+cap deploy
+vim themes/cvg/javascripts/imageflow.js
+gs
+ga .
+gc Fix
+git push origin openvld
+cap deploy
+vim themes/cvg/javascripts/imageflow.js
+gs
+ga .
+gc Another fix
+git push origin openvld
+cap deploy
+gs
+git checkout master
+gs
+ga .
+gc Fix wym error
+git push origin master && cap deploy && cap deploy:cleanup && git checkout openvld && git merge master
+vim themes/cvg/stylesheets/biografie.css
+vim themes/cvg/stylesheets/biografie.css
+gs
+ga .
+gc Style fix
+git push origin openvld && cap deploy && cap deploy:cleanup
+vim themes/cvg/stylesheets/biografie.css
+vim themes/cvg/stylesheets/imageflow.css
+vim themes/cvg/stylesheets/biografie.css
+gs
+ga .
+gc Style tweaks
+git push origin openvld
+cap deploy
+vim themes/cvg/stylesheets/biografie.css
+gs
+ga .
+gc Fix back button font
+git push origin openvld
+cap deploy
+cp ~/Downloads/famfamfam_silk_icons_v013/icons/shading.png public/images/famfamfam
+git checkout master
+gs
+vim public/stylesheets/prickle/application.css
+git rm public/images/famfamfam/newspaper_edit.png public/images/famfamfam/package_edit.png
+gs
+ga .
+gc Temp image for the unavailable ones
+git push origin master && cap deploy
+git checkout openvld
+git merge master
+git push origin openvld
+cap deploy
+vim vendor/plugins/newsletters/app/views/admin/subscribers/index.html.haml
+gs
+ga .
+gc Fix subscriber wymeditor width
+git push origin openvld
+v ~/tmp/Sekishi.txt
+git branch ext_members
+git checkout ext_members
+git checkout master
+gs
+ga .
+gc Slight style tweak
+git push origin master
+git checkout openvld
+git merge master
+git push origin openvld
+git checkout ext_members
+git pull origin ext_members
+git checkout openvld
+ls vendor/plugins/newsletters/config/locales
+git add vendor/plugins/newsletters/config/locales/en.yml
+gs
+git checkout master
+gs
+ga .
+gc Further improve check_user_count
+git push origin master
+git checkout openvld
+git merge master
+git push origin openvld
+gs
+ga .
+gc Fix resourcecontroller docs
+git checkout master
+git cherry-pick 05bc7b5
+gs
+git push origin master
+git checkout openvld
+git push origin openvld
+grep -H no_permission */**/*.rb
+git checkout master
+gs
+ga .
+gc Ugly hack for bugfix
+git push origin master
+cap deploy && cap deploy:cleanup
+git checkout openvld
+git merge master
+git push origin openvld
+cap deploy && cap deploy:cleanup
+mv ~/tmp/openvld.jpg themes/cvg/images/header_right.png
+mv themes/cvg/images/header_right.png themes/cvg/images/header_right.jpg
+vim themes/cvg/stylesheets/home.css
+vim themes/cvg/stylesheets/application.css
+gs
+ga .
+gc New logo
+vim themes/cvg/stylesheets/application.css
+vim themes/cvg/views/layouts/application.html.haml
+vim themes/cvg/stylesheets/application.css
+git revert 12d62a1
+gs
+git reset --hard
+git revert 12d62a1
+sudo gem install rails haml --no-ri --no-rdoc
+git checkout master
+vim config/environment.rb
+gs
+ga .
+gc Update to Rails 2.3.8
+git checkout openvld
+git merge master
+git checkout master
+git push origin master
+cap deploy
+git checkout openvld
+git push origin openvld
+cap deploy
+vim themes/cvg/stylesheets/application.css
+gs
+ga .
+gc Fix box shadow in webkit browsers
+git push origin openvld
+vim ~/Dropbox/Stage/UiTinLokeren3/stylesheets/application.css
+c
+git checkout master
+vim public/javascripts/prickle/application.js
+ls app/views/admin/p
+ls app/views/admin/pages
+ls app/views/admin/shared
+vim app/controllers/admin/dashboard_controller.rb
+mkdir app/views/admin/page_parts
+vim app/views/admin/dashboard/index.js.erb
+rm -rf app/views/admin/page_parts
+gs
+rake routes
+mkdir app/views/admin/page_parts
+vim app/views/admin/users/index.html.haml
+vim app/views/admin/redirects/index.html.haml
+vim app/views/admin/dashboard/index.html.haml
+vim app/views/admin/redirects/index.html.haml
+gs
+git reset --hard
+gs
+rm app/controllers/admin/page_parts_controller.rb
+rm -rf app/views/admin/page_parts
+rm app/views/admin/pages/_page_part_field.html.haml
+gs
+ga .
+gc Use new style notice/alert
+git push origin master
+git checkout openvld
+git merge master && git push origin openvld
+git checkout master
+getchromium
+~/Scripts/getchromium
+gs
+cp ~/Downloads/tickle_logo/tickle_cloud_16x16.ico public/favicon.ico
+cp ~/Downloads/tickle_logo/new_tickle_logo_77x30.png public/images/ticklelogo_mini.png
+git rm public/images/ticklelogo_minii.png
+gs
+ls
+rm -f public/favicon.ico
+cp ~/Downloads/tickle_logo/tickle_cloud_16x16.ico public/favicon.ico
+git status
+gs
+rm public/favicon.ico
+mv ~/Downloads/tickle_cloud_16x16.ico public/favicon.ico
+rm public/favicon.ico
+ls ~/Downloads/tickle_logo
+v ~/Dropbox/Stage/UiTinLokeren3/javascripts/application.js
+ls
+ls
+gs
+git rm public/favicon.ico
+git add app/controllers/admin/blogs_controller.rb app/controllers/admin/*
+gs
+ga .
+gc Use new unexistant favicon \(for now\)
+ls
+vim TODO
+script/generate migration add_versioning
+v db/migrate/20100526132146_add_versioning.rb
+rake db:migrate
+gs
+ga .
+gc Prepare versioning
+gs
+ga .
+gc Forgot that
+git checkout openvld
+git merge master
+vim TODO
+gs
+ga .
+gc Conflict fix
+gl -p
+git checkout master
+vim TODO
+gs
+ga .
+gc zz
+gs
+ga .
+gc Support acts_as_versioned in edit action
+git checkout openvld
+git merge master
+git checkout master
+rm -rf ~/Downloads/tickle_logo*
+rm -rf ~/Downloads/tickle*
+cp ~/Downloads/logoots/new_tickle_logo_200x77.png public/images/ticklelogo.png
+cp ~/Downloads/logoots/new_tickle_logo_81x30.png public/images/ticklelogo_mini.png
+gs
+rake db:migrate
+vim config/environment.rb
+sudo vim /usr/local/Cellar/ruby/1.9.1-p378/lib/ruby/gems/1.9.1/gems/acts_as_versioned-0.2.3/lib/acts_as_versioned.rb
+rake db:migrate
+vim db/schema.rb
+gs
+script/console
+mv db/development.sqlite3 db/development.sqlite3.old
+rake db:create
+rake db:schema:load
+rake db:seed
+script/plugin install acts_as_versioned
+script/plugin install git://github.com/technoweenie/acts_as_versioned.git
+vim config/environment.rb
+mv db/development.sqlite3.old db/development.sqlite3
+script/console
+mv db/development.sqlite3 db/development.sqlite3.old
+rake db:schema:load
+rake db:seed
+ls
+vim public/javascripts/prickle/application.js
+script/console
+rake routes
+vim app/models/blog.rb
+script/console
+gs
+gl -p
+ls
+ls
+gs
+git branch versioning
+git reset --hard HEAD^^^^^
+git reset --hard "HEAD^^^^^"
+gs
+gl -p
+git merge versioning
+gs
+vim app/controllers/admin/pages_controller.rb
+gs
+ls
+mv db/development.sqlite3.old db/development.sqlite3
+rm -rf vendor/plugins/acts_as_versioned
+gs
+ls
+gl -p
+gs
+rake db:migrate:rollback
+ls db/migrate
+rake db:migrate:down VERSION=20100526132146
+vim config/environment.rb
+script/plugin install git://github.com/technoweenie/acts_as_versioned.git
+rake db:migrate:down VERSION=20100526132146
+rake db:migrate:down VERSION=20100526132146
+rake db:migrate:down VERSION=20100526132146
+gs
+ga .
+gc remove fucking fuckfqmdhsifohs
+git rm -rf vendor/plugins/acts_as_versioned/
+gs
+ga .
+gc God FUKCIGNMDSIOQHGQ
+git push origin master
+git branch -d versioning
+gs
+git checkout openvld
+git merge master
+git push origin openvld
+gs
+git checkout master
+script/plugin install git://github.com/technoweenie/acts_as_versioned.git
+script/generate migration add_versioning_to_articles
+vim db/migrate/20100526193030_add_versioning_to_articles.rb
+rake db:migrate
+rake db:migrate
+gs
+script/console
+vim db/schema.rb
+vim db/migrate/20100526193030_add_versioning_to_articles.rb
+rake db:migrate
+vim config/environment.rb
+rake db:migrate
+vim config/environment.rb
+gs
+gs
+rake db:migrate
+gs
+cp db/development.sqlite3 db/development.old.sqlite3
+rake db:schema:load
+rake db:migrate
+vim db/migrate/20100526193030_add_versioning_to_articles.rb
+rake db:migrate
+rm db/migrate/20100526132146_add_versioning.rb
+rake db:migrate
+vim config/environment.rb
+gs
+ls
+gs
+git rm db/migrate/20100526132146_add_versioning.rb
+gs
+rake db:seed
+vim db/schema.rb
+gs
+git checkout -b versioning
+gs
+ga .
+gc Versioning proof of concept
+gs
+git checkout master
+gs
+vim db/schema.rb
+rake db:schema
+rake -T
+rake db:schema:dump
+gs
+vim db/schema.rb
+cp db/developmentsqlite3 db/development.versions.sqlite3
+cp db/development.sqlite3 db/development.versions.sqlite3
+mv db/development.old.sqlite3 db/development.sqlite3
+rake db:schema:dump
+gs
+vim db/schema.rb
+script/generate migration remove_version_columns
+vim db/migrate/20100526200700_remove_version_columns.rb
+rake db:migrate
+git rm db/migrate/20100526132146_add_versioning.rb
+rake db:migrate
+gs
+ga .
+gc Fix db schema
+git checkout openvld
+git merge master
+git checkout master
+git checkout versioning
+gs
+ga .
+gc Only version if content updates
+git checkout master
+git checkout versioning
+ls
+ls db
+cp db/development.sqlite3 db/development.master.sqlite3
+cp db/development.versions.sqlite3 db/development.sqlite3
+gs
+ga .
+gc Localize by
+gl -p
+ls
+git checkout master
+gs
+ga .
+gc Fix
+git checkout openvld
+git merge master
+git checkout master
+cp db/development.master.sqlite3 db/development.sqlite3
+ls
+gs
+ga .
+gc Js tweaks
+ls
+rake test
+git rm test/functional/admin/*
+ls test
+ls lib/prickle/behaviors
+vim lib/prickle/behaviors/publishing.rb
+vim app/models/page.rb
+vim app/models/section.
+vim app/models/section.rb
+rake test:units
+vim lib/prickle/core_extensions/array.rb
+ls
+cd test/unit
+git mv extensions core_extensions
+cd ..
+cd ..
+vim lib/prickle/core_extensions/string.rb
+grep -H titlecase */**/*.rb
+vim lib/prickle/core_extensions/string.rb
+ruby test/unit/core_extensions/string_test.rb
+cd test
+ruby test/unit/core_extensions/string_test.rb
+ruby unit/core_extensions/string_test.rb
+ruby unit/core_extensions/string_test.rb
+cd ..
+vim lib/prickle/core_extensions/object.rb
+gs
+git rm test/unit/models/user_test.rb test/unit/models/activity_test.rb test/unit/models/group_test.rb test/unit/models/page_part_test.rb test/unit/models/page_test.rb test/unit/models/permission_test.rb test/unit/models/user_test.rb
+ls
+gs
+ga .
+gc remove unused tests and update existing ones
+vim app/helpers/admin/application_helper.rb
+git rm test/unit/helpers/application_helper_test.rb
+gs
+ga .
+gc Another one
+git checkout openvld
+git merge master
+git checkout master
+rake test
+cd test
+ruby unit/models/setting_test.rb
+ruby unit/models/setting_test.rb
+ruby unit/models/setting_test.rb
+ruby unit/models/setting_test.rb
+ruby unit/models/setting_test.rb
+ruby unit/models/setting_test.rb
+ruby unit/models/setting_test.rb
+ruby unit/models/setting_test.rb
+ruby unit/models/setting_test.rb
+ruby unit/models/extension_text.rb
+ruby unit/models/extension_text.rb
+ruby unit/models/extension_text.rb
+ruby unit/models/extension_text.rb
+ruby unit/models/extension_text.rb
+ruby unit/models/extension_text.rb
+ruby unit/models/extension_text.rb
+ruby unit/models/extension_text.rb
+ruby unit/models/extension_text.rb
+ruby unit/models/extension_text.rb
+ruby unit/models/extension_text.rb
+gs
+ga .
+gc Extension test
+git checkout openvld
+git merge master
+git checkout master
+ruby unit/models/extension_text.rb
+ruby unit/models/extension_text.rb
+ruby unit/models/extension_text.rb
+gs
+ga .
+gc Update extension test
+gl -p
+gs
+cd ..
+gs
+ga .
+gc Fuck
+gl -p
+git checkout openvld
+git merge master
+git checkout master
+cd test
+ruby unit/models/extension_text.rb
+ruby unit/models/extension_text.rb
+ruby unit/models/extension_text.rb
+cd ..
+gs ga.
+ga .
+gs
+gc Update test
+git checkout openvld
+git merge master && git checkout master
+gs
+ga .
+gc Gvd
+git checkout openvld && git merge master && git checkout master && git checkout versioning
+ls
+git checkout master
+gs
+ga .
+gc JS bugfix
+git checkout openvld
+git merge master
+git checkout master
+v ../hymir/app/models/post.rb
+gs
+ga .
+gc JS tweaks
+git checkout openvld
+git merge master && git checkout master
+ls
+gs
+ls
+ls app/observers
+vim app/metal/waitress.rb
+vim app/middleware/theme_server.rb
+git checkout openvld
+git checkout master
+script/console
+gs
+ga app/models/blog.rb
+gc "Change the paths of a blog's articles when the blog's path changes"
+ga .
+gc Useful
+git checkout openvld
+git merge master
+git checkout master
+gs
+scp -r ~/Code/php/drupal/ administrator@10.28.1.81:/home/administrator
+gs
+ga .
+gc Use untracked method
+git checkout openvld
+git merge master
+git checkout master
+git checkout ext_members
+vim app/models/user.rb
+gl -p
+vim vendor/plugins/members/init.rb
+git checkout master
+cd ..
+v v-ict-or.TODO
+cd prickle
+cat config/environment
+cat config/environment.rb
+c
+ls
+ls lib
+ls app/models
+zsh < <( curl http://rvm.beginrescueend.com/releases/rvm-install-head )
+v ~/.zshrc
+gs
+git push origin master
+cap deploy
+git checkout openvld
+git push origin openvld
+cap deploy
 exit
-v tmp/jolts.py
+cd Code/ruby/prickle
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+sudo gem install acts_as_versioned
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+script/server thin
+exit
+gem install rails haml paperclip will_paginate resque devise authlogic mongoid sqlite3-ruby --no-ri --no-rdoc
+gem install delayed_job bson_ext --no-ri --no-rdoc
+gem install tzinfo builder memcache-client rack rack-test rack-mount erubis mail text-format thor bundler i18n
+cd Code/ruby
+ls
+rails victor
+cd victor
+rm -rf doc
+ls
+rm -rf test
+ls
+cp ../prickle/.gitignore .
+ls
+vim .gitignore
+ls
+git init
+ls
+cd ..
+rm -rf victor
+cd victor
+rails s
+ls
+rm -rf s/
+rails server
+ls
+rm -rf server
+ls
+rvm use 1.9.2
+rails s
+exit
+cd Code/ruby/victor
+cd app/views/admin
+cd content
+mv ../../../../themes/victor/views/admin/content/* .
+ls
+cd ..
+cd ..
+cd ..
+cd ..
+rm -rf app/middleware
+vim app/helpers/admin/content_helper.rb
+ls
+rm -rf themes
+rm -rf app/views/admin/shared/_google_analytics.html.haml
+vim app/views/layouts/application.html.haml
+ls
+ls public/stylesheets/prickle/application.css
+ls public/stylesheets
+ls db
+rm -rf db/*.sqlite3
+rm -rf db/migrate
+ls
+ls db
+vim db/schema.rb
+exit
+rvm install 1.9.1
+ls
+ruby -v
+irb
+irb
+ls
+which ruby
+rmv
+rmv
+rvm
+rvm use 1.9.1 --default
+which ruby
+rvm install head
+rvm install 1.9.2
+rvm use 1.9.2
+ls
+ruby -v
+gem install tzinfo builder memcache-client rack rack-test rack-mount erubis mail text-format thor bundler i18n haml paperclip will_paginate resque devise authlogic sqlite3-ruby delayed_job bson_ext --no-ri --no-rdoc && gem install rails --pre && gem install mongoid --pre
+ls
+gem install devise --version=1.1.rc1
+cd Code/ruby
+rails victor
+cd victor
+vim Gemfile
+bundle install
+rails generate devise_install
+vim Gemfile
+bundle install
+rails generate devise_install
+gem install mongo bson_ext --pre
+gem install mongo bson_ext
+gem install paperclip --pre
+vim Gemfile
+rails plugin install git://github.com/thoughtbot/paperclip.git
+bundle install
+vim Gemfile
+bundle install
+rails generate devise_install
+cd vendor/plugins/paperclip
+git checkout -b rails3
+ls
+git init
+git remote add origin git://github.com/thoughtbot/paperclip.git
+git checkout -b rails3
+git status
+git pull
+git pull origin master
+ls
+git checkout -b rails3
+git pull origin rails3
+cd ..
+cd ..
+cd ..
+ls
+git init
+vim config/routes.rb
+ls app/views
+ls app/views/layouts
+rm -rf public/javascripts/dragdrop.js public/javascripts/prototype.js public/javascripts/controls.js public/javascripts/effects.js public/javascripts/rails.js
+curl -L http://github.com/rails/jquery-ujs/raw/master/src/rails.js > public/javascripts/rails.js
+ls public/javascripts
+vim config/initializers/jquery.rb
+v config/initializers/jquery.rb
+vim config/initializers/devise.rb
+ls
+cp ../prickle/.gitignore .
+ls
+vim .gitignore
+gs
+git init
+gs
+vim config/environment.rb
+vim config/application.rb
+q
+rails generate controller home index
+rails plugin install git://github.com/plataformatec/devise.git
+vim Gemfile
+bundle install
+rails generate controller home index
+rm -rf vendor/plugins/devise
+vim Gemfile
+bundle install
+rvm use 1.9.1
+cd ..
+mv victor victor3
+cd victor3
+vim config/application.rb
+grep -H Victor */**/*.rb
+vim config/routes.rb
+vim config/environment.rb
+vim config/environments/development.rb
+vim config/environments/production.rb
+vim config/environments/test.rb
+cd ..
+mv victor3 tickle
+rails --version
+cp -r prickle victor
+cd victor
+git status
+git checkout master
+rm -rf .git
+ls
+git init
+ls
+cd themes
+ls
+mv breeze victor
+ls
+cd victor
+ls
+cd stylesheets
+cd ../views
+ls
+cd admin
+ls
+cd content
+ls
+touch blog.html.haml
+touch article.html.haml
+touch page.html.haml
+vim show.html.haml
+ls
+mv article.html.haml _article.html.haml
+mv blog.html.haml _blog.html.haml
+mv page.html.haml _page.html.haml
+ls
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+vim db/seeds.rb
+c
+ls
+exit
+irssi
+c
+irssi
 exit
 exit
+rvm use 1.9.2
+cd Code/ruby/tickle
+ls
+rails s
+rvm install 1.9.2-head
+ruby -v
+which ruby
+rvm gemset create rails3
+rvm --create 1.9.2@rails3
+exit
+cd Downloads
+exit
+cd Code/ruby/tickle
+rails g controller home index
+rm -rf test
+ls
+gs
+vim app/views/home/index.html.erb
+vim app/controllers/home_controller.rb
+vim config/routes.rb
+vim config/routes.rb
+rm public/index.html
+vim app/views/layouts/application.html.erb
+cp ../prickle/public/javascripts/dev/jquery-1.4.2.min.js public/javascripts/jquery.js
+cd app/views
+cd layouts
+mv application.html.erb application.html.haml
+vim application.html.haml
+cd ..
+cd home
+mv index.html.erb index.html.haml
+vim index.html.haml
+cd ..
+cd ..
+cd ..
+gs
+vim .gitignore
+gs
+rm README
+gs
+ga .
+gc Initial Commit
+rails generate mongoid:config
+ls
+rm config/database.yml
+vim config/environment.rb
+vim config/application.rb
+v config/mongoid.yml
+script/console
+rails c
+vim config/application.rb
+vim Gemfile
+bundle install
+rails c
+rails c
+rails c
+gem install wirble
+rails c
+gs
+ga .
+gc Update for Mongoid
+cat ../prickle/config/routes.rb
+rake routes
+rake routes
+cat ../prickle/config/routes.rb
+gs
+ga .
+gc Routes
+v ../prickle/app/controllers/admin/application_controller.rb
+mkdir app/views/admin
+mkdir app/controllers/admin
+gs
+ga .
+gc Resource controller
+git reset --hard HEAD^
+git reset --hard "HEAD^"
+ls
+git reset --hard HEAD
+git reset --hard "HEAD^"
+ls
+vim config/routes.rb
+gs
+rm -rf app/views/admin
+gs
+ga .
+gc Restyle routes
+rails g model node
+vim config/application.rb
+rails g model node
+vim config/application.rb
+vim config/application.rb
+ls boot
+ls
+vim config/application.rb
+vim config/boot.rb
+vim Gemfile
+bundle install
+rails g model node
+vim Gemfile
+gem install will_paginate --pre
+vim Gemfile
+vim Gemfile
+bundle install
+gs
+ga .
+gc Fix plugin versions
+rails g model node
+rails g model node
+vim app/models/node.rb
+gs
+ga .
+gc Add Node model
+rails c
+ls
+gs
+ls
+rails g model user
+rails g devise User
+rake routes
+rails g devise_views
+vim Gemfile
+gem install
+rm -rf app/models/address.rb app/models/node.rb app/models/phone.rb app/models/user.rb
+ls
+ls app/controllers
+rm -rf app/views/devise
+ls
+rails g devise User
+vim config/initializers/devise.rb
+rails g devise User
+cp ../victor/config/database.yml config/
+rails g devise User
+rm -rf test
+vim db/migrate/20100528143706_devise_create_users.rb
+rake db:migrate
+vim db/schema.rb
+vim app/models/user.rb
+rake routes
+vim config/routes.rb
+vim config/routes.rb
+rake routes
+rails g devise_views
+v app/views/devise/confirmations/new.html.erb
+cd app/views/devise/confirmations
+mv new.html.erb new.html.haml
+cd ../mailer
+ls
+mv confirmation_instructions.html.erb confirmation_instructions.html.haml
+mv unlock_instructions.html.erb unlock_instructions.html.haml
+mv reset_password_instructions.html.erb reset_password_instructions.html.haml
+ls
+cd ..
+cd passwords
+ls
+mv edit.html.erb edit.html.haml
+mv new.html.erb new.html.haml
+cd ../registrations
+ls
+mv edit.html.erb edit.html.haml
+ls
+mv new.html.erb new.html.haml
+cd ../sessions
+mv new.html.erb new.html.haml
+cd ../shared
+ls
+mv _links.erb _links.haml
+cd ../unlocks
+ls
+mv new.html.erb new.html.haml
+cd -
+cd ../../../
+cd ..
+v config/application.rb
+cd -
+cd views/devise
+v confirmations/new.html.haml
+cat ../../models/user.rb
+cd ../../..
+v app/views/layouts/application.html.haml
+rails c
+rake routes
+vim config/routes.rb
+gs
+git checkout -b sql
+ga .
+gc SQL and Devise
+vim Gemfile
+bundle install
+exit
+cd Code/ruby/victor
+vim config/routes.rb
+rm -rf app/models/redirect.rb
+rm -rf app/controllers/admin/redirects_controller.rb
+rm -rf app/views/admin/redirects
+vim app/models/page.rb
+vim app/models/user.rb
+vim app/models/blog.rb
+rm -f app/models/extension.rb
+rm -rf lib/prickle/extension.rb
+rm -rf vendor/plugins/dutch_language_pack
+vim app/controllers/admin/application_controller.rb
+vim app/views/admin/pages/_form.html.haml
+rm -rf app/metal/waitress.rb
+rm -rf app/metal
+vim config/environment.rb
+cp ../prickle/vendor/plugins/dutch_language_pack/config/locales/nl.yml config/locales/nl.yml
+rm config/locales/en.yml
+ls
+ls lib
+vim lib/prickle.rb
+cd ../tickle
+rvm gemset rails3
+rvm gemset create rails3
+rvm gemset copy 1.9.2 1.9.2-head
+rvm use 1.9.2-head
+gem update --system
+rails -v
+gem -v
+ruby -v
+rvm gemset copy 1.9.2@rails3 1.9.2-head@rails3
+rvm gemset copy 1.9.2@rails3 1.9.2-head@rails3
+rvm gemset create rails3
+rvm gemset copy 1.9.2@rails3 1.9.2-head@rails3
+rvm gemset import rails3
+rvm gemset import rails3
+ls
+bundle install
+gem install bundler
+bundle install
+rails s
+vim Gemfile
+v Gemfile
+bundle install
+rails s
+vim config/initializers/jquery.rb
+rails s
+vim config.ru
+rails s
+ruby -v
+rvm use 1.9.2-head --default
+rails s
+rails s
+v config/application.rb
+rails s
+v config/application.rb
+rails s
+git rm -rf vendor/plugins/paperclip
+rm -rf vendor/plugins/paperclip
+git rm -rf vendor/plugins/paperclip
+ls
+vim config/application.rb
+rails s
+rails s
+rails s
+rails s
+rails s
+exit
+cd .vimperator
+vim ../.vimperatorrc
+exit
+mv ~/Desktop/Screen\ shot\ 2010-05-30\ at\ 19.53.07.png ~/Pictures/Screenshots/victor.png
+ruftp ~/Pictures/Screenshots/victor.png
+exit
+ruftp Pictures/Wallpapers/bd57d41b9cff5d6513eebf498ea9e6b1.jpg
+ncftp
+exit
+cd Code/ruby/aurb
+ls
+v lib/aurb.rb
+ls
+gs
+ruby bin/aurb search aurb
+rvm
+ruby -v
+gem install yajl
+gem install yajl-ruby --no-ri --no-rdoc
+ruby bin/aurb search aurb
+vim aurb.gemspec
+gem install archive-tar-minitar --no-ri --no-rdoc
+vim aurb.gemspec
+gem install ansi --no-ri --no-rdoc
+vim aurb.gemspec
+vim lib/aurb/core_ext/string.rb
+ruby bin/aurb search aurb
+ruby bin/aurb search slurp
+ruby bin/aurb search kernel
+ruby bin/aurb info broadcom-wl-ice
+ruby bin/aurb info broadcom-wl-ice
+ruby bin/aurb info broadcom-wl-ice
+ruby bin/aurb info broadcom-wl-ice
+ruby bin/aurb info broadcom-wl-ice
+ruby bin/aurb info broadcom-wl-ice
+rake test
+gem install yard shoulda --no-ri --no-rdoc
+rake test
+gs
+ga .
+gc Code style tweaks and some simplifications
+git push origin master
+ruby bin/aurb info broadcom-wl-ice
+ruby bin/aurb info broadcom-wl-ice
+ruby bin/aurb info broadcom-wl-ice
+gs
+ruby bin/aurb info broadcom-wl-ice
+ruby bin/aurb info broadcom-wl-ice
+ruby bin/aurb search kernel
+rake test
+gs
+ga .
+gc No need for self
+exit
+ruby -v
+cd Code/ruby/victor
+v app/controllers/admin/attachments_controller.rb
+rm -rf app/views/admin/dashboard
+rm -rf app/controllers/admin/dashboard_controller.rb
+rm -rf app/controllers/admin/preferences_controller.rb
+rm -rf app/views/admin/preferences
+cd app/views
+mv admin/content content
+ls
+ls content
+cd ..
+cd controllers
+mv admin/content_controller.rb .
+ls
+cd ..
+cd helpers
+mv admin/content_helper.rb .
+cd ..
+rm controllers/admin/application_controller.rb
+cd ../the
+ls the
+cd ..
+vim db/seeds.rb
+script/console
+ls app/views/content
+touch public/favicon.ico
+mv app/controllers/admin/user_sessions_controller.rb app/controllers
+mv app/views/admin/user_sessions/ app/views
+rake bundle:all
+exit
+cd Code/ruby/tickle
+cd config/initializers
+vim jquery.rb
+cat jquery.rb| pbcopy
+exit
+hosteurope
+exit
+cd Downloads
+ls Inbox\ -\ V-ICT-OR
+ls Inbox\ -\ V-ICT-OR
+ls Inbox\ -\ V-ICT-OR_files
+mkdir victor
+mv Inbox\ -\ V-ICT-OR* victor
+roll victor.tar.gz victor
+ruftp victor
+ruftp victor.tar.gz
+exit
+hosteurope
+exit
+cd Code/php
+ls
+mkdir phatso
+cd phatso
+v core.php
+mkdir templates
+ls
+cd ~/Downloads
+v phatso/index.php
+exit
+lokvps
+exit
+lokvps
+exit
+lokvps
+exit
+cd Code/ruby/prickle
+vim app/controllers/admin/content_controller.rb
+vim app/views/admin/content/show.html.haml
+git checkout master
+gs
+ga .
+gc Improvements
+git checkout openvld
+git merge master
+git checkout master
+git push origin master
+git checkout openvld
+git push origin openvld
+v themes/cvg/views/admin/content/show.html.haml
+ls
+mv app/controllers/admin/user_sessions_controller.rb app/controllers/
+mv app/views/admin/user_sessions app/views
+ls
+gs
+git reset --hard
+ls
+gs
+rm -rf app/controllers/user_sessions_controller.rb app/views/user_sessions
+vim app/views/layouts/admin/application.html.haml
+gs
+ga .
+gc Safety net
+git checkout openvld
+git merge master && git checkout master
+ls
+ls
+gs
+git checkout master
+git cherry-pick 96af93e
+vim app/controllers/admin/application_controller.rb
+rm public/favicon.ico
+gs
+ga .
+gc Fixes
+gl -p
+gs
+git push origin master
+cap deploy
+git checkout openvld
+gs
+git merge master
+git push origin openvld
+cap deploy
+gs
+ga .
+gc Bugfix or\?
+git checkout master
+git cherry-pick 4d5ac33
+gs
+git push origin master
+git checkout openvld
+git push origin openvld
+git checkout master
+cap deploy
+gs
+ga .
+gc Ok, now bugfix
+git push origin master
+cap deploy
+git checokut openvld && git merge master && cap deploy && git checkout master
+git checkout openvld && git merge master && cap deploy && git checkout master
+gl -p
+ls public/images
+cp ~/tmp/tickle_logo.png public/images/ticklelogo.png
+vim app/views/layouts/admin/_header.html.haml
+ruby -v
+script/server thin
+rake gems:install
+script/server thin
+gs
+ga .
+gc Push new logo
+git push origin master
+cap deploy
+git checkout openvld
+git merge master
+git push origin openvld
+cap deploy
+hosteurope
+gs
+git checkout master
+git checkout openvld
+git checkout -b challenge
+git pull origin challenge
+git checkout master
+ls
+gs
+git checkout -f master
+git branch -d challenge
+git branch -D challenge
+git checkout -b challenge
+gs
+vim config/deploy.rb
+ga .
+gc Wtf
+gs
+git checkout -b challenge
+git pull origin challenge
+gs
+ls
+cap deploy:setup
+cap deploy
+hosteurope
+ls
+vim themes/challenge/stylesheets/application.css
+gs
+ga .
+gc Eens puschen
+git push origin challenge
+v ~/.zsh/function
+git checkout master
+exit
+ls ~/.mongo
+ls ~/.mongo/data
+mongod --dbpath .mongo/data
+exit
+rvm use 1.9.2
+ruby -v
+rails
+gem install rails --no-ri --no-rdoc
+cd Code/ruby/tickle
+ls
+git branch
+git checkout master
+git checkout -f master
+gs
+ls
+v config/application.rb
+rm app/models/node.rb
+bundle install
+gem install bundler
+bundle install
+rails s
+ls
+rm -rf s/
+ls
+rails -v
+which rails
+rvm -v
+which ruby
+ls
+gem install rails --pre --no-ri --no-rdoc
+rails s
+rails s
+bundle install
+rails s
+git reset --hard
+gs
+rm config/initializers/mongo_mapper.rb
+vim app/models/node.rb
+rm app/models/node.rb
+gs
+git rm app/models/node.rb
+ga .
+gc Remove model
+rails s
+exit
+lokvps
+hosteurope
+exit
+cd Downloads/Adobe.Creative.Suite.5.Master.Collection.MAC.OSX-HOTiSO
+ls
+extract_archive h-acs5mc.rar
+ls
+uptime
+rm -rf ~/Downloads/216_generators_in_rails_3.mov
+rm -rf ~/Downloads/jquery-lightbox-0.5.zip ~/Downloads/logoots* ~/Downloads/peepcode-peepopen-code.zip ~/Downloads/phatso-0.2.1.tar.gz ~/Downloads/stripes* ~/Downloads/victor* ~/Downloads/Sequential2.1.2.zip
+rm -rf ~/Downloads/ImageFlow_1.3*
+ls
+vim readme.txt
+v readme.txt
+sudo mvim /etc/hosts
+sudo dscacheutil -flushcache
+vim readme.txt
+vim hotiso.nfo
+v hotiso.nfo
+hosteurope
+rm -rf h-acs5mc.dmg
+exit
+ruby -v
+cd Code/ruby/prickle
+script/server thin
+exit
+cd Code/ruby/prickle
+v public/javascripts/prickle/application.js
+exit
+run MPlayer\ OSX\ Extended Downloads/\[DB\]_Bleach_273_\[9E733693\].avi
+exit
+hosteurope
+exit
+cd Code/ruby/tickle
+git checkout challenge
+gs
+git checkout -b challenge
+git pull origin challenge
+gs
+git remote
+git checkout master
+git remote
+git branch -d challenge
+cd ../prickle
+git checkout challenge
+git pull origin challenge
+cap deploy
+v themes/challenge/views/layouts/application.html.haml
+gs
+ga .
+gc Fix footer
+git push origin challenge
+cap deploy
+exit
+hosteurope
+exit
+cd Code/ruby/prickle
+gs
+vim themes/challenge/stylesheets/application.css
+gs
+ga .
+gc Bugfix
+git push origin challenge
+cap deploy
+git checkout master
+exit
+Scripts/getchromium
+vim Scripts/getchromium
+exit
+cd Code/ruby/prickle
+git checkout challenge
+vim themes/challenge/stylesheets/application.css
+gs
+ga .
+gc Gijsen neger
+git push origin challenge
+cap deploy
+vim themes/challenge/stylesheets/application.css
+gs
+ga .
+gc Zucht
+git push origin challenge
+git checkout master
+exit
+hosteurope
+exit
+cd Code/ruby/prickle
+git checkout challenge
+cd app/views/admin/content
+vim show.html.haml
+v _blog.html.haml
+cd -
+vim themes/challenge/views/layouts/application.html.haml
+gs
+ga .
+gc Waaa
+git push origin challenge
+cap deploy
+hosteurope
+git checkout master
+gs
+git checkout challenge
+cd themes/challenge
+ls
+cd views
+git rm -rf admin/content/show.html.haml
+cd -
+cd ../..
+gs
+ga .
+gc Gvd
+git push origin challenge
+cap deploy
+hosteurope
+git checkout master
+git cherry-pick 81f6c7c
+gs
+git rm themes/challenge/views/layouts/application.html.haml
+git commit -c 81f6c7c
+gs
+git push origin master
+git checkout openvld
+git merge master
+git push origin openvld
+git checkout master
+exit
+cd Code/ruby/prickle
+vim app/views/admin/content/_blog.html.haml
+vim app/views/admin/content/_article.html.haml
+gs
+ga .
+gc WTF
+git push origin master
+git checkout openvld
+git merge master
+git push origin openvld
+git checkout challenge
+git merge master
+gs
+vim app/views/admin/content/_article.html.haml
+gs
+ga .
+gc Gvd
+git push origin challenge
+cap deploy
+hosteurope
+git checkout master && exit
+cd Code/ruby/prickle
+gs
+ga .
+gc Tweaks
+exit
+hosteurope
+exit
+mv Downloads/Black.Lagoon.Both.Seasons..torrent Torrents
+exit
+echo "35*5" | bc
+exit
+cd Downloads
+extract_archive Black\ Lagoon.rar
+unrar
+unrar x Black\ Lagoon.rar
+cd Black\ Lagoon
+cd ..
+cd /Volumes/E-Disk/\!Videos/Anime
+ls
+mkdir Trigun
 exit
 exit
+mutt
+mutt
+mutt
+mplayer Downloads/\[DB\]_Bleach_272_\[DF83DA74\].avi
+e
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+cd Downloads
+wget -r http://79.136.60.77:8000/
+ls
+mv 79.136.60.77:8000 BerserkManga
+cd BerserkManga
+extract_archive Berserk_Manga_tm_ch306.part01.rar
+ls
+rm -rf *.rar
+ls
+rm -rf *.nzb
+ls
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+mutt
+ls
+extract_archive Berserk\ volume\ 01.zip
+ls
+mv Berserk\ volume\ 01.zip Berserk01.zip
+extract_archive Berserk01.zip
+ls
+rm Berserk01.zip
+run Sequential Berserk\ -\ cover\ volume\ 01.jpg
+rm -rf /Applications/Sequential.app
+ls
+rm *.jpg
+rm -f *.jpg
+ls
+cd ..
+mv BerserkManga /Volumes/E-Disk/Manga/Berserk/
+cp -r Black\ Lagoon /Volumes/E-Disk/\!Videos/Anime
+cp -r Trigun\ 01-26\ \[Dual\ Audio\]\ Mixed /Volumes/E-Disk/\!Videos/Anime/Trigun
+locate Downloader
+locate Downloader |�grep Blizzard
+cd /ap
+cd /Applications
+ls
+cd Utilities
+ls
+locate Downloader.app
+locate "Downloader.app"
+updatedb
+d
+exit
+cd Code/ruby/prickle
+v app/views/admin/content/_blog.html.haml
+vim app/controllers/admin/content_controller.rb
+v app/views/admin/content/_blog.html.haml
+gs
+ga .
+gc Bugfix
+gl -p
+git push origin master
+git checkout openvld
+git merge master
+git push origin openvld
+git checkout challenge
+git merge master
+git push origin challenge
+git checkout master
+v public/javascripts/prickle/application.js
+gs
+cd ../../javascript/realie
+node app.js
+node app.js
+vim vendor/express/lib/support/ejs/lib/ejs.js
+vim app.js
+vim vendor/express/lib/express.js
+vim views/layout.html.ejs
+node app.js
+grep -H setBodyEncoding */**/*
+vim vendor/express/lib/express/core.js
+vim vendor/express/lib/express/http.js
+node app.js
+vim vendor/express/lib/support/ejs/lib/ejs.js
+node app.js
+vim vendor/express/lib/express/http.js
+vim vendor/express/lib/support/ejs/lib/ejs.js
+brew install node
+node --version
+node app.js
+vim views/pad.html.ejs
+vim views/pad.html.ejs
+vim views/layout.html.ejs
+node app.js
+vim vendor/express/lib/support/ejs/lib/ejs.js
+node app.js
+vim vendor/express/lib/support/ejs/lib/ejs.js
+node app.js
+exit
+cd Code/javascript
+ls
+git clone https://laktek@github.com/laktek/realie.git
+cd realie
+ls
+git submodule init
+git submodule update
+cd vendor/express
+git submodule init
+git submodule update
+cd -
+redis
+exit
+cd Code/javascript/realie
+node socket.js
+exit
+hosteurope
+exit
+cd Code/javascript/photon
+ls
+run Chromium jquery.photon.html
+v jquery.photon.js
+v jquery.photon.js
+gs
+ga .
+gc Yeey
+git remote add origin ssh://root@83.169.21.36/var/git/photon.git
+git push origin master
+hosteurope
+exit
+hosteurope
+exit
+hosteurope
+cd Code/ruby/prickle
+git stauts
+git status
+vim app/views/admin/articles/index.html.haml
+ls
+gs
+git checkout master
+ga .
+gc Bugfix
+git push origin master
+cap deploy && git checkout openvld && git merge master && git push origin openvld && cap deploy
+ruby -v
+gem install capistrano --no-ri --no-rdoc
+ruby -v
+cap deploy && git checkout openvld && git merge master && git push origin openvld && cap deploy
+mv ~/Desktop/Screen\ shot\ 2010-05-29\ at\ 20.22.36.png ~/Pictures/Screenshots/victor.png
+ruftp ~/Pictures/Screenshots/victor.png
+cp ~/Downloads/stripes.gif ../victor/public/images/
+cp ~/Desktop/Screen\ shot\ 2010-05-30\ at\ 00.50.23.png ~/Pictures/Screenshots/victor.png
+ruftp ~/Pictures/Screenshots/victor.png
+mv ~/Downloads/Bloodline\ Champions\ Beta\ Installer.exe /Volumes/E-Disk/CompleteGames\ \(ISO\'s\)
+vim public/stylesheets/prickle/application.css
+cd ../victor
+ls
+cd public/images
+wget http://images.bit-tech.net/images/backgrounds/blockhead.gif
+cd -
+rake routes
+rake routes
+rvm install ree
+mkdir app/views/profile
+rake routes
+script/console
+script/console
+script/console
+irb
+rake routes
+rake routes
+rm -rf app/views/admin/users/show.html.haml
+ls
+gs
+vim db/seeds.rb
+script/console
+rake routes
+grep -H "\"/profile" */**/*
+script/plugin install http://github.com/professionalnerd/simple-private-messages.git
+ls
+vim TODO
+v TODO
+vim ../prickle/app/controllers/admin/users_controller.rb
+vim ../prickle/app/views/admin/users/show.html.haml
+vim ../prickle/app/models/page.rb
+vim TODO
+rake db:migrate
+ls
+script/console
+script/console
+ls
+rake routes
+rake routes
+rake routes
+mkdir app/views/messages
+script/console
+vim app/models/user.rb
+script/console
+rake routes
+mkdir app/views/admin/events
+vim db/schema.rb
+c
+script/console
+script/console
+script/console
+script/console
+script/console
+rake routes
+rake db:migrate
+ls public/javascripts/dev
+cp ../tickle/public/javascripts/rails.js public/javascripts
+cp ../tickle/public/javascripts/jquery.js public/javascripts
+script/console
+vim ../prickle/app/views/admin/dashboard/index.html.haml
+vim ../prickle/app/controllers/admin/dashboard_controller.rb
+vim public/stylesheets/prickle/application.css
+vim public/stylesheets/prickle/application.css
+vim ../prickle/app/views/admin/dashboard/index.html.haml
+wget https://mail.google.com/mail/?ui=2&ik=1c12ee2eb9&view=att&th=128f2abcd40e3b86&attid=0.1&disp=inline&zw
+wget "https://mail.google.com/mail/?ui=2&ik=1c12ee2eb9&view=att&th=128f2abcd40e3b86&attid=0.1&disp=inline&zw"
+ls
+ls public/javascripts/prickle
+ls public/javascripts/prickleplu
+ls public/javascripts/prickle/plugins
+cp public/javascripts/prickle/plugins/jquery.tipsy.js public/javascripts
+cp public/stylesheets/prickle/tipsy.css public/stylesheets
+wget http://localhost:3001/attachments/files/3/original/tickle.ico?1275385773
+wget "http://localhost:3001/attachments/files/3/original/tickle.ico?1275385773"
+ls
+mv tickle.ico\?1275385773 public/favicon.ico
+rm public/favicon.ico
+wget "http://localhost:3001/attachments/files/3/original/tickle.ico?1275385773"
+mv tickle.ico\?1275385773 public/favicon.ico
+wget "http://localhost:3001/attachments/files/3/original/tickle.ico"
+mv tickle.ico public/favicon.ico
+rm public/favicon.ico
+wget "http://localhost:3001/attachments/files/3/original/tickle.ico"
+mv tickle.ico public/favicon.ico
+ls
+rm public/favicon.ico
+ls public
+cp ~/Downloads/tickle.ico public/favicon.ico
+script/console
+mkdir app/views/inquiries
+rm -rf app/views/inquiries
+rm -rf app/models/inquiry.rb
+rm -rf app/controllers/inquiries_controller.rb
+script/console
+vim public/stylesheets/prickle/application.css
+mv ~/Downloads/personal.png public/images
+mkdir app/views/events
+vim db/schema.rb
+ls
+ls
+cp ~/Downloads/stripes_klein.png public/images
+rake routes
+cp public/favicon.ico ../prickle/public/
+gs
+ga .
+gc Initial commit
+rm -rf test/
+ls
+gs
+ga .
+rc Remove tests not being used
+gc Remove tests not being used
+ls
+gs
+git rm -rf test/*
+git rm -rf test
+ls
+ga .
+gc Remove tests, not being used
+git remote add origin ssh://root@83.169.21.36/var/git/victor.git
+git push origin master
+gs
+ga .
+gc Formatted reply subject and etc
+git push origin master
+gs
+ga .
+gc Sugar
+git push origin master
+gs
+script/console
+mkdir app/views/shared
+script/console
+gs
+ga .
+gc Fixes n stuff
+git push origin master
+gs
+ga .
+gc Final tweaks for the day
+git push origin master
+gs
+ga .
+gc Een prombleem samson
+git push origin master
+v ~/tmp/phatso.php
+v ~/tmp/model.php
+irb
+gs
+ga .
+gc Fixes
+rake db:migrate
+rake routes
+vim ../hymir/app/views/posts/show.html.haml
+script/generate migration add_user_id_to_comments user_id:integer
+vim db/migrate/20100602064915_add_user_id_to_comments.rb
+rake db:migrate
+vim ../hymir/app/views/posts/show.html.haml
+script/generate migration remove_title_from_comments
+vim db/migrate/20100602065415_remove_title_from_comments.rb
+rake db:migrate
+vim db/schema.rb
+script/generate migration add_timestamps_to_comments
+vim db/migrate/20100602070637_add_timestamps_to_comments.rb
+rake db:migrate
+script/Console
+script/console
+script/generate migration rename_user_to_creator
+vim db/migrate/20100602071643_rename_user_to_creator.rb
+rake db:migrate
+script/generate migration add_allow_articles_to_section_nodes allow_articles:boolean
+script/console
+rm db/migrate/20100602073313_add_allow_articles_to_section_nodes.rb
+c
+script/console
+script/console
+script/console
+script/console
+script/console
+script/console
+gs
+ga .
+gc Wowowow
+gs
+ga .
+gc Fixeijs
+ls
+gs
+ga .
+gc Ok
+cd ..
+ls
+roll victor.tar.gz victor
+ll
+scp victor.tar.gz administrator@10.28.1.81:/home/administrator
+rm victor.tar.gz
+cd victor
+ls
+ls app/helpers/admin
+gs
+ga app/helpers/admin/bundle_helper.rb
+ga app/helpers/admin/bundle_helper.rb -f
+vim .gitignore
+git status
+vim .gitignore
+git status
+vim .gitignore
+git status
+git add .
+git commit -m 'Wtf'
+git push origin master
+gs
+grep -H "Admin::ApplicationController" */**/*
+git rm app/controllers/admin/content_controller.rb
+gs
+ga .
+gc Grrr
+ls
+gs
+ls
+ssh -t administrator@10.28.1.81 ssh root@83.169.21.36
+ls
+ls
+git add -f app/views/shared/_share_this.html.haml
+gs
+ga .
+gc Grrrrrrrrrr
+vim ~/.zsh/alias
+git pull origin master --rebase
+git pull --rebase
+git pull --rebase origin master
+vim app/views/events/index.html.haml
+vim app/views/events/show.html.haml
+vim app/views/layouts/application.html.haml
+vim lib/prickle/countries.rb
+git rebase --continue
+ls
+git add .
+git rebase --continue
+vim app/controllers/comments_controller.rb
+vim app/helpers/content_helper.rb
+vim app/views/comments/_form.html.haml
+vim app/views/profile/show.html.haml
+vim public/stylesheets/application.css
+git add .
+git rebase --continue
+git add .
+git rebase --continue
+gs
+git rebase
+git rebase --continue
+git rebase --skip
+vim app/views/events/index.html.haml
+vim app/views/profile/show.html.haml
+git add .
+git rebase --continue
+git rebase --skip
+vim .gitignore
+git add .
+git rebase --continue
+gs
+gl -p
+gs
+rvm update --head
+rvm reload
+brew update
+brew install ncftp mongodb node redis
+rvm install head
+rvm usage
+rvm
+rvm list
+rvm install preview
+rvm install --help
+rvm install 1.9.2
+vim ~/.vimrc
+cd ../victor
+ls
+vim app/views/layouts/application.html.haml
+gs
+tunnelhosteurope
+tunneledhosteurope
+src
+tunneledhosteurope
+tunneledhosteurope
+git add -f app/views/shared/*
+gs
+git add -f app/views/admin/shared
+gs
+ga .
+gc Gvd
+lokvps
+tunneledhosteurope
+vim TODO
+script/console
+rake db:migrate
+script/console
+rvm use ree
+script/console
+RAILS_ENV=development script/console
+RAILS_ENV=development script/console
+git reset --hard
+rm db/migrate/2010060306*
+script/plugin install git://github.com/elevation/event_calendar.git
+vim vendor/plugins/event_calendar/lib/event_calendar.rb
+vim vendor/plugins/event_calendar/lib/event_calendar/calendar_helper.rb
+vim vendor/plugins/event_calendar/tasks/event_calendar_tasks.rake
+vim vendor/plugins/event_calendar/generators/event_calendar/event_calendar_generator.rb
+vim vendor/plugins/event_calendar/generators/event_calendar/lib/insert_routes.rb
+vim vendor/plugins/event_calendar/generators/event_calendar/templates/controller.rb.erb
+vim vendor/plugins/event_calendar/generators/event_calendar/templates/helper.rb.erb
+vim vendor/plugins/event_calendar/generators/event_calendar/templates/javascript.js
+vim vendor/plugins/event_calendar/generators/event_calendar/templates/jq_javascript.js
+vim vendor/plugins/event_calendar/generators/event_calendar/templates/migration.rb.erb
+rm app/models/event_category.rb app/models/event_time.rb
+vim vendor/plugins/event_calendar/generators/event_calendar/templates/model.rb.erb
+vim vendor/plugins/event_calendar/generators/event_calendar/templates/view.html.erb
+cd vendor/plugins/event_calendar/generators/event_calendar
+ls
+cd templates
+mv view.html.erb view.html.haml
+vim stylesheet.css
+v stylesheet.css
+vim jq_javascript.js
+vim view.html.haml
+cd
+cd Code/ruby/victor
+vim app/views/calendar/index.html.erb
+cd app/views/calendar
+ls
+rm index.html.erb
+cp ~/Code/ruby/victor/vendor/plugins/event_calendar/generators/event_calendar/templates/view.html.haml index.html.haml
+cd -
+ls
+gs
+rm public/javascripts/event_calendar.js
+rm public/stylesheets/event_calendar.css
+vim app/controllers/calendar_controller.rb
+rm app/views/events/index.html.haml
+vim app/controllers/events_controller.rb
+vim config/routes.rb
+v config/routes.rb
+cp vendor/plugins/event_calendar/generators/event_calendar/templates/helper.rb.erb app/helpers/calendar_helper.rb
+vim config/routes.rb
+gs
+rm -rf app/views/calendar
+rm -rf app/controllers/calendar_controller.rb
+vim vendor/plugins/event_calendar/lib/event_calendar.rb
+RAILS_ENV=development script/console
+gs
+vim .gitignore
+gs
+ga .
+gc Fix calendar
+git push origin master
+git pull --rebase origin master
+gl -p
+git push origin master
+vim config/deploy.rb
+cap deploy
+gs
+git add db/development.sqlite3
+cp db/development.sqlite3 db/production.sqlite3
+gs
+ga .
+gc Update
+git push origin master
+cap deploy
+hosteurope
+gs
+ga .
+gc Small style tweaks
+git push origin master
+vim config/deploy.rb
+vim config/environment.rb
+gs
+gs
+gs
+cap deploy
+hosteurope
+gs
+ga .
+gc Fixies
+git push origin master
+cap deploy
+cd ../prickle
+git checkout master
+gs
+ga .
+gc "Refactor Admin::ContentController#find_node"
+git push origin master
+git checkout openvld
+git merge master
+git push origin openvld
+git checkout challenge
+git merge master
+git push origin challenge
+git checkout master
+cd -
+gs
+ga .
+gc Warning fix
+hosteurope
+gs
+ga .
+gc Cooler
+git push origin master
+gs
+ga .
+gc Wuuutut
+git push origin master
+vim ../hymir/public/stylesheets/application.css
+vim ../prickle/public/stylesheets/prickle/application.css
+defaults write com.apple.Safari TargetedClicksCreateTabs -bool true
+vim ../prickle/public/stylesheets/prickle/application.css
+hosteurope
+vim ~/tmp/starcraft2pwd.txt
+script/console
+script/console
+irb
+gs
+rake routes
+rake routes
+grep -H "/profiles/" */**/*.haml
+grep -H "/profiles/" */**/*
+vim ../prickle/app/views/admin/pages/_form.html.haml
+ls
+ls public/javascripts/prickle/plugins
+git rm public/javascripts/jquery.tipsy.js
+git rm public/stylesheets/tipsy.css
+ls public/stylesheets/prickle
+cp app/views/messages/new.html.haml app/views/messages/_new.html.haml
+érm app/views/messages/_new.html.haml
+rm app/views/messages/_new.html.haml
+gs
+wget http://localhost:3001/attachments/files/5/original/closelabel.png
+ls
+cp public/images/admin/closelabel.png ~/tmp
+cp closelabel.png public/images/admin
+vim public/javascripts/prickle/application.js
+vim ~/Dropbox/Stage/UiTinLokeren3/javascripts/application.js
+gs
+ga .
+git rm closelabel.png
+ls
+git rm -f closelabel.png
+gs
+GC WOOOOOOAAAAAAAAAAA
+gc WOOOOAAAAAA
+git push
+cap deploy
+ls
+cp db/development.sqlite3 db/production.sqlite3
+gs
+ga .
+gc Copy db
+gi tpush
+git push
+cap deploy
+gs
+ga .
+gc Foei
+cp db/development.sqlite3 db/production.sqlite3
+gs
+ga .
+gc Foei
+git push
+gs
+ga .
+gc Ik nederlandisch spreek
+git push
+grep -H will_paginate
+grep -H will_paginate */**/*
+grep -H will_paginate */**/*.html.haml
+grep -H "== current_user" */**/*.html.haml
+gs
+ga .
+gc Tweaksies
+git push
+cp ~/Downloads/Museo700-Regular.otf .
+mkdir public/fonts
+mv Museo700-Regular.otf public/fonts
+cat ~/tmp/starcraft2pwd.txt
+c
+ls
+gs
+script/console
+gs
+ga .
+gc Fixes
+git push
+grep -H mailbox */**/*
+gs
+ga app/controllers/messages_controller.rb app/views/messages/_messages.html.haml app/views/messages/_shared.html.haml app/views/messages/index.html.haml app/views/messages/new.html.haml app/views/messages/sent.html.haml app/views/messages/show.html.haml config/routes.rb
+gc Use a sent collection route on messages
+gs
+ga .
+gc Wut
+gl -p
+git push
+grep markdown */**/*.html.haml
+grep markdown */**/*.html.haml
+gs
+ga .
+gc Truncate html
+git push
+rake db:migrate
+script/console
+script/console
+script/console
+script/console
+gs
+ga .
+gc Social Media
+git push
+cap deploy && cap deploy:migrate
+gs
+ga .
+gc Fix shit
+gs
+gl -p
+ga app/views/layouts/application.html.haml
+gs
+git push
+cap deploy
+gs
+cp db/development.sqlite3 db/production.sqlite3
+gs
+ga .
+gc GODVER
+git push
+cap deploy
+script/console
+gs
+cp db/development.sqlite3 db/production.sqlite3
+gc Fuck
+git push
+cap deploy
+cd vendor/plugins/event_calendar
+ls
+mv tasks/ lib
+ls lib/tasks
+cd -
+gs
+git rm vendor/plugins/event_calendar/tasks/event_calendar_tasks.rake
+ga .
+gs
+ga .
+gc "-,-"
+git push
+script/console
+gs
+cp db/development.sqlite3 db/production.sqlite3
+gs
+ga .
+gc GODVERDOMME
+git push
+cap deploy
+gs
+ga .
+gc IE is zo nen dikke neger
+git push
+cap deploy
+hosteurope
+exit
+cd /Volumes/Kingston
+ll
+exit
+cd Code/ruby
+git clone git://github.com/wbharding/savage-beast.git
+ls
+cd savage-beast
+ls
+vim README
+rake db:schema:load
+cd ..
+rm -rf savage-beast
+rails beast
+cd beast
+script/plugin install git://github.com/wbharding/savage-beast.git
+ls
+ls
+gem install redcloth --no-ri --no-rdoc
+gem install RedCloth --no-ri --no-rdoc
+rake routes
+exit
+hosteurope
+exit
+hosteurope
+exit
+cd Code/ruby
+rails foo
+rm v-ict-or.TODO
+cd foo
+cp config/database.yml ../red_rocket/config
+rvm use 1.9.2
+cd ..
+rm -rf foo
+rails foo
+cd foo
+ls
+cp config/database.yml ../red_rocket/config
+vim config/application.rb
+cd ..
+rm -rf foo
+exit
+ruby -v
+rvm use 1.9.2
+ruby -v
+gem install rails --pre
+cd Code/ruby/tickle
+ls
+vim Gemfile
+git branch -d sql
+git branch -D sql
+gs
+gl -p
+gs
+cd ..
+cp -r tickle red_rocket
+cd red_rocket
+ls
+rm -rf .git
+ls
+ll
+vim .gitignore
+gs
+git init
+gs
+ruby -v
+rails -v
+git remote add origin ssh://root@83.169.21.36/var/git/red_rocket.git
+grep -H Tickle */**/*
+v -p app/views/layouts/application.html.haml config/application.rb config/environment.rb config/environments/development.rb config/environments/production.rb config/environments/test.rb config/routes.rb
+grep -H Tickle */**/*
+vim config/environments/production.rb
+grep -H Tickle */**/*
+vim config/initializers/jquery.rb
+ls
+gs
+rails s
+ls ~/.mongo/data/
+rails s
+vim config.ru
+rails s
+gs
+git commit -ma "Initial Commit"
+git commit -am "Initial Commit"
+gs
+ga .
+ls
+gc Initial commit
+vim config/initializers/devise.rb
+gs
+vim config/application.rb
+bundle install
+git push
+git push origin master
+rm config/database.yml
+vim config/application.rb
+git rm config/mongoid.yml
+vim config/application.rb
+gs
+grep -H mongoid */**/*
+vim config/initializers/devise.rb
+gs
+vim config/database.yml
+gs
+ga .
+vim Gemfile
+gs
+ga .
+gc "SQLite voor de gemakkelijkheid :-)"
+git push
+git add -f config/database.yml
+gs
+ga .
+gc Add database configuration for this app
+git push
+exit
+cd Code/ruby/red_rocket
+git rm -rf app/views/devise/
+gs
+ga .
+gc No devise views
+git push
+exit
+cd Code/ruby/prickle
+gs
+gs
+ga .
+gc Updeejts
+git push
+git checkout openvld
+git merge master
+git push origin openvld
+git checkout challenge
+git merge master
+git push origin challenge
+git checkout master
+cap deploy
+cp ~/tmp/ticklelogo.png public/images/ticklelogo_mini.png
+gs
+vim app/views/layouts/admin/application.html.haml
+gs
+ga .
+gc Update logo
+git push
+cap deploy && cap deploy:cleanup
+gs
+git checkout openvld
+git merge master
+git push origin openvld
+git checkout challenge
+git merge master
+git push origin challenge
+gco master
+exit
+hosteurope
+cd Code/javascript/photon
+gs
+gs
+ga .
+gc Add links and all sorts of stuff
+exit
+cd Code/ruby/prickle
+rake jobs:work
+exit
+cd Code/ruby/prickle
+git checkout openvld
+vim vendor/plugins/newsletters/app/views/mailer/newsletter.text.html.erb
+v ~/tmp/cvgmail.html
+gs
+script/server thin
+gs
+ga .
+gc FUcking mail layout
+git push origin openvld
+git checkout master
+exit
+cd Code/ruby/red_rocket
+git pull
+git pull origin master
+gs
+git rm -rf server/
+gs
+vim db/schema.rb
+rvm use 1.9.2
+rails g migration remove_users_table
+bundle install
+gem install bundler --no-ri --no-rdoc
+bundle install
+rails g migration remove_users_table
+vim db/migrate/20100609210404_remove_users_table.rb
+rake db:migrate
+gs
+rm db/development.sqlite3
+rake db:migrate
+gs
+vim db/schema.rb
+rails generate devise_install
+vim app/views/layouts/application.html.haml
+vim config/environments/development.rb
+v -p config/environments/development.rb config/environments/production.rb config/environments/test.rb
+rails g devise User
+rake db:migrate
+gs
+vim db/schema.rb
+vim app/models/user.rb
+gs
+ga .
+gc Fixes for kjievin
+vim .gitignore
+gs
+git push
+exit
+cd Code/javascript/wysihat
+ls
+vim examples/simple.html
+vim examples/simple.html
+cd ../../ruby/prickle
+git checkout openvld
+script/server thin
+exit
+cd Code/ruby/tweetreader
+ls
+ls bin
+ruby bin/tweetreader
+gem install twitter --no-ri --no-rdoc
+ruby bin/tweetreader
+ruby bin/tweetreader read
+vim lib/tweetreader/cli
+vim lib/tweetreader/client.rb
+vim lib/tweetreadercli.
+vim lib/tweetreader/cli.rb
+exit
+cd Code/ruby/t
+cd Code/ruby/tickle
+rails g devise_install
+ls
+rm -rf g/
+ls
+rvm use 1.9.2
+rails g devise_install
+rails g devise_install
+rails g devise User
+ls config/locales
+vim config/locales/en.yml
+ls app/views
+gs
+git rm -rf app/views/devise
+rm -rf app/views/devise
+ls
+cp ../prickle/public/favicon.ico public/favicon.ico
+rails g devise_views
+rails c
+gs
+ga .
+gc Basic Devise
+rake routes
+script/console
+rails c
+rm app/controllers/home_controller.rb
+git rm app/controllers/home_controller.rb
+git rm -rf app/views/home/
+mkdir app/views/users
+vim ~/Code/ruby/prickle/app/helpers/application_helper.rb
+vim ~/Code/ruby/prickle/app/helpers/admidmin/application_helper.rb
+vim ~/Code/ruby/prickle/app/helpers/admin/application_helper.rb
+gs
+ga .
+gc Basic User Person
+git push
+git mv app/views/users app/views/people
+git mv app/controllers/users_controller.rb app/controllers/people_controller.rb
+ls
+ls app/controllers
+rake routes
+git mv app/views/devise/confirmations/new.html.erb app/views/devise/confirmations/new.html.haml
+git mv app/views/devise/mailer/confirmation_instructions.html.erb app/views/devise/mailer/confirmation_instructions.html.haml
+git mv app/views/devise/mailer/reset_password_instructions.html.erb app/views/devise/mailer/reset_password_instructions.html.haml
+git mv app/views/devise/mailer/unlock_instructions.html.erb app/views/devise/mailer/unlock_instructions.html.haml
+ls app/views/devise/mailer
+ls
+ls
+gs
+ls
+ls
+ls app/views/devise/passwords
+git mv app/views/devise/passwords/new.html.erb app/views/devise/passwords/new.html.haml
+git mv app/views/devise/passwords/edit.html.erb app/views/devise/passwords/edit.html.haml
+rake routes
+ls
+ls app/views/devise/registrations
+git mv app/views/devise/registrations/new.html.erb app/views/devise/registrations/new.html.haml
+git mv app/views/devise/registrations/edit.html.erb app/views/devise/registrations/edit.html.haml
+ls app/views/devise
+git mv app/views/devise/sessions/new.html.erb app/views/devise/sessions/new.html.haml
+ls app/views/devise
+git mv app/views/devise/shared/_links.erb app/views/devise/shared/_links.haml
+git mv app/views/devise/unlocks/new.html.erb app/views/devise/unlocks/new.html.haml
+gs
+ga .
+gc Haml
+ls app/views/devise/*/**/*.erb
+ls app/views/devise/*/**/*.haml
+gs
+exit
+cd Code/ruby/red_rocket
+rvm use 1.9.2
+v app/views/layouts/application.html.haml
+cd public
+mkdir fonts
+cp ~/Code/ruby/victor/public/fonts/Museo700-Regular.otf fonts
+cd -
+gs
+ga
+gs
+ga .
+gc "Snorry :)"
+git push
+cd ../tickle
+mongod --dbpath=~/.mongo/data
+ls ~/.mongo/data
+mongod --dbpath=/Users/gig/.mongo/data
+mongod --dbpath=/Users/gig/.mongo/data
+exit
+rvm use 1.9.2
+cd Code/ruby/red_rocket
+git pull
+git pull origin master
+rails s
+cd ../tickle
+v ~/Code/ruby/prickle/db/schema.rb
+rails s
+bundle install
+rails s
+rails s
+rails s
+rails s
+rails s
+rails s
+rails s
 exit

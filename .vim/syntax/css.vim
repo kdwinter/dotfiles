@@ -29,6 +29,8 @@ syn keyword cssTagName link map menu meta noframes noscript ol optgroup
 syn keyword cssTagName option p param pre q s samp script select small
 syn keyword cssTagName span strike strong style sub sup tbody td
 syn keyword cssTagName textarea tfoot th thead title tr tt ul u var
+syn keyword cssTagName article aside canvas details figcaption figure
+syn keyword cssTagName footer header hgroup menu nav section summary
 syn match cssTagName "\<table\>"
 syn match cssTagName "\*"
 
