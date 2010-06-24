@@ -11,18 +11,18 @@ fi
 
 # Exports
 #export PATH=/bin:/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/Applications:/Users/gig/bin:/usr/local/Cellar/ruby/1.9.1-p378/bin
-export PATH=/bin:/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/Applications:/Users/gig/bin
+export PATH=/bin:/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/Applications:/Users/gig/Scripts
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LOCALE=en_US.UTF-8
-export BROWSER="open -a Firefox"
+export BROWSER='open -a Safari'
 export PACKAGER='Gigamo <gigamo@gmail.com>'
 #export OOO_FORCE_DESKTOP='gnome'
 export EDITOR=vim
 export VISUAL=vim
 export HISTCONTROL=ignoredups
 export IGNOREEOF=3
-export CLICOLOR=1
+export CLICOLOR=1 # Needed in OSX somehow
 #export WMII_ADDRESS=/tmp/ns.gig.:0/wmii
 #export JAVA_HOME=/opt/java
 #export J2SDKDIR=/opt/java
@@ -68,6 +68,7 @@ bindkey "\e[6~" end-of-history
 #  logout
 #fi
 
+# Source rvm (comment these if you don't use rvm)
 if [[ -s ~/.rvm/scripts/rvm ]]; then
   . ~/.rvm/scripts/rvm
 fi

@@ -1,2 +1,8 @@
 /*
 !.*
+*.rbc
+log/*.log
+*.swp
+.bundle
+.DS_Store
+Thumbs.db
