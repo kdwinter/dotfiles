@@ -1,25 +1,27 @@
 #!/usr/bin/ruby
-require 'rubygems' rescue nil
-require 'wirble' rescue nil
+require 'rubygems' if RUBY_VERSION < '1.9' || RUBY_DESCRIPTION =~ /rubinius/i
 require 'irb/completion'
 require 'irb/ext/save-history'
- 
+begin
+  require 'wirble'
+  Wirble.init
+  Wirble.colorize
+rescue LoadError
+end
+
 IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
- 
-#IRB.conf[:PROMPT_MODE] = :SIMPLE
- 
-IRB.conf[:AUTO_INDENT] = true
 
-Wirble.init
-Wirble.colorize
+#IRB.conf[:PROMPT_MODE] = :SIMPLE
+
+IRB.conf[:AUTO_INDENT] = true
 
 class Object
   # list methods which aren't in superclass
   def local_methods(obj = self)
     (obj.methods - obj.class.superclass.instance_methods).sort
   end
-  
+
   # print documentation
   #
   # ri 'Array#pop'
@@ -35,4 +37,4 @@ class Object
   end
 end
  
-load File.dirname(__FILE__) + '/.railsrc' if $0 == 'irb' && ENV['RAILS_ENV'] 
+load File.dirname(__FILE__) + '/.railsrc' if $0 == 'irb' && ENV['RAILS_ENV']

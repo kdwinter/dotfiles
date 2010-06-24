@@ -15,8 +15,8 @@ if has('gui_running')
   if has('win32')
     set guifont=DejaVu_Sans_Mono:h8:cANSI
   elseif has('mac')
-    set guifont=Inconsolata:h14
-    "set guifont=Panic\ Sans:h12
+    "set guifont=Inconsolata:h14
+    set guifont=Panic\ Sans:h12
     "set guifont=Monaco:h12
     set transparency=10
   else
@@ -31,12 +31,13 @@ elseif (&term =~ 'linux')
   set nocursorline
   colo desert
 else
-  "set t_Co=256
+  set t_Co=256
   "colo wombat256
   "colo desert
   "colo slate2
   "colo miromiro
   colo vimbrant
+  "colo neverland2-laptop
   set mouse=a
   set termencoding=utf-8
 endif
@@ -124,13 +125,32 @@ call <SID>SetStatusLine()
 inoremap <C-s> <esc>:w<cr>a
 nnoremap <C-s> :w<cr>
 
-" Change leader
-let mapleader=','
+" sane movement with wrap turned on
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
+
+" do not menu with left / right in command line
+cnoremap <Left> <Space><BS><Left>
+cnoremap <Right> <Space><BS><Right>
 
 " tab key in visual mode
 vmap <tab> >gv
 vmap <S-tab> <gv
 "vmap <bs> <gv
+
+" Change leader
+let mapleader=','
+
+map <leader>d :e %:h/<CR>
+map <leader>dt :tabe %:h/<CR>
 
 " Set taglist plugin options
 let g:Tlist_Display_Prototype = 1
@@ -158,9 +178,6 @@ let g:NERDTreeHijackNetrw = 1
 let g:NERDChristmasTree = 1
 map <F3> :NERDTreeToggle<CR>
 
-" Fuzzy
-map <leader>t :FuzzyFinderTextMate<CR>
-
 " Git
 let git_diff_spawn_mode=2
 
@@ -184,6 +201,8 @@ if has('autocmd')
   " Ruby file specific options
   au Filetype ruby set textwidth=80 ts=2
   au Filetype haml set ts=2 sw=2 sts=0 expandtab tw=120
+
+  au FileType javascript setlocal nocindent
 
   au BufRead,BufNewFile *.rpdf set ft=ruby
   au BufRead,BufNewFile *.rxls set ft=ruby
@@ -230,6 +249,15 @@ if has('autocmd')
   " Reload vimrc when we edit it
   au! BufWritePost .vimrc source %
 endif
+
+" open URL on current line in browser
+function! Browser()
+  let line0 = getline (".")
+  let line = matchstr (line0, "http[^ )]*")
+  let line = escape (line, "#?&;|%")
+  exec ':silent !open ' . "\"" . line . "\""
+endfunction
+map ,w :call Browser()<CR>
 
 " Prevent annoying typo
 imap <F1> <esc>

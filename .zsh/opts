@@ -20,7 +20,7 @@ HISTSIZE=5000
 SAVEHIST=5000
 
 # type a dir's name to cd into it
-compctl -/ cd
+#compctl -/ cd
 
 # Some options..
 setopt autopushd pushdminus pushdsilent pushdtohome
