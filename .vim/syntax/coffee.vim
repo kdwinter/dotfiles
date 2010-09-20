@@ -1,117 +1,159 @@
-" Vim syntax file
-" Language:	CoffeeScript
-" Maintainer:	Jeff Olson <olson.jeffery@gmail.com>
-" URL:		http://github.com/olsonjeffery
-" Changes:	(jro) initial port from javascript
-" Last Change:	2006 Jun 19
-" Adaptation of javascript.vim syntax file (distro'd w/ vim72), 
-" maintained by Claudio Fleiner <claudio@fleiner.com>
-" with updates from Scott Shattuck (ss) <ss@technicalpursuit.com>
+" Language:    CoffeeScript
+" Maintainer:  Mick Koch <kchmck@gmail.com>
+" URL:         http://github.com/kchmck/vim-coffee-script
+" License:     WTFPL
 
-if !exists("main_syntax")
-  if version < 600
-    syntax clear
-  elseif exists("b:current_syntax")
-    finish
-  endif
-  let main_syntax = 'coffee'
+if exists("b:current_syntax")
+  finish
 endif
 
-syn case ignore
-
-syn match   coffeeLineComment      "#.*" contains=@Spell,CoffeeCommentTodo
-syn match   coffeeSpecial	       "\\\d\d\d\|\\."
-syn region  coffeeStringD	       start=+"+  skip=+\\\\\|\\"+  end=+"\|$+  contains=coffeeSpecial,@htmlPreproc
-syn region  coffeeStringS	       start=+'+  skip=+\\\\\|\\'+  end=+'\|$+  contains=coffeeSpecial,@htmlPreproc
-
-syn match   coffeeSpecialCharacter "'\\.'"
-syn match   coffeeNumber	       "-\=\<\d\+L\=\>\|0[xX][0-9a-fA-F]\+\>"
-syn region  coffeeRegexpString     start=+/[^/*]+me=e-1 skip=+\\\\\|\\/+ end=+/[gi]\{0,2\}\s*$+ end=+/[gi]\{0,2\}\s*[;.,)\]}]+me=e-1 contains=@htmlPreproc oneline
-
-syn match coffeeFunctionParams "([^)]*)\s*->"
-syn match coffeeBindFunctionParams "([^)]*)\s*=>"
-syn match coffeePrototypeAccess "::"
-syn match coffeeBindFunction "=[1]>[1]"
-syn match coffeeFunction "->"
-
-syn keyword coffeeExtends   extends
-syn keyword coffeeConditional	if else switch then not
-syn keyword coffeeRepeat		while for in of
-syn keyword coffeeBranch		break continue
-syn keyword coffeeOperator		delete instanceof typeof
-syn keyword coffeeType		Array Boolean Date Function Number Object String RegExp
-syn keyword coffeeStatement		return with
-syn keyword coffeeBoolean		true false
-syn keyword coffeeNull		null undefined
-syn keyword coffeeIdentifier	arguments this var
-syn keyword coffeeLabel		case default
-syn keyword coffeeException		try catch finally throw
-syn keyword coffeeMessage		alert confirm prompt status
-syn keyword coffeeGlobal		self window top parent
-syn keyword coffeeMember		document event location 
-syn keyword coffeeDeprecated	escape unescape
-syn keyword coffeeReserved		abstract boolean byte char class const debugger double enum export final float goto implements import int interface long native package private protected public short static super synchronized throws transient volatile 
-
-syn sync fromstart
-syn sync maxlines=100
-
-if main_syntax == "coffee"
-  syn sync ccomment coffeeComment
-endif
-
-" Define the default highlighting.
-" For version 5.7 and earlier: only when not done already
-" For version 5.8 and later: only when an item doesn't have highlighting yet
-if version >= 508 || !exists("did_coffee_syn_inits")
-  if version < 508
-    let did_coffee_syn_inits = 1
-    command -nargs=+ HiLink hi link <args>
-  else
-    command -nargs=+ HiLink hi def link <args>
-  endif
-  HiLink coffeePrototypeAccess Keyword
-  HiLink coffeeExtends        Keyword
-  HiLink coffeeLineComment		Comment
-  HiLink coffeeSpecial		Special
-  HiLink coffeeStringS		String
-  HiLink coffeeStringD		String
-  HiLink coffeeCharacter		Character
-  HiLink coffeeSpecialCharacter	coffeeSpecial
-  HiLink coffeeNumber		coffeeValue
-  HiLink coffeeConditional		Conditional
-  HiLink coffeeRepeat		Repeat
-  HiLink coffeeBranch		Conditional
-  HiLink coffeeOperator		Operator
-  HiLink coffeeType			Type
-  HiLink coffeeStatement		Statement
-  HiLink coffeeBindFunctionParams		Function
-  HiLink coffeeFunctionParams		Function
-  HiLink coffeeFunction		Function
-  HiLink coffeeBindFunction		Function
-  HiLink coffeeBraces		Function
-  HiLink coffeeError		Error
-  HiLink coffeeScrParenError		coffeeError
-  HiLink coffeeNull			Keyword
-  HiLink coffeeBoolean		Boolean
-  HiLink coffeeRegexpString		String
-
-  HiLink coffeeIdentifier		Identifier
-  HiLink coffeeLabel		Label
-  HiLink coffeeException		Exception
-  HiLink coffeeMessage		Keyword
-  HiLink coffeeGlobal		Keyword
-  HiLink coffeeMember		Keyword
-  HiLink coffeeDeprecated		Exception 
-  HiLink coffeeReserved		Keyword
-  HiLink coffeeDebug		Debug
-  HiLink coffeeConstant		Label
-
-  delcommand HiLink
+if version < 600
+  syntax clear
 endif
 
 let b:current_syntax = "coffee"
-if main_syntax == 'coffee'
-  unlet main_syntax
+
+syntax sync minlines=100
+
+" CoffeeScript allows dollar signs in identifiers
+setlocal isident+=$
+
+syntax match coffeeStatement /\<\%(return\|break\|continue\|throw\)\>/
+highlight default link coffeeStatement Statement
+
+syntax match coffeeRepeat /\<\%(for\|while\|until\|loop\)\>/
+highlight default link coffeeRepeat Repeat
+
+syntax match coffeeConditional /\<\%(if\|else\|unless\|switch\|when\|then\)\>/
+highlight default link coffeeConditional Conditional
+
+syntax match coffeeException /\<\%(try\|catch\|finally\)\>/
+highlight default link coffeeException Exception
+
+syntax match coffeeOperator /\<\%(instanceof\|typeof\|delete\)\>/
+highlight default link coffeeOperator Operator
+
+syntax match coffeeKeyword /\<\%(new\|in\|of\|by\|where\|and\|or\|not\|is\|isnt\|class\|extends\|super\|all\)\>/
+highlight default link coffeeKeyword Keyword
+
+syntax match coffeeBoolean /\<\%(\%(true\|on\|yes\|false\|off\|no\)\)\>/
+highlight default link coffeeBoolean Boolean
+
+syntax match coffeeGlobal /\<\%(null\|undefined\)\>/
+highlight default link coffeeGlobal Type
+
+syntax cluster coffeeReserved contains=coffeeStatement,coffeeRepeat,
+\                                      coffeeConditional,coffeeException,
+\                                      coffeeOperator,coffeeKeyword,
+\                                      coffeeBoolean,coffeeGlobal
+
+syntax match coffeeAssignmentMod /\%(\s\+\zs\%(and\|or\)\|\W\{,3}\)\ze=/ contained
+highlight default link coffeeAssignmentMod SpecialChar
+
+syntax match coffeeAssignmentChar /:\|=/ contained
+highlight default link coffeeAssignmentChar SpecialChar
+
+syntax match coffeeVar /\<\%(this\|prototype\|arguments\)\>/
+" Matches @-variables like @abc
+syntax match coffeeVar /@\%(\I\i*\)\?/
+highlight default link coffeeVar Type
+
+" Matches class-like names that start with a capital letter, like Array or
+" Object
+syntax match coffeeObject /\<\u\w*\>/
+highlight default link coffeeObject Structure
+
+" Matches constant-like names in SCREAMING_CAPS
+syntax match coffeeConstant /\<\u[A-Z0-9_]\+\>/
+highlight default link coffeeConstant Constant
+
+syntax match coffeePrototype /::/
+highlight default link coffeePrototype SpecialChar
+
+syntax region coffeeString start=/"/ skip=/\\\\\|\\"/ end=/"/ contains=@coffeeInterpString
+syntax region coffeeString start=/'/ skip=/\\\\\|\\'/ end=/'/ contains=@coffeeSimpleString
+highlight default link coffeeString String
+
+" What can make up a variable name
+syntax cluster coffeeIdentifier contains=coffeeVar,coffeeObject,coffeeConstant,
+\                                        coffeePrototype
+
+syntax match coffeeAssignment /@\?\I\%(\i\|::\|\.\|\[.\+\]\)*\s*\%(::\@!\|\%(and\|or\|\|&&\|||\|?\|+\|-\|\/\|\*\|%\|<<\|>>\|>>>\|&\||\|\^\)==\@!\)/
+\                             contains=@coffeeIdentifier,coffeeAssignmentMod,
+\                                       coffeeAssignmentChar,coffeeBrackets
+syntax match coffeeAssignment /\%("\|'\)[^'"]\+\%("\|'\)\s*:/ contains=coffeeString,
+\                                                                      coffeeAssignmentChar
+syntax match coffeeAssignment /\d*\%(\.\d\+\)\?\s*:/ contains=coffeeNumber,coffeeAssignmentChar
+highlight default link coffeeAssignment Identifier
+
+syntax match coffeeFunction /->\|=>/
+highlight default link coffeeFunction Function
+
+syntax keyword coffeeTodo TODO FIXME XXX contained
+highlight default link coffeeTodo Todo
+
+syntax match coffeeComment /#.*/ contains=@Spell,coffeeTodo
+syntax match coffeeComment /####\@!\_.\{-}###/ contains=@Spell,coffeeTodo
+highlight default link coffeeComment Comment
+
+syntax region coffeeEmbed start=/`/ end=/`/
+highlight default link coffeeEmbed Special
+
+" Matches numbers like -10, -10e8, -10E8, 10, 10e8, 10E8
+syntax match coffeeNumber /\<-\?\d\+\%([eE][+-]\?\d\+\)\?\>/
+" Matches hex numbers like 0xfff, 0x000
+syntax match coffeeNumber /\<0[xX]\x\+\>/
+highlight default link coffeeNumber Number
+
+" Matches floating-point numbers like -10.42e8, 10.42e-8
+syntax match coffeeFloat /-\?\d*\.\@<!\.\d\+\%([eE][+-]\?\d\+\)\?/
+highlight default link coffeeFloat Float
+
+syntax region coffeeInterpolation matchgroup=coffeeInterpDelim
+\                                 start=/\#{/ end=/}/
+\                                 contained contains=TOP
+highlight default link coffeeInterpDelim Delimiter
+
+syntax match coffeeEscape /\\\d\d\d\|\\x\x\{2\}\|\\u\x\{4\}\|\\./ contained
+highlight default link coffeeEscape SpecialChar
+
+syntax cluster coffeeSimpleString contains=@Spell,coffeeEscape
+syntax cluster coffeeInterpString contains=@coffeeSimpleString,
+\                                           coffeeInterpolation
+
+syntax region coffeeRegExp start=/\// end=/\/[gimy]\{,4}/ oneline
+\                          contains=@coffeeInterpString
+highlight default link coffeeRegExp String
+
+syntax region coffeeHeredoc start=/"""/ end=/"""/ contains=@coffeeInterpString
+syntax region coffeeHeredoc start=/'''/ end=/'''/ contains=@coffeeSimpleString
+highlight default link coffeeHeredoc String
+
+syntax region coffeeCurlies start=/{/ end=/}/ contains=TOP
+syntax region coffeeBrackets start=/\[/ end=/\]/ contains=TOP,coffeeAssignment
+syntax region coffeeParens start=/(/ end=/)/ contains=TOP
+
+" Displays an error for trailing whitespace
+if !exists("coffee_no_trailing_space_error")
+  syntax match coffeeSpaceError /\s\+$/ display
+  highlight default link coffeeSpaceError Error
 endif
 
-" vim: ts=8
+" Displays an error for trailing semicolons
+if !exists("coffee_no_trailing_semicolon_error")
+  syntax match coffeeSemicolonError /;$/ display
+  highlight default link coffeeSemicolonError Error
+endif
+
+" Displays an error for reserved words
+if !exists("coffee_no_reserved_words_error")
+  syntax keyword coffeeReservedError case default do function var void with const
+  \                                  let enum export import native __hasProp
+  \                                  __extends __slice
+  highlight default link coffeeReservedError Error
+endif
+
+" Reserved words can be used as dot-properties
+syntax match coffeeDot /\.\@<!\.\i\+/ transparent
+\                                     contains=ALLBUT,@coffeeReserved,
+\                                                      coffeeReservedError

@@ -6,7 +6,7 @@ if v:version >= 700
 endif
 if has('gui_running')
   winpos 0 0
-  set guicursor=a:blinkon0
+  set guicursor=a:blinkon0 " disable cursor blinking
   "set guioptions=tmaegr
   set guitablabel=%t\ %m
   set guioptions=gemc
@@ -15,10 +15,10 @@ if has('gui_running')
   if has('win32')
     set guifont=DejaVu_Sans_Mono:h8:cANSI
   elseif has('mac')
-    "set guifont=Inconsolata:h14
-    set guifont=Panic\ Sans:h12
+    set guifont=Inconsolata:h14
+    "set guifont=Panic\ Sans:h12
     "set guifont=Monaco:h12
-    set transparency=10
+    "set transparency=10
   else
     set guifont=DejaVu\ Sans\ Mono\ 8.6
   endif

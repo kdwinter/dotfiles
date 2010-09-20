@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/gig/.vimperator'
+let g:netrw_dirhist_2='/Users/gig/Code/ruby/prickle/vendor/plugins/newsletters/app/controllers/admin'
+let g:netrw_dirhist_3='/Users/gig/Dropbox/Stage/CRMLogging/public'
+let g:netrw_dirhist_4='/Users/gig/Code/ruby/aurb'
+let g:netrw_dirhist_5='/Users/gig/Git/tobi/liquid/performance/shopify'
+let g:netrw_dirhist_6='/Users/gig/Code/ruby/prickle/themes/hammezomert/stylesheets'
+let g:netrw_dirhist_7='/Users/gig/Code/ruby/prickle/themes/hammezomert/views/layouts'
+let g:netrw_dirhist_8='/Users/gig/Code/ruby/tickle/vendor/joint/lib/joint'
