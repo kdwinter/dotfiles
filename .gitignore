@@ -6,3 +6,4 @@ log/*.log
 .bundle
 .DS_Store
 Thumbs.db
+.vim/.netrwhist
