@@ -1,9 +1,13 @@
-"colo sunburst
-"colo vimbrant
 "colo railscasts2
 "colo sunburst2
-colo twilight2
+"colo twilight2
+"colo liquidcarbon
 "colo ir_black2
 "colo clouds_midnight2
 "colo idle_fingers2
+"colo vitamins
+colo solarized
 "colo dawn2
+"colo tomorrownight
+"colo molokai
+"colo digerati
