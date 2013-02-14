@@ -6,7 +6,7 @@ if v:version >= 700
   set cursorline
 endif
 
-let g:solarized_visibility = 'low'
+"let g:solarized_visibility = 'low'
 
 if has('gui_running')
   winpos 0 0
@@ -20,15 +20,19 @@ if has('gui_running')
     set guifont=DejaVu_Sans_Mono:h8:cANSI
   elseif has('mac')
     "set guifont=Monaco:h12
-    set guifont=Meslo\ LG\ M\ DZ:h12
-    "set noantialias
+    "set guifont=Meslo\ LG\ M\ DZ:h12
+    set anti
+    set gfn=Monaco:h12
     "set guifont=Envy\ Code\ R:h12
     "set guifont=Letter\ Gothic\ Std\ Bold:h12
     "set guifont=Andale\ Mono:h14
-    "set guifont=Inconsolata:h12
+    "set guifont=Inconsolata:h14
     "set guifont=Panic\ Sans:h10
     "set guifont=Terminus:h12
     "set transparency=10
+
+    " fix clipboard on osx
+    set clipboard+=unnamed
   else
     set guifont=DejaVu\ Sans\ Mono\ 8.6
   endif
@@ -44,6 +48,7 @@ else
   "colo desert
   "colo vimbrant
   colo tomorrownight
+  "colo twilight2
   set mouse=a
   set termencoding=utf-8
 endif
