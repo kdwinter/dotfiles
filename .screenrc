@@ -1,20 +1,20 @@
 defscrollback 10000
-deflogin on
+#deflogin on
 altscreen on
 autodetach on
 msgwait 2
-activity "active: %n (%t) [%w:%s]"
-bell "bell: %n (%t) [%w:%s]^G"
-vbell_msg "[[[ ding ]]]"
+activity 'active: %n (%t) [%w:%s]'
+bell 'bell: %n (%t) [%w:%s]^G'
+vbell_msg '[[[ ding ]]]'
 vbell off
 startup_message off
 defutf8 on
 term screen-256color
 termcapinfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
-termcapinfo rxvt-256color 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm' 
+termcapinfo rxvt-256color 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 
 screen -t irc irssi
-#screen -t mail sup
+screen -t mail mutt
 screen -t torrent rtorrent
 screen -t zsh
 
@@ -30,5 +30,7 @@ bindkey "^[Oc" next
 
 select 2
 
-caption always "%{= kb}[ %{kG}$USER%{kW} :: %{kG}%H %{b}][ %=%{w}%?%-Lw%?%{b}(%{W}%n*%f %t%?(%u)%?%{b})%{w}%?%+Lw%?%= %{b}]"
+caption always "%{= kb}[ %{kG}$USER%{kW} :: %{kG}%H %{b}][ %=%{kW}%?%-Lw%?%{b}(%{W}%n*%f %t%?(%u)%?%{b})%{w}%?%+Lw%?%= %{b}]"
 sorendition +b kG
+
+escape ``

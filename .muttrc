@@ -1,6 +1,9 @@
 # Credits to Thayer Williams (cinderwick.ca) for this one
 #
-source ~/.mutt/colors.vimbrant
+#source ~/.mutt/colors.vimbrant
+#source ~/.mutt/colors.lightr
+#source ~/.mutt/colors.solarized
+source ~/.mutt/colors.solarized
 
 set realname = "Gigamo"
 set from = "username@gmail.com"
@@ -30,7 +33,7 @@ unset arrow_cursor
 set timeout = 15
 set mail_check = 60
 set sort = threads
-set sort = last-date-received
+set sort_aux = last-date-received
 set strict_threads
 set sort_re
 set sort_browser = alpha
@@ -86,7 +89,7 @@ alternative_order text/plain text/html text
 
 set folder = imaps://imap.gmail.com:993
 set spoolfile = +INBOX
-set mbox = "+[Gmail]/All Mail"
+set mbox = "+[Gmail]/All\ Mail"
 set postponed = "+[Gmail]/Drafts"
 set record = "+[Gmail]/Sent Mail"
 set header_cache = ~/.mutt/cache/headers
@@ -96,6 +99,7 @@ unset message_cache_clean
 set imap_keepalive = 300
 
 macro index,pager d "<save-message>+[Gmail]/Trash<enter>" "move to trash"
+macro index,pager A "<save-message>+[Gmail]/All Mail" "archive selected email"
 macro index,pager S "<save-message>+[Gmail]/Spam<enter>" "mark as spam"
 
 macro index,pager gi    "<change-folder>!<enter>"                  "go to inbox"

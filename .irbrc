@@ -16,10 +16,26 @@ IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 
 IRB.conf[:AUTO_INDENT] = true
 
+#def time(times = 1)
+#  require 'benchmark'
+#  ret = nil
+#  Benchmark.bm { |x| x.report { times.times { ret = yield } } }
+#  ret
+#end
+
 class Object
   # list methods which aren't in superclass
   def local_methods(obj = self)
     (obj.methods - obj.class.superclass.instance_methods).sort
+  end
+
+  def ls(obj = self)
+    width = `stty size 2>/dev/null`.split(/\s+/, 2).last.to_i
+    width = 80 if width == 0
+    local_methods(obj).each_slice(3) do |meths|
+      pattern = "%-#{width / 3}s" * meths.length
+      puts pattern % meths
+    end
   end
 
   # print documentation
