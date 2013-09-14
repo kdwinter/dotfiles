@@ -15,7 +15,7 @@ function src() {
   source ~/.zshrc
 }
 
-function add-alias() {
+function add_alias() {
   local name=$1 value="$2"
   echo "alias $name='$value'" >> ~/.zsh/alias
   eval "alias $name='$value'"
@@ -23,11 +23,11 @@ function add-alias() {
 }
 
 # git functions
-function ga() { git add $* }
-function gl() { git log $* }
-function gs() { git status $* }
-function gp() { git push $* }
-function gc() { git commit -m "$*" }
+function ga()  { git add $* }
+function gl()  { git log $* }
+function gs()  { git status -sb $* }
+function gp()  { git push $* }
+function gc()  { git commit -m "$*" }
 function gpl() { git pull $* }
 function gco() {
   if [ -z "$1" ]; then
@@ -91,5 +91,33 @@ function extract_archive() {
 }
 
 function cd() {
-  builtin cd "$@"; ls
+  builtin cd "$@"
+  ll
+}
+
+# md2html Apptitle FOO.md
+function md2html() {
+  local title file
+  title=$1
+  file=$2
+  ronn --html README.md --style toc --organization=$title --manual=$title $file
+}
+
+# marks
+export MARKPATH=$HOME/.marks
+
+function jump() {
+  builtin cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
+}
+
+function mark() {
+  mkdir -p $MARKPATH; ln -s "$(pwd)" $MARKPATH/$1
+}
+
+function unmark() {
+  rm -i $MARKPATH/$1
+}
+
+function marks() {
+  ls -l $MARKPATH | sed 's/  / /g' | cut -d' ' -f9- | sed 's/@//g' && echo
 }

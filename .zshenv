@@ -11,11 +11,11 @@ fi
 
 # Exports
 #export PATH=/bin:/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/Applications:/Users/gig/bin:/usr/local/Cellar/ruby/1.9.1-p378/bin
-export PATH=/bin:/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/Applications:/Users/gig/Scripts
+export PATH=/bin:/sbin:/usr/local/bin:/usr/bin:/usr/sbin
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LOCALE=en_US.UTF-8
-export BROWSER='open -a Safari'
+export BROWSER='open -a FirefoxAurora'
 export PACKAGER='Gigamo <gigamo@gmail.com>'
 #export OOO_FORCE_DESKTOP='gnome'
 export EDITOR=vim
@@ -28,10 +28,6 @@ export CLICOLOR=1 # Needed in OSX somehow
 #export J2SDKDIR=/opt/java
 export RACK_ENV=development
 export RAILS_ENV=development
-
-# watch for people
-watch=(notme)                   # watch for everybody but me
-LOGCHECK=300                    # check every 5 min for login/logout activity
 
 if [ "$TERM" = "linux" ]; then
   echo -en "\e]P0000000" #black
@@ -67,8 +63,3 @@ bindkey "\e[6~" end-of-history
 #  dbus-launch --exit-with-session ck-launch-session xinit >& .myXLog
 #  logout
 #fi
-
-# Source rvm (comment these if you don't use rvm)
-if [[ -s ~/.rvm/scripts/rvm ]]; then
-  . ~/.rvm/scripts/rvm
-fi
