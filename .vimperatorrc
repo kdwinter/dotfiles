@@ -1,4 +1,4 @@
-set runtimepath=/Users/gig/.vimperator
+set runtimepath=/home/gig/.vimperator
 set titlestring=Vimperator
 set defsearch=google
 "set defsearch=duck
@@ -18,7 +18,7 @@ set laststatus=2
 
 set! browser.urlbar.filter.javascript=false
 set! browser.urlbar.maxRichResults=20
-set! browser.tabs.closeButtons=1
+set! browser.tabs.closeButtons=2
 " 2 for disabled
 "set! browser.tabs.insertRelatedafterCurrent=false
 set! ui.key.generalAccessKey=0
@@ -35,8 +35,8 @@ cnoremap <down> <tab>
 cnoremap <c-down> <down>
 
 "colorscheme griff
-colorscheme bigchu-mini
-"colorscheme bigchu
+"colorscheme bigchu-mini
+colorscheme bigchu
 
 au LocationChange .* js modes.passAllKeys = /google\.com\/(reader|calendar|mail|a)/.test(buffer.URL);
 

@@ -1,14 +1,14 @@
-set nocompatible        " use gVim defaults
-set encoding=utf-8      " unicode encoding
-syntax on               " enable syntax highlighting
+set nocompatible   " use gVim defaults
+set encoding=utf-8 " unicode encoding
+set laststatus=2
+syntax on          " enable syntax highlighting
 
 if v:version >= 700
   set cursorline
 endif
 
-"let g:solarized_visibility = 'low'
-
 if has('gui_running')
+  "set background=light
   winpos 0 0
   set guicursor=a:blinkon0 " disable cursor blinking
   "set guioptions=tmaegr
@@ -21,13 +21,17 @@ if has('gui_running')
   elseif has('mac')
     "set guifont=Monaco:h12
     "set guifont=Meslo\ LG\ M\ DZ:h12
+    "set guifont=Consolas:h12
     set anti
-    set gfn=Monaco:h12
     "set guifont=Envy\ Code\ R:h12
     "set guifont=Letter\ Gothic\ Std\ Bold:h12
     "set guifont=Andale\ Mono:h14
     "set guifont=Inconsolata:h14
-    "set guifont=Panic\ Sans:h10
+    "set guifont=Monaco\ for\ Powerline:h10
+    "set guifont=Mensch\ for\ Powerline:h12
+    set guifont=Inconsolata\ for\ Powerline:h14
+    "set guifont=Ubuntu\ Mono:h14
+    "set guifont=Panic\ Sans:h12
     "set guifont=Terminus:h12
     "set transparency=10
 
@@ -38,22 +42,31 @@ if has('gui_running')
   endif
 "elseif (&term =~ 'screen' || &term =~ 'linux')
 elseif (&term =~ 'linux')
+  set background=dark
   set t_Co=16
   set termencoding=utf-8
   set nocursorline
   colo desert
 else
+  set background=dark
+  "set background=light
   set t_Co=256
-  "colo wombat256
+  "colo distinguished
+  "colo smyck
   "colo desert
   "colo vimbrant
-  colo tomorrownight
+  "colo solarized
+  "let g:solarized_termcolors=256
+  "colo tomorrownight
   "colo twilight2
+  colo landscape
   set mouse=a
   set termencoding=utf-8
 endif
 
-set background=dark
+let g:Powerline_symbols = 'fancy'
+let g:solarized_visibility = 'low'
+
 set listchars=eol:¬,trail:…
 set expandtab           " expand tabs to spaces
 set nosmarttab          " fuck tabs
@@ -81,7 +94,7 @@ set nofoldenable        " dont autofold
 set foldmethod=syntax
 set foldlevel=1
 set foldnestmax=10
-set tabstop=4           " a n-space tab width
+set tabstop=2           " a n-space tab width
 set shiftwidth=2        " allows the use of < and > for VISUAL indenting
 set softtabstop=2       " counts n spaces when DELETE or BCKSPCE is used
 set textwidth=76        " in new gvim windows
@@ -123,155 +136,35 @@ set magic
 set suffixes=.bak,~,.o,.info,.log,.rbx,.swp
 set title
 filetype plugin indent on      " fix the f*cking indenting
+set scrolloff=8                " start scrolling at 8 lines away from margins
+set sidescrolloff=15
+set sidescroll=1
 
-" statusline setup
-set statusline=%f " tail of the filename
-
-" display a warning if fileformat isnt unix
-set statusline+=%#warningmsg#
-set statusline+=%{&ff!='unix'?'['.&ff.']':''}
-set statusline+=%*
-
-" display a warning if file encoding isnt utf-8
-set statusline+=%#warningmsg#
-set statusline+=%{(&fenc!='utf-8'&&&fenc!='')?'['.&fenc.']':''}
-set statusline+=%*
-
-set statusline+=%h " help file flag
-set statusline+=%y " filetype
-set statusline+=%r " read only flag
-set statusline+=%m " modified flag
-
-" display a warning if &et is wrong, or we have mixed-indenting
-set statusline+=%#error#
-set statusline+=%{StatuslineTabWarning()}
-set statusline+=%*
-
-set statusline+=%{StatuslineTrailingSpaceWarning()}
-
-set statusline+=%{StatuslineLongLineWarning()}
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-" display a warning if &paste is set
-set statusline+=%#error#
-set statusline+=%{&paste?'[paste]':''}
-set statusline+=%*
-
-set statusline+=%= " left/right separator
-set statusline+=%{StatuslineCurrentHighlight()}\ \ "current highlight
-set statusline+=%c, " cursor column
-set statusline+=%l/%L " cursor line/total lines
-set statusline+=\ %P " percent through file
-set laststatus=2
-
-" recalculate the trailing whitespace warning when idle, and after saving
-autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
-
-" return '[\s]' if trailing white space is detected
-" return '' otherwise
-function! StatuslineTrailingSpaceWarning()
-  if !exists("b:statusline_trailing_space_warning")
-    if search('\s\+$', 'nw') != 0
-      let b:statusline_trailing_space_warning = '[\s]'
-    else
-      let b:statusline_trailing_space_warning = ''
-    endif
-  endif
-  return b:statusline_trailing_space_warning
+function! IsHelp()
+  return &buftype=='help'?' (help) ':''
 endfunction
 
-" return the syntax highlight group under the cursor ''
-function! StatuslineCurrentHighlight()
-  let name = synIDattr(synID(line('.'),col('.'),1),'name')
-  if name == ''
-    return ''
-  else
-    return '[' . name . ']'
-  endif
+function! GetName()
+  return expand("%:t")==''?'<none>':expand("%:t")
 endfunction
 
-" recalculate the tab warning flag when idle and after writing
-autocmd cursorhold,bufwritepost * unlet! b:statusline_tab_warning
+set statusline=%3*[%1*%{GetName()}%3*]%3*
+set statusline+=%7*%{&modified?'\ (modified)':'\ '}%3*
+set statusline+=%5*%{IsHelp()}%3*
+set statusline+=%6*%{&readonly?'\ (read-only)\ ':'\ '}%3*
+set statusline+=%3*enc:%4*%{strlen(&fenc)?&fenc:'none'}%3*\ \ 
+set statusline+=%3*ff:%4*%{&ff}%3*\ \ 
+set statusline+=%3*ft:%4*%{strlen(&ft)?&ft:'<none>'}\ \ 
+"set statusline+=%3*tab:%4*%{&ts}
+"set statusline+=%3*,%4*%{&sts}
+"set statusline+=%3*,%4*%{&sw}
+"set statusline+=%3*,%4*%{&et?'et':'noet'}\ \ 
+set statusline+=%<%3*pwd:%4*%{getcwd()}\ \ 
+set statusline+=%9*%=
+set statusline+=%3*col:%4*%c\ \ 
+set statusline+=%3*line:%4*%l\ \ 
+set statusline+=%3*total:%4*%L\ 
 
-" return '[&et]' if &et is set wrong
-" return '[mixed-indenting]' if spaces and tabs are used to indent
-" return an empty string if everything is fine
-function! StatuslineTabWarning()
-  if !exists("b:statusline_tab_warning")
-    let tabs = search('^\t', 'nw') != 0
-    let spaces = search('^ ', 'nw') != 0
-
-    if tabs && spaces
-      let b:statusline_tab_warning = '[mixed-indenting]'
-    elseif (spaces && !&et) || (tabs && &et)
-      let b:statusline_tab_warning = '[&et]'
-    else
-      let b:statusline_tab_warning = ''
-    endif
-  endif
-  return b:statusline_tab_warning
-endfunction
-
-" recalculate the long line warning when idle and after saving
-autocmd cursorhold,bufwritepost * unlet! b:statusline_long_line_warning
-
-" return a warning for "long lines" where "long" is either &textwidth or 80 (if
-" no &textwidth is set)
-"
-" return '' if no long lines
-" return '[#x,my,$z] if long lines are found, were x is the number of long
-" lines, y is the median length of the long lines and z is the length of the
-" longest line
-function! StatuslineLongLineWarning()
-  if !exists("b:statusline_long_line_warning")
-    let long_line_lens = s:LongLines()
-
-    if len(long_line_lens) > 0
-      let b:statusline_long_line_warning = "[" .
-            \ '#' . len(long_line_lens) . "," .
-            \ 'm' . s:Median(long_line_lens) . "," .
-            \ '$' . max(long_line_lens) . "]"
-    else
-      let b:statusline_long_line_warning = ""
-    endif
-  endif
-  return b:statusline_long_line_warning
-endfunction
-
-" return a list containing the lengths of the long lines in this buffer
-function! s:LongLines()
-  let threshold = (&tw ? &tw : 80)
-  let spaces = repeat(" ", &ts)
-
-  let long_line_lens = []
-
-  let i = 1
-  while i <= line("$")
-    let len = strlen(substitute(getline(i), '\t', spaces, 'g'))
-    if len > threshold
-      call add(long_line_lens, len)
-    endif
-    let i += 1
-  endwhile
-
-  return long_line_lens
-endfunction
-
-" find the median of the given array of numbers
-function! s:Median(nums)
-  let nums = sort(a:nums)
-  let l = len(nums)
-
-  if l % 2 == 1
-    let i = (l-1) / 2
-    return nums[i]
-  else
-    return (nums[l/2] + nums[(l/2)-1]) / 2
-  endif
-endfunction
 
 " common save shortcuts
 inoremap <C-s> <esc>:w<cr>a
@@ -333,12 +226,26 @@ map <F3> :NERDTreeToggle<CR>
 " Git
 let git_diff_spawn_mode=2
 
+function! FillSignColumn()
+  if (&term =~ 'screen' || &term =~ 'linux')
+  else
+    sign define dummy
+    execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
+  endif
+endfunction
+
 if has('autocmd')
   au WinEnter * setlocal cursorline
   au WinLeave * setlocal nocursorline
+
   hi ExtraWhitespace ctermbg=red guibg=red
   au ColorScheme * hi ExtraWhitespace ctermbg=red guibg=red
   match ExtraWhitespace /\s\+$\| \+\ze\t/
+
+  if exists("&colorcolumn")
+    au Insertenter * set colorcolumn=81
+    au InsertLeave * set colorcolumn=""
+  endif
 
   " Fix filetype detection
   au BufNewFile,BufRead *.inc set filetype=php
@@ -349,6 +256,7 @@ if has('autocmd')
   " C file specific options
   au FileType c,cpp set cindent
   au FileType c,cpp set formatoptions+=ro
+  au FileType make  set noexpandtab
 
   " Ruby file specific options
   au Filetype ruby set textwidth=80 ts=2
@@ -400,16 +308,10 @@ if has('autocmd')
 
   " Reload vimrc when we edit it
   au! BufWritePost .vimrc source %
-endif
 
-" open URL on current line in browser
-function! Browser()
-  let line0 = getline (".")
-  let line = matchstr (line0, "http[^ )]*")
-  let line = escape (line, "#?&;|%")
-  exec ':silent !open ' . "\"" . line . "\""
-endfunction
-map ,w :call Browser()<CR>
+  " Resize splits upon window resize
+  au VimResized * exe "normal! \<c-w>="
+endif
 
 " Prevent annoying typo
 imap <F1> <esc>
