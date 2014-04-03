@@ -11,12 +11,14 @@ fi
 
 # Exports
 #export PATH=/bin:/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/Applications:/Users/gig/bin:/usr/local/Cellar/ruby/1.9.1-p378/bin
-export PATH=/bin:/sbin:/usr/local/bin:/usr/bin:/usr/sbin
+typeset -U path
+path=(~/scripts ~/.gem/ruby/2.1.0/bin $path)
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LOCALE=en_US.UTF-8
-export BROWSER='open -a FirefoxAurora'
-export PACKAGER='Gigamo <gigamo@gmail.com>'
+export BROWSER='firefox-aurora'
+export PACKAGER='Gigamo <gigamo@fastmail.fm>'
 #export OOO_FORCE_DESKTOP='gnome'
 export EDITOR=vim
 export VISUAL=vim
@@ -28,26 +30,7 @@ export CLICOLOR=1 # Needed in OSX somehow
 #export J2SDKDIR=/opt/java
 export RACK_ENV=development
 export RAILS_ENV=development
-
-if [ "$TERM" = "linux" ]; then
-  echo -en "\e]P0000000" #black
-  echo -en "\e]P8505354" #darkgrey
-  echo -en "\e]P1f92672" #darkred
-  echo -en "\e]P9ff5995" #red
-  echo -en "\e]P282b414" #darkgreen
-  echo -en "\e]PAb6e354" #green
-  echo -en "\e]P3fd971f" #brown
-  echo -en "\e]PBfeed6c" #yellow
-  echo -en "\e]P456c2d6" #darkblue
-  echo -en "\e]PC8cedff" #blue
-  echo -en "\e]P58c54fe" #darkmagenta
-  echo -en "\e]PD9e6ffe" #magenta
-  echo -en "\e]P6465457" #darkcyan
-  echo -en "\e]PE899ca1" #cyan
-  echo -en "\e]P7ccccc6" #lightgrey
-  echo -en "\e]PFf8f8f2" #white
-  clear # back to default input colours
-fi
+export GEM_HOME=$HOME/.gem/ruby/2.1.0
 
 bindkey "\e[1~" beginning-of-line
 bindkey "\e[7~" beginning-of-line
@@ -59,7 +42,10 @@ bindkey "\e[5~" beginning-of-history
 bindkey "\e[6~" end-of-history
 
 # Automatically start X and log out after when logging into vc/1
-#if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
-#  dbus-launch --exit-with-session ck-launch-session xinit >& .myXLog
-#  logout
-#fi
+if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
+  startx >& .myXLog
+  logout
+fi
+
+# export ssh agent stuffs
+eval "$(ssh-agent)" &> /dev/null
