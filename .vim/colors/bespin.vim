@@ -30,7 +30,7 @@ hi Folded ctermfg=241 ctermbg=16 cterm=NONE guifg=#666666 guibg=#28211c gui=NONE
 hi Normal ctermfg=145 ctermbg=16 cterm=NONE guifg=#baae9e guibg=#28211c gui=NONE
 hi Boolean ctermfg=167 ctermbg=NONE cterm=NONE guifg=#cf6a4c guibg=NONE gui=NONE
 hi Character ctermfg=167 ctermbg=NONE cterm=NONE guifg=#cf6a4c guibg=NONE gui=NONE
-hi Comment ctermfg=241 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=italic
+hi Comment ctermfg=241 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NONE
 hi Conditional ctermfg=74 ctermbg=NONE cterm=NONE guifg=#5ea6ea guibg=NONE gui=NONE
 hi Constant ctermfg=167 ctermbg=NONE cterm=NONE guifg=#cf6a4c guibg=NONE gui=NONE
 hi Define ctermfg=74 ctermbg=NONE cterm=NONE guifg=#5ea6ea guibg=NONE gui=NONE
@@ -52,7 +52,7 @@ hi StorageClass ctermfg=228 ctermbg=NONE cterm=NONE guifg=#f9ee98 guibg=NONE gui
 hi String ctermfg=70 ctermbg=NONE cterm=NONE guifg=#54be0d guibg=NONE gui=NONE
 hi Tag ctermfg=74 ctermbg=NONE cterm=NONE guifg=#5ea6ea guibg=NONE gui=NONE
 hi Title ctermfg=145 ctermbg=NONE cterm=bold guifg=#baae9e guibg=NONE gui=bold
-hi Todo ctermfg=241 ctermbg=NONE cterm=inverse,bold guifg=#666666 guibg=NONE gui=inverse,bold,italic
+hi Todo ctermfg=241 ctermbg=NONE cterm=inverse,bold guifg=#666666 guibg=NONE gui=inverse,bold,NONE
 hi Type ctermfg=94 ctermbg=NONE cterm=NONE guifg=#937121 guibg=NONE gui=NONE
 hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 hi rubyClass ctermfg=74 ctermbg=NONE cterm=NONE guifg=#5ea6ea guibg=NONE gui=NONE
@@ -79,7 +79,7 @@ hi rubyRailsARMethod ctermfg=186 ctermbg=NONE cterm=NONE guifg=#dad085 guibg=NON
 hi rubyRailsRenderMethod ctermfg=186 ctermbg=NONE cterm=NONE guifg=#dad085 guibg=NONE gui=NONE
 hi rubyRailsMethod ctermfg=186 ctermbg=NONE cterm=NONE guifg=#dad085 guibg=NONE gui=NONE
 hi erubyDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi erubyComment ctermfg=241 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=italic
+hi erubyComment ctermfg=241 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NONE
 hi erubyRailsMethod ctermfg=186 ctermbg=NONE cterm=NONE guifg=#dad085 guibg=NONE gui=NONE
 hi htmlTag ctermfg=137 ctermbg=NONE cterm=NONE guifg=#ac885b guibg=NONE gui=NONE
 hi htmlEndTag ctermfg=137 ctermbg=NONE cterm=NONE guifg=#ac885b guibg=NONE gui=NONE

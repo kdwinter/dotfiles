@@ -27,7 +27,7 @@ hi Search ctermfg=NONE ctermbg=23 cterm=NONE guifg=NONE guibg=#0c3348 gui=NONE
 hi Directory ctermfg=32 ctermbg=NONE cterm=NONE guifg=#259adb guibg=NONE gui=NONE
 hi Folded ctermfg=237 ctermbg=0 cterm=NONE guifg=#3d3d3d guibg=#000000 gui=NONE
 
-hi Normal ctermfg=231 ctermbg=0 cterm=NONE guifg=#f8f8f8 guibg=#000000 gui=NONE
+hi Normal ctermfg=231 ctermbg=232 cterm=NONE guifg=#f8f8f8 guibg=#000000 gui=NONE
 hi Boolean ctermfg=32 ctermbg=NONE cterm=NONE guifg=#259adb guibg=NONE gui=NONE
 hi Character ctermfg=32 ctermbg=NONE cterm=NONE guifg=#259adb guibg=NONE gui=NONE
 hi Comment ctermfg=237 ctermbg=NONE cterm=NONE guifg=#3d3d3d guibg=NONE gui=italic

@@ -1,10 +1,10 @@
 servers = (
-  {
-    address = "irc.quakenet.org";
-    chatnet = "QuakeNet";
-    port = "6667";
-    autoconnect = "yes";
-  },
+  #{
+  #  address = "irc.quakenet.org";
+  #  chatnet = "QuakeNet";
+  #  port = "6667";
+  #  autoconnect = "yes";
+  #},
   {
     address = "irc.freenode.net";
     chatnet = "freenode";
@@ -12,13 +12,13 @@ servers = (
     use_ssl = "no";
     ssl_verify = "no";
     autoconnect = "yes";
-  },
-  {
-    address = "irc.oftc.net";
-    chatnet = "OFTC";
-    port = "6667";
-    autoconnect = "yes";
-  },
+  }
+  #{
+  #  address = "irc.oftc.net";
+  #  chatnet = "OFTC";
+  #  port = "6667";
+  #  autoconnect = "yes";
+  #},
   #  {
   #    address = "im.bitlbee.org";
   #    port = "6667";
@@ -27,13 +27,13 @@ servers = (
 );
 
 chatnets = {
-  QuakeNet = {
-    type = "IRC";
-    autosendcmd = "";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
+  #QuakeNet = {
+  #  type = "IRC";
+  #  autosendcmd = "";
+  #  max_kicks = "1";
+  #  max_msgs = "3";
+  #  max_whois = "30";
+  #};
   freenode = {
     type = "IRC";
     autosendcmd = "";
@@ -41,23 +41,18 @@ chatnets = {
     max_msgs = "3";
     max_whois = "30";
   };
-  OFTC = {
-    type = "IRC";
-    autosendcmd = "";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
+  #OFTC = {
+  #  type = "IRC";
+  #  autosendcmd = "";
+  #  max_kicks = "1";
+  #  max_msgs = "3";
+  #  max_whois = "30";
+  #};
 };
 
 
 channels = (
-  { name = "#awesome"; chatnet = "OFTC"; autojoin = "yes"; },
   { name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#linux"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#zsh"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#debian"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#legions"; chatnet = "QuakeNet"; autojoin = "yes"; }
 );
 
 aliases = {

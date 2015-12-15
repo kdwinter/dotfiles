@@ -18,7 +18,7 @@ set cpo&vim
 
 augroup endwise " {{{1
     au!
-    autocmd FileType ruby
+    autocmd FileType ruby,crystal
                 \ let b:endwise_addition = '\=submatch(0)=="{" ? "}" : "end"' |
                 \ let b:endwise_words = 'module,class,def,if,unless,case,while,until,begin,do' |
                 \ let b:endwise_pattern = '^\s*\zs\%(module\|class\|def\|if\|unless\|case\|while\|until\|for\|\|begin\)\>\%(.*[^.:@$]\<end\>\)\@!\|\<do\ze\%(\s*|.*|\)\=\s*$' |

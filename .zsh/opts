@@ -13,9 +13,11 @@ zfinit
 
 autoload -U zcalc			#	for mathhhh
 
-
+HOSTNAME="$(hostname)"
+HOSTNAME_SHORT="${HOSTNAME%%.*}"
 # history
 HISTFILE=~/.zsh/history
+#HISTFILE="${HOME}/.history/$(date -u +%Y/%m/%d.%H.%M.%S)_${HOSTNAME_SHORT}_$$"
 HISTSIZE=5000
 SAVEHIST=5000
 

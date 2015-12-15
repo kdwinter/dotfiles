@@ -1,8 +1,7 @@
 [user]
   email = gigamo@gmail.com
   name = Gigamo
-  editor = mvim --nofork
-  #editor = vim
+  editor = vim
 [diff]
   tool = vimdiff
 [color]
@@ -42,4 +41,4 @@
 [core]
   pager = less -FRSX
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  editor = mvim --nofork
+  editor = vim

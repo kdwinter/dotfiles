@@ -3,14 +3,14 @@
 #source ~/.mutt/colors.vimbrant
 #source ~/.mutt/colors.lightr
 #source ~/.mutt/colors.solarized
-source ~/.mutt/colors.solarized
+source ~/.mutt/colors.solarizedlight
 
-set realname = "Gigamo"
+set realname = "some name"
 set from = "username@gmail.com"
 set imap_user = "username@gmail.com"
-set imap_pass = "password"
+#set imap_pass = "password"
 set smtp_url = "smtp://username@smtp.gmail.com:587/"
-set smtp_pass = "password"
+#set smtp_pass = "password"
 
 source ~/.mutt_private # Sensitive info overwritten in here
 
@@ -110,3 +110,8 @@ macro index,pager gd    "<change-folder>+[Gmail]/Drafts<enter>"    "go to drafts
 macro index,pager go    "<change-folder><<enter>"                  "go to sent mail"
 macro index,pager gt    "<change-folder>+[Gmail]/Trash<enter>"     "go to trash"
 macro index,pager gl    "<change-folder>-<enter>"                  "go to last folder"
+
+# mutt-sidebar required
+set sidebar_visible = yes
+macro index,pager b "<enter-command>toggle sidebar_visible<enter>" "toggle sidebar"
+

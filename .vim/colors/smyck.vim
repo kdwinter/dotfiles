@@ -16,8 +16,8 @@ if exists("syntax_on")
   syntax reset
 endif
 
-hi Normal               cterm=none ctermbg=none     ctermfg=15      gui=none        guibg=#242424   guifg=#F7F7F7
-hi LineNr               cterm=none ctermbg=none     ctermfg=8       gui=none        guibg=#242424   guifg=#8F8F8F
+hi Normal               cterm=none ctermbg=233      ctermfg=15      gui=none        guibg=#242424   guifg=#F7F7F7
+hi LineNr               cterm=none ctermbg=234      ctermfg=8       gui=none        guibg=#242424   guifg=#8F8F8F
 hi StatusLine           cterm=none ctermbg=8        ctermfg=15      gui=none        guibg=#5D5D5D   guifg=#FBFBFB
 hi StatusLineNC         cterm=none ctermbg=15       ctermfg=8       gui=none        guibg=#5D5D5D   guifg=#FBFBFB
 hi Search               cterm=none ctermbg=6        ctermfg=15      gui=none        guibg=#2EB5C1   guifg=#F7F7F7
@@ -44,7 +44,7 @@ hi DiffChange           cterm=bold ctermbg=4        ctermfg=15
 hi DiffDelete           cterm=bold ctermbg=1        ctermfg=15
 hi DiffText             cterm=bold ctermbg=3        ctermfg=8
 hi MatchParen           cterm=none ctermbg=6        ctermfg=15      gui=none        guibg=#2EB5C1   guifg=#F7F7F7
-hi CursorLine           cterm=none ctermbg=238      ctermfg=none    gui=none        guibg=#424242
+hi CursorLine           cterm=none ctermbg=234      ctermfg=none    gui=none        guibg=#424242
 hi Title                cterm=none ctermbg=none     ctermfg=4       gui=none                        guifg=#88CCE7
 
 " ----------------------------------------------------------------------------

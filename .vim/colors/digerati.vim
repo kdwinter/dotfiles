@@ -14,7 +14,7 @@ let colors_name = "digerati"
 
 " Vim >= 7.0 specific colors
 if version >= 700
-  hi CursorLine   guibg=#4f4f4f
+  hi CursorLine   guibg=#303030
   hi CursorColumn guibg=#2d2d2d
   hi MatchParen   guifg=#ffffff guibg=#4f4f4f gui=bold
   hi Pmenu 		    guifg=#404040 guibg=#dcdcdc
@@ -28,7 +28,7 @@ hi NonText 		   guifg=#a0a0a0 guibg=#202020 gui=none
 hi LineNr        guifg=#404040 guibg=#202020 gui=none ctermfg=244 ctermbg=232
 hi StatusLine    guifg=#d3d3d5 guibg=#303030 gui=none ctermfg=253 ctermbg=238
 hi StatusLineNC  guifg=#939395 guibg=#303030 gui=none ctermfg=246 ctermbg=238
-hi VertSplit     guifg=#444444 guibg=#303030 gui=none ctermfg=238 ctermbg=238  
+hi VertSplit     guifg=#444444 guibg=#303030 gui=none ctermfg=238 ctermbg=238
 hi Folded 		   guibg=#384048 guifg=#a0a8b0 gui=none
 hi Title		     guifg=#ffffff guibg=NONE	   gui=bold
 hi Visual		     guifg=#ffffff guibg=#b8b89f gui=none
@@ -69,5 +69,5 @@ hi hlLevel9      guifg=#cdff00
 hi MarkerConstant guifg=#808080
 
 " Code-specific colors
-hi htmlEndTag    guifg=#ffffff gui=none 
+hi htmlEndTag    guifg=#ffffff gui=none
 hi htmlLink      guifg=#ff3b77 gui=underline

@@ -1,0 +1,93 @@
+out_to_x no
+own_window no
+out_to_console yes
+background no
+max_text_width 0
+total_run_times 0
+cpu_avg_samples 2
+override_utf8_locale no
+double_buffer no
+short_units yes
+update_interval 11.0
+
+TEXT
+
+[\
+  {\
+    "full_text": "KERNEL",\
+    "color": "\#676E7D",\
+    "separator": false,\
+    "separator_block_width": 6\
+  },\
+  {\
+    "full_text": "${kernel}",\
+    "color": "\#f3f4f5",\
+    "separator": false\
+  },\
+  {\
+    "full_text": "TEMP",\
+    "color": "\#676E7D",\
+    "separator": false,\
+    "separator_block_width": 6\
+  },\
+  {\
+    "full_text": "${hwmon 1 temp 1}C",\
+    "color": ${if_match ${hwmon 1 temp 1}<80}"\#f3f4f5"${else}"\#FF3B77"${endif},\
+    "separator": false\
+  },\
+  {\
+    "full_text": "LOAD",\
+    "color": "\#676E7D",\
+    "separator": false,\
+    "separator_block_width": 6\
+  },\
+  {\
+    "full_text": "${loadavg}",\
+    "color": "\#f3f4f5",\
+    "separator": false\
+  },\
+  {\
+    "full_text": "MEM",\
+    "color": "\#676E7D",\
+    "separator": false,\
+    "separator_block_width": 6\
+  },\
+  {\
+    "full_text": "${mem}",\
+    "color": ${if_match ${memperc}<85}"\#f3f4f5"${else}"\#FF3B77"${endif},\
+    "separator": false\
+  },\
+  {\
+    "full_text": "WLAN",\
+    "color": "\#676E7D",\
+    "separator": false,\
+    "separator_block_width": 6\
+  },\
+  {\
+    "full_text": "${if_up wlp1s0}${wireless_essid wlp1s0}-${wireless_link_qual_perc wlp1s0}%${else}N/A${endif}",\
+    "color": ${if_up wlp1s0}"\#f3f4f5"${else}"\#FF3B77"${endif},\
+    "separator": false\
+  },\
+  {\
+    "full_text": "BAT",\
+    "color": "\#676E7D",\
+    "separator": false,\
+    "separator_block_width": 6\
+  },\
+  {\
+    "full_text": "${battery_percent}% ${battery_time}",\
+    "color": ${if_match ${battery_percent}>15}"\#f3f4f5"${else}"\#FF3B77"${endif},\
+    "separator": false\
+  },\
+  {\
+    "full_text": "TIME",\
+    "color": "\#676E7D",\
+    "separator": false,\
+    "separator_block_width": 6\
+  },\
+  {\
+    "full_text": "${time %a %e %b %H:%M}",\
+    "color": "\#f3f4f5",\
+    "separator": false\
+  }\
+],

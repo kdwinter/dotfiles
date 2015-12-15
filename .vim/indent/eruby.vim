@@ -1,9 +1,7 @@
 " Vim indent file
 " Language:		eRuby
-" Maintainer:		Tim Pope <vimNOSPAM@tpope.info>
-" Info:			$Id: eruby.vim,v 1.9 2007/04/16 17:03:36 tpope Exp $
-" URL:			http://vim-ruby.rubyforge.org
-" Anon CVS:		See above site
+" Maintainer:		Tim Pope <vimNOSPAM@tpope.org>
+" URL:			https://github.com/vim-ruby/vim-ruby
 " Release Coordinator:	Doug Kearns <dougkearns@gmail.com>
 
 if exists("b:did_indent")
@@ -12,7 +10,7 @@ endif
 
 runtime! indent/ruby.vim
 unlet! b:did_indent
-set indentexpr=
+setlocal indentexpr=
 
 if exists("b:eruby_subtype")
   exe "runtime! indent/".b:eruby_subtype.".vim"
@@ -40,34 +38,54 @@ if exists("*GetErubyIndent")
   finish
 endif
 
-function! GetErubyIndent()
+function! GetErubyIndent(...)
+  if a:0 && a:1 == '.'
+    let v:lnum = line('.')
+  elseif a:0 && a:1 =~ '^\d'
+    let v:lnum = a:1
+  endif
   let vcol = col('.')
   call cursor(v:lnum,1)
-  let inruby = searchpair('<%','','%>')
+  let inruby = searchpair('<%','','%>','W')
   call cursor(v:lnum,vcol)
-  if inruby && getline(v:lnum) !~ '^<%'
-    let ind = GetRubyIndent()
+  if inruby && getline(v:lnum) !~ '^<%\|^\s*[-=]\=%>'
+    let ind = GetRubyIndent(v:lnum)
   else
     exe "let ind = ".b:eruby_subtype_indentexpr
+
+    " Workaround for Andy Wokula's HTML indent
+    if b:eruby_subtype_indentexpr =~# '^HtmlIndent('
+	  \ && exists('b:indent')
+	  \ && type(b:indent) == type({})
+	  \ && has_key(b:indent, 'lnum')
+      " Force HTML indent to not keep state
+      let b:indent.lnum = -1
+    endif
   endif
   let lnum = prevnonblank(v:lnum-1)
   let line = getline(lnum)
   let cline = getline(v:lnum)
-  if cline =~# '<%\s*\%(end\|else\|\%(ensure\|rescue\|elsif\|when\).\{-\}\)\s*\%(-\=%>\|$\)'
+  if cline =~# '^\s*<%[-=]\=\s*\%(}\|end\|else\|\%(ensure\|rescue\|elsif\|when\).\{-\}\)\s*\%([-=]\=%>\|$\)'
     let ind = ind - &sw
   endif
-  if line =~# '\<do\%(\s*|[^|]*|\)\=\s*-\=%>'
+  if line =~# '\S\s*<%[-=]\=\s*\%(}\|end\).\{-\}\s*\%([-=]\=%>\|$\)'
+    let ind = ind - &sw
+  endif
+  if line =~# '\%({\|\<do\)\%(\s*|[^|]*|\)\=\s*[-=]\=%>'
     let ind = ind + &sw
-  elseif line =~# '<%\s*\%(module\|class\|def\|if\|for\|while\|until\|else\|elsif\|case\|when\|unless\|begin\|ensure\|rescue\)\>.*%>'
+  elseif line =~# '<%[-=]\=\s*\%(module\|class\|def\|if\|for\|while\|until\|else\|elsif\|case\|when\|unless\|begin\|ensure\|rescue\)\>.*%>'
     let ind = ind + &sw
   endif
-  if line =~# '^\s*<%[=#]\=\s*$' && cline !~# '^\s*end\>'
+  if line =~# '^\s*<%[=#-]\=\s*$' && cline !~# '^\s*end\>'
     let ind = ind + &sw
   endif
-  if cline =~# '^\s*-\=%>\s*$'
+  if line !~# '^\s*<%' && line =~# '%>\s*$'
+    let ind = ind - &sw
+  endif
+  if cline =~# '^\s*[-=]\=%>\s*$'
     let ind = ind - &sw
   endif
   return ind
 endfunction
 
-" vim:set sw=2 sts=2 ts=8 noet ff=unix:
+" vim:set sw=2 sts=2 ts=8 noet:

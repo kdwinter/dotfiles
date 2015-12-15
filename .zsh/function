@@ -33,17 +33,19 @@ function gco() {
   if [ -z "$1" ]; then
     git checkout master
   else
-    git checkout $1
+    git checkout $*
   fi
 }
 
 function mkmine() { sudo chown -R ${USER} ${1:-.}; }
+
 # Usage: sanitize <file>
 function sanitize() {
   chmod -R u=rwX,go=rX "$@"
   chown -R ${USER}.users "$@"
 }
 
+# roll archive.tar.gz dir/**/*
 function roll() {
   local FILE
   FILE=$1
@@ -95,14 +97,6 @@ function cd() {
   ll
 }
 
-# md2html Apptitle FOO.md
-function md2html() {
-  local title file
-  title=$1
-  file=$2
-  ronn --html README.md --style toc --organization=$title --manual=$title $file
-}
-
 # marks
 export MARKPATH=$HOME/.marks
 
@@ -121,3 +115,58 @@ function unmark() {
 function marks() {
   ls -l $MARKPATH | sed 's/  / /g' | cut -d' ' -f9- | sed 's/@//g' && echo
 }
+
+function conf() {
+  case $1 in
+    i3)         vim ~/.config/i3/config      ;;
+    termite)    vim ~/.config/termite/config ;;
+    awesome)    vim ~/.config/awesome/rc.lua ;;
+    zsh)        vim ~/.zshrc                 ;;
+    xinit)      vim ~/.xinitrc               ;;
+    xresources) vim ~/.Xresources            ;;
+    xdefaults)  vim ~/.Xdefaults             ;;
+    irssi)      vim ~/.irssi/config          ;;
+    vim)        vim ~/.vimrc                 ;;
+    gvim)       vim ~/.gvimrc                ;;
+    conky)      vim ~/.conkyrc               ;;
+    *) echo "Unknown app: $1" || return 1    ;;
+  esac
+}
+
+# replace_in_files Node.root.title Node.root_title
+function replace_in_files() {
+  local search="$1" replace="$2"
+  echo "Replacing ${search} with ${replace}..."
+  grep -rl "${search}" | xargs sed -i "s/${search}/${replace}/g"
+}
+
+function git_changelog() {
+  local v1="$1" v2="$2"
+  git log --pretty=format:%s $v1..$v2 . | sort | awk '$0="* "$0'
+}
+
+function play() {
+  # Skip DASH manifest for speed purposes. This might actually disable
+  # being able to specify things like 'bestaudio' as the requested format,
+  # but try anyway.
+  # Get the best audio that isn't WebM, because afplay doesn't support it.
+  # Use "$*" so that quoting the requested song isn't necessary.
+  youtube-dl --default-search=ytsearch: \
+             --youtube-skip-dash-manifest \
+             --output="${TMPDIR:-/tmp/}%(title)s-%(id)s.%(ext)s" \
+             --restrict-filenames \
+             --format="bestaudio[ext!=webm]" \
+             --exec=cvlc "$*"
+}
+
+function mp3() {
+  # Get the best audio, convert it to MP3, and save it to the current
+  # directory.
+  youtube-dl --default-search=ytsearch: \
+             --restrict-filenames \
+             --format=bestaudio \
+             --extract-audio \
+             --audio-format=mp3 \
+             --audio-quality=1 "$*"
+}
+

@@ -6,7 +6,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-highlight Normal gui=none guifg=#dddddd guibg=grey0 ctermbg=233
+highlight Normal gui=none guifg=#dddddd guibg=grey0 ctermbg=232
 highlight Comment term=none ctermfg=243 ctermbg=none gui=none guifg=#767676
 highlight Constant term=none ctermfg=111 gui=none guifg=#87afff
 highlight String term=none ctermfg=215 ctermbg=none gui=none guifg=#ffaf5f
@@ -76,7 +76,7 @@ highlight SpecialKey term=underline ctermfg=darkgray gui=none guifg=darkgray
 highlight NonText term=none ctermfg=black gui=none guifg=black
 highlight StatusLineNC term=none gui=none guifg=black guibg=darkgray gui=none ctermfg=black ctermbg=darkgray cterm=none gui=none
 if version >= 700
-  highlight CursorLine term=none cterm=none ctermbg=235 gui=none guibg=#262626
+  highlight CursorLine term=none cterm=none ctermbg=233 gui=none guibg=#262626
   highlight ColorColumn term=none cterm=none ctermbg=239 gui=none guibg=#4e4e4e
   highlight CursorColumn term=none cterm=none ctermbg=235 gui=none guibg=#262626
   highlight LineNr term=none ctermfg=58 ctermbg=none guifg=#5f5f00 guibg=bg

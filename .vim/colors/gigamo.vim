@@ -23,7 +23,7 @@
 "           :unlet g:gvim_background
 "       To  disable the  feature permanently,  simply remove
 "       the line from your .vimrc file.
-"       Lastly you can also just uncomment the line below here.        
+"       Lastly you can also just uncomment the line below here.
 
 "let g:gvim_background=1
 
@@ -35,7 +35,7 @@ if exists("syntax_on")
 endif
 let colors_name = "gigamo"
 
-if exists("g:gvim_background") 
+if exists("g:gvim_background")
   hi Normal     guifg=#f8f8f8   guibg=#141414   ctermfg=255   ctermbg=233
   hi LineNr     guifg=#808080   guibg=#141414   ctermfg=244   ctermbg=233
   hi NonText    guifg=#808080   guibg=#303030   ctermfg=244   ctermbg=236
@@ -47,7 +47,7 @@ else
   hi TabLineSel guifg=black     guibg=#f0f0f0   gui=bold      ctermfg=black   cterm=bold  ctermbg=none
 endif
 
-hi Cursor       guifg=none      guibg=#586068   ctermfg=none  ctermbg=240
+hi Cursor       guibg=#586068   ctermbg=240
 
 hi StatusLine   guifg=#f0f0f0   guibg=#4f4a50   ctermfg=254   ctermbg=238
 hi StatusLineNC guifg=#c0c0c0   guibg=#5f5a60   ctermfg=251   ctermbg=241
@@ -56,7 +56,7 @@ hi VertSplit    guifg=#5f5a60   guibg=#5f5a60   ctermfg=60
 hi Folded       guifg=#a0a8b0   guibg=#384048   ctermfg=247   ctermbg=237
 
 hi Comment      guifg=#5f5a60   ctermfg=241
-hi Todo         guifg=#808080   guibg=none      gui=bold      ctermfg=244     ctermbg=none    cterm=bold
+hi Todo         guifg=#808080   guibg=None      gui=bold      ctermfg=244     ctermbg=None    cterm=bold
 hi Constant     guifg=#cf6a4c   ctermfg=209
 hi String       guifg=#ddf2a4   ctermfg=229
 hi Type         ctermfg=83
