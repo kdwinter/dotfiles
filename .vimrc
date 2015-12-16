@@ -33,7 +33,7 @@ if has('gui_running')
     "set guifont=CMU\ Typewriter\ Text\ 8
     "set guifont=Fira\ Mono\ 7
     "set guifont=PragmataPro\ 7
-    set guifont=Inconsolata\ Bold\ 10.3
+    set guifont=Inconsolata\ Bold\ 8.5
     "set guifont=Liberation\ Mono\ 9
     "set guifont=limey\ 8
     "set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 9
@@ -47,7 +47,7 @@ if has('gui_running')
     "set guifont=neep\ alt\ medium\ 8
     "set guifont=Ubuntu\ Mono \8
     "set guifont=Courier\ New\ 9
-    "set noanti
+    set noanti
   endif
 "elseif (&term =~ 'screen' || &term =~ 'linux')
 elseif (&term =~ 'linux')
@@ -57,13 +57,13 @@ elseif (&term =~ 'linux')
   set nocursorline
   colo desert
 else
-  "set background=dark
-  set background=light
+  set background=dark
+  "set background=light
   set t_Co=256
   "colo distinguished
   "colo desert
   "colo vimbrant
-  let g:solarized_termcolors=256
+  "let g:solarized_termcolors=256
   "let g:onedark_termcolors=256
   "colo tomorrownight
   "colo twilight2
@@ -72,11 +72,11 @@ else
   set termencoding=utf-8
   "colo smyck
   "colo gotham
-  "colo gruvbox
+  colo gruvbox
   "colo badwolf
   "colo sunburst2
   "colo PaperColor-Dark
-  colo solarized
+  "colo solarized
   "colo onedark
   "colo github
 endif
