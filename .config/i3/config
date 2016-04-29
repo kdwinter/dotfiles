@@ -63,7 +63,7 @@ bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace @
+bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -73,7 +73,7 @@ bindsym $mod+Shift+1 move window to workspace 1
 bindsym $mod+Shift+2 move window to workspace 2
 bindsym $mod+Shift+3 move window to workspace 3
 bindsym $mod+Shift+4 move window to workspace 4
-bindsym $mod+Shift+5 move window to workspace @
+bindsym $mod+Shift+5 move window to workspace 5
 bindsym $mod+Shift+6 move window to workspace 6
 bindsym $mod+Shift+7 move window to workspace 7
 bindsym $mod+Shift+8 move window to workspace 8
@@ -99,6 +99,9 @@ exec --no-startup-id dropbox start &
 exec --no-startup-id unclutter &
 exec --no-startup-id setxkbmap be &
 exec --no-startup-id xset r rate 300 40 &
+#exec --no-startup-id /usr/lib/notification-daemon-1.0/notification-daemon &
+exec --no-startup-id xflux -l 51 -g 3.983333 &
+exec --no-startup-id "i3-msg 'workspace 3; append_layout /home/gig/.config/i3/workspace_3.json'"
 
 # assign apps
 assign [class="Pidgin"] 1
@@ -107,7 +110,7 @@ assign [class="Firefox|Aurora|Chromium"] 2
 # config apps
 for_window [instance="Navigator" class="Firefox|Aurora"] border none
 for_window [title="^Source of" class="Firefox|Aurora"] floating enable
-for_window [class="Pidgin"] floating enable
+#for_window [class="Pidgin"] floating enable
 for_window [class="Thunar"] floating enable
 for_window [class="Lxappearance"] floating enable
 for_window [class="VLC"] floating enable

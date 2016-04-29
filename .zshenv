@@ -18,7 +18,6 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LOCALE=en_US.UTF-8
 export BROWSER='firefox'
-export PACKAGER='Gigamo <gigamo@gmail.com>'
 #export OOO_FORCE_DESKTOP='gnome'
 export EDITOR=vim
 export VISUAL=vim
@@ -31,7 +30,9 @@ export CLICOLOR=1 # Needed in OSX somehow
 export RACK_ENV=development
 export RAILS_ENV=development
 #export GEM_HOME=$HOME/.gem/ruby/2.1.0
-export GEM_HOME=$(ruby -e 'print Gem.user_dir')
+export ANDROID_HOME=/opt/android-sdk-linux
+#export GEM_HOME=$(ruby -e 'print Gem.user_dir')
+export GEM_HOME="/home/gig/.gem/ruby/2.2.0"
 export TERM=xterm-256color
 
 bindkey "\e[1~" beginning-of-line

@@ -33,7 +33,7 @@ if has('gui_running')
     "set guifont=CMU\ Typewriter\ Text\ 8
     "set guifont=Fira\ Mono\ 7
     "set guifont=PragmataPro\ 7
-    set guifont=Inconsolata\ Bold\ 8.5
+    set guifont=Inconsolata\ 10.3
     "set guifont=Liberation\ Mono\ 9
     "set guifont=limey\ 8
     "set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 9
@@ -73,6 +73,7 @@ else
   "colo smyck
   "colo gotham
   colo gruvbox
+  "colo darktooth
   "colo badwolf
   "colo sunburst2
   "colo PaperColor-Dark
@@ -89,6 +90,7 @@ set mat=5               " duration to show matching brace
 set autoread            " reload files automagically
 set viminfo='1000,f1,:100,@100,/20
 set shm=atI             " disable intro screen
+set nospell             " no spell checking
 set ul=150              " only undo up to 150 times
 set lz                  " don't redraw screen during macros
 set tf                  " improves redrawing for newer computers

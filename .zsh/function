@@ -129,6 +129,7 @@ function conf() {
     vim)        vim ~/.vimrc                 ;;
     gvim)       vim ~/.gvimrc                ;;
     conky)      vim ~/.conkyrc               ;;
+    emacs)      vim ~/.spacemacs             ;;
     *) echo "Unknown app: $1" || return 1    ;;
   esac
 }

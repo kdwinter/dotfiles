@@ -23,18 +23,15 @@ alias -s {mp3,ogg,wav,flac}='vlc'
 # auto open web addresses
 alias -s {html,php,com,net,org,gov}='firefox'
 # auto open regular files
-alias -s txt='vim'
+alias -s txt='gvim'
 alias -s pdf='firefox'
 
 alias mplayer='mplayer -idx'
 alias wcat='wget -q -O -'
 alias v='vim'
 alias dirsizes='du -h -d 1'
-
 alias ruby_test_file='RAILS_ENV=test ruby -I"lib:test"'
-
 alias flux='xflux -l 51 -g 3.983333'
-
 alias j='jump'
-
 alias sumount='sudo mount -o gid=users,fmask=113,dmask=002'
+alias fucking='sudo'

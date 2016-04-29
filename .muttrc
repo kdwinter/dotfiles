@@ -1,11 +1,11 @@
 # Credits to Thayer Williams (cinderwick.ca) for this one
 #
-#source ~/.mutt/colors.vimbrant
+source ~/.mutt/colors.vimbrant
 #source ~/.mutt/colors.lightr
 #source ~/.mutt/colors.solarized
-source ~/.mutt/colors.solarizedlight
+#source ~/.mutt/colors.solarizedlight
 
-set realname = "some name"
+set realname = "Name"
 set from = "username@gmail.com"
 set imap_user = "username@gmail.com"
 #set imap_pass = "password"
@@ -111,7 +111,5 @@ macro index,pager go    "<change-folder><<enter>"                  "go to sent m
 macro index,pager gt    "<change-folder>+[Gmail]/Trash<enter>"     "go to trash"
 macro index,pager gl    "<change-folder>-<enter>"                  "go to last folder"
 
-# mutt-sidebar required
 set sidebar_visible = yes
 macro index,pager b "<enter-command>toggle sidebar_visible<enter>" "toggle sidebar"
-

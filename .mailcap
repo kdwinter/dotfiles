@@ -1,1 +1,2 @@
 image/*; /usr/bin/feh %s
+text/html; /usr/bin/firefox %s

@@ -46,6 +46,7 @@
 "colo summerfruit256
 "colo PaperColor
 
-let g:badwolf_darkgutter = 1
-colo badwolf
+"let g:badwolf_darkgutter = 1
+"colo badwolf
+colo darktooth
 "colo onedark
