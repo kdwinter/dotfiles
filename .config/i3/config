@@ -2,17 +2,16 @@
 set $mod Mod4
 #font pango: Fantasque Sans Mono 16
 #font pango: San Francisco Text Medium 17
-#font pango: Fira Sans Medium 8.5
+#font pango: Fira Sans Medium 17
 #font pango: Fixedsys Excelsior 3.01 18
 #font pango: Inconsolata 17.5
-#font pango: Fakt Pro SemiBold 9
-#font pango: Input Mono 9
-font pango: DinC 9
+#font pango: Fakt Pro SemiBold 17
+font pango: DinC 16
 floating_modifier $mod
 default_orientation horizontal
 workspace_layout default
 #new_window normal 2
-new_window pixel 1
+new_window pixel 3
 workspace_auto_back_and_forth no
 focus_follows_mouse no
 
@@ -81,27 +80,23 @@ bindsym $mod+Shift+9 move window to workspace 9
 
 # other keys
 bindsym $mod+Return exec termite
-bindsym $mod+r exec dmenu_run -fn 'neep-10' -nb '#121314' -sb '#18191A' -nf '#757575' -sf '#CDFF00'
+bindsym $mod+r exec dmenu_run -fn 'cure-8' -nb '#121314' -sb '#18191A' -nf '#757575' -sf '#CDFF00'
 
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
+bindsym XF86AudioRaiseVolume exec amixer -D pulse -q set Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -D pulse -q set Master 5%- unmute
+bindsym XF86AudioMute exec amixer -D pulse -q set Master toggle
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
-bindsym $mod+v exec i3lock -i /home/gig/Pictures/lock.png
+#bindsym $mod+v exec i3lock -i /home/gig/Pictures/lock2.png
+bindsym $mod+v exec "$HOME/Scripts/lockscreen"
 
 # autostart
-exec --no-startup-id sh /home/gig/.fehbg &
-#exec --no-startup-id nm-applet &
-exec --no-startup-id dropbox start &
-exec --no-startup-id unclutter &
-exec --no-startup-id setxkbmap be &
-exec --no-startup-id xset r rate 300 40 &
-#exec --no-startup-id /usr/lib/notification-daemon-1.0/notification-daemon &
-exec --no-startup-id xflux -l 51 -g 3.983333 &
-exec --no-startup-id "i3-msg 'workspace 3; append_layout /home/gig/.config/i3/workspace_3.json'"
+exec --no-startup-id sh /home/gig/.fehbg
+exec --no-startup-id nm-applet
+exec --no-startup-id dropbox start
+exec --no-startup-id unclutter
 
 # assign apps
 assign [class="Pidgin"] 1
@@ -110,7 +105,7 @@ assign [class="Firefox|Aurora|Chromium"] 2
 # config apps
 for_window [instance="Navigator" class="Firefox|Aurora"] border none
 for_window [title="^Source of" class="Firefox|Aurora"] floating enable
-#for_window [class="Pidgin"] floating enable
+for_window [class="Pidgin"] floating enable
 for_window [class="Thunar"] floating enable
 for_window [class="Lxappearance"] floating enable
 for_window [class="VLC"] floating enable
@@ -122,13 +117,13 @@ set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
-# window colors
 #                       border              background         text                 indicator
-client.focused          $inactive-text-color $inactive-text-color $bg-color            #00ff00
+client.focused          $inactive-text-color $inactive-text-color $bg-color         #00ff00
 client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
+# colors                border  bg      text    indicator
 #client.focused          #859900 #859900 #fdf6e3 #2e9ef4
 #client.focused_inactive #268bd2 #268bd2 #fdf6e3 #484e50
 #client.unfocused        #333333 #93a1a1 #fdf6e3 #292d2e
@@ -169,8 +164,8 @@ mode "layout" {
 
 bindsym $mod+b mode "border"
 mode "border" {
-  bindsym 1 border pixel 2; mode "default"
-  bindsym 2 border normal 2; mode "default"
+  bindsym 1 border pixel 3; mode "default"
+  bindsym 2 border normal 3; mode "default"
   bindsym 3 border none; mode "default"
   bindsym Return mode "default"
   bindsym Escape mode "default"
@@ -181,7 +176,7 @@ mode "i3wm" {
   bindsym 1 reload; mode "default"
   bindsym 2 restart; mode "default"
   bindsym 3 exit; mode "default"
-  bindsym 4 exec i3lock -i /home/gig/Pictures/lock.png && systemctl suspend; mode "default"
+  bindsym 4 exec i3lock -i /home/gig/Pictures/lock2.png && systemctl suspend; mode "default"
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }
@@ -193,12 +188,11 @@ bar {
   workspace_buttons yes
   #font pango: Fantasque Sans Mono 16
   #font pango: San Francisco Text Medium 17
-  #font pango: Fira Sans Medium 8.5
+  #font pango: Fira Sans Medium 17
   #font pango: Fixedsys Excelsior 3.01 18
   #font pango: Inconsolata 17.5
-  #font pango: Fakt Pro SemiBold 9
-  #font pango: Input Mono 9
-  font pango: DinC 9
+  #font pango: Fakt Pro SemiBold 17
+  font pango: DinC 16
   status_command ~/Scripts/i3bar_exec
 
   colors {
@@ -252,4 +246,3 @@ bar {
     #urgent_workspace   #ff7700 #dd6600 #EEEEEE
   }
 }
-

@@ -44,7 +44,10 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages
+   '(
+     dracula-theme
+     )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages
    '(
@@ -104,24 +107,31 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
+   dotspacemacs-themes '(majapahit-dark
+                         jazz
+                         spolsky
+                         lush
+                         soothe
+                         professional
+                         spacemacs-dark
                          spacemacs-light
                          solarized-light
                          solarized-dark
                          leuven
                          monokai
+                         wilson
                          zenburn)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    ;dotspacemacs-default-font '("Inconsolata"
-   ;                            :size 10.5
+   ;                            :size 8.5
    ;                            :weight normal
    ;                            :width normal
    ;                            :powerline-scale 1.2)
-   dotspacemacs-default-font '("Terminus"
-                               :size 8
+   dotspacemacs-default-font '("VT323"
+                               :size 8.0
                                :weight normal
                                :width normal
                                :powerline-scale 1.2)
@@ -279,3 +289,4 @@ layers configuration. You are free to put any user code."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+

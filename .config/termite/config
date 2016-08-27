@@ -3,33 +3,19 @@ scroll_on_output = false
 scroll_on_keystroke = true
 audible_bell = false
 mouse_autohide = false
-#allow_bold = true
+allow_bold = false
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
-#font = CMU Typewriter Text 9.5
-#font = Ubuntu Mono 9.5
-#font = Fixedsys Excelsior 3.01 12
-#font = Fira Mono Medium 9
-#font = PragmataPro 10
-#font = DejaVu Sans Mono 9.2
-#font = Inconsolata 10.3
-#font = Monaco 9.3
-font = Terminus 8
-#font = PxPlus IBM VGA8 10
-allow_bold = false
-#font = Fantasque Sans Mono 10
-#font = neep 10
-#font = Anonymous Pro Bold 10
-#font = Input Mono 8
-#font = Average Mono 10
-#font = CodingFontTobi 12
-#font = Hermit 9
-#font = Consola Mono 9
-#font = Courier Prime Code 9
-#font = CPMono_v07 8
-#font = Iosevka 9
-#font = ProggyCleanTT 12
+#font = CMU Typewriter Text 8
+#font = Fixedsys Excelsior 3.01 9
+#font = Fira Mono Medium 8
+#font = PragmataPro 7
+#font = DejaVu Sans Mono 7.7
+#font = Inconsolata 8.5
+font = VT323 8
+#font = Input Mono 6.5
+#font = DinC Regular 8
 scrollback_lines = 10000
 search_wrap = true
 #icon_name = terminal
@@ -94,14 +80,14 @@ color15 = #ebdbb2
 #[colors]
 #foreground = #657b83
 #foreground_bold = #073642
-#foreground_dim = #888888
+##foreground_dim = #888888
 #background = #fdf6e3
 #cursor = #586e75
-
-# if unset, will reverse foreground and background
-#highlight = #839496
-
-# colors from color0 to color254 can be set
+#
+## if unset, will reverse foreground and background
+##highlight = #839496
+#
+## colors from color0 to color254 can be set
 #color0 = #073642
 #color1 = #dc322f
 #color2 = #859900
