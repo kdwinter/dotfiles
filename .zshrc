@@ -27,7 +27,7 @@ if [ "$TERM" = "linux" ]; then
   clear # back to default input colours
 fi
 
-. /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+. /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 . ~/.zsh/ssh-agent-plugin.zsh
 

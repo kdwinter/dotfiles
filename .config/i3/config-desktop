@@ -1,0 +1,300 @@
+# i3 config
+set $mod Mod4
+#font pango: Fantasque Sans Mono 16
+#font pango: San Francisco Text Medium 17
+#font pango: Fira Sans Medium 17
+#font pango: Fixedsys Excelsior 3.01 18
+#font pango: Inconsolata 17.5
+#font pango: Fakt Pro SemiBold 17
+#font pango: DinC 16
+#font pango: Fira Sans Medium 9
+#font pango: xos4 Terminus 8
+#font pango: Roboto Medium 9
+#font pango: Roboto Medium, FontAwesome 10
+#font pango: jmk Neep, FontAwesome 8
+font pango: DinC, FontAwesome 9
+floating_modifier $mod
+default_orientation horizontal
+workspace_layout default
+#new_window normal 2
+new_window pixel 2
+workspace_auto_back_and_forth no
+focus_follows_mouse no
+
+gaps inner 15
+gaps outer 0
+
+set $WS1 "1:  main"
+set $WS2 "2:  browser"
+set $WS3 "3:  code"
+set $WS4 "4:  code"
+set $WS5 "5:  voip"
+set $WS6 "6:  steam"
+set $WS7 "7:  music"
+set $WS8 "8"
+set $WS9 "9"
+set $WS0 "0"
+
+# mons = DVI-I-1 and HDMI-0
+
+# assign workspaces
+workspace $WS1 output DVI-I-1
+workspace $WS2 output HDMI-0
+workspace $WS3 output DVI-I-1
+workspace $WS4 output DVI-I-1
+workspace $WS5 output HDMI-0
+workspace $WS6 output HDMI-0
+workspace $WS7 output HDMI-0
+workspace $WS8 output DVI-I-1
+workspace $WS9 output DVI-I-1
+workspace $WS0 output DVI-I-1
+
+# wm keys
+bindsym $mod+w kill
+
+bindsym $mod+Left focus left
+bindsym $mod+Right focus right
+bindsym $mod+Up focus up
+bindsym $mod+Down focus down
+
+bindsym $mod+h focus left
+bindsym $mod+l focus right
+bindsym $mod+k focus up
+bindsym $mod+j focus down
+
+bindsym $mod+Tab focus right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Down move down
+
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+l move right
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+j move down
+
+bindsym $mod+a split h
+bindsym $mod+z split v
+
+bindsym $mod+f fullscreen
+bindsym $mod+g floating toggle
+bindsym $mod+Space focus mode_toggle
+
+bindsym $mod+1 workspace $WS1
+bindsym $mod+2 workspace $WS2
+bindsym $mod+3 workspace $WS3
+bindsym $mod+4 workspace $WS4
+bindsym $mod+5 workspace $WS5
+bindsym $mod+6 workspace $WS6
+bindsym $mod+7 workspace $WS7
+bindsym $mod+8 workspace $WS8
+bindsym $mod+9 workspace $WS9
+bindsym $mod+0 workspace $WS0
+
+bindsym $mod+Shift+1 move window to workspace $WS1
+bindsym $mod+Shift+2 move window to workspace $WS2
+bindsym $mod+Shift+3 move window to workspace $WS3
+bindsym $mod+Shift+4 move window to workspace $WS4
+bindsym $mod+Shift+5 move window to workspace $WS5
+bindsym $mod+Shift+6 move window to workspace $WS6
+bindsym $mod+Shift+7 move window to workspace $WS7
+bindsym $mod+Shift+8 move window to workspace $WS8
+bindsym $mod+Shift+9 move window to workspace $WS9
+bindsym $mod+Shift+0 move window to workspace $WS0
+
+# other keys
+bindsym $mod+Return exec termite
+bindsym $mod+r exec dmenu_run -fn 'jmk Neep-8' -nb '#121314' -sb '#18191A' -nf '#757575' -sf '#CDFF00'
+
+bindsym XF86AudioRaiseVolume exec amixer -D pulse -q set Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -D pulse -q set Master 5%- unmute
+bindsym XF86AudioMute exec amixer -D pulse -q set Master toggle
+
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
+#bindsym $mod+v exec i3lock -i /home/gig/Pictures/lock2.png
+bindsym $mod+v exec "$HOME/Scripts/lockscreen"
+
+# autostart
+exec_always --no-startup-id sh /home/gig/.fehbg
+exec_always --no-startup-id setxkbmap be
+exec_always --no-startup-id xset m 0 0
+exec_always --no-startup-id xset r rate 350 40
+exec_always --no-startup-id xinput set-prop 11 'libinput Accel Speed' -0.5
+#exec --no-startup-id dropbox start
+exec --no-startup-id unclutter
+exec --no-startup-id xrandr --output DVI-I-1 --mode 1920x1080 --rate 144
+exec --no-startup-id redshift-gtk
+
+# assign apps
+assign [class="Pidgin"] $WS1
+assign [class="Firefox|Aurora|Chromium"] $WS2
+assign [class="discord"] $WS5
+assign [class="Steam"] $WS6
+
+# config apps
+for_window [instance="Navigator" class="Firefox|Aurora"] border none
+for_window [title="^Source of" class="Firefox|Aurora"] floating enable
+for_window [class="Steam"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Pidgin"] floating enable
+for_window [class="Thunar"] floating enable
+for_window [class="Lxappearance"] floating enable
+for_window [class="VLC"] floating enable
+for_window [title="^TeamSpeak"] floating enable
+for_window [class="discord"] border none
+
+set $bg-color            #131313
+set $inactive-bg-color   #2f343f
+set $text-color          #f3f4f5
+set $inactive-text-color #676E7D
+set $urgent-bg-color     #E53935
+
+#                       border              background         text                 indicator
+client.focused          $inactive-text-color $inactive-text-color $bg-color         #222222
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #222222
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #222222
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #222222
+
+# colors                border  bg      text    indicator
+#client.focused          #859900 #859900 #fdf6e3 #2e9ef4
+#client.focused_inactive #268bd2 #268bd2 #fdf6e3 #484e50
+#client.unfocused        #333333 #93a1a1 #fdf6e3 #292d2e
+#client.urgent           #d33682 #d33682 #fdf6e3 #dc322f
+#client.background       #073642
+
+#client.focused          #458588 #83a598 #282828 #282828
+#client.focused_inactive #1d2021 #3c3836 #ebdbb2 #282828
+#client.unfocused        #1d2021 #3c3836 #ebdbb2 #282828
+#client.urgent           #cc241d #fb4934 #ebdbb2 #282828
+#client.background       #282828
+
+#client.focused          #cccccc #cccccc #222222 #222222
+#client.focused_inactive #191919 #191919 #999999 #222222
+#client.unfocused        #191919 #191919 #999999 #222222
+#client.urgent           #FF7700 #dd6600 #eeeeee #222222
+#client.background       #121212
+
+#client.focused          #bcd8ff #7086a8 #242224 #222222
+#client.focused_inactive #242224 #242224 #cbc6cc #222222
+#client.unfocused        #242224 #242224 #cbc6cc #222222
+#client.urgent           #b3d6ae #748c71 #242224 #222222
+
+#client.focused          #006699 #005577 #EEEEEE #543857
+#client.focused_inactive #232323 #121314 #757575 #222222
+#client.unfocused        #232323 #121314 #757575 #222222
+#client.urgent           #FF7700 #DD6600 #EEEEEE #87292E
+
+# modes
+bindsym $mod+m mode "layout"
+mode "layout" {
+  bindsym 1 layout stacking; mode "default"
+  bindsym 2 layout tabbed; mode "default"
+  bindsym 3 layout toggle split; mode "default"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+bindsym $mod+b mode "border"
+mode "border" {
+  bindsym 1 border pixel 2; mode "default"
+  bindsym 2 border normal 2; mode "default"
+  bindsym 3 border none; mode "default"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+bindsym $mod+i mode "i3wm"
+mode "i3wm" {
+  bindsym 1 reload; mode "default"
+  bindsym 2 restart; mode "default"
+  bindsym 3 exit; mode "default"
+  bindsym 4 exec i3lock -i /home/gig/Pictures/wallhaven-29165.jpg && systemctl suspend; mode "default"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+bar {
+  mode dock
+  modifier $mod
+  position top
+  workspace_buttons yes
+  font pango: DinC, FontAwesome 9
+  #status_command i3status -c "~/.config/i3/i3status.conf"
+  status_command ~/Scripts/i3bar_exec_secondary
+  output DVI-I-1
+  tray_output HDMI-0
+
+  colors {
+    background $bg-color
+    separator #757575
+    #                  border             background         text
+    focused_workspace  $bg-color          $text-color        $bg-color
+    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+    urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+  }
+}
+
+bar {
+  mode dock
+  modifier $mod
+  position top
+  workspace_buttons yes
+  font pango: DinC, FontAwesome 9
+  status_command ~/Scripts/i3bar_exec_main
+  output HDMI-0
+  tray_output HDMI-0
+
+  colors {
+    background $bg-color
+    separator #757575
+    #                  border             background         text
+    focused_workspace  $bg-color          $text-color        $bg-color
+    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+    urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+
+    #background #073642
+    #statusline #eee8d5
+
+    #background #282828
+    #statusline #ebdbb2
+
+    #background #19171a
+    #statusline #cbc6cc
+
+    #background #121314
+    #statusline #FFFFFF
+
+    # workspace:       border  bg      text
+    #focused_workspace  #cb4b16 #cb4b16 #eee8d5
+    #active_workspace   #cb4b16 #cb4b16 #eee8d5
+    #inactive_workspace #b58900 #b58900 #eee8d5
+    #urgent_workspace   #cb4b16 #dc322f #eee8d5
+
+    # workspace:       border  bg      text
+    #focused_workspace  #458588 #83a598 #282828
+    #active_workspace   #1d2021 #282828 #ebdbb2
+    #inactive_workspace #1d2021 #3c3836 #ebdbb2
+    #urgent_workspace   #cc241d #fb4934 #ebdbb2
+
+    # workspace:       border  bg      text
+    #focused_workspace  #006699 #005577 #eeeeee
+    #active_workspace   #5f5f5f #101010 #101010
+    #inactive_workspace #252525 #1a1a1a #5f5f5f
+    #urgent_workspace   #ff7700 #dd6600 #eeeeee
+
+    # workspace:       border  bg      text
+    #focused_workspace  #bcd8ff #7086a8 #242224
+    #active_workspace   #bcd8ff #7086a8 #cbc6cc
+    #inactive_workspace #242224 #19171a #cbc6cc
+    #urgent_workspace   #b3d6ae #748c71 #242224
+
+    # workspace:       border  bg  text
+    #focused_workspace  #006699 #005577 #EEEEEE
+    #active_workspace   #006699 #005577 #EEEEEE
+    #inactive_workspace #232323 #121314 #FFFFFF
+    #urgent_workspace   #ff7700 #dd6600 #EEEEEE
+  }
+}

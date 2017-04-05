@@ -1,0 +1,144 @@
+out_to_x no
+own_window no
+out_to_console yes
+background no
+max_text_width 0
+total_run_times 0
+cpu_avg_samples 2
+override_utf8_locale no
+double_buffer no
+short_units yes
+if_up_strictness address
+update_interval 7.0
+
+TEXT
+
+[\
+  {\
+    "full_text": "KERNEL",\
+    "color": "\#676E7D",\
+    "separator": false,\
+    "separator_block_width": 6\
+  },\
+  {\
+    "full_text": "${kernel}",\
+    "color": "\#f3f4f5",\
+    "separator": false\
+  },\
+  {\
+    "full_text": "SSD /",\
+    "color": "\#676E7D",\
+    "separator": false,\
+    "separator_block_width": 6\
+  },\
+  {\
+    "full_text": "${fs_used /}/${fs_size /}",\
+    "color": "\#f3f4f5",\
+    "separator": false\
+  },\
+  {\
+    "full_text": "SSD /home",\
+    "color": "\#676E7D",\
+    "separator": false,\
+    "separator_block_width": 6\
+  },\
+  {\
+    "full_text": "${fs_used /home}/${fs_size /home}",\
+    "color": "\#f3f4f5",\
+    "separator": false\
+  },\
+  {\
+    "full_text": "HDD E",\
+    "color": "\#676E7D",\
+    "separator": false,\
+    "separator_block_width": 6\
+  },\
+  {\
+    "full_text": "${fs_used /mnt/E}/${fs_size /mnt/E}",\
+    "color": "\#f3f4f5",\
+    "separator": false\
+  },\
+  {\
+    "full_text": "HDD F",\
+    "color": "\#676E7D",\
+    "separator": false,\
+    "separator_block_width": 6\
+  },\
+  {\
+    "full_text": "${fs_used /mnt/F}/${fs_size /mnt/F}",\
+    "color": "\#f3f4f5",\
+    "separator": false\
+  },\
+  {\
+    "full_text": "TEMP",\
+    "color": "\#676E7D",\
+    "separator": false,\
+    "separator_block_width": 6\
+  },\
+  {\
+    "full_text": "${hwmon 0 temp 3}°C",\
+    "color": ${if_match ${hwmon 0 temp 3}<80}"\#f3f4f5"${else}"\#FF3B77"${endif},\
+    "separator": false\
+  },\
+  {\
+    "full_text": "LOAD",\
+    "color": "\#676E7D",\
+    "separator": false,\
+    "separator_block_width": 6\
+  },\
+  {\
+    "full_text": "${loadavg}",\
+    "color": "\#f3f4f5",\
+    "separator": false\
+  },\
+  {\
+    "full_text": "CPU",\
+    "color": "\#676E7D",\
+    "separator": false,\
+    "separator_block_width": 6\
+  },\
+  {\
+    "full_text": "${exec cat /proc/cpuinfo | grep "cpu MHz" | sort -nr | head -1 | sed "s/\..*//" | sed "s/.*: //"}MHz, ${cpu cpu0}%",\
+    "color": ${if_match ${cpu cpu0}<85}"\#f3f4f5"${else}"\#FF3B77"${endif},\
+    "separator": false\
+  },\
+  {\
+    "full_text": "MEM",\
+    "color": "\#676E7D",\
+    "separator": false,\
+    "separator_block_width": 6\
+  },\
+  {\
+    "full_text": "${mem}, ${memperc}%",\
+    "color": ${if_match ${memperc}<85}"\#f3f4f5"${else}"\#FF3B77"${endif},\
+    "separator": false\
+  },\
+  {\
+    "full_text": "VPN",\
+    "color": "\#676E7D",\
+    "separator": false,\
+    "separator_block_width": 6\
+  },\
+  {\
+    "full_text": "${if_up tun0}${exec nordvpn status | head -1 | sed "s/.*_//"}${else}Off${endif}",\
+    "color": ${if_up tun0}"\#3BFF77"${else}"\#FF3B77"${endif},\
+    "separator": false\
+  },\
+  {\
+    "full_text": "TIME",\
+    "color": "\#676E7D",\
+    "separator": false,\
+    "separator_block_width": 6\
+  },\
+  {\
+    "full_text": "${time %a %e %b %H:%M}",\
+    "color": "\#f3f4f5",\
+    "separator": false\
+  },\
+  {\
+    "full_text": "TRAY",\
+    "color": "\#676E7D",\
+    "separator": false,\
+    "separator_block_width": 6\
+  }\
+],
