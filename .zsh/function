@@ -54,6 +54,7 @@ function roll() {
     *.tbz2)     shift && tar cjf $FILE $* ;;
     *.tar.gz)   shift && tar czf $FILE $* ;;
     *.tgz)      shift && tar czf $FILE $* ;;
+    *.tar.xz)   shift && tar cJf $FILE $* ;;
     *.zip)      shift && zip $FILE $*     ;;
     *.rar)      shift && rar $FILE $*     ;;
   esac
@@ -130,6 +131,8 @@ function conf() {
     gvim)       vim ~/.gvimrc                ;;
     conky)      vim ~/.conkyrc               ;;
     emacs)      vim ~/.spacemacs             ;;
+    rtorrent)   vim ~/.rtorrent.rc           ;;
+    dlna)       vim ~/.config/minidlna/minidlna.conf ;;
     *) echo "Unknown app: $1" || return 1    ;;
   esac
 }
@@ -160,7 +163,7 @@ function play() {
              --exec=cvlc "$*"
 }
 
-function mp3() {
+function download_mp3() {
   # Get the best audio, convert it to MP3, and save it to the current
   # directory.
   youtube-dl --default-search=ytsearch: \
@@ -171,3 +174,11 @@ function mp3() {
              --audio-quality=1 "$*"
 }
 
+function killsteam() {
+  if [[ -f ~/.steampid ]]; then
+    local steampid=$(cat ~/.steampid)
+    kill -9 $steampid
+  else
+    echo "Steam is not running."
+  fi
+}

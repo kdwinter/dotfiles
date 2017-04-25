@@ -12,12 +12,13 @@ clickable_url = true
 #font = Fira Mono Medium 8
 #font = PragmataPro 7
 #font = DejaVu Sans Mono 7.7
-#font = Inconsolata 10
+font = Inconsolata Bold 9
 #font = VT323 8
 #font = Input Mono 6.5
 #font = DinC Regular 8
 #font = xos4 Terminus 8
-font = jmk Neep 7.0
+#font = jmk Neep 7.0
+#font = Inconsolata Bold 8.5
 #font = artwiz smoothansi 8
 #font = -*-lemon-medium-r-*-*-*-*-*-*-*-*-*-*
 scrollback_lines = 10000
@@ -52,32 +53,56 @@ browser = firefox
 #border_width = 0.5
 #roundness = 2.0
 
+# PaperColor colors
+
+[colors]
+background = #F5F5F5
+foreground = #4d4d4c
+foreground_bold = #4d4d4d
+
+color0 = #272727
+color8 = #363636
+
+color1 = #D40000
+color9 = #FF2222
+color2 = #005F87
+color10 = #00AAD4
+color3 = #FF4500
+color11 = #FF6830
+color4 = #354857
+color12 = #728391
+color5 = #438EAD
+color13 = #3EAEC9
+color6 = #20786D
+color14 = #34AF9F
+color7 = #818ea2
+color15 = #F1F1F1
 
 # Gruvbox colors
 
-[colors]
+#[colors]
 # hard contrast: background = #1d2021
 # soft contrast: background = #32302f
-background = #131313
-foreground = #ebdbb2
-foreground_bold = #ebdbb2
+#background = #131313
+#foreground = #ebdbb2
+#foreground_bold = #ebdbb2
 
-color0 = #282828
-color8 = #928374
-color1 = #cc241d
-color9 = #fb4934
-color2 = #98971a
-color10 = #b8bb26
-color3 = #d79921
-color11 = #fabd2f
-color4 = #458588
-color12 = #83a598
-color5 = #b16286
-color13 = #d3869b
-color6 = #689d6a
-color14 = #8ec07c
-color7 = #a89984
-color15 = #ebdbb2
+#color0 = #282828
+#color8 = #928374
+#color1 = #cc241d
+#color9 = #fb4934
+#color2 = #98971a
+#color10 = #b8bb26
+#color3 = #d79921
+#color11 = #fabd2f
+#color4 = #458588
+#color12 = #83a598
+#color5 = #b16286
+#color13 = #d3869b
+#color6 = #689d6a
+#color14 = #8ec07c
+#color7 = #a89984
+#color15 = #ebdbb2
 
 # Solarized light color scheme
 
