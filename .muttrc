@@ -1,7 +1,7 @@
 # Credits to Thayer Williams (cinderwick.ca) for this one
 #
-source ~/.mutt/colors.vimbrant
-#source ~/.mutt/colors.lightr
+#source ~/.mutt/colors.vimbrant
+source ~/.mutt/colors.lightr
 #source ~/.mutt/colors.solarized
 #source ~/.mutt/colors.solarizedlight
 
@@ -31,14 +31,14 @@ set net_inc = 20
 unset arrow_cursor
 
 set timeout = 15
-set mail_check = 60
-set sort = threads
+set mail_check = 5
+set sort = reverse-threads
 set sort_aux = last-date-received
 set strict_threads
 set sort_re
 set sort_browser = alpha
 set sort_alias = unsorted
-unset move
+set move = no
 unset mark_old
 unset markers
 set menu_scroll
@@ -60,7 +60,7 @@ set pager_format = "[%C/%m] %b  %> %1L (%P)"
 set folder_format = "%2C %t %N %8s %d %f"
 set status_format = "%r %?M?%M/?%m total, %?n?%n new, ?%?u?%u unread, ?%?p?%p drafts, ?%?t?%t +tagged, ?%?d?%d deleted, ?(%f %l)  %?b?%b unread messages. ?%>  %V   sort by: %s/%S  (%P) %r"
 
-set editor="vim +':set tw=77' +':set spell' +':set wrap' +\`awk '/^$/ {print i+2; exit} {i++}' %s\` %s"
+set editor = "vim"
 
 set use_from
 set use_envelope_from
@@ -85,31 +85,33 @@ set attribution = "On %D, %f wrote:"
 set implicit_autoview
 auto_view text/html application/x-pgp-message
 
-alternative_order text/plain text/html text
+alternative_order text/plain text/enriched text/html text
 
 set folder = imaps://imap.gmail.com:993
 set spoolfile = +INBOX
-set mbox = "+[Gmail]/All\ Mail"
+#set mbox = "+'[Gmail]/All\ Mail'"
 set postponed = "+[Gmail]/Drafts"
 set record = "+[Gmail]/Sent Mail"
 set header_cache = ~/.mutt/cache/headers
 set message_cachedir = ~/.mutt/cache/bodies
 unset copy
 unset message_cache_clean
-set imap_keepalive = 300
+set imap_keepalive = 900
+unset imap_passive
+set text_flowed = yes
 
-macro index,pager d "<save-message>+[Gmail]/Trash<enter>" "move to trash"
-macro index,pager A "<save-message>+[Gmail]/All Mail" "archive selected email"
-macro index,pager S "<save-message>+[Gmail]/Spam<enter>" "mark as spam"
+macro index,pager d "<save-message>=[Gmail]/Trash<enter><enter>" "move to trash"
+macro index,pager A "<save-message>=[Gmail]/All<tab><enter><enter>" "archive selected email"
+macro index,pager S "<save-message>=[Gmail]/Spam<enter><enter>" "mark as spam"
 
-macro index,pager gi    "<change-folder>!<enter>"                  "go to inbox"
-macro index,pager ga    "<change-folder>><enter>"                  "go to archived mail"
-macro index,pager gf    "<change-folder>+[Gmail]/Starred<enter>"   "go to flagged"
-macro index,pager gs    "<change-folder>+[Gmail]/Spam<enter>"      "go to spam"
-macro index,pager gd    "<change-folder>+[Gmail]/Drafts<enter>"    "go to drafts"
-macro index,pager go    "<change-folder><<enter>"                  "go to sent mail"
-macro index,pager gt    "<change-folder>+[Gmail]/Trash<enter>"     "go to trash"
-macro index,pager gl    "<change-folder>-<enter>"                  "go to last folder"
+macro index,pager gi "<change-folder>=INBOX<enter>"                  "go to inbox"
+macro index,pager ga "<change-folder>=[Gmail]/All<tab><enter>"                  "go to archived mail"
+macro index,pager gf "<change-folder>=[Gmail]/Starred<enter>"   "go to flagged"
+macro index,pager gs "<change-folder>=[Gmail]/Spam<enter>"      "go to spam"
+macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>"    "go to drafts"
+macro index,pager go "<change-folder>=[Gmail]/Sent<tab><enter>"                  "go to sent mail"
+macro index,pager gt "<change-folder>=[Gmail]/Trash<enter>"     "go to trash"
+macro index,pager gl "<change-folder>-<enter>"                  "go to last folder"
 
-set sidebar_visible = yes
+set sidebar_visible = no
 macro index,pager b "<enter-command>toggle sidebar_visible<enter>" "toggle sidebar"
