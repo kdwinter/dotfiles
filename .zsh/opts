@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/zsh
 #
 # zsh specifics
 
@@ -6,12 +6,9 @@
 autoload -U compinit
 compinit
 
-autoload zmv				#	for renaming better than your mother named you
+autoload zmv
 
-autoload -U zfinit			#	For initializing zftp
-zfinit
-
-autoload -U zcalc			#	for mathhhh
+autoload -U zcalc
 
 HOSTNAME="$(hostname)"
 HOSTNAME_SHORT="${HOSTNAME%%.*}"
@@ -24,7 +21,6 @@ SAVEHIST=5000
 # type a dir's name to cd into it
 #compctl -/ cd
 
-# Some options..
 setopt autopushd pushdminus pushdsilent pushdtohome
 setopt autocd
 setopt cdablevars
@@ -35,8 +31,9 @@ setopt banghist
 setopt noclobber
 setopt hist_reduce_blanks
 setopt hist_ignore_space
+setopt histignorespace
 setopt SH_WORD_SPLIT
-setopt nobeep                  # i hate beeps
+setopt nobeep
 setopt automenu
 setopt autopushd               # automatically append dirs to the push/pop list
 setopt pushdignoredups         # and don't duplicate them
@@ -48,4 +45,4 @@ setopt completeinword          # not just at the end
 setopt alwaystoend             # when complete from middle, move cursor
 setopt nopromptcr              # don't add \n which overwrites cmds with no \n
 setopt histverify              # when using ! cmds, confirm first
-setopt interactivecomments     # escape commands so i can use them later
+setopt interactivecomments     # escape commands to use them later

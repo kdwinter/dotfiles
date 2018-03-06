@@ -1,39 +1,50 @@
-#!/bin/zsh
+#!/usr/bin/zsh
 
 case $TERM in
-  *xterm*|rxvt|rxvt-unicode|rxvt-256color|(dt|k|E)term)
-    precmd () { print -Pn "\e]0;%n %# %~\a" }
-    preexec () { print -Pn "\e]0;%n %# %~ ($1)\a" }
+  *xterm*|rxvt|rxvt-unicode|rxvt-256color|(dt|k|E)term|st-256color)
+    precmd() { print -Pn "\e]0;%n %# %~\a" }
+    preexec() { print -Pn "\e]0;%n %# %~ ($1)\a" }
   ;;
   screen)
-    precmd () {
+    precmd() {
       print -Pn "\e]83;title \"$1\"\a"
       print -Pn "\e]0;$TERM - (%L) [%n]%# [%~]\a"
     }
-    preexec () {
+    preexec() {
       print -Pn "\e]83;title \"$1\"\a"
       print -Pn "\e]0;$TERM - (%L) [%n]%# [%~] ($1)\a"
     }
   ;;
 esac
 
+vcs_info_wrapper() {
+  vcs_info
+  if [ -n "$vcs_info_msg_0_" ]; then
+    echo "%{$fg[grey]%}${vcs_info_msg_0_}%{$reset_color%}$del"
+  fi
+}
+
 setprompt() {
   autoload -U colors zsh/terminfo
+  #autoload -Uz vcs_info
   colors
   setopt prompt_subst
   PR_NO_COLOR="%{$terminfo[sgr0]%}"
   for color in BLACK RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
     eval PR_$color='%{$terminfo[bold]$fg[${(L)color}]%}'
     eval PR_LIGHT_$color='%{$fg[${(L)color}]%}'
+    eval BG_$color='%{$terminfo[bold]$bg[${(L)color}]%}'
   done
+  #PROMPT=$'[%n@%m ${PR_LIGHT_BLUE}%~${PR_NO_COLOR}]$ '
 
   #PROMPT=$'${PR_LIGHT_BLACK}[${PR_LIGHT_YELLOW}%n${PR_LIGHT_BLACK}][${PR_LIGHT_RED}%~${PR_LIGHT_BLACK}] %#${PR_NO_COLOR} '
   #RPROMPT=$'${PR_LIGHT_GREEN}%~${PR_NO_COLOR}'
   #PROMPT=$'${PR_LIGHT_YELLOW}%n${PR_LIGHT_CYAN}@${PR_LIGHT_GREEN}%m${PR_LIGHT_WHITE}:${PR_LIGHT_RED}%#${PR_LIGHT_CYAN}->${PR_LIGHT_YELLOW}%~${PR_LIGHT_WHITE} (${PR_LIGHT_GREEN}%?${PR_LIGHT_CYAN})
 #> ${PR_NO_COLOR}'
   #PROMPT=$'${PR_LIGHT_BLUE}%n${PR_NO_COLOR} ${PR_LIGHT_CYAN}%~${PR_NO_COLOR} ${PR_RED}→${PR_NO_COLOR} '
-  PROMPT=$'${PR_LIGHT_BLUE}%~${PR_NO_COLOR} ${PR_RED}>${PR_NO_COLOR} '
-  #PROMPT=$'[%n ${PR_RED}%~${PR_NO_COLOR}]%# '
+  #PROMPT=$'${PR_LIGHT_BLUE}%~${PR_NO_COLOR} ${PR_RED}>${PR_NO_COLOR} '
+  PROMPT=$'${PR_LIGHT_WHITE}[${PR_LIGHT_BLUE}%n${PR_LIGHT_WHITE}@${PR_LIGHT_CYAN}%m${PR_LIGHT_WHITE}:${PR_BLUE}%~${PR_NO_COLOR}${PR_LIGHT_WHITE}]%#${PR_NO_COLOR} '
+  #RPROMPT=$'$(vcs_info_wrapper)'
 }
 
 if [[ -n "$TERM" && -z "$EMACS" ]]; then

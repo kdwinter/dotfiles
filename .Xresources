@@ -1,0 +1,8 @@
+Xft.autohint: false
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xft.hinting: true
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.dpi: 96
+Xcursor.theme: Breeze_Obsidian

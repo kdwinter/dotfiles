@@ -2,4 +2,4 @@
 #
 # Variables accessable by all config files
 
-HOSTNAME=$(hostname)
+#HOSTNAME=$(hostname)

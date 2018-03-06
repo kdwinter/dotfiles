@@ -1,55 +1,77 @@
 # i3 config
 set $mod Mod4
-#font pango: Fantasque Sans Mono 16
-#font pango: San Francisco Text Medium 17
-#font pango: Fira Sans Medium 17
-#font pango: Fixedsys Excelsior 3.01 18
-#font pango: Inconsolata 17.5
-#font pango: Fakt Pro SemiBold 17
-#font pango: DinC 16
-#font pango: Fira Sans Medium 9
-#font pango: xos4 Terminus 8
-#font pango: Roboto Medium 9
-#font pango: Roboto Medium, FontAwesome 10
+#font pango: FontAwesome, Roboto Medium 9
+#font pango: FontAwesome, Cantarell Bold 9
 #font pango: jmk Neep, FontAwesome 8
-#font pango: Roboto Medium, FontAwesome 9
-font pango: FontAwesome, Inconsolata Bold 9
-#font pango: xos4 Terminus, FontAwesome 8
+#font pango: FontAwesome, Inconsolata Bold 9.5
+#font pango: FontAwesome, Hack Bold 8
+#font pango: FontAwesome, Iosevka Medium 10
+#font pango: FontAwesome, Fantasque Sans Mono Bold 9
+#font pango: FontAwesome, SF Text Medium 9
+#font pango: FontAwesome, Ubuntu Mono Bold 10
+#font pango: FontAwesome, artwiz lemon 8
+#font pango: FontAwesome, artwiz smoothansi 10
+#font pango: FontAwesome, Archivo Narrow Bold 10
+#font pango: FontAwesome, IBM Plex Sans SemiBold 9
+font pango: FontAwesome, Flanders Art Sans Medium 9
+#font pango: FontAwesome, Fira Sans Medium 9
+#font pango: FontAwesome, Overpass SemiBold 9
+#font pango: FontAwesome, xos4 Terminus 8
+#font pango: FontAwesome, Operator Mono 9
+#font: -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font pango: FontAwesome, Misc Fixed 9
+#font pango: FontAwesome, Circular Std Medium Regular 10
+#font pango: FontAwesome, Dina 8
+#font pango: FontAwesome, lucy tewi 8
+#font pango: FontAwesome, DejaVu Sans Mono SemiBold 8
+#font pango: FontAwesome, Ubuntu Medium 9
+#font pango: FontAwesome, San Francisco Display Bold 9
 floating_modifier $mod
 default_orientation horizontal
 workspace_layout default
-#new_window normal 2
-new_window pixel 2
+new_window pixel 1
+#new_window normal 1
 workspace_auto_back_and_forth no
 focus_follows_mouse no
 
-gaps inner 5
+gaps inner 15
 gaps outer 0
+#smart_gaps on
 
-set $WS1 "1:"
-set $WS2 "2:"
-set $WS3 "3:"
-set $WS4 "4:"
-set $WS5 "5:"
-set $WS6 "6:"
-set $WS7 "7:"
-set $WS8 "8:"
-set $WS9 "9:9"
-set $WS0 "0:0"
+set $WS1 "1:MAIN"
+set $WS2 "2:WEB"
+set $WS3 "3:CODE"
+set $WS4 "4:CODE"
+set $WS5 "5:CHAT"
+set $WS6 "6:STEAM"
+set $WS7 "7:MEDIA"
+set $WS8 "8:MEDIA"
+set $WS9 "9:GAME"
+set $WS0 "0:MAIL"
+#set $WS1 "1: main"
+#set $WS2 "2: web"
+#set $WS3 "3: code"
+#set $WS4 "4: code"
+#set $WS5 "5: chat"
+#set $WS6 "6: steam"
+#set $WS7 "7: media"
+#set $WS8 "8: media"
+#set $WS9 "9: game"
+#set $WS0 "0: mail"
 
-# mons = DVI-I-1 and HDMI-0
+# mons = DVI-D-0 and DisplayPort-0
 
 # assign workspaces
-workspace $WS1 output DVI-I-1
-workspace $WS2 output HDMI-0
-workspace $WS3 output DVI-I-1
-workspace $WS4 output DVI-I-1
-workspace $WS5 output HDMI-0
-workspace $WS6 output HDMI-0
-workspace $WS7 output HDMI-0
-workspace $WS8 output DVI-I-1
-workspace $WS9 output DVI-I-1
-workspace $WS0 output DVI-I-1
+workspace $WS1 output DisplayPort-0
+workspace $WS2 output DVI-D-0
+workspace $WS3 output DisplayPort-0
+workspace $WS4 output DisplayPort-0
+workspace $WS5 output DVI-D-0
+workspace $WS6 output DVI-D-0
+workspace $WS7 output DVI-D-0
+workspace $WS8 output DisplayPort-0
+workspace $WS9 output DisplayPort-0
+workspace $WS0 output DisplayPort-0
 
 # wm keys
 bindsym $mod+w kill
@@ -83,6 +105,8 @@ bindsym $mod+f fullscreen
 bindsym $mod+g floating toggle
 bindsym $mod+Space focus mode_toggle
 
+bindsym $mod+s sticky toggle
+
 bindsym $mod+1 workspace $WS1
 bindsym $mod+2 workspace $WS2
 bindsym $mod+3 workspace $WS3
@@ -106,54 +130,92 @@ bindsym $mod+Shift+9 move window to workspace $WS9
 bindsym $mod+Shift+0 move window to workspace $WS0
 
 # other keys
-bindsym $mod+Return exec termite
-bindsym $mod+r exec dmenu_run -fn 'jmk Neep-8' -nb '#121314' -sb '#18191A' -nf '#757575' -sf '#CDFF00'
+bindsym $mod+Return exec st
+#bindsym $mod+r exec dmenu_run -fn 'xos4 Terminus-8'
+#bindsym $mod+r exec dmenu_run -fn 'Inconsolata-10' -nb '#121314' -sb '#18191A' -nf '#757575' -sf '#CDFF00'
+bindsym $mod+r exec /home/gig/Scripts/rofi_dmenu
+#bindsym $mod+r exec xfce4-appfinder
+bindsym $mod+Mod1+c exec --no-startup-id compton -b
+bindsym $mod+Mod1+x exec --no-startup-id pkill compton
 
-bindsym XF86AudioRaiseVolume exec amixer -D pulse -q set Master 5%+ unmute
-bindsym XF86AudioLowerVolume exec amixer -D pulse -q set Master 5%- unmute
-bindsym XF86AudioMute exec amixer -D pulse -q set Master toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse -q set Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse -q set Master 5%- unmute
+bindsym XF86AudioMute exec --no-startup-id amixer -D pulse -q set Master toggle
+bindsym XF86AudioPlay exec --no-startup-id cmus-remote -u
+bindsym XF86AudioNext exec --no-startup-id cmus-remote -n
+bindsym XF86AudioPrev exec --no-startup-id cmus-remote -r
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 #bindsym $mod+v exec i3lock -i /home/gig/Pictures/lock2.png
-bindsym $mod+v exec "$HOME/Scripts/lockscreen"
+#bindsym $mod+v exec "$HOME/Scripts/lockscreen.sh"
+bindsym $mod+v exec /home/gig/.config/i3/i3lock-fancy-multimonitor/lock
 
 # autostart
-exec --no-startup-id sh /home/gig/.fehbg
+#exec --no-startup-id xfce4-panel --disable-wm-check
+exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id setxkbmap be
 exec_always --no-startup-id xset m 0 0
 exec_always --no-startup-id xset r rate 350 40
-exec_always --no-startup-id xinput set-prop 11 'libinput Accel Speed' -0.5
-#exec --no-startup-id dropbox start
-exec --no-startup-id unclutter
-exec --no-startup-id xrandr --output DVI-I-1 --mode 1920x1080 --rate 144
-exec --no-startup-id redshift-gtk
+exec_always --no-startup-id xinput set-prop 12 'libinput Accel Speed' 0
+exec --no-startup-id compton -b
+exec --no-startup-id nm-applet &
+exec --no-startup-id unclutter &
+#exec --no-startup-id xrandr --output DisplayPort-0 --mode 2560x1440 --rate 144
+exec --no-startup-id redshift-gtk -l 50.5:4.4 &
+exec --no-startup-id /usr/lib/notify-osd/notify-osd &
 
 # assign apps
 assign [class="Pidgin"] $WS1
 assign [class="Firefox|Aurora|Chromium"] $WS2
 assign [class="discord"] $WS5
 assign [class="Steam"] $WS6
+assign [class="Steam.exe"] $WS6
+assign [class="evolution|Evolution"] $WS0
 
 # config apps
 for_window [instance="Navigator" class="Firefox|Aurora"] border none
 for_window [title="^Source of" class="Firefox|Aurora"] floating enable
 for_window [class="Steam"] floating enable
+for_window [class="Steam.exe"] floating enable
+for_window [class="Wine"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Pidgin"] floating enable
 for_window [class="Thunar"] floating enable
 for_window [class="Lxappearance"] floating enable
 for_window [class="Vlc"] floating enable
+for_window [class="mpv"] floating enable
+for_window [class="mpv"] border none
+#for_window [class="Keybase"] floating enable
+for_window [class="Pinta"] floating enable
 for_window [title="^TeamSpeak"] floating enable
 for_window [class="discord"] border none
+for_window [title="feh"] floating enable
+for_window [title="QEMU"] floating enable
+for_window [class="qemu-system-x86_64"] floating enable
+for_window [class="Qemu-system-x86_64"] floating enable
+for_window [class="synergy"] floating enable
+for_window [class="Sxiv"] floating enable
+for_window [class="xfce4-appfinder"] floating enable
+for_window [class="Xfce4-appfinder"] floating enable
 
-client.focused              #222222 #222222 #00AAD4 #DDDDDD     #005F87
-client.focused_inactive     #666666 #666666 #F9F9F9 #111111     #444444
-#client.unfocused            #666666 #666666 #F9F9F9 #111111     #444444
-client.urgent               #4A4A4A #4A4A4A #FDFDFD #FDFDFD     #4A4A4A
+client.background           #151d22
+# state                 border  bg      text    indicator
+client.focused          #0074D9 #0074D9 #ffffff #2e9ef4
+client.focused_inactive #272F44 #272F44 #888888 #484e50
+client.unfocused        #040C11 #040C11 #888888 #292d2e
+client.urgent           #F82222 #D60000 #ffffff #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000
 
-client.background           #111111
+#client.background           #F5F5F5
+# state                 border  bg      text    indicator
+#client.focused          #0074D9 #0074D9 #ffffff #2e9ef4
+#client.focused_inactive #CDCDCD #F5F5F5 #888888 #484e50
+#client.unfocused        #CDCDCD #E5E5E5 #888888 #292d2e
+#client.urgent           #F82222 #D60000 #ffffff #900000
+#client.placeholder      #000000 #0c0c0c #ffffff #000000
+
 
 # modes
 bindsym $mod+m mode "layout"
@@ -167,8 +229,8 @@ mode "layout" {
 
 bindsym $mod+b mode "border"
 mode "border" {
-  bindsym 1 border pixel 2; mode "default"
-  bindsym 2 border normal 2; mode "default"
+  bindsym 1 border pixel 1; mode "default"
+  bindsym 2 border normal 1; mode "default"
   bindsym 3 border none; mode "default"
   bindsym Return mode "default"
   bindsym Escape mode "default"
@@ -179,7 +241,7 @@ mode "i3wm" {
   bindsym 1 reload; mode "default"
   bindsym 2 restart; mode "default"
   bindsym 3 exit; mode "default"
-  bindsym 4 exec i3lock -i /home/gig/Pictures/wallhaven-29165.jpg && systemctl suspend; mode "default"
+  bindsym 4 exec --no-startup-id /home/gig/Scripts/lock_and_suspend.sh; mode "default"
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }
@@ -189,27 +251,58 @@ bar {
   modifier $mod
   position top
   workspace_buttons yes
-  #font pango: Roboto Medium, FontAwesome 9
-  font pango: FontAwesome, Inconsolata Bold 9
-  #font pango: xos4 Terminus, FontAwesome 8
+  #font pango: FontAwesome, Roboto Medium 9
+  #font pango: FontAwesome, Cantarell Bold 9
+  #font pango: FontAwesome, Inconsolata Bold 9.5
+  #font pango: FontAwesome, Hack Bold 8
+  #font pango: FontAwesome, Ubuntu Mono Bold 10
+  #font pango: FontAwesome, artwiz lemon 8
+  #font pango: FontAwesome, artwiz smoothansi 10
+  #font pango: FontAwesome, Iosevka Medium 10
+  #font pango: FontAwesome, Fantasque Sans Mono Bold 9
+  #font pango: FontAwesome, SF Text Medium 9
+  #font pango: FontAwesome, Archivo Narrow Bold 10
+  #font pango: FontAwesome, IBM Plex Sans SemiBold 9
+  font pango: FontAwesome, Flanders Art Sans Medium 9
+  #font pango: FontAwesome, Fira Sans Medium 9
+  #font pango: FontAwesome, Overpass SemiBold 9
+  #font pango: FontAwesome, xos4 Terminus 8
+  #font pango: FontAwesome, Operator Mono 9
+  #font: -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+  #font pango: FontAwesome, Circular Std Medium Regular 10
+  #font pango: FontAwesome, Dina 8
+  #font pango: FontAwesome, lucy tewi 8
+  #font pango: FontAwesome, DejaVu Sans Mono SemiBold 8
+  #font pango: FontAwesome, Ubuntu Medium 9
+  #font pango: FontAwesome, San Francisco Display Bold 9
   #status_command i3status -c "~/.config/i3/i3status.conf"
-  status_command ~/Scripts/i3bar_exec_secondary
-  output DVI-I-1
-  tray_output HDMI-0
+  i3bar_command i3bar -t
+  status_command /home/gig/Scripts/i3bar_exec_main
+  output DVI-D-0
+  tray_output DVI-D-0
   strip_workspace_numbers yes
-  height 20
+  height 26
 
   colors {
-    background #004E76
-    statusline #FFFFFF
-    focused_background #005F87
-    focused_statusline #FFFFFF
-    separator  #FF9955
-#                        border  backgr   text
-    focused_workspace   #00AAD4 #00AAD4 #F9F9F9
-    active_workspace    #F9F9F9 #F9F9F9 #00AAD4
-    inactive_workspace  #F9F9F9 #F9F9F9 #000000
-    urgent_workspace    #272727 #272727 #00AAD4
+    statusline #606060
+    background #040c11aa
+    focused_statusline #606060
+    focused_background #151d22aa
+    #separator  #FF9955
+    #                  border  backgr  text
+    focused_workspace  #0074D9 #0074D9 #FFFFFF
+    active_workspace   #151d22 #151d22 #FFFFFF
+    inactive_workspace #373f44 #373f44 #CCCACA
+    urgent_workspace   #D60000 #D60000 #FFFFFF
+#    statusline #888888
+#    background #E5E5E5
+#    focused_statusline #888888
+#    focused_background #F5F5F5
+#    #separator  #FF9955
+#    #                  border  backgr  text
+#    focused_workspace  #2296FB #0074D9 #FFFFFF
+#    inactive_workspace #CDCDCD #E5E5E5 #151d22
+#    urgent_workspace   #F82222 #D60000 #FFFFFF
   }
 }
 
@@ -218,25 +311,48 @@ bar {
   modifier $mod
   position top
   workspace_buttons yes
-  #font pango: Roboto Medium, FontAwesome 9
-  font pango: FontAwesome, Inconsolata Bold 9
-  #font pango: xos4 Terminus, FontAwesome 8
-  status_command ~/Scripts/i3bar_exec_main
-  output HDMI-0
-  tray_output HDMI-0
+  #font pango: FontAwesome, Roboto Medium 9
+  #font pango: FontAwesome, Cantarell Bold 9
+  #font pango: FontAwesome, Inconsolata Bold 9.5
+  #font pango: FontAwesome, Hack Bold 8
+  #font pango: FontAwesome, Ubuntu Mono Bold 10
+  #font pango: FontAwesome, artwiz lemon 8
+  #font pango: FontAwesome, artwiz smoothansi 10
+  #font pango: FontAwesome, Iosevka Medium 10
+  #font pango: FontAwesome, Fantasque Sans Mono Bold 9
+  #font pango: FontAwesome, SF Text Medium 9
+  #font pango: FontAwesome, Archivo Narrow Bold 10
+  #font pango: FontAwesome, IBM Plex Sans SemiBold 9
+  font pango: FontAwesome, Flanders Art Sans Medium 9
+  #font pango: FontAwesome, Fira Sans Medium 9
+  #font pango: FontAwesome, Overpass SemiBold 9
+  #font pango: FontAwesome, xos4 Terminus 8
+  #font pango: FontAwesome, Operator Mono 9
+  #font: -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+  #font pango: FontAwesome, Circular Std Medium Regular 10
+  #font pango: FontAwesome, Dina 8
+  #font pango: FontAwesome, lucy tewi 8
+  #font pango: DejaVu Sans Mono SemiBold 8
+  #font pango: FontAwesome, Ubuntu Medium 9
+  #font pango: FontAwesome, Montserrat Medium 8
+  #font pango: FontAwesome, San Francisco Display Bold 9
+  i3bar_command i3bar -t
+  status_command /home/gig/Scripts/i3bar_exec_secondary
+  output DisplayPort-0
+  tray_output DVI-D-0
   strip_workspace_numbers yes
-  height 20
+  height 26
 
   colors {
-    background #004E76
-    statusline #FFFFFF
-    focused_background #005F87
-    focused_statusline #FFFFFF
-    separator  #FF9955
-#                        border  backgr   text
-    focused_workspace   #00AAD4 #00AAD4 #F9F9F9
-    active_workspace    #F9F9F9 #F9F9F9 #00AAD4
-    inactive_workspace  #F9F9F9 #F9F9F9 #000000
-    urgent_workspace    #272727 #272727 #00AAD4
+    statusline #606060
+    background #040c11aa
+    focused_statusline #606060
+    focused_background #151d22aa
+    #separator  #FF9955
+    #                  border  backgr  text
+    focused_workspace  #0074D9 #0074D9 #FFFFFF
+    active_workspace   #151d22 #151d22 #FFFFFF
+    inactive_workspace #373f44 #373f44 #CCCACA
+    urgent_workspace   #D60000 #D60000 #FFFFFF
   }
 }

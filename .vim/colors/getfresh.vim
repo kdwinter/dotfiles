@@ -16,7 +16,7 @@ let g:colors_name = "getfresh"
 let NormalFG      = '#DDCCBB'
 
 "let NormalFG      = '#30251D'
-let NormalBG      = '#151515'
+let NormalBG      = '#151D22'
 
 let DarkGray      = '#393939'
 let LightGray     = '#AF875F'
@@ -33,8 +33,8 @@ let LightYellow   = '#F7D325'
 let DarkBlue      = '#1CA1DB'
 let LightBlue     = '#00AFDA'
 
-let DarkMagenta   = '#652F90'
-let LightMagenta  = '#894E9F'
+let DarkMagenta   = '#FFFFFF'
+let LightMagenta  = '#FFFFFF'
 
 let DarkCyan      = '#EA7D24'
 let LightCyan     = '#F79321'
@@ -43,7 +43,7 @@ let White         = '#E7E8E9'
 
 " Specific Colors
 let CursorColor   = '#FF8939'
-let CursorLColor  = '#202020'
+let CursorLColor  = '#262E33'
 
 let LineNrFG      = '#555555'
 let LineNrBG      = '#101010'
@@ -66,7 +66,7 @@ let OtherFont     = '-*-neep-medium-*-*-*-10-*-*-*-*-*-*-*'
 exe 'hi Nontext                   guifg='.LightGray
 exe 'hi Normal                    guifg='.NormalFG.'      guibg='.NormalBG
 exe 'hi Cursor                                            guibg='.CursorColor
-exe 'hi CursorLine                                        guibg='.CursorLColor
+exe 'hi CursorLine                cterm=none              guibg='.CursorLColor
 exe 'hi LineNr                    guifg='.LineNrFG.'      guibg='.LineNrBG
 exe 'hi Search                                            guibg='.DarkCyan
 exe 'hi VertSplit                 guifg='.SplitFG.'       guibg='.SplitBG
@@ -114,7 +114,7 @@ exe 'hi xmlEndTag                 guifg='.LightMagenta
 exe 'hi User1                     guifg='.DarkYellow.'  guibg='.StatusBG.'      gui='.GUI
 exe 'hi User2                     guifg='.DarkRed.'     guibg='.StatusBG.'      gui='.GUI
 exe 'hi User3                     guifg='.LightGreen.'  guibg='.StatusBG.'      gui='.GUI
-exe 'hi User4                     guifg='.DarkGray.'    guibg='.DarkMagenta.'   gui='.GUI
+exe 'hi User4                     guifg='.LightGreen.'  guibg='.StatusBG.'   gui='.GUI
 exe 'hi User5                     guifg='.NormalFG.'    guibg='.StatusBG
 exe 'hi User6                     guifg='.LightGray.'   guibg='.StatusBG
 exe 'hi User7                     guifg='.StatusBG.'    guibg='.StatusBG.'      gui='.GUI
@@ -125,7 +125,7 @@ function! InsertStatuslineColor(mode)
   let DarkGray      = '#101010'
   let DarkRed       = '#E84F4F'
   let DarkBlue      = '#7DC1CF'
-  let DarkMagenta   = '#9B64FB'
+  let DarkMagenta   = '#303030'
 
   if a:mode == 'i' " Insert Mode
     exe 'hi User4                 guifg='.DarkGray.'    guibg='.DarkBlue
@@ -134,12 +134,12 @@ function! InsertStatuslineColor(mode)
     exe 'hi User4                 guifg='.DarkGray.'    guibg='.DarkRed
 
   else
-    exe 'hi User4                 guifg='.DarkGray.'    guibg='.DarkMagenta
+    exe 'hi User4                 guifg='.LightGreen.'    guibg='.StatusBG
 
   endif
 endfunction
 
 " Call function
 exe 'au InsertEnter * call InsertStatuslineColor(v:insertmode)'
-exe 'au InsertLeave * hi statusline guifg='.NormalFG.' guibg='.StatusBG
-exe 'au InsertLeave * hi User4      guifg='.DarkGray.' guibg='.DarkMagenta
+exe 'au InsertLeave * hi statusline guifg='.LightGreen.' guibg='.StatusBG
+exe 'au InsertLeave * hi User4      guifg='.LightGreen.' guibg='.StatusBG

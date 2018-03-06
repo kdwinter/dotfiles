@@ -1,6 +1,7 @@
 " Author: Kevin Ballard
 " Description: Helper functions for Rust commands/mappings
 " Last Modified: May 27, 2014
+" For bugs, patches and license go to https://github.com/rust-lang/rust.vim
 
 " Jump {{{1
 
@@ -346,7 +347,7 @@ function! s:RmDir(path)
 		echoerr 'Attempted to delete protected path: ' . a:path
 		return 0
 	endif
-	silent exe "!rm -rf " . shellescape(a:path)
+	return system("rm -rf " . shellescape(a:path))
 endfunction
 
 " Executes {cmd} with the cwd set to {pwd}, without changing Vim's cwd.
@@ -359,7 +360,60 @@ function! s:system(pwd, cmd)
 	return system(cmd)
 endfunction
 
+" Playpen Support {{{1
+" Parts of gist.vim by Yasuhiro Matsumoto <mattn.jp@gmail.com> reused
+" gist.vim available under the BSD license, available at
+" http://github.com/mattn/gist-vim
+function! s:has_webapi()
+    if !exists("*webapi#http#post")
+	try
+	    call webapi#http#post()
+	catch
+	endtry
+    endif
+    return exists("*webapi#http#post")
+endfunction
+
+function! rust#Play(count, line1, line2, ...) abort
+    redraw
+
+    let l:rust_playpen_url = get(g:, 'rust_playpen_url', 'https://play.rust-lang.org/')
+    let l:rust_shortener_url = get(g:, 'rust_shortener_url', 'https://is.gd/')
+
+    if !s:has_webapi()
+	echohl ErrorMsg | echomsg ':RustPlay depends on webapi.vim (https://github.com/mattn/webapi-vim)' | echohl None
+	return
+    endif
+
+    let bufname = bufname('%')
+    if a:count < 1
+	let content = join(getline(a:line1, a:line2), "\n")
+    else
+	let save_regcont = @"
+	let save_regtype = getregtype('"')
+	silent! normal! gvy
+	let content = @"
+	call setreg('"', save_regcont, save_regtype)
+    endif
+
+    let body = l:rust_playpen_url."?code=".webapi#http#encodeURI(content)
+
+    if strlen(body) > 5000
+	echohl ErrorMsg | echomsg 'Buffer too large, max 5000 encoded characters ('.strlen(body).')' | echohl None
+	return
+    endif
+
+    let payload = "format=simple&url=".webapi#http#encodeURI(body)
+    let res = webapi#http#post(l:rust_shortener_url.'create.php', payload, {})
+    let url = res.content
+
+    if exists('g:rust_clip_command')
+	call system(g:rust_clip_command, url)
+    endif
+
+    redraw | echomsg 'Done: '.url
+endfunction
+
 " }}}1
 
-" vim: set noet sw=4 ts=4:
-
+" vim: set noet sw=8 ts=8:

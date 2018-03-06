@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/zsh
 
 . ~/.zsh/vars
 
@@ -12,26 +12,32 @@ alias c='clear'
 #alias ll='ls -ahl | more; echo "\e[1;32m --[\e[1;34m Dirs:\e[1;36m `ls -al | egrep \"^drw\" | wc -l` \e[1;32m|\e[1;35m Files: \e[1;31m`ls -al | egrep -v \"^drw\" | grep -v total | wc -l` \e[1;32m]--"'
 alias ll='ls -aGF; echo "\e[1;32m --[\e[1;34m Dirs:\e[1;36m `ls -al | egrep \"^drw\" | wc -l` \e[1;32m|\e[1;35m Files: \e[1;31m`ls -al | egrep -v \"^drw\" | grep -v total | wc -l` \e[1;32m]--"'
 alias cdc='cd; clear'
-alias ls='ls -GF'
+alias ls='ls -GF --color=auto'
+alias dmesg='dmesg --color=auto'
+alias journalctl_boot_errors="journalctl -b -p err..alert"
 
 # auto open images
-alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}='firefox'
+alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}='sxiv'
 # auto open movies
-alias -s {mpg,mpeg,avi,ogm,wmv,m4v,mp4,mov}='vlc'
+alias -s {mpg,mpeg,avi,ogm,wmv,m4v,mp4,mov,mkv,webm}='mpv'
 # auto open audio
-alias -s {mp3,ogg,wav,flac}='vlc'
+alias -s {mp3,ogg,wav,flac}='cmus'
 # auto open web addresses
-alias -s {html,php,com,net,org,gov}='firefox'
+alias -s {html,php,com,net,org,gov}='firefox-developer'
 # auto open regular files
-alias -s txt='gvim'
-alias -s pdf='firefox'
+alias -s {txt,md,yaml,conf,cr,rs}='vim'
+alias -s pdf='firefox-developer'
 
 alias mplayer='mplayer -idx'
 alias wcat='wget -q -O -'
 alias v='vim'
+alias e='emacs -nw'
 alias dirsizes='du -h -d 1'
-alias ruby_test_file='RAILS_ENV=test ruby -I"lib:test"'
-alias flux='xflux -l 51 -g 3.983333'
+alias ruby_test_file='RAILS_ENV=test bundle exec ruby -I"lib:test"'
 alias j='jump'
 alias sumount='sudo mount -o gid=users,fmask=113,dmask=002'
-alias fucking='sudo'
+
+alias pa_sinks="pacmd list-sinks | grep -e 'name:' -e 'index'"
+alias pa_sources="pacmd list-sources | grep -e device.string -e 'name:'"
+
+#alias steam_wine='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe -no-cef-sandbox'

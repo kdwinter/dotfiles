@@ -33,8 +33,9 @@ if has('gui_running')
     "set guifont=CMU\ Typewriter\ Text\ 8
     "set guifont=Fira\ Mono\ 7
     "set guifont=PragmataPro\ 7
-    set guifont=Inconsolata\ 10.3
+    "set guifont=Inconsolata\ 11
     "set guifont=Liberation\ Mono\ 9
+    set guifont=xos4\ Terminus\ 8
     "set guifont=limey\ 8
     "set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 9
     "set guifont=Fantasque\ Sans\ Mono\ 9
@@ -59,8 +60,19 @@ elseif (&term =~ 'linux')
 else
   set background=dark
   "set background=light
-  set t_Co=256
-  "colo distinguished
+  set mouse=a
+  set termencoding=utf-8
+  if has("termguicolors")     " set true colors
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+  else
+    set t_Co=256
+  endif
+  "colo getfresh
+  "colo digerati
+  "colo archery
+  colo distinguished
   "colo desert
   "colo vimbrant
   "let g:solarized_termcolors=256
@@ -68,18 +80,28 @@ else
   "colo tomorrownight
   "colo twilight2
   "colo landscape
-  set mouse=a
-  set termencoding=utf-8
   "colo smyck
+  "colo tender2
+  "colo breezy
+  "colo github
   "colo gotham
-  colo gruvbox
+  "colo gruvbox
+  "colo fahrenheit
   "colo darktooth
   "colo badwolf
   "colo sunburst2
   "colo PaperColor-Dark
+  "colo space-vim-dark
+  "colo jellybeans
   "colo solarized
   "colo onedark
-  "colo github
+  "colo archery
+  "colo acme
+  "colo PaperColor
+  "colo summerfruit256
+  "colo github_new
+  "colo materialbox
+  "colo rakr
 endif
 
 set listchars=eol:¬,trail:…
@@ -102,15 +124,15 @@ set hid                 " allow hidden buffers
 set tm=500              " lower timeout for mappings
 set cot=menu            " don't show extra info on completions
 set report=0            " always report when lines are changed
-set shell=/bin/zsh      " set default shell
+set shell=/usr/bin/zsh  " set default shell
 set vb                  " don't beep
 set t_vb=               " ^
 set nofoldenable        " dont autofold
-"set foldmethod=indent   " marks foldstarts/ends with {{{ }}}
-set foldmethod=syntax
+set foldmethod=indent   " marks foldstarts/ends with {{{ }}}
+"set foldmethod=syntax
 set foldlevel=1
 set foldnestmax=10
-set tabstop=2           " a n-space tab width
+set tabstop=8           " a n-space tab width
 set shiftwidth=2        " allows the use of < and > for VISUAL indenting
 set softtabstop=2       " counts n spaces when DELETE or BCKSPCE is used
 set textwidth=78        " in new gvim windows
@@ -157,30 +179,30 @@ set scrolloff=8                " start scrolling at 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
-"function! IsHelp()
-"  return &buftype=='help'?' (help) ':''
-"endfunction
+function! IsHelp()
+  return &buftype=='help'?' (help) ':''
+endfunction
 "
-"function! GetName()
-"  return expand("%:t")==''?'<none>':expand("%:t")
-"endfunction
+function! GetName()
+  return expand("%:t")==''?'<none>':expand("%:t")
+endfunction
 
-"set statusline=%3*[%1*%{GetName()}%3*]%3*
-"set statusline+=%7*%{&modified?'\ (modified)':'\ '}%3*
-"set statusline+=%5*%{IsHelp()}%3*
-"set statusline+=%6*%{&readonly?'\ (read-only)\ ':'\ '}%3*
-"set statusline+=%3*enc:%4*%{strlen(&fenc)?&fenc:'none'}%3*\ \
-"set statusline+=%3*ff:%4*%{&ff}%3*\ \
-"set statusline+=%3*ft:%4*%{strlen(&ft)?&ft:'<none>'}\ \
-""set statusline+=%3*tab:%4*%{&ts}
-""set statusline+=%3*,%4*%{&sts}
-""set statusline+=%3*,%4*%{&sw}
-""set statusline+=%3*,%4*%{&et?'et':'noet'}\ \
-"set statusline+=%<%3*pwd:%4*%{getcwd()}\ \
-"set statusline+=%9*%=
-"set statusline+=%3*col:%4*%c\ \
-"set statusline+=%3*line:%4*%l\ \
-"set statusline+=%3*total:%4*%L\
+set statusline=%3*[%1*%{GetName()}%3*]%3*
+set statusline+=%7*%{&modified?'\ (modified)':'\ '}%3*
+set statusline+=%5*%{IsHelp()}%3*
+set statusline+=%6*%{&readonly?'\ (read-only)\ ':'\ '}%3*
+set statusline+=%3*enc:%4*%{strlen(&fenc)?&fenc:'none'}%3*\ \ 
+set statusline+=%3*ff:%4*%{&ff}%3*\ \ 
+set statusline+=%3*ft:%4*%{strlen(&ft)?&ft:'<none>'}\ \ 
+"set statusline+=%3*tab:%4*%{&ts}
+"set statusline+=%3*,%4*%{&sts}
+"set statusline+=%3*,%4*%{&sw}
+"set statusline+=%3*,%4*%{&et?'et':'noet'}\ \
+set statusline+=%<%3*pwd:%4*%{getcwd()}\ \ 
+set statusline+=%9*%=
+set statusline+=%3*col:%4*%c\ \ 
+set statusline+=%3*line:%4*%l\ \ 
+set statusline+=%3*total:%4*%L
 
 " common save shortcuts
 inoremap <C-s> <esc>:w<cr>a
@@ -223,16 +245,6 @@ let g:Tlist_Sort_Type = 'name'
 let g:Tlist_Enable_Fold_Column = 0
 map <F1> :Tlist<CR>
 
-" MiniBufExplorer
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
-
-" Rails
-let g:rails_subversion = 1
-let g:rails_menu = 2
-
 " NERDTree
 let g:NERDTreeHijackNetrw = 1
 ""let NERDTreeMouseMode=1
@@ -242,33 +254,7 @@ map <F3> :NERDTreeToggle<CR>
 " Git
 let git_diff_spawn_mode=2
 
-" Airline
-let g:airline#extensions#tabline#enabled = 1
-"let g:airline_theme = "gruvbox"
-"let g:airline_theme = "solarized"
-let g:airline_theme = "PaperColor"
-let g:airline_powerline_fonts = 0
-" comment these if powerline fonts are enabled..
-let g:airline_left_sep = ' '
-let g:airline_left_alt_sep = ' '
-let g:airline_right_sep = ' '
-let g:airline_right_alt_sep = ' '
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#right_sep = ' '
-let g:airline#extensions#tabline#right_alt_sep = '|'
-
-function! AirlineInit()
-  let g:airline_section_a = airline#section#create(['mode'])
-  let g:airline_section_b = airline#section#create_left(['%f'])
-  let g:airline_section_c = airline#section#create(['filetype'])
-  let g:airline_section_x = airline#section#create(['%P'])
-  let g:airline_section_y = airline#section#create(['ffenc'])
-  let g:airline_section_z = airline#section#create_right(['%l', '%c'])
-endfunction
-
-let g:gruvbox_contrast_dark = "hard"
-
+let g:vue_disable_preprocessors = 1
 
 if has('autocmd')
   au WinEnter * setlocal cursorline
@@ -326,6 +312,8 @@ if has('autocmd')
 
   au Bufread,BufNewFile *.tpl set ft=liquid
 
+  au BufRead,BufNewFile .spacemacs set ft=lisp
+
   " Compile and run keymappings
   au FileType php map <F6> :!php -f %<CR>
   au FileType python map <F6> :!python %<CR>
@@ -350,7 +338,7 @@ if has('autocmd')
   au VimResized * exe "normal! \<c-w>="
 
   " Airline
-  au VimEnter * call AirlineInit()
+  "au VimEnter * call AirlineInit()
 endif
 
 " Prevent annoying typo

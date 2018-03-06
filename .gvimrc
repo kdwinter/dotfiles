@@ -1,4 +1,4 @@
-"colo railscasts2
+colo railscasts2
 "colo flatland
 "colo sunburst2
 "colo twilight2
@@ -48,5 +48,6 @@
 
 "let g:badwolf_darkgutter = 1
 "colo badwolf
-colo darktooth
+"set background=dark
+"colo darktooth
 "colo onedark

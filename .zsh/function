@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/zsh
 
 # reload zshrc
 function src() {
@@ -27,7 +27,7 @@ function ga()  { git add $* }
 function gl()  { git log $* }
 function gs()  { git status -sb $* }
 function gp()  { git push $* }
-function gc()  { git commit -m "$*" }
+function gc()  { git commit -S -s -m "$*" }
 function gpl() { git pull $* }
 function gco() {
   if [ -z "$1" ]; then
@@ -37,7 +37,9 @@ function gco() {
   fi
 }
 
-function mkmine() { sudo chown -R ${USER} ${1:-.}; }
+function mkmine() {
+  sudo chown -R ${USER} ${1:-.}
+}
 
 # Usage: sanitize <file>
 function sanitize() {
@@ -62,26 +64,29 @@ function roll() {
 
 function extract_archive() {
   local old_dirs current_dirs lower
+
   lower=${(L)1}
   old_dirs=( *(N/) )
+
   case $lower in
-    *.tar.bz2)  tar xvjf $1   ;;
-    *.tar.gz)   tar xvzf $1   ;;
-    *.tar.xz)   tar xvJf $1   ;;
-    *.bz2)      bunzip2 $1    ;;
-    *.rar)      unrar x $1    ;;
-    *.gz)       gunzip $1     ;;
-    *.tar)      tar xvf $1    ;;
-    *.tbz2)     tar xvjf $1   ;;
-    *.tgz)      tar xvzf $1   ;;
-    *.zip)      unzip $1      ;;
-    *.Z)        uncompress $1 ;;
-    *.7z)       7z x $1       ;;
-    *.xz)       unxz $1       ;;
-    *.exe)      cabextract $1 ;;
-    *.lha)      lha e $1      ;;
-    *) echo "Unknown archive type: $1" || return 1 ;;
+    *.tar.bz2)  tar xvjf $@   ;;
+    *.tar.gz)   tar xvzf $@   ;;
+    *.tar.xz)   tar xvJf $@   ;;
+    *.bz2)      bunzip2 $@    ;;
+    *.rar)      unrar x $@    ;;
+    *.gz)       gunzip $@     ;;
+    *.tar)      tar xvf $@    ;;
+    *.tbz2)     tar xvjf $@   ;;
+    *.tgz)      tar xvzf $@   ;;
+    *.zip)      unzip $@      ;;
+    *.Z)        uncompress $@ ;;
+    *.7z)       7z x $@       ;;
+    *.xz)       unxz $@       ;;
+    *.exe)      cabextract $@ ;;
+    *.lha)      lha e $@      ;;
+    *) echo "Unknown archive type: $@" || return 1 ;;
   esac
+
   # Change in to the newly created directory, and
   # list the directory contents, if there is one.
   current_dirs=( *(N/) )
@@ -133,6 +138,7 @@ function conf() {
     emacs)      vim ~/.spacemacs             ;;
     rtorrent)   vim ~/.rtorrent.rc           ;;
     dlna)       vim ~/.config/minidlna/minidlna.conf ;;
+    mutt)       vim ~/.muttrc                ;;
     *) echo "Unknown app: $1" || return 1    ;;
   esac
 }
@@ -181,4 +187,18 @@ function killsteam() {
   else
     echo "Steam is not running."
   fi
+}
+
+function flac2mp3() {
+  local files="$@"
+  for a in $files; do
+    ffmpeg -i "$a" -qscale:a 0 "${a[@]/%flac/mp3}" 2>/dev/null
+  done
+}
+
+function edit_rg() {
+  local search="$1"
+  for f in "$(rg "$search" -l)"; do
+    vim $f
+  done
 }

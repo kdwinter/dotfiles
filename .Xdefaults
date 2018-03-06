@@ -1,0 +1,83 @@
+!URxvt*font: -xos4-terminus-medium-r-normal-*-*-*-*-*-*-*-*-*
+!URxvt*font: xft:Iosevka Term:style=Medium:pixelsize=12.5,xft:M+ 1mn:style=medium:pixelsize=12
+!URxvt*font: xft:SF Mono:style=Semibold:pixelsize=12,xft:M+ 1mn:style=medium:pixelsize=12
+!URxvt*font: xft:Fira Mono:style=Medium:pixelsize=12,xft:M+ 1mn:style=medium:pixelsize=12
+!URxvt*font: xft:Consolas:style=Regular:pixelsize=12,xft:M+ 1mn:style=medium:pixelsize=12
+!URxvt*font: xft:Inconsolata:style=Bold:pixelsize=12,xft:M+ 1mn:style=medium:pixelsize=12
+URxvt*font: -misc-fixed-medium-r-semicondensed--13-*-*-*-c-*-iso10646-1
+
+URxvt*saveLines:        32767
+URxvt*scrollBar:        false
+URxvt*scrollBar_right:  true
+URxvt*loginShell:       true
+URxvt*termName:         rxvt-unicode
+URxvt*secondaryScroll:  true
+URxvt*perl-lib:         /usr/lib/urxvt/perl/
+URxvt*perl-ext-common:  default,matcher,searchable-scrollback
+URxvt*urlLauncher:      firefox
+URxvt*matcher.button:   1
+URxvt*visualBell:       true
+URxvt*keysym.C-u:       perl:matcher
+URxvt*urgentOnBell:     true
+URxvt*shading:          0
+URxvt*inheritPixmap:    false
+
+!URxvt*cursorColor:      #DDCCBB
+!URxvt*tintColor:        #EEEEEE
+!URxvt*background:       #151515
+!URxvt*foreground:       #DDCCBB
+
+!*color0:        #393939
+!*color1:        #BF1E2D
+!*color2:        #9DBA3A
+!*color3:        #F5B915
+!*color4:        #1CA1DB
+!*color5:        #652F90
+!*color6:        #EA7D24
+!*color7:        #E7E8E9
+!*color8:        #AF875F
+!*color9:        #E7212A
+!*color10:       #A9C938
+!*color11:       #F7D325
+!*color12:       #00AFDA
+!*color13:       #894E9F
+!*color14:       #F79321
+!*color15:       #F3F3F4
+
+
+! special
+*.foreground:   #AFF0A8
+*.background:   #151D22
+*.cursorColor:  #cfcfc2
+
+! black
+*.color0:       #2a2e32
+*.color8:       #31363b
+
+! red
+*.color1:       #c0392b
+*.color9:       #f44f4f
+
+! green
+*.color2:       #218058
+*.color10:      #27ae60
+
+! yellow
+*.color3:       #fdbc4b
+*.color11:      #fdbc4b
+
+! blue
+*.color4:       #2980b9
+*.color12:      #0099ff
+
+! magenta
+*.color5:       #8e44ad
+*.color13:      #af81ff
+
+! cyan
+*.color6:       #27aeae
+*.color14:      #31dddd
+
+! white
+*.color7:       #acada1
+*.color15:      #cfd0c2

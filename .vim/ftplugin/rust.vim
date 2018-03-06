@@ -1,8 +1,9 @@
 " Language:     Rust
-" Description:  Vim syntax file for Rust
+" Description:  Vim ftplugin for Rust
 " Maintainer:   Chris Morgan <me@chrismorgan.info>
 " Maintainer:   Kevin Ballard <kevin@sb.org>
-" Last Change:  January 29, 2015
+" Last Change:  June 08, 2016
+" For bugs, patches and license go to https://github.com/rust-lang/rust.vim 
 
 if exists("b:did_ftplugin")
 	finish
@@ -12,13 +13,16 @@ let b:did_ftplugin = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
+augroup rust.vim
+autocmd!
+
 " Variables {{{1
 
 " The rust source code at present seems to typically omit a leader on /*!
 " comments, so we'll use that as our default, but make it easy to switch.
 " This does not affect indentation at all (I tested it with and without
 " leader), merely whether a leader is inserted by default or not.
-if exists("g:rust_bang_comment_leader") && g:rust_bang_comment_leader == 1
+if exists("g:rust_bang_comment_leader") && g:rust_bang_comment_leader != 0
 	" Why is the `,s0:/*,mb:\ ,ex:*/` there, you ask? I don't understand why,
 	" but without it, */ gets indented one space even if there were no
 	" leaders. I'm fairly sure that's a Vim bug.
@@ -35,7 +39,7 @@ silent! setlocal formatoptions+=j
 " otherwise it's better than nothing.
 setlocal smartindent nocindent
 
-if !exists("g:rust_recommended_style") || g:rust_recommended_style == 1
+if !exists("g:rust_recommended_style") || g:rust_recommended_style != 0
 	setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 	setlocal textwidth=99
 endif
@@ -43,7 +47,6 @@ endif
 " This includeexpr isn't perfect, but it's a good start
 setlocal includeexpr=substitute(v:fname,'::','/','g')
 
-" NOT adding .rc as it's being phased out (0.7)
 setlocal suffixesadd=.rs
 
 if exists("g:ftplugin_rust_source_path")
@@ -54,7 +57,33 @@ if exists("g:loaded_delimitMate")
 	if exists("b:delimitMate_excluded_regions")
 		let b:rust_original_delimitMate_excluded_regions = b:delimitMate_excluded_regions
 	endif
-	let b:delimitMate_excluded_regions = delimitMate#Get("excluded_regions") . ',rustLifetimeCandidate,rustGenericLifetimeCandidate'
+
+	let s:delimitMate_extra_excluded_regions = ',rustLifetimeCandidate,rustGenericLifetimeCandidate'
+
+	" For this buffer, when delimitMate issues the `User delimitMate_map`
+	" event in the autocommand system, add the above-defined extra excluded
+	" regions to delimitMate's state, if they have not already been added.
+	autocmd User <buffer>
+		\ if expand('<afile>') ==# 'delimitMate_map' && match(
+		\     delimitMate#Get("excluded_regions"),
+		\     s:delimitMate_extra_excluded_regions) == -1
+		\|  let b:delimitMate_excluded_regions =
+		\       delimitMate#Get("excluded_regions")
+		\       . s:delimitMate_extra_excluded_regions
+		\|endif
+
+	" For this buffer, when delimitMate issues the `User delimitMate_unmap`
+	" event in the autocommand system, delete the above-defined extra excluded
+	" regions from delimitMate's state (the deletion being idempotent and
+	" having no effect if the extra excluded regions are not present in the
+	" targeted part of delimitMate's state).
+	autocmd User <buffer>
+		\ if expand('<afile>') ==# 'delimitMate_unmap'
+		\|  let b:delimitMate_excluded_regions = substitute(
+		\       delimitMate#Get("excluded_regions"),
+		\       '\C\V' . s:delimitMate_extra_excluded_regions,
+		\       '', 'g')
+		\|endif
 endif
 
 if has("folding") && exists('g:rust_fold') && g:rust_fold != 0
@@ -67,7 +96,7 @@ if has("folding") && exists('g:rust_fold') && g:rust_fold != 0
 	endif
 endif
 
-if has('conceal') && exists('g:rust_conceal')
+if has('conceal') && exists('g:rust_conceal') && g:rust_conceal != 0
 	let b:rust_set_conceallevel=1
 	setlocal conceallevel=2
 endif
@@ -82,16 +111,6 @@ xnoremap <silent> <buffer> ]] :call rust#Jump('v', 'Forward')<CR>
 onoremap <silent> <buffer> [[ :call rust#Jump('o', 'Back')<CR>
 onoremap <silent> <buffer> ]] :call rust#Jump('o', 'Forward')<CR>
 
-" %-matching. <:> is handy for generics.
-set matchpairs+=<:>
-" There are two minor issues with it; (a) comparison operators in expressions,
-" where a less-than may match a greater-than later on—this is deemed a trivial
-" issue—and (b) `Fn() -> X` syntax. This latter issue is irremediable from the
-" highlighting perspective (built into Vim), but the actual % functionality
-" can be fixed by this use of matchit.vim.
-let b:match_skip = 's:comment\|string\|rustArrow'
-source $VIMRUNTIME/macros/matchit.vim
-
 " Commands {{{1
 
 " See |:RustRun| for docs
@@ -105,6 +124,15 @@ command! -nargs=* -buffer RustEmitIr call rust#Emit("llvm-ir", <q-args>)
 
 " See |:RustEmitAsm| for docs
 command! -nargs=* -buffer RustEmitAsm call rust#Emit("asm", <q-args>)
+
+" See |:RustPlay| for docs
+command! -range=% RustPlay :call rust#Play(<count>, <line1>, <line2>, <f-args>)
+
+" See |:RustFmt| for docs
+command! -buffer RustFmt call rustfmt#Format()
+
+" See |:RustFmtRange| for docs
+command! -range -buffer RustFmtRange call rustfmt#FormatRange(<line1>, <line2>)
 
 " Mappings {{{1
 
@@ -142,6 +170,7 @@ let b:undo_ftplugin = "
 		\|delcommand RustExpand
 		\|delcommand RustEmitIr
 		\|delcommand RustEmitAsm
+		\|delcommand RustPlay
 		\|nunmap <buffer> <D-r>
 		\|nunmap <buffer> <D-R>
 		\|nunmap <buffer> [[
@@ -156,7 +185,18 @@ let b:undo_ftplugin = "
 
 " }}}1
 
+" Code formatting on save
+if get(g:, "rustfmt_autosave", 0)
+	autocmd BufWritePre *.rs silent! call rustfmt#Format()
+endif
+
+augroup END
+
+set matchpairs+=<:>
+" For matchit.vim (rustArrow stops `Fn() -> X` messing things up)
+let b:match_skip = 's:comment\|string\|rustArrow'
+
 let &cpo = s:save_cpo
 unlet s:save_cpo
 
-" vim: set noet sw=4 ts=4:
+" vim: set noet sw=8 ts=8:
