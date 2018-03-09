@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+#rofi -show run -modi run -location 1 -width 100 -lines 2 -line-margin 0 -line-padding 1 -separator-style none -font "Inconsolata 9" -columns 9 -bw 0 -disable-history -hide-scrollbar -color-window "#222222, #222222, #b1b4b3" -color-normal "#222222, #b1b4b3, #222222, #005577, #b1b4b3" -color-active "#222222, #b1b4b3, #222222, #007763, #b1b4b3" -color-urgent "#222222, #b1b4b3, #222222, #77003d, #b1b4b3" -kb-row-select "Tab" -kb-row-tab ""
+rofi \
+    -show run \
+    -modi run \
+    -font "SF Mono Semibold 12" \
+    -show-icons true \
+    -color-window "#151d23, #262e34, #373f45" \
+    -color-normal "#262e34, #cccaca, #151d23, #8c8f9a, #333131" \
+    -line-padding 1 \
+    -line-margin 0 \
+    -lines 20 \
+    -separator-style none
+
+# vim:ts=4:tw=4
