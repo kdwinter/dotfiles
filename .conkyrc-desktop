@@ -171,10 +171,10 @@ conky.text = [[
     "separator_block_width": 2\
   },\
   {\
-    "full_text": "    ${if_up tun0}ON${else}OFF${endif}  ",\
-    "color": ${if_up tun0}"\#F1F1F1"${else}"\#FFFFFF"${endif},\
+    "full_text": "    ${if_up mullvad-no1}ON${else}OFF${endif}  ",\
+    "color": ${if_up mullvad-no1}"\#F1F1F1"${else}"\#FFFFFF"${endif},\
     "background": "\#262e3388",\
-    "border": ${if_up tun0}"\#9DBA3A"${else}"\#EA7D24"${endif},\
+    "border": ${if_up mullvad-no1}"\#9DBA3A"${else}"\#EA7D24"${endif},\
     "border_top": 0,\
     "border_left": 0,\
     "border_right": 0,\

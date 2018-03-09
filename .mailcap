@@ -1,10 +1,11 @@
-image/*; /usr/bin/feh %s
-#text/html; /usr/bin/firefox %s
-application/pdf; /usr/bin/firefox %s
+image/*; /usr/bin/sxiv %s
+#text/html; /usr/bin/firefox-developer %s
+application/pdf; /usr/bin/firefox-developer %s
 text/html; /usr/bin/w3m -I %{charset} -T text/html; copiousoutput
 application/vnd.ms-word.document.12; docx2txt %s -; copiousoutput
 application/vnd.openxmlformats-officedocument.wordprocessingml.document; docx2txt %s -; copiousoutput
 application/msword; antiword %s; copiousoutput
 application/vnd.ms-excel; xls2csv -x %s -s cp1252 -d utf-8; copiousoutput
 application/rtf; unrtf --text %s; copiousoutput
+video/*; mpv %s
 #image/*; /home/gig/Scripts/muttimage.sh %s; copiousoutput

@@ -47,7 +47,7 @@ set $WS6 "6:STEAM"
 set $WS7 "7:MEDIA"
 set $WS8 "8:MEDIA"
 set $WS9 "9:GAME"
-set $WS0 "0:MAIL"
+set $WS0 "10:MAIL"
 #set $WS1 "1: main"
 #set $WS2 "2: web"
 #set $WS3 "3: code"
@@ -130,7 +130,7 @@ bindsym $mod+Shift+9 move window to workspace $WS9
 bindsym $mod+Shift+0 move window to workspace $WS0
 
 # other keys
-bindsym $mod+Return exec st
+bindsym $mod+Return exec termite
 #bindsym $mod+r exec dmenu_run -fn 'xos4 Terminus-8'
 #bindsym $mod+r exec dmenu_run -fn 'Inconsolata-10' -nb '#121314' -sb '#18191A' -nf '#757575' -sf '#CDFF00'
 bindsym $mod+r exec /home/gig/Scripts/rofi_dmenu
