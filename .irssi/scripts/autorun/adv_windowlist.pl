@@ -1,0 +1,1 @@
+/home/gig/.irssi/scripts/adv_windowlist.pl

@@ -1,0 +1,1 @@
+/home/gig/.irssi/scripts/nm2.pl

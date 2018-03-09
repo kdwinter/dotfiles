@@ -8,11 +8,11 @@ servers = (
   {
     address = "irc.freenode.net";
     chatnet = "freenode";
-    port = "6667";
-    use_ssl = "no";
-    ssl_verify = "no";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "yes";
     autoconnect = "yes";
-  }
+  },
   #{
   #  address = "irc.oftc.net";
   #  chatnet = "OFTC";
@@ -50,9 +50,11 @@ chatnets = {
   #};
 };
 
-
 channels = (
   { name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#i3"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#btrfs"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#zfsonlinux"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -71,26 +73,26 @@ aliases = {
   IG = "ignore";
   UNIG = "unignore";
   WC = "window close";
+  WL = "window list";
   ID = "quote nickserv identify";
   RUN = "SCRIPT LOAD";
-  UPTIME = "eval exec - expr `date +%s` - \\$F | awk '{print \"Irssi uptime: \"int(\\\\\\$1/3600/24)\"d \"int(\\\\\\$1/3600%24)\"h \"int(\\\\\\$1/60%60)\"m \"int(\\\\\\$1%60)\"s\" }'";
-  CALC = "exec - if which bc &>/dev/null\\; then echo '$*' | bc | awk '{print \"$*=\"$$1}'\\; else echo bc was not found\\; fi";
   Q = "QUERY";
 };
 
 statusbar = {
-
-  items = {
-    prompt = "{prompt $[.15]itemname}";
-    prompt_empty = "{prompt $winname}";
-
-    separator = "--------------------------------------------------------------------------------------------------------------------------------";
-    separator2 = "-------------------------------------------------------------------------------------------------------------------------------%N";
-  };
+  #items = {
+  #  prompt = "{prompt $[.15]itemname}";
+  #  prompt_empty = "{prompt $winname}";
+  #
+  #  separator = "--------------------------------------------------------------------------------------------------------------------------------";
+  #  separator2 = "-------------------------------------------------------------------------------------------------------------------------------%N";
+  #};
 
   default = {
     topic = { disabled = "yes"; };
+
     window = { disabled = "yes"; };
+
     window_inact = { disabled = "yes"; };
 
     separator = {
@@ -113,7 +115,6 @@ statusbar = {
       };
     };
 
-    mpdbar = { disabled = "yes"; };
     awl_0 = {
       items = {
         barstart = { priority = "100"; };
@@ -131,17 +132,19 @@ settings = {
     nick = "";
     quit_message = "none";
   };
-  "perl/core/scripts" = {
-    awl_display_key = "$H$N:$C$S ";
-    mpd_host = "localhost";
-    mpd_port = "6600";
-  };
+
   "fe-common/core" = {
     timestamps = "yes";
     show_nickmode = "yes";
     theme = "kennae";
   };
+
   "irc/core" = { skip_motd = "yes"; };
+
   "fe-text" = { actlist_sort = "refnum"; };
+  "perl/core/scripts" = { awl_shared_sbar = "OFF"; awl_viewer = "no"; };
 };
+
 logs = { };
+
+# vim:ft=perl:fenc=utf-8
