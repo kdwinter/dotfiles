@@ -1,56 +1,27 @@
 set nocompatible   " use gVim defaults
 set encoding=utf-8 " unicode encoding
-set laststatus=2
 syntax on          " enable syntax highlighting
 
-if v:version >= 700
-  set cursorline
-endif
-
-set clipboard+=unnamedplus
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
 
 if has('gui_running')
-  "set background=light
   winpos 0 0
   set guicursor=a:blinkon0 " disable cursor blinking
   set guitablabel=%t\ %m
-  "set guioptions=tmaegr
-  "set guioptions=gemc
   set guioptions=gec
   set columns=100
   set lines=55
   if has('win32')
-    set guifont=DejaVu_Sans_Mono:h8:cANSI
+    set guifont=Courier_New:h8:cANSI
   elseif has('mac')
     set anti
     set guifont=Ubuntu\ Mono:h12
-    "set transparency=10
-
-    " fix clipboard on osx
     set clipboard+=unnamed
   else
-    "set guifont=Fixedsys\ Excelsior\ 3.01\ 9
-    "set guifont=CMU\ Typewriter\ Text\ 8
-    "set guifont=Fira\ Mono\ 7
-    "set guifont=PragmataPro\ 7
-    "set guifont=Inconsolata\ 11
-    "set guifont=Liberation\ Mono\ 9
-    set guifont=xos4\ Terminus\ 8
-    "set guifont=limey\ 8
-    "set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 9
-    "set guifont=Fantasque\ Sans\ Mono\ 9
-    "set guifont=Courier\ Prime\ Code\ 9
-    "set guifont=Source\ Code\ Pro\ 8
-    "set guifont=Tamsyn\ 10
-    "set guifont=Terminus\ 8
-    "set guifont=Gohufont\ 8
-    "set guifont=Dina\ 6
-    "set guifont=neep\ alt\ medium\ 8
-    "set guifont=Ubuntu\ Mono \8
-    "set guifont=Courier\ New\ 9
+    set guifont=SF\ Mono\ SemiBold\ 9
     set noanti
   endif
-"elseif (&term =~ 'screen' || &term =~ 'linux')
 elseif (&term =~ 'linux')
   set background=dark
   set t_Co=16
@@ -59,7 +30,6 @@ elseif (&term =~ 'linux')
   colo desert
 else
   set background=dark
-  "set background=light
   set mouse=a
   set termencoding=utf-8
   if has("termguicolors")     " set true colors
@@ -69,42 +39,12 @@ else
   else
     set t_Co=256
   endif
-  "colo getfresh
-  "colo digerati
-  "colo archery
-  colo distinguished
-  "colo desert
-  "colo vimbrant
-  "let g:solarized_termcolors=256
-  "let g:onedark_termcolors=256
-  "colo tomorrownight
-  "colo twilight2
-  "colo landscape
-  "colo smyck
-  "colo tender2
-  "colo breezy
-  "colo github
-  "colo gotham
-  "colo gruvbox
-  "colo fahrenheit
-  "colo darktooth
-  "colo badwolf
-  "colo sunburst2
-  "colo PaperColor-Dark
-  "colo space-vim-dark
-  "colo jellybeans
-  "colo solarized
-  "colo onedark
-  "colo archery
-  "colo acme
-  "colo PaperColor
-  "colo summerfruit256
-  "colo github_new
-  "colo materialbox
-  "colo rakr
+  colo candycode
+  "colo distinguished
 endif
 
-set listchars=eol:¬,trail:…
+set clipboard+=unnamedplus
+set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\ 
 set expandtab           " expand tabs to spaces
 set nosmarttab          " fuck tabs
 set nolazyredraw        " turn off lazy redraw
@@ -178,15 +118,17 @@ filetype plugin indent on      " fix the f*cking indenting
 set scrolloff=8                " start scrolling at 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
+set cursorline
 
 function! IsHelp()
   return &buftype=='help'?' (help) ':''
 endfunction
-"
+
 function! GetName()
   return expand("%:t")==''?'<none>':expand("%:t")
 endfunction
 
+set laststatus=2
 set statusline=%3*[%1*%{GetName()}%3*]%3*
 set statusline+=%7*%{&modified?'\ (modified)':'\ '}%3*
 set statusline+=%5*%{IsHelp()}%3*
@@ -227,36 +169,27 @@ cnoremap <Right> <Space><BS><Right>
 " tab key in visual mode
 vmap <tab> >gv
 vmap <S-tab> <gv
-"vmap <bs> <gv
 
 " Change leader
 let mapleader=','
 
-map <leader>d :e %:h/<CR>
-map <leader>dt :tabe %:h/<CR>
-
-" Set taglist plugin options
-let g:Tlist_Display_Prototype = 1
-let g:Tlist_Use_Right_Window = 1
-let g:Tlist_Exit_OnlyWindow = 1
-let g:Tlist_Compact_Format = 0
-let g:Tlist_File_Fold_Auto_Close = 0
-let g:Tlist_Sort_Type = 'name'
-let g:Tlist_Enable_Fold_Column = 0
-map <F1> :Tlist<CR>
-
-" NERDTree
-let g:NERDTreeHijackNetrw = 1
-""let NERDTreeMouseMode=1
-let g:NERDChristmasTree = 1
-map <F3> :NERDTreeToggle<CR>
-
 " Git
 let git_diff_spawn_mode=2
 
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
+" Other
 let g:vue_disable_preprocessors = 1
 
-if has('autocmd')
+" Allows writing to files with root priviledges
+cmap w!! w !sudo tee % > /dev/null
+
+if has("autocmd")
   au WinEnter * setlocal cursorline
   au WinLeave * setlocal nocursorline
 
@@ -281,9 +214,8 @@ if has('autocmd')
   au FileType make  setlocal noexpandtab ts=8
 
   " Ruby file specific options
-  au Filetype ruby set textwidth=80 ts=2
-  au Filetype haml set ts=2 sw=2 sts=0 expandtab tw=120
-
+  au Filetype ruby set tw=80 ts=2 sw=2 expandtab
+  au Filetype haml set tw=120 ts=2 sw=2 expandtab
   au BufRead,BufNewFile *.rpdf set ft=ruby
   au BufRead,BufNewFile *.rxls set ft=ruby
   au BufRead,BufNewFile *.ru set ft=ruby
@@ -297,22 +229,16 @@ if has('autocmd')
   " Others..
   au FileType javascript setlocal nocindent
   au BufRead,BufNewFile *.es6 set ft=javascript
-
   au BufRead,BufNewFile *.sql set ft=pgsql
   au BufRead,BufNewFile *.svg set ft=svg
-
   au BufRead,BufNewFile *.vimp set ft=vimperator
-
-  au BufRead,BufNewFile *.md set ft=mkd tw=72 ts=2 sw=2 expandtab
-  au BufRead,BufNewFile *.markdown set ft=mkd tw=72 ts=2 sw=2 expandtab
-
+  au BufRead,BufNewFile *.md set ft=markdown
+  au BufRead,BufNewFile *.markdown set ft=markdown
   au BufRead,BufNewFile *.coffee set ft=coffee
-
   au BufRead,BufNewFile mutt{ng,}-*-\w\+ set ft=mail
-
   au Bufread,BufNewFile *.tpl set ft=liquid
-
   au BufRead,BufNewFile .spacemacs set ft=lisp
+  au FileType sh,zsh,bash set ts=4 sw=4 sts=4 expandtab
 
   " Compile and run keymappings
   au FileType php map <F6> :!php -f %<CR>
@@ -336,20 +262,4 @@ if has('autocmd')
 
   " Resize the splits upon window resize
   au VimResized * exe "normal! \<c-w>="
-
-  " Airline
-  "au VimEnter * call AirlineInit()
 endif
-
-" Prevent annoying typo
-imap <F1> <esc>
-nmap q: :q<cr>
-ia teh the
-ia htis this
-ia tihs this
-ia funciton function
-ia funtion function
-ia fucntion function
-ia retunr return
-ia reutrn return
-ca eariler earlier
