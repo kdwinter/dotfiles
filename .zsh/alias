@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/env zsh
 
 . ~/.zsh/vars
 
@@ -14,7 +14,8 @@ alias ll='ls -aGF; echo "\e[1;32m --[\e[1;34m Dirs:\e[1;36m `ls -al | egrep \"^d
 alias cdc='cd; clear'
 alias ls='ls -GF --color=auto'
 alias dmesg='dmesg --color=auto'
-alias journalctl_boot_errors="journalctl -b -p err..alert"
+alias dmesg_errors='dmesg --level=err,warn'
+alias journalctl_errors_since_boot="journalctl -b -p err..alert"
 
 # auto open images
 alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}='sxiv'
@@ -26,18 +27,38 @@ alias -s {mp3,ogg,wav,flac}='cmus'
 alias -s {html,php,com,net,org,gov}='firefox-developer'
 # auto open regular files
 alias -s {txt,md,yaml,conf,cr,rs}='vim'
-alias -s pdf='firefox-developer'
+alias -s pdf='zathura'
+alias -s org='emacs -nw'
 
 alias mplayer='mplayer -idx'
 alias wcat='wget -q -O -'
-alias v='vim'
+alias v='nvim'
+alias vim='nvim'
 alias e='emacs -nw'
 alias dirsizes='du -h -d 1'
 alias ruby_test_file='RAILS_ENV=test bundle exec ruby -I"lib:test"'
 alias j='jump'
+alias sudo='echo "[ran with sudo]"; sudo'
 alias sumount='sudo mount -o gid=users,fmask=113,dmask=002'
+alias fucking='sudo'
+alias updatesystem="sudo pacman -Syu"
 
 alias pa_sinks="pacmd list-sinks | grep -e 'name:' -e 'index'"
 alias pa_sources="pacmd list-sources | grep -e device.string -e 'name:'"
 
-#alias steam_wine='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe -no-cef-sandbox'
+alias muttpersonal="mutt -F ~/.mutt/muttrc_personal"
+alias muttgmail="mutt -F ~/.mutt/muttrc_gmail"
+alias muttwork="mutt -F ~/.mutt/muttrc_work"
+
+alias restart_i3="i3-msg restart"
+alias vimwiki="vim $WIKIPATH/index.wiki"
+
+case $(hostname) in
+    archbox)
+        #alias dota2='steam steam://rungameid/570'
+        alias quake3="quake3 +set fs_game cpma"
+    ;;
+    archbook)
+
+    ;;
+esac

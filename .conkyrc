@@ -1,93 +1,258 @@
-out_to_x no
-own_window no
-out_to_console yes
-background no
-max_text_width 0
-total_run_times 0
-cpu_avg_samples 2
-override_utf8_locale no
-double_buffer no
-short_units yes
-update_interval 11.0
+conky.config = {
+  out_to_x = false,
+  own_window = false,
+  out_to_console = true,
+  background = false,
+  max_text_width = 0,
+  total_run_times = 0,
+  cpu_avg_samples = 2,
+  override_utf8_locale = false,
+  double_buffer = false,
+  short_units = true,
+  if_up_strictness = "address",
+  update_interval = 3.0,
+  text_buffer_size = 256,
+  lua_load = "~/.config/conky/pad.lua"
+}
 
-TEXT
-
+conky.text = [[
 [\
   {\
-    "full_text": "KERNEL",\
-    "color": "\#676E7D",\
+    "full_text": " KERNEL",\
+    "color": "\#229AFB",\
+    "background": "\#282828",\
+    "border": "\#151515",\
+    "border_right": 0,\
     "separator": false,\
-    "separator_block_width": 6\
+    "separator_block_width": 0\
   },\
   {\
-    "full_text": "${kernel}",\
-    "color": "\#f3f4f5",\
-    "separator": false\
-  },\
-  {\
-    "full_text": "TEMP",\
-    "color": "\#676E7D",\
+    "full_text": " ${kernel} ",\
+    "color": "\#c5c8c6",\
+    "background": "\#282828",\
+    "border": "\#151515",\
+    "border_bottom": 1,\
+    "border_left": 0,\
+    "border_right": 1,\
     "separator": false,\
-    "separator_block_width": 6\
+    "separator_block_width": 1\
   },\
   {\
-    "full_text": "${hwmon 1 temp 1}C",\
-    "color": ${if_match ${hwmon 1 temp 1}<80}"\#f3f4f5"${else}"\#FF3B77"${endif},\
-    "separator": false\
-  },\
-  {\
-    "full_text": "LOAD",\
-    "color": "\#676E7D",\
+    "full_text": " WEATHER",\
+    "color": "\#229AFB",\
+    "background": "\#282828",\
+    "border": "\#151515",\
+    "border_right": 0,\
     "separator": false,\
-    "separator_block_width": 6\
+    "separator_block_width": 0\
   },\
   {\
-    "full_text": "${loadavg}",\
-    "color": "\#f3f4f5",\
-    "separator": false\
-  },\
-  {\
-    "full_text": "MEM",\
-    "color": "\#676E7D",\
+    "full_text": " ${execi 600 /usr/bin/bash /home/gig/bin/weather.sh 'lede'} ",\
+    "color": "\#c5c8c6",\
+    "background": "\#282828",\
+    "border": "\#151515",\
+    "border_bottom": 1,\
+    "border_left": 0,\
+    "border_right": 1,\
     "separator": false,\
-    "separator_block_width": 6\
+    "separator_block_width": 1\
   },\
   {\
-    "full_text": "${mem}",\
-    "color": ${if_match ${memperc}<85}"\#f3f4f5"${else}"\#FF3B77"${endif},\
-    "separator": false\
-  },\
-  {\
-    "full_text": "WLAN",\
-    "color": "\#676E7D",\
+    "full_text": " MUSIC",\
+    "color": "\#229AFB",\
+    "background": "\#282828",\
+    "border": "\#151515",\
+    "border_right": 0,\
     "separator": false,\
-    "separator_block_width": 6\
+    "separator_block_width": 0\
   },\
   {\
-    "full_text": "${if_up wlp1s0}${wireless_essid wlp1s0}-${wireless_link_qual_perc wlp1s0}%${else}N/A${endif}",\
-    "color": ${if_up wlp1s0}"\#f3f4f5"${else}"\#FF3B77"${endif},\
-    "separator": false\
-  },\
-  {\
-    "full_text": "BAT",\
-    "color": "\#676E7D",\
+    "full_text": " ${execi 17 /usr/bin/bash /home/gig/bin/cmus_status.sh} ",\
+    "color": "\#c5c8c6",\
+    "background": "\#282828",\
+    "border": "\#151515",\
+    "border_bottom": 1,\
+    "border_left": 0,\
+    "border_right": 1,\
     "separator": false,\
-    "separator_block_width": 6\
+    "separator_block_width": 1\
   },\
   {\
-    "full_text": "${battery_percent}% ${battery_time}",\
-    "color": ${if_match ${battery_percent}>15}"\#f3f4f5"${else}"\#FF3B77"${endif},\
-    "separator": false\
-  },\
-  {\
-    "full_text": "TIME",\
-    "color": "\#676E7D",\
+    "full_text": " DISKS",\
+    "color": "\#229AFB",\
+    "background": "\#282828",\
+    "border": "\#151515",\
+    "border_right": 0,\
     "separator": false,\
-    "separator_block_width": 6\
+    "separator_block_width": 0\
   },\
   {\
-    "full_text": "${time %a %e %b %H:%M}",\
-    "color": "\#f3f4f5",\
-    "separator": false\
+    "full_text": " / ${fs_used /}/${fs_size /} · /home ${fs_used /home}/${fs_size /home} · /storage ${execi 61 /usr/bin/bash /home/gig/bin/conky_zfs_usage.sh} ",\
+    "color": "\#c5c8c6",\
+    "background": "\#282828",\
+    "border": "\#151515",\
+    "border_bottom": 1,\
+    "border_left": 0,\
+    "border_right": 1,\
+    "separator": false,\
+    "separator_block_width": 1\
+  },\
+  {\
+    "full_text": " NET",\
+    "color": "\#229AFB",\
+    "background": "\#282828",\
+    "border": "\#151515",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " ${addr bridge0} · DOWN ${downspeed bridge0}/s · UP ${upspeed bridge0}/s ",\
+    "color": "\#c5c8c6",\
+    "background": "\#282828",\
+    "border": "\#151515",\
+    "border_bottom": 1,\
+    "border_left": 0,\
+    "border_right": 1,\
+    "separator": false,\
+    "separator_block_width": 1\
+  },\
+  {\
+    "full_text": " TEMPS",\
+    "color": "\#229AFB",\
+    "background": "\#282828",\
+    "border": "\#151515",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " CPU ${hwmon 2 temp 1}°C ",\
+    "color": ${if_match ${hwmon 2 temp 1}<70}"\#c5c8c6"${else}"\#fbf1c7"${endif},\
+    "background": ${if_match ${hwmon 2 temp 1}<70}"\#282828"${else}"\#fb4934"${endif},\
+    "border": "\#151515",\
+    "border_bottom": 1,\
+    "border_left": 0,\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "· GPU ${hwmon 0 temp 1}°C ",\
+    "color": ${if_match ${hwmon 0 temp 1}<85}"\#c5c8c6"${else}"\#fbf1c7"${endif},\
+    "background": ${if_match ${hwmon 0 temp 1}<85}"\#282828"${else}"\#fb4934"${endif},\
+    "border": "\#151515",\
+    "border_bottom": 1,\
+    "border_left": 0,\
+    "border_right": 1,\
+    "separator": false,\
+    "separator_block_width": 1\
+  },\
+  {\
+    "full_text": " LOAD",\
+    "color": "\#229AFB",\
+    "background": "\#282828",\
+    "border": "\#151515",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " ${lua_parse pad %2i ${cpu cpu0}}% · ${loadavg} ",\
+    "color": ${if_match ${cpu cpu0}<85}"\#c5c8c6"${else}"\#fbf1c7"${endif},\
+    "background": ${if_match ${cpu cpu0}<85}"\#282828"${else}"\#fb4934"${endif},\
+    "border": "\#151515",\
+    "border_bottom": 1,\
+    "border_left": 0,\
+    "border_right": 1,\
+    "separator": false,\
+    "separator_block_width": 1\
+  },\
+  {\
+    "full_text": " MEMORY",\
+    "color": "\#229AFB",\
+    "background": "\#282828",\
+    "border": "\#151515",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " ${mem}/${memmax} (${lua_parse pad %2i ${memperc}}%) ",\
+    "color": ${if_match ${memperc}<85}"\#c5c8c6"${else}"\#fbf1c7"${endif},\
+    "background": ${if_match ${memperc}<85}"\#282828"${else}"\#fb4934"${endif},\
+    "border": "\#151515",\
+    "border_bottom": 1,\
+    "border_left": 0,\
+    "border_right": 1,\
+    "separator": false,\
+    "separator_block_width": 1\
+  },\
+  {\
+    "full_text": " UPDATES",\
+    "color": "\#229AFB",\
+    "background": "\#282828",\
+    "border": "\#151515",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " ${execi 600 /usr/bin/bash /home/gig/bin/package_updates.sh} ",\
+    "color": "\#c5c8c6",\
+    "background": "\#282828",\
+    "border": "\#151515",\
+    "border_bottom": 1,\
+    "border_left": 0,\
+    "border_right": 1,\
+    "separator": false,\
+    "separator_block_width": 1\
+  },\
+  {\
+    "full_text": " VPN ",\
+    "color": "\#229AFB",\
+    "background": "\#282828",\
+    "border": "\#151515",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " ${if_match "${exec ip a show type wireguard}" != ""}ON${else}OFF${endif} · DNS ${execi 60 /usr/bin/bash /home/gig/bin/nameserver.sh} ",\
+    "color": ${if_match "${exec ip a show type wireguard}" != ""}"\#151515"${else}"\#fbf1c7"${endif},\
+    "background": ${if_match "${exec ip a show type wireguard}" != ""}"\#b8bb26"${else}"\#fb4934"${endif},\
+    "border": "\#151515",\
+    "border_bottom": 1,\
+    "border_left": 1,\
+    "border_right": 1,\
+    "separator": false,\
+    "separator_block_width": 1\
+  },\
+  {\
+    "full_text": " TIME",\
+    "color": "\#229AFB",\
+    "background": "\#282828",\
+    "border": "\#151515",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " ${time %a %e %b %H:%M} ",\
+    "color": "\#c5c8c6",\
+    "background": "\#282828",\
+    "border": "\#151515",\
+    "border_bottom": 1,\
+    "border_left": 0,\
+    "border_right": 1,\
+    "separator": false,\
+    "separator_block_width": 1\
+  },\
+  {\
+    "full_text": "",\
+    "color": "\#F9F9F9",\
+    "separator": false,\
+    "separator_block_width": 0\
   }\
 ],
+]]

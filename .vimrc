@@ -17,7 +17,8 @@ if has("gui_running")
     if has("win32")
         set guifont=Courier_New:h8:cANSI
     else
-        set guifont=SF\ Mono\ SemiBold\ 9
+        "set guifont=SF\ Mono\ SemiBold\ 9
+        set guifont=Liga\ Inconsolata\ Bold\ 10.2
     endif
 elseif (&term =~ "linux")
     set background=dark
@@ -26,7 +27,6 @@ elseif (&term =~ "linux")
     set nocursorline
     colo desert
 else
-    set background=dark
     set mouse=a
     set termencoding=utf-8
 
@@ -38,8 +38,30 @@ else
         set t_Co=256
     endif
 
-    colo candycode
+    set background=dark
+    "colo github
+    "let g:lightline = {'colorscheme': 'github'}
+    "colo candycode
+    "colo jellybeans
+    colo sourcerer
+    "colo nucolors
+    "colo citylights
     "colo distinguished
+    "colo bespin
+    "let g:gruvbox_contrast_dark = "hard"
+    "let g:gruvbox_contrast_light = "hard"
+    "colo gruvbox
+    "let g:lightline = {'colorscheme': 'gruvbox'}
+    "colo monotone
+    "colo railscasts2
+    "let g:github_colors_soft = 1
+    "let g:dracula_italic = 0
+    "colo dracula
+    "let g:lightline = {'colorscheme': 'Dracula'}
+    "colo wtf
+    "colo summerfruit256
+    "colo molokai
+    "colo gotham
 endif
 
 set clipboard+=unnamedplus
@@ -86,7 +108,7 @@ set cmdheight=1         " command line height
 set ruler               " ruler display in status line
 set showmode            " show mode at bottom of screen
 "set relativenumber      " show line numbers relative to current line
-set number              " show line numbers
+"set number              " show line numbers
 set nobackup            " dont keep backups after close
 set writebackup         " do keep one while working
 set backupdir=$HOME/.vim/backup/,/tmp
@@ -177,6 +199,11 @@ let mapleader=","
 let git_diff_spawn_mode=2
 
 " CtrlP
+" Use fd.
+if executable("fd")
+    let g:ctrlp_user_command = "fd --type file --follow --hidden --exclude .git"
+    let g:ctrlp_use_caching = 0
+endif
 let g:ctrlp_map = "<c-p>"
 let g:ctrlp_cmd = "CtrlP"
 
@@ -185,6 +212,44 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Other
 let g:vue_disable_preprocessors = 1
+
+" Vimwiki
+let hostname = substitute(system('hostname'), '\n', '', '')
+if hostname == "archbook"
+    let g:vimwiki_list = [{'path': '/home/gig/wiki'}]
+elseif hostname == "archbox"
+    let g:vimwiki_list = [{'path': '/storage/wiki'}]
+endif
+
+" Open links in a new vim buffer instead of xdg-open
+fun! VimwikiLinkHandler(link)
+    let link_infos = vimwiki#base#resolve_link(a:link)
+    try
+        if link_infos.filename =~ "^http"
+            exe '!$BROWSER "' . fnameescape(link_infos.filename) . '"'
+        else
+            exe "e " . fnameescape(link_infos.filename)
+        endif
+        return 1
+    catch
+        echo "Failed opening " . a:link
+        return 0
+    endtry
+endfun
+
+" Remove docx and xlsx from zip.vim
+let g:zipPlugin_ext= '*.zip,*.jar,*.xpi,*.ja,*.war,*.ear,*.celzip,*.oxt,*.kmz,*.wsz,*.xap,*.docm,*.dotx,*.dotm,*.potx,*.potm,*.ppsx,*.ppsm,*.pptx,*.pptm,*.ppam,*.sldx,*.thmx,*.xlam,*.xlsm,*.xlsb,*.xltx,*.xltm,*.xlam,*.crtx,*.vdw,*.glox,*.gcsx,*.gqsx'
+
+" ALE
+"let g:ale_sign_error = '✖✖'
+"let g:ale_sign_warning = '▲▲'
+"let g:ale_echo_msg_error_str = 'E'
+"let g:ale_echo_msg_warning_str = 'W'
+"let g:ale_sign_column_always = 1
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+let g:ale_statusline_format = ['✘ %d', '⚠ %d', '']
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 " Allows writing to files with root priviledges
 cmap w!! w !sudo tee % > /dev/null
@@ -214,8 +279,8 @@ if has("autocmd")
     au FileType make  setlocal noexpandtab ts=8 sts=8 sw=8
 
     " Ruby file specific options
-    au Filetype ruby set tw=80 ts=2 sw=2 expandtab
-    au Filetype haml set tw=120 ts=2 sw=2 expandtab
+    au Filetype ruby set tw=80 ts=2 sw=2 sts=2 expandtab
+    au Filetype haml set tw=120 ts=2 sw=2 sts=2 expandtab
     au BufRead,BufNewFile *.rpdf set ft=ruby
     au BufRead,BufNewFile *.rxls set ft=ruby
     au BufRead,BufNewFile *.ru set ft=ruby
@@ -239,6 +304,7 @@ if has("autocmd")
     au Bufread,BufNewFile *.tpl set ft=liquid
     au BufRead,BufNewFile .spacemacs set ft=lisp
     au FileType sh,zsh,bash set ts=4 sw=4 sts=4 expandtab
+    au FileType go set ts=8 sw=8 sts=8 noexpandtab
     au FileType markdown set ts=4 sw=4 sts=4 expandtab
     au FileType vim set ts=4 sts=4 sw=4 expandtab
 
@@ -254,7 +320,7 @@ if has("autocmd")
     au BufReadPre *.doc set ro hlsearch!
     au BufReadPost *.doc %!antiword "%"
     au BufReadPre *.docx set ro hlsearch!
-    au BufReadPost *.docx %!antiword "%"
+    au BufReadPost *.docx %!docx2txt "%" -
 
     " Git
     au BufRead,BufNewFile COMMIT_EDITMSG set ft=git

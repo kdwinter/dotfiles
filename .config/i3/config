@@ -1,32 +1,76 @@
 # i3 config
+# vim:ft=conf:ts=4:sw=4:sts=4:expandtab
+
 set $mod Mod4
-#font pango: Fantasque Sans Mono 16
-#font pango: San Francisco Text Medium 17
-#font pango: Fira Sans Medium 17
-#font pango: Fixedsys Excelsior 3.01 18
-#font pango: Inconsolata 17.5
-#font pango: Fakt Pro SemiBold 17
-font pango: DinC 16
+
+set $TERM "termite"
+set $MAINMONITOR "DisplayPort-0"
+set $RIGHTMONITOR "DisplayPort-2"
+#set $FONT "pango: FontAwesome, Poppins Medium 9"
+#set $FONT "pango: FontAwesome, Liga Inconsolata Bold 10.2"
+set $FONT "pango: FontAwesome, xos4 Terminus 8"
+#set $FONT "pango: FontAwesome, Misc Fixed Medium SemiCondensed 10"
+#set $FONT "pango: FontAwesome, Roboto Medium 9"
+#set $FONT "pango: FontAwesome, Inter UI Medium 9"
+#set $FONT "pango: FontAwesome, Dina 8"
+#set $FONT "pango: FontAwesome, Ubuntu Mono 11"
+#set $FONT "pango: FontAwesome, Iosevka Term Bold 9"
+#set $FONT "pango: FontAwesome, SF Mono Semibold 9"
+#set $FONT "pango: FontAwesome, Fantasque Sans Mono 10.8"
+#set $FONT "pango: FontAwesome, Inconsolata Bold 9.5"
+#set $FONT "pango: FontAwesome, UW Ttyp0 8"
+#set $FONT "-misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1"
+
+set $WS1 "1:  "
+set $WS2 "2:  "
+set $WS3 "3:  "
+set $WS4 "4:  "
+set $WS5 "5:  "
+set $WS6 "6:  "
+set $WS7 "7:  "
+set $WS8 "8:  "
+set $WS9 "9:  "
+set $WS0 "10:  "
+#set $WS1 "1:main"
+#set $WS2 "2:web"
+#set $WS3 "3:code"
+#set $WS4 "4:code"
+#set $WS5 "5:chat"
+#set $WS6 "6:steam"
+#set $WS7 "7:media"
+#set $WS8 "8:media"
+#set $WS9 "9:game"
+#set $WS0 "10:mail"
+
+################################################################################
+
+font $FONT
 floating_modifier $mod
 default_orientation horizontal
 workspace_layout default
-#new_window normal 2
-new_window pixel 3
+new_window pixel 1
+#new_window normal 1
 workspace_auto_back_and_forth no
 focus_follows_mouse no
 
-# assign workspaces
-#workspace 1 output LVDS-0
-#workspace 2 output LVDS-0
-#workspace 3 output LVDS-0
-#workspace 4 output LVDS-0
-#workspace 5 output LVDS-0
-#workspace 6 output LVDS-0
-#workspace 7 output LVDS-0
-#workspace 8 output LVDS-0
-#workspace 9 output LVDS-0
+gaps inner 10
+gaps outer 0
+smart_borders on
+smart_gaps on
 
-# wm keys
+# Assign workspaces to specific monitors
+workspace $WS1 output $MAINMONITOR
+workspace $WS2 output $RIGHTMONITOR
+workspace $WS3 output $MAINMONITOR
+workspace $WS4 output $MAINMONITOR
+workspace $WS5 output $RIGHTMONITOR
+workspace $WS6 output $RIGHTMONITOR
+workspace $WS7 output $RIGHTMONITOR
+workspace $WS8 output $MAINMONITOR
+workspace $WS9 output $MAINMONITOR
+workspace $WS0 output $MAINMONITOR
+
+# Main wm keybinds
 bindsym $mod+w kill
 
 bindsym $mod+Left focus left
@@ -39,7 +83,7 @@ bindsym $mod+l focus right
 bindsym $mod+k focus up
 bindsym $mod+j focus down
 
-bindsym $mod+Tab focus down
+bindsym $mod+Tab focus right
 
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Right move right
@@ -58,191 +102,284 @@ bindsym $mod+f fullscreen
 bindsym $mod+g floating toggle
 bindsym $mod+Space focus mode_toggle
 
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
+bindsym $mod+s sticky toggle
 
-bindsym $mod+Shift+1 move window to workspace 1
-bindsym $mod+Shift+2 move window to workspace 2
-bindsym $mod+Shift+3 move window to workspace 3
-bindsym $mod+Shift+4 move window to workspace 4
-bindsym $mod+Shift+5 move window to workspace 5
-bindsym $mod+Shift+6 move window to workspace 6
-bindsym $mod+Shift+7 move window to workspace 7
-bindsym $mod+Shift+8 move window to workspace 8
-bindsym $mod+Shift+9 move window to workspace 9
+bindsym $mod+1 workspace $WS1
+bindsym $mod+2 workspace $WS2
+bindsym $mod+3 workspace $WS3
+bindsym $mod+4 workspace $WS4
+bindsym $mod+5 workspace $WS5
+bindsym $mod+6 workspace $WS6
+bindsym $mod+7 workspace $WS7
+bindsym $mod+8 workspace $WS8
+bindsym $mod+9 workspace $WS9
+bindsym $mod+0 workspace $WS0
 
-# other keys
-bindsym $mod+Return exec termite
-bindsym $mod+r exec dmenu_run -fn 'cure-8' -nb '#121314' -sb '#18191A' -nf '#757575' -sf '#CDFF00'
+bindsym $mod+Shift+1 move window to workspace $WS1
+bindsym $mod+Shift+2 move window to workspace $WS2
+bindsym $mod+Shift+3 move window to workspace $WS3
+bindsym $mod+Shift+4 move window to workspace $WS4
+bindsym $mod+Shift+5 move window to workspace $WS5
+bindsym $mod+Shift+6 move window to workspace $WS6
+bindsym $mod+Shift+7 move window to workspace $WS7
+bindsym $mod+Shift+8 move window to workspace $WS8
+bindsym $mod+Shift+9 move window to workspace $WS9
+bindsym $mod+Shift+0 move window to workspace $WS0
 
-bindsym XF86AudioRaiseVolume exec amixer -D pulse -q set Master 5%+ unmute
-bindsym XF86AudioLowerVolume exec amixer -D pulse -q set Master 5%- unmute
-bindsym XF86AudioMute exec amixer -D pulse -q set Master toggle
+# Other keybinds
+bindsym $mod+Return exec $TERM
+#bindsym $mod+r exec dmenu_run -fn 'xos4 Terminus-8'
+#bindsym $mod+r exec dmenu_run -fn 'Inconsolata-10' -nb '#121314' -sb '#18191A' -nf '#757575' -sf '#CDFF00'
+bindsym $mod+r exec $HOME/.config/rofi/rofi_dmenu.sh
+
+# toggle compton
+bindsym $mod+Mod1+c exec --no-startup-id compton -b
+bindsym $mod+Mod1+x exec --no-startup-id pkill compton
+bindsym $mod+Mod1+p exec --no-startup-id pkill PathOfExile
+
+#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse -q set Master 5%+ unmute
+#bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse -q set Master 5%- unmute
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioRaiseVolume exec --no-startup-id cmus-remote -C "vol +10%"
+bindsym XF86AudioLowerVolume exec --no-startup-id cmus-remote -C "vol -10%"
+bindsym $mod+XF86AudioRaiseVolume exec --no-startup-id cmus-remote -n
+bindsym $mod+XF86AudioLowerVolume exec --no-startup-id cmus-remote -r
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMute exec --no-startup-id cmus-remote -u
+bindsym XF86AudioPlay exec --no-startup-id cmus-remote -u
+bindsym XF86AudioNext exec --no-startup-id cmus-remote -n
+bindsym XF86AudioPrev exec --no-startup-id cmus-remote -r
+
+bindsym XF86Favorites exec $HOME/bin/rofi_dmenu
+bindsym XF86HomePage workspace $WS1
+bindsym XF86Mail workspace $WS0
+bindsym XF86Search workspace $WS2
+bindsym XF86Calculator exec $TERM
+bindcode 166 exec --no-startup-id cmus-remote -r
+bindcode 167 exec --no-startup-id cmus-remote -n
+bindcode 192 workspace $WS1
+bindcode 193 workspace $WS2
+bindcode 194 workspace $WS3
+bindcode 195 workspace $WS4
+bindcode 196 workspace $WS5
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
-#bindsym $mod+v exec i3lock -i /home/gig/Pictures/lock2.png
-bindsym $mod+v exec "$HOME/Scripts/lockscreen"
+#bindsym $mod+v exec i3lock -i $HOME/Pictures/lock2.png
+#bindsym $mod+v exec "$HOME/bin/lockscreen.sh"
+bindsym $mod+v exec $HOME/.config/i3/i3lock-fancy-multimonitor/lock
 
-# autostart
-exec --no-startup-id sh /home/gig/.fehbg
-exec --no-startup-id nm-applet
-exec --no-startup-id dropbox start
-exec --no-startup-id unclutter
+# Autostart these applications
+exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id $HOME/bin/set_mouse_keyboard_prefs.sh
+exec --no-startup-id xrandr --output $MAINMONITOR --mode 2560x1440 --pos 0x0 --primary
+exec --no-startup-id xrandr --output $RIGHTMONITOR --mode 2560x1440 --pos 2560x0
+exec --no-startup-id nm-applet &
+exec --no-startup-id unclutter &
+#exec --no-startup-id xrandr --output $MAINMONITOR --mode 2560x1440 --rate 144
+exec --no-startup-id redshift-gtk -l 50.5:4.4 &
+exec --no-startup-id dunst &
+#exec --no-startup-id /usr/lib/notify-osd/notify-osd &
+#exec --no-startup-id compton -b &
 
-# assign apps
-assign [class="Pidgin"] 1
-assign [class="Firefox|Aurora|Chromium"] 2
+# Assign applications to workspaces
+assign [class="Pidgin"] $WS1
+assign [class="Firefox|Aurora|Chromium"] $WS2
+assign [class="discord"] $WS5
+assign [class="Keybase|keybase"] $WS5
+assign [class="Steam"] $WS6
+assign [class="Steam.exe"] $WS6
+assign [class="evolution|Evolution"] $WS0
+assign [title="^TeamSpeak"] $WS5
 
-# config apps
+# Config applications
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
 for_window [instance="Navigator" class="Firefox|Aurora"] border none
 for_window [title="^Source of" class="Firefox|Aurora"] floating enable
+for_window [class="Steam"] floating enable
+for_window [class="Steam.exe"] floating enable
+for_window [class="Wine"] floating enable
+for_window [class="Pavucontrol"] floating enable
 for_window [class="Pidgin"] floating enable
 for_window [class="Thunar"] floating enable
 for_window [class="Lxappearance"] floating enable
-for_window [class="VLC"] floating enable
+for_window [class="Vlc"] floating enable
+for_window [class="mpv"] floating enable, border none
+#for_window [class="Keybase"] floating enable
+for_window [class="Pinta"] floating enable
 for_window [title="^TeamSpeak"] floating enable
+#for_window [class="discord"] border none
+for_window [title="feh"] floating enable
+for_window [title="QEMU"] floating enable
+for_window [class="qemu-system-x86_64"] floating enable
+for_window [class="Qemu-system-x86_64"] floating enable
+for_window [class="synergy"] floating enable
+for_window [class="Sxiv"] floating enable
+for_window [class="File-roller"] floating enable
+for_window [class="Lutris"] floating enable
 
-set $bg-color            #2f343f
-set $inactive-bg-color   #2f343f
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
+### Own window decoration colors
+client.background       #1d2021
+# state                 border  bg      text    indicator
+client.focused          #0074D9 #0074D9 #ffffff #2e9ef4
+client.focused_inactive #272727 #272727 #ffffff #484e50
+client.unfocused        #1F1F1F #1F1F1F #888888 #292d2e
+client.urgent           #F82222 #D60000 #ffffff #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000
 
-#                       border              background         text                 indicator
-client.focused          $inactive-text-color $inactive-text-color $bg-color         #00ff00
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+### Gruvbox window decoration colors
+#client.background       #1d2021
+# state                 border  bg      text    indicator
+#client.focused          #458588 #458588 #1d2021 #b16286
+#client.focused_inactive #32302f #32302f #d79921 #b16286
+#client.unfocused        #282828 #282828 #d79921 #b16286
+#client.urgent           #cc241d #cc241d #ebdbb2 #cc241d
+#client.placeholder      #282828 #282828 #282828 #282828
 
-# colors                border  bg      text    indicator
-#client.focused          #859900 #859900 #fdf6e3 #2e9ef4
-#client.focused_inactive #268bd2 #268bd2 #fdf6e3 #484e50
-#client.unfocused        #333333 #93a1a1 #fdf6e3 #292d2e
-#client.urgent           #d33682 #d33682 #fdf6e3 #dc322f
-#client.background       #073642
+### Dracula window decoration colors
+#client.background       #282a36
+# state                 border  bg      text    indicator
+#client.focused          #ff79c6 #ff79c6 #040404 #ff79c6
+#client.focused_inactive #282a36aa #282a36aa #ff79c6 #ff79c6
+#client.unfocused        #282a36aa #282a36aa #f8f8f2aa #ff79c6
+#client.urgent           #f1fa7c #f1fa7c #040404 #ff79c6
+#client.placeholder      #282a36aa #282a36aa #282a36aa #282a36aa
 
-#client.focused          #458588 #83a598 #282828 #282828
-#client.focused_inactive #1d2021 #3c3836 #ebdbb2 #282828
-#client.unfocused        #1d2021 #3c3836 #ebdbb2 #282828
-#client.urgent           #cc241d #fb4934 #ebdbb2 #282828
-#client.background       #282828
-
-#client.focused          #cccccc #cccccc #222222 #222222
-#client.focused_inactive #191919 #191919 #999999 #222222
-#client.unfocused        #191919 #191919 #999999 #222222
-#client.urgent           #FF7700 #dd6600 #eeeeee #222222
-#client.background       #121212
-
-#client.focused          #bcd8ff #7086a8 #242224 #222222
-#client.focused_inactive #242224 #242224 #cbc6cc #222222
-#client.unfocused        #242224 #242224 #cbc6cc #222222
-#client.urgent           #b3d6ae #748c71 #242224 #222222
-
-#client.focused          #006699 #005577 #EEEEEE #543857
-#client.focused_inactive #232323 #121314 #757575 #222222
-#client.unfocused        #232323 #121314 #757575 #222222
-#client.urgent           #FF7700 #DD6600 #EEEEEE #87292E
-
-# modes
+# Modes
 bindsym $mod+m mode "layout"
 mode "layout" {
-  bindsym 1 layout stacking; mode "default"
-  bindsym 2 layout tabbed; mode "default"
-  bindsym 3 layout toggle split; mode "default"
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
+    bindsym 1 layout stacking; mode "default"
+    bindsym 2 layout tabbed; mode "default"
+    bindsym 3 layout toggle split; mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 bindsym $mod+b mode "border"
 mode "border" {
-  bindsym 1 border pixel 3; mode "default"
-  bindsym 2 border normal 3; mode "default"
-  bindsym 3 border none; mode "default"
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
+    bindsym 1 border pixel 1; mode "default"
+    bindsym 2 border normal 1; mode "default"
+    bindsym 3 border none; mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 bindsym $mod+i mode "i3wm"
 mode "i3wm" {
-  bindsym 1 reload; mode "default"
-  bindsym 2 restart; mode "default"
-  bindsym 3 exit; mode "default"
-  bindsym 4 exec i3lock -i /home/gig/Pictures/lock2.png && systemctl suspend; mode "default"
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
+    bindsym 1 reload; mode "default"
+    bindsym 2 restart; mode "default"
+    bindsym 3 exit; mode "default"
+    bindsym 4 exec --no-startup-id $HOME/bin/lock_and_suspend.sh; mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
+# Bar 1
 bar {
-  mode dock
-  modifier $mod
-  position top
-  workspace_buttons yes
-  #font pango: Fantasque Sans Mono 16
-  #font pango: San Francisco Text Medium 17
-  #font pango: Fira Sans Medium 17
-  #font pango: Fixedsys Excelsior 3.01 18
-  #font pango: Inconsolata 17.5
-  #font pango: Fakt Pro SemiBold 17
-  font pango: DinC 16
-  status_command ~/Scripts/i3bar_exec
+    mode dock
+    modifier $mod
+    position top
+    workspace_buttons yes
+    #status_command i3status -c "~/.config/i3/i3status.conf"
+    font $FONT
+    i3bar_command i3bar -t
+    status_command $HOME/bin/i3bar_exec_main.sh
+    output $RIGHTMONITOR
+    tray_output $RIGHTMONITOR
+    #strip_workspace_numbers yes
+    height 22
 
-  colors {
-    background $bg-color
-    separator #757575
-    #                  border             background         text
-    focused_workspace  $bg-color          $text-color        $bg-color
-    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-    urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+    colors {
+        ## Own bar colors
+        statusline #dcdccc
+        background #151515dd
+        focused_statusline #dcdccc
+        focused_background #222222dd
+        separator #FF9955
+        #                    border  backgr  text
+        focused_workspace    #0074D9 #0074D9 #FFFFFF
+        active_workspace     #151515 #151515 #c5c8c6
+        inactive_workspace   #151515dd #282828dd #c5c8c6
+        urgent_workspace     #D60000 #D60000 #FFFFFF
 
-    #background #073642
-    #statusline #eee8d5
+        ### Gruvbox bar colors
+        #statusline #d79921
+        #background #282828ee
+        #focused_statusline #ebdbb2
+        #focused_background #1d2021ee
+        #separator #000000
+        #                    border  backgr  text
+        #focused_workspace    #2296FB #0074D9 #ffffff
+        #inactive_workspace   #1d2021 #1d2021 #d79921
+        #active_workspace     #1d2021 #32302f #d79921
+        #urgent_workspace     #cc241d #cc241d $282828
 
-    #background #282828
-    #statusline #ebdbb2
+        ### Dracula bar colors
+        #statusline #f8f8f2
+        #background #282a36ee
+        #focused_statusline #fffff2
+        #focused_background #282a36ee
+        #separator #000000
+        #                    border  backgr  text
+        #focused_workspace    #ff79c6 #ff79c6 #040404
+        #inactive_workspace   #181a26 #282a36 #f8f8f2
+        #active_workspace     #181a26 #282a36 #8be8fd
+        #urgent_workspace     #ff5555 #44475a $f8f8f2
+    }
+}
 
-    #background #19171a
-    #statusline #cbc6cc
+# Bar 2
+bar {
+    mode dock
+    modifier $mod
+    position top
+    workspace_buttons yes
+    font $FONT
+    i3bar_command i3bar -t
+    status_command $HOME/bin/i3bar_exec_secondary.sh
+    output $MAINMONITOR
+    tray_output $RIGHTMONITOR
+    #strip_workspace_numbers yes
+    height 22
 
-    #background #121314
-    #statusline #FFFFFF
+    colors {
+        ## Own bar colors
+        statusline #dcdccc
+        background #151515dd
+        focused_statusline #dcdccc
+        focused_background #222222dd
+        separator #FF9955
+        #                    border  backgr  text
+        focused_workspace    #0074D9 #0074D9 #FFFFFF
+        active_workspace     #151515 #151515 #c5c8c6
+        inactive_workspace   #151515dd #282828dd #c5c8c6
+        urgent_workspace     #D60000 #D60000 #FFFFFF
 
-    # workspace:       border  bg      text
-    #focused_workspace  #cb4b16 #cb4b16 #eee8d5
-    #active_workspace   #cb4b16 #cb4b16 #eee8d5
-    #inactive_workspace #b58900 #b58900 #eee8d5
-    #urgent_workspace   #cb4b16 #dc322f #eee8d5
+        ### Gruvbox bar colors
+        #statusline #d79921
+        #background #282828ee
+        #focused_statusline #ebdbb2
+        #focused_background #1d2021ee
+        #separator #000000
+        #                    border  backgr  text
+        #focused_workspace    #2296FB #0074D9 #ffffff
+        #inactive_workspace   #1d2021 #1d2021 #d79921
+        #active_workspace     #1d2021 #32302f #d79921
+        #urgent_workspace     #cc241d #cc241d $282828
 
-    # workspace:       border  bg      text
-    #focused_workspace  #458588 #83a598 #282828
-    #active_workspace   #1d2021 #282828 #ebdbb2
-    #inactive_workspace #1d2021 #3c3836 #ebdbb2
-    #urgent_workspace   #cc241d #fb4934 #ebdbb2
-
-    # workspace:       border  bg      text
-    #focused_workspace  #006699 #005577 #eeeeee
-    #active_workspace   #5f5f5f #101010 #101010
-    #inactive_workspace #252525 #1a1a1a #5f5f5f
-    #urgent_workspace   #ff7700 #dd6600 #eeeeee
-
-    # workspace:       border  bg      text
-    #focused_workspace  #bcd8ff #7086a8 #242224
-    #active_workspace   #bcd8ff #7086a8 #cbc6cc
-    #inactive_workspace #242224 #19171a #cbc6cc
-    #urgent_workspace   #b3d6ae #748c71 #242224
-
-    # workspace:       border  bg  text
-    #focused_workspace  #006699 #005577 #EEEEEE
-    #active_workspace   #006699 #005577 #EEEEEE
-    #inactive_workspace #232323 #121314 #FFFFFF
-    #urgent_workspace   #ff7700 #dd6600 #EEEEEE
-  }
+        ### Dracula bar colors
+        #statusline #f8f8f2
+        #background #282a36ee
+        #focused_statusline #fffff2
+        #focused_background #282a36ee
+        #separator #000000
+        #                    border  backgr  text
+        #focused_workspace    #ff79c6 #ff79c6 #040404
+        #inactive_workspace   #181a26 #282a36 #f8f8f2
+        #active_workspace     #181a26 #282a36 #8be8fd
+        #urgent_workspace     #ff5555 #44475a $f8f8f2
+    }
 }

@@ -1,7 +1,8 @@
 [user]
-  email = gigamo@gmail.com
-  name = Gigamo
+  email = kenneth@dewinter.online
+  name = Kenneth De Winter
   editor = vim
+  signingkey = 6B5397C85A66AA0F4D4CF9153C0E882460A5849A
 [diff]
   tool = vimdiff
 [color]
@@ -26,14 +27,14 @@
   untracked = cyan
 [alias]
   st = status
-  ci = commit
+  ci = commit -S
   br = branch
   df = diff
-  lg = log -p
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   co = checkout
   tree = log --graph --pretty=oneline --decorate
   pom = push origin master
-  amend = commit --amend -C HEAD
+  amend = commit -S --amend -C HEAD
   dlog = log --oneline --decorate
   wdiff = diff --word-diff
   mcherry = cherry -v master

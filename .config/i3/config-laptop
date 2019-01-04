@@ -1,0 +1,248 @@
+# i3 config
+set $mod Mod4
+#font pango: Fantasque Sans Mono 16
+#font pango: San Francisco Text Medium 17
+#font pango: Fira Sans Medium 17
+#font pango: Fixedsys Excelsior 3.01 18
+#font pango: Inconsolata 17.5
+#font pango: Fakt Pro SemiBold 17
+font pango: DinC 16
+floating_modifier $mod
+default_orientation horizontal
+workspace_layout default
+#new_window normal 2
+new_window pixel 3
+workspace_auto_back_and_forth no
+focus_follows_mouse no
+
+# assign workspaces
+#workspace 1 output LVDS-0
+#workspace 2 output LVDS-0
+#workspace 3 output LVDS-0
+#workspace 4 output LVDS-0
+#workspace 5 output LVDS-0
+#workspace 6 output LVDS-0
+#workspace 7 output LVDS-0
+#workspace 8 output LVDS-0
+#workspace 9 output LVDS-0
+
+# wm keys
+bindsym $mod+w kill
+
+bindsym $mod+Left focus left
+bindsym $mod+Right focus right
+bindsym $mod+Up focus up
+bindsym $mod+Down focus down
+
+bindsym $mod+h focus left
+bindsym $mod+l focus right
+bindsym $mod+k focus up
+bindsym $mod+j focus down
+
+bindsym $mod+Tab focus down
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Down move down
+
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+l move right
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+j move down
+
+bindsym $mod+a split h
+bindsym $mod+z split v
+
+bindsym $mod+f fullscreen
+bindsym $mod+g floating toggle
+bindsym $mod+Space focus mode_toggle
+
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+
+bindsym $mod+Shift+1 move window to workspace 1
+bindsym $mod+Shift+2 move window to workspace 2
+bindsym $mod+Shift+3 move window to workspace 3
+bindsym $mod+Shift+4 move window to workspace 4
+bindsym $mod+Shift+5 move window to workspace 5
+bindsym $mod+Shift+6 move window to workspace 6
+bindsym $mod+Shift+7 move window to workspace 7
+bindsym $mod+Shift+8 move window to workspace 8
+bindsym $mod+Shift+9 move window to workspace 9
+
+# other keys
+bindsym $mod+Return exec termite
+bindsym $mod+r exec dmenu_run -fn 'cure-8' -nb '#121314' -sb '#18191A' -nf '#757575' -sf '#CDFF00'
+
+bindsym XF86AudioRaiseVolume exec amixer -D pulse -q set Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -D pulse -q set Master 5%- unmute
+bindsym XF86AudioMute exec amixer -D pulse -q set Master toggle
+
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
+#bindsym $mod+v exec i3lock -i /home/gig/Pictures/lock2.png
+bindsym $mod+v exec "$HOME/Scripts/lockscreen"
+
+# autostart
+exec --no-startup-id sh /home/gig/.fehbg
+exec --no-startup-id nm-applet
+exec --no-startup-id dropbox start
+exec --no-startup-id unclutter
+
+# assign apps
+assign [class="Pidgin"] 1
+assign [class="Firefox|Aurora|Chromium"] 2
+
+# config apps
+for_window [instance="Navigator" class="Firefox|Aurora"] border none
+for_window [title="^Source of" class="Firefox|Aurora"] floating enable
+for_window [class="Pidgin"] floating enable
+for_window [class="Thunar"] floating enable
+for_window [class="Lxappearance"] floating enable
+for_window [class="VLC"] floating enable
+for_window [title="^TeamSpeak"] floating enable
+
+set $bg-color            #2f343f
+set $inactive-bg-color   #2f343f
+set $text-color          #f3f4f5
+set $inactive-text-color #676E7D
+set $urgent-bg-color     #E53935
+
+#                       border              background         text                 indicator
+client.focused          $inactive-text-color $inactive-text-color $bg-color         #00ff00
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+
+# colors                border  bg      text    indicator
+#client.focused          #859900 #859900 #fdf6e3 #2e9ef4
+#client.focused_inactive #268bd2 #268bd2 #fdf6e3 #484e50
+#client.unfocused        #333333 #93a1a1 #fdf6e3 #292d2e
+#client.urgent           #d33682 #d33682 #fdf6e3 #dc322f
+#client.background       #073642
+
+#client.focused          #458588 #83a598 #282828 #282828
+#client.focused_inactive #1d2021 #3c3836 #ebdbb2 #282828
+#client.unfocused        #1d2021 #3c3836 #ebdbb2 #282828
+#client.urgent           #cc241d #fb4934 #ebdbb2 #282828
+#client.background       #282828
+
+#client.focused          #cccccc #cccccc #222222 #222222
+#client.focused_inactive #191919 #191919 #999999 #222222
+#client.unfocused        #191919 #191919 #999999 #222222
+#client.urgent           #FF7700 #dd6600 #eeeeee #222222
+#client.background       #121212
+
+#client.focused          #bcd8ff #7086a8 #242224 #222222
+#client.focused_inactive #242224 #242224 #cbc6cc #222222
+#client.unfocused        #242224 #242224 #cbc6cc #222222
+#client.urgent           #b3d6ae #748c71 #242224 #222222
+
+#client.focused          #006699 #005577 #EEEEEE #543857
+#client.focused_inactive #232323 #121314 #757575 #222222
+#client.unfocused        #232323 #121314 #757575 #222222
+#client.urgent           #FF7700 #DD6600 #EEEEEE #87292E
+
+# modes
+bindsym $mod+m mode "layout"
+mode "layout" {
+  bindsym 1 layout stacking; mode "default"
+  bindsym 2 layout tabbed; mode "default"
+  bindsym 3 layout toggle split; mode "default"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+bindsym $mod+b mode "border"
+mode "border" {
+  bindsym 1 border pixel 3; mode "default"
+  bindsym 2 border normal 3; mode "default"
+  bindsym 3 border none; mode "default"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+bindsym $mod+i mode "i3wm"
+mode "i3wm" {
+  bindsym 1 reload; mode "default"
+  bindsym 2 restart; mode "default"
+  bindsym 3 exit; mode "default"
+  bindsym 4 exec i3lock -i /home/gig/Pictures/lock2.png && systemctl suspend; mode "default"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+bar {
+  mode dock
+  modifier $mod
+  position top
+  workspace_buttons yes
+  #font pango: Fantasque Sans Mono 16
+  #font pango: San Francisco Text Medium 17
+  #font pango: Fira Sans Medium 17
+  #font pango: Fixedsys Excelsior 3.01 18
+  #font pango: Inconsolata 17.5
+  #font pango: Fakt Pro SemiBold 17
+  font pango: DinC 16
+  status_command ~/Scripts/i3bar_exec
+
+  colors {
+    background $bg-color
+    separator #757575
+    #                  border             background         text
+    focused_workspace  $bg-color          $text-color        $bg-color
+    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+    urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+
+    #background #073642
+    #statusline #eee8d5
+
+    #background #282828
+    #statusline #ebdbb2
+
+    #background #19171a
+    #statusline #cbc6cc
+
+    #background #121314
+    #statusline #FFFFFF
+
+    # workspace:       border  bg      text
+    #focused_workspace  #cb4b16 #cb4b16 #eee8d5
+    #active_workspace   #cb4b16 #cb4b16 #eee8d5
+    #inactive_workspace #b58900 #b58900 #eee8d5
+    #urgent_workspace   #cb4b16 #dc322f #eee8d5
+
+    # workspace:       border  bg      text
+    #focused_workspace  #458588 #83a598 #282828
+    #active_workspace   #1d2021 #282828 #ebdbb2
+    #inactive_workspace #1d2021 #3c3836 #ebdbb2
+    #urgent_workspace   #cc241d #fb4934 #ebdbb2
+
+    # workspace:       border  bg      text
+    #focused_workspace  #006699 #005577 #eeeeee
+    #active_workspace   #5f5f5f #101010 #101010
+    #inactive_workspace #252525 #1a1a1a #5f5f5f
+    #urgent_workspace   #ff7700 #dd6600 #eeeeee
+
+    # workspace:       border  bg      text
+    #focused_workspace  #bcd8ff #7086a8 #242224
+    #active_workspace   #bcd8ff #7086a8 #cbc6cc
+    #inactive_workspace #242224 #19171a #cbc6cc
+    #urgent_workspace   #b3d6ae #748c71 #242224
+
+    # workspace:       border  bg  text
+    #focused_workspace  #006699 #005577 #EEEEEE
+    #active_workspace   #006699 #005577 #EEEEEE
+    #inactive_workspace #232323 #121314 #FFFFFF
+    #urgent_workspace   #ff7700 #dd6600 #EEEEEE
+  }
+}

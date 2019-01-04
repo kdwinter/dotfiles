@@ -1,25 +1,31 @@
-#!/usr/bin/zsh
+#!/usr/bin/env zsh
 
 # reload zshrc
 function src() {
-  autoload -U zrecompile
-  [[ -f ~/.zshrc ]] && zrecompile -p ~/.zshrc
-  for i in "$(find ~/.zsh/ -type f)"; do
-    [[ -f $i ]] && zrecompile -p $i
-    [[ -f $i.zwc.old ]] && rm -f $i.zwc.old
-  done
-  [[ -f ~/.zcompdump ]] && zrecompile -p ~/.zcompdump
-  [[ -f ~/.zcompdump ]] && zrecompile -p ~/.zcompdump
-  [[ -f ~/.zshrc.zwc.old ]] && rm -f ~/.zshrc.zwc.old
-  [[ -f ~/.zcompdump.zwc.old ]] && rm -f ~/.zcompdump.zwc.old
-  source ~/.zshrc
+    autoload -U zrecompile
+
+    [[ -f ~/.zshrc.local ]] && zrecompile -p ~/.zshrc.local
+
+    for i in "$(find ~/.zsh/ -type f)"; do
+        [[ -f $i ]] && zrecompile -p $i
+        [[ -f $i.zwc.old ]] && rm -f $i.zwc.old
+    done
+
+    [[ -f ~/.zcompdump ]] && zrecompile -p ~/.zcompdump
+    [[ -f ~/.zcompdump ]] && zrecompile -p ~/.zcompdump
+    [[ -f ~/.zshrc.zwc.old ]] && rm -f ~/.zshrc.zwc.old
+    [[ -f ~/.zcompdump.zwc.old ]] && rm -f ~/.zcompdump.zwc.old
+
+    source ~/.zshrc.local
 }
 
 function add_alias() {
-  local name=$1 value="$2"
-  echo "alias $name='$value'" >> ~/.zsh/alias
-  eval "alias $name='$value'"
-  alias $name
+    local name=$1 value="$2"
+
+    echo "alias $name='$value'" >> ~/.zsh/alias
+    eval "alias $name='$value'"
+
+    alias $name
 }
 
 # git functions
@@ -28,177 +34,232 @@ function gl()  { git log $* }
 function gs()  { git status -sb $* }
 function gp()  { git push $* }
 function gc()  { git commit -S -s -m "$*" }
+function gm()  { git merge -S --signoff "$*" }
 function gpl() { git pull $* }
 function gco() {
-  if [ -z "$1" ]; then
-    git checkout master
-  else
-    git checkout $*
-  fi
+    if [ -z "$1" ]; then
+        git checkout master
+    else
+        git checkout $*
+    fi
 }
 
 function mkmine() {
-  sudo chown -R ${USER} ${1:-.}
+    sudo chown -R ${USER} ${1:-.}
 }
 
 # Usage: sanitize <file>
 function sanitize() {
-  chmod -R u=rwX,go=rX "$@"
-  chown -R ${USER}.users "$@"
+    chmod -R u=rwX,go=rX "$@"
+    chown -R ${USER}.users "$@"
 }
 
-# roll archive.tar.gz dir/**/*
-function roll() {
-  local FILE
-  FILE=$1
-  case $FILE in
-    *.tar.bz2)  shift && tar cjf $FILE $* ;;
-    *.tbz2)     shift && tar cjf $FILE $* ;;
-    *.tar.gz)   shift && tar czf $FILE $* ;;
-    *.tgz)      shift && tar czf $FILE $* ;;
-    *.tar.xz)   shift && tar cJf $FILE $* ;;
-    *.zip)      shift && zip $FILE $*     ;;
-    *.rar)      shift && rar $FILE $*     ;;
-  esac
+# create_archive archive.tar.gz dir/**/*
+function create_archive() {
+    local archive_file="$1"
+
+    case $archive_file in
+        *.tar.bz2)  shift && tar cjf $archive_file $* ;;
+        *.tbz2)     shift && tar cjf $archive_file $* ;;
+        *.tar.gz)   shift && tar czf $archive_file $* ;;
+        *.tgz)      shift && tar czf $archive_file $* ;;
+        *.tar.xz)   shift && tar cJf $archive_file $* ;;
+        *.zip)      shift && zip $archive_file $*     ;;
+        *.rar)      shift && rar $archive_file $*     ;;
+    esac
 }
 
 function extract_archive() {
-  local old_dirs current_dirs lower
+    local old_dirs current_dirs lower
 
-  lower=${(L)1}
-  old_dirs=( *(N/) )
+    lower=${(L)1}
+    old_dirs=( *(N/) )
 
-  case $lower in
-    *.tar.bz2)  tar xvjf $@   ;;
-    *.tar.gz)   tar xvzf $@   ;;
-    *.tar.xz)   tar xvJf $@   ;;
-    *.bz2)      bunzip2 $@    ;;
-    *.rar)      unrar x $@    ;;
-    *.gz)       gunzip $@     ;;
-    *.tar)      tar xvf $@    ;;
-    *.tbz2)     tar xvjf $@   ;;
-    *.tgz)      tar xvzf $@   ;;
-    *.zip)      unzip $@      ;;
-    *.Z)        uncompress $@ ;;
-    *.7z)       7z x $@       ;;
-    *.xz)       unxz $@       ;;
-    *.exe)      cabextract $@ ;;
-    *.lha)      lha e $@      ;;
-    *) echo "Unknown archive type: $@" || return 1 ;;
-  esac
+    case $lower in
+        *.tar.bz2)  tar xvjf $@   ;;
+        *.tar.gz)   tar xvzf $@   ;;
+        *.tar.xz)   tar xvJf $@   ;;
+        *.bz2)      bunzip2 $@    ;;
+        *.rar)      unrar x $@    ;;
+        *.gz)       gunzip $@     ;;
+        *.tar)      tar xvf $@    ;;
+        *.tbz2)     tar xvjf $@   ;;
+        *.tgz)      tar xvzf $@   ;;
+        *.zip)      unzip $@      ;;
+        *.Z)        uncompress $@ ;;
+        *.7z)       7z x $@       ;;
+        *.xz)       unxz $@       ;;
+        *.exe)      cabextract $@ ;;
+        *.lha)      lha e $@      ;;
+        *) echo "Unknown archive type: $@" || return 1 ;;
+    esac
 
-  # Change in to the newly created directory, and
-  # list the directory contents, if there is one.
-  current_dirs=( *(N/) )
-  for i in {1..${#current_dirs}}; do
-    if [[ $current_dirs[$i] != $old_dirs[$i] ]]; then
-      cd $current_dirs[$i]
-      break
-    fi
-  done
+    # Change in to the newly created directory, and
+    # list the directory contents, if there is one.
+    current_dirs=( *(N/) )
+    for i in {1..${#current_dirs}}; do
+        if [[ $current_dirs[$i] != $old_dirs[$i] ]]; then
+            cd $current_dirs[$i]
+            break
+        fi
+    done
 }
 
 function cd() {
-  builtin cd "$@"
-  ll
+    builtin cd "$@"
+    ll
 }
 
 # marks
 export MARKPATH=$HOME/.marks
 
 function jump() {
-  builtin cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
+    builtin cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
 }
 
 function mark() {
-  mkdir -p $MARKPATH; ln -s "$(pwd)" $MARKPATH/$1
+    mkdir -p $MARKPATH; ln -s "$(pwd)" $MARKPATH/$1
 }
 
 function unmark() {
-  rm -i $MARKPATH/$1
+    rm -i $MARKPATH/$1
 }
 
 function marks() {
-  ls -l $MARKPATH | sed 's/  / /g' | cut -d' ' -f9- | sed 's/@//g' && echo
+    ls -la $MARKPATH | sed 's/  / /g' | cut -d' ' -f9- | sed 's/@//g' && echo
 }
 
 function conf() {
-  case $1 in
-    i3)         vim ~/.config/i3/config      ;;
-    termite)    vim ~/.config/termite/config ;;
-    awesome)    vim ~/.config/awesome/rc.lua ;;
-    zsh)        vim ~/.zshrc                 ;;
-    xinit)      vim ~/.xinitrc               ;;
-    xresources) vim ~/.Xresources            ;;
-    xdefaults)  vim ~/.Xdefaults             ;;
-    irssi)      vim ~/.irssi/config          ;;
-    vim)        vim ~/.vimrc                 ;;
-    gvim)       vim ~/.gvimrc                ;;
-    conky)      vim ~/.conkyrc               ;;
-    emacs)      vim ~/.spacemacs             ;;
-    rtorrent)   vim ~/.rtorrent.rc           ;;
-    dlna)       vim ~/.config/minidlna/minidlna.conf ;;
-    mutt)       vim ~/.muttrc                ;;
-    *) echo "Unknown app: $1" || return 1    ;;
-  esac
+    case $1 in
+        i3)         $EDITOR ~/.config/i3/config      ;;
+        termite)    $EDITOR ~/.config/termite/config ;;
+        awesome)    $EDITOR ~/.config/awesome/rc.lua ;;
+        bash)       $EDITOR ~/.bashrc                ;;
+        zsh)        $EDITOR ~/.zsh/zshrc             ;;
+        xinit)      $EDITOR ~/.xinitrc               ;;
+        xresources) $EDITOR ~/.Xresources            ;;
+        xdefaults)  $EDITOR ~/.Xdefaults             ;;
+        irssi)      $EDITOR ~/.irssi/config          ;;
+        vim)        $EDITOR ~/.vim/vimrc             ;;
+        gvim)       $EDITOR ~/.vim/gvimrc            ;;
+        conky)      $EDITOR ~/.conkyrc               ;;
+        emacs)      $EDITOR ~/.emacs                 ;;
+        rtorrent)   $EDITOR ~/.rtorrent.rc           ;;
+        dlna)       $EDITOR ~/.config/minidlna/minidlna.conf ;;
+        mutt)       $EDITOR ~/.mutt/muttrc           ;;
+        git)        $EDITOR ~/.gitconfig             ;;
+        tmux)       $EDITOR ~/.config/tmux/tmux.conf ;;
+        dunst)      $EDITOR ~/.config/dunst/dunstrc  ;;
+        rofi)       $EDITOR ~/.config/rofi/config    ;;
+        compton)    $EDITOR ~/.config/compton.conf   ;;
+        *) echo "Unknown app: $1" || return 1        ;;
+    esac
 }
 
 # replace_in_files Node.root.title Node.root_title
 function replace_in_files() {
-  local search="$1" replace="$2"
-  echo "Replacing ${search} with ${replace}..."
-  grep -rl "${search}" | xargs sed -i "s/${search}/${replace}/g"
+    local search="$1" replace="$2"
+
+    echo "Replacing ${search} with ${replace}..."
+    grep -rl "${search}" | xargs sed -i "s/${search}/${replace}/g"
 }
 
 function git_changelog() {
-  local v1="$1" v2="$2"
-  git log --pretty=format:%s $v1..$v2 . | sort | awk '$0="* "$0'
+    local v1="$1" v2="$2"
+
+    git log --pretty=format:%s $v1..$v2 . | sort | awk '$0="* "$0'
 }
 
 function play() {
-  # Skip DASH manifest for speed purposes. This might actually disable
-  # being able to specify things like 'bestaudio' as the requested format,
-  # but try anyway.
-  # Get the best audio that isn't WebM, because afplay doesn't support it.
-  # Use "$*" so that quoting the requested song isn't necessary.
-  youtube-dl --default-search=ytsearch: \
-             --youtube-skip-dash-manifest \
-             --output="${TMPDIR:-/tmp/}%(title)s-%(id)s.%(ext)s" \
-             --restrict-filenames \
-             --format="bestaudio[ext!=webm]" \
-             --exec=cvlc "$*"
+    # Skip DASH manifest for speed purposes. This might actually disable
+    # being able to specify things like 'bestaudio' as the requested format,
+    # but try anyway.
+    # Get the best audio that isn't WebM, because afplay doesn't support it.
+    # Use "$*" so that quoting the requested song isn't necessary.
+    youtube-dl --default-search=ytsearch: \
+        --youtube-skip-dash-manifest \
+        --output="${TMPDIR:-/tmp/}%(title)s-%(id)s.%(ext)s" \
+        --restrict-filenames \
+        --format="bestaudio[ext!=webm]" \
+        --exec=cvlc "$*"
 }
 
 function download_mp3() {
-  # Get the best audio, convert it to MP3, and save it to the current
-  # directory.
-  youtube-dl --default-search=ytsearch: \
-             --restrict-filenames \
-             --format=bestaudio \
-             --extract-audio \
-             --audio-format=mp3 \
-             --audio-quality=1 "$*"
+    # Get the best audio, convert it to MP3, and save it to the current
+    # directory.
+    youtube-dl --default-search=ytsearch: \
+        --restrict-filenames \
+        --format=bestaudio \
+        --extract-audio \
+        --audio-format=mp3 \
+        --audio-quality=1 "$*"
 }
 
-function killsteam() {
-  if [[ -f ~/.steampid ]]; then
-    local steampid=$(cat ~/.steampid)
-    kill -9 $steampid
-  else
-    echo "Steam is not running."
-  fi
+function play_youtube() {
+    if [ -z "$1" ]; then
+        echo "Usage: play_youtube \"search terms\""
+        exit 0
+    fi
+
+    ytid="$(youtube-dl --get-id "ytsearch:$@")"
+    mpv "https://youtube.com/watch?v=$ytid"
 }
 
-function flac2mp3() {
-  local files="$@"
-  for a in $files; do
-    ffmpeg -i "$a" -qscale:a 0 "${a[@]/%flac/mp3}" 2>/dev/null
-  done
+function murder_steam() {
+    if [ -e $HOME/.steampid ]; then
+        kill -9 $(cat $HOME/.steampid)
+    else
+        echo "steam not running?"
+    fi
+}
+
+function flac_to_mp3() {
+    for a in $@; do
+        ffmpeg -i "$a" -qscale:a 0 "${a[@]/%flac/mp3}"
+    done
 }
 
 function edit_rg() {
-  local search="$1"
-  for f in "$(rg "$search" -l)"; do
-    vim $f
-  done
+    local search="$1" files=""
+
+    for f in "$(rg "$search" -l)"; do
+        files="$(echo "$f" | tr "\n" " ") $files"
+    done
+
+    #echo "$files" | xargs vim
+    vim -p $(echo $files)
+}
+
+function info() {
+    /usr/bin/info "$@" | less
+}
+
+function keybase_fs() {
+    if [ ! -d /keybase ]; then
+        sudo mkdir -p /keybase
+        sudo chown -R /keybase $USER
+    fi
+
+    kbfsfuse /keybase
+}
+
+function restart_bluetooth() {
+    sudo modprobe -r btusb
+    sudo modprobe btusb
+    sudo systemctl restart bluetooth
+}
+
+function start_dlna() {
+    minidlnad -R -f $HOME/.config/minidlna/minidlna.conf -P $HOME/.config/minidlna/minidlna.pid
+}
+
+function stop_dlna() {
+    #kill -15
+    #kill
+    #killall minidlnad
+    if [ -e $HOME/.config/minidlna/minidlna.pid ]; then
+        kill -TERM $(cat $HOME/.config/minidlna/minidlna.pid)
+    else
+        echo "minidlna not running?"
+    fi
 }
