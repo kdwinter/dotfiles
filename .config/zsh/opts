@@ -1,0 +1,49 @@
+#!/usr/bin/zsh
+#
+# zsh specifics
+
+# autoload
+autoload -U compinit
+compinit
+
+autoload zmv
+
+autoload -U zcalc
+
+HOSTNAME="$(hostname)"
+HOSTNAME_SHORT="${HOSTNAME%%.*}"
+# history
+HISTFILE=~/.config/zsh/history
+#HISTFILE="${HOME}/.config/zsh/history/$(date -u +%Y/%m/%d.%H.%M.%S)_${HOSTNAME_SHORT}_$$"
+HISTSIZE=5000
+SAVEHIST=5000
+
+# type a dir's name to cd into it
+#compctl -/ cd
+
+# Some options..
+setopt autopushd pushdminus pushdsilent pushdtohome
+setopt autocd
+setopt cdablevars
+setopt globdots
+setopt ignoreeof
+setopt interactivecomments
+setopt banghist
+setopt noclobber
+setopt hist_reduce_blanks
+setopt hist_ignore_space
+setopt histignorespace
+setopt SH_WORD_SPLIT
+setopt nobeep                  # i hate beeps
+setopt automenu
+setopt autopushd               # automatically append dirs to the push/pop list
+setopt pushdignoredups         # and don't duplicate them
+setopt cdablevars              # avoid the need for an explicit $
+setopt nohup                   # and don't kill them, either
+setopt nolisttypes             # show types in completion
+setopt extendedglob            # weird & wacky pattern matching - yay zsh!
+setopt completeinword          # not just at the end
+setopt alwaystoend             # when complete from middle, move cursor
+setopt nopromptcr              # don't add \n which overwrites cmds with no \n
+setopt histverify              # when using ! cmds, confirm first
+setopt interactivecomments     # escape commands so i can use them later

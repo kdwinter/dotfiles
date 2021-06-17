@@ -1,0 +1,61 @@
+/*
+__        __     __ _
+\ \      / /__  / _(_)
+ \ \ /\ / / _ \| |_| |
+  \ V  V / (_) |  _| |
+   \_/\_/ \___/|_| |_|
+*/
+
+* {
+  transition-property: none;
+  animation: none;
+  font-family: monospace;
+  font-size: 13.5px;
+  color: #ebdbb2;
+}
+
+window {
+  margin: 0px;
+  border-radius: 0px;
+  border: 2px solid #504945;
+  background-color: rgba(50, 48, 47, 0.9);
+}
+
+#input {
+  margin: 0px;
+  padding: 0px 0px 0px 8px;
+  background-color: transparent;
+  border: 0px solid transparent;
+}
+
+#inner-box {
+  margin: 4px;
+  background-color: transparent;
+}
+
+#outer-box {
+  margin: 2px;
+  background-color: transparent;
+}
+
+#scroll {
+  margin: 0px;
+  background-color: transparent;
+}
+
+#text {
+  margin: 0px -8px 2px 4px;
+  padding: 0px 4px 0px 14px;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+#text:selected {
+  background-color: #504945;
+}
+
+#entry {
+  padding: 6px;
+  background-color: transparent;
+  outline-color: transparent;
+}

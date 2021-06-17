@@ -1,0 +1,79 @@
+/*
+__        __          _
+\ \      / /_ _ _   _| |__   __ _ _ __
+ \ \ /\ / / _` | | | | '_ \ / _` | '__|
+  \ V  V / (_| | |_| | |_) | (_| | |
+   \_/\_/ \__,_|\__, |_.__/ \__,_|_|
+                |___/
+*/
+
+* {
+  transition-property: none;
+  animation: none;
+  font-size: 11px;
+  font-family: Inter, "Font Awesome 5 Free";
+  font-weight: 500;
+  border-radius: 0;
+  padding: 0;
+}
+
+window#waybar {
+  background: #1d2021;
+  color: #fbf1c7;
+  padding: 2px;
+}
+
+#workspaces,
+#tray {
+  padding: 3px;
+}
+
+#workspaces button {
+  padding: 0 3px;
+  color: #fbf1c7;
+  border-radius: 2px;
+  margin-right: 4px;
+}
+
+#workspaces button.persistent {
+  color: #928374;
+}
+
+#workspaces button.focused {
+  color: #fbf1c7;
+  background: #076678;
+  font-weight: bold
+}
+
+#workspaces button:hover {
+  background: #32302f;
+}
+
+#window {
+  color: #fbf1c7;
+  font-weight: bold
+}
+
+#clock,
+#pulseaudio,
+#memory,
+#cpu,
+#battery,
+#custom-cmus,
+#custom-pacman,
+#custom-vpn,
+#custom-mail,
+#network,
+#disk {
+  color: #fbf1c7;
+  padding: 0 10px;
+  padding-left: 4px;
+  font-weight: 400;
+}
+
+#custom-cmus {
+  /*padding-right: 16px;*/
+}
+
+#disk { padding-right: 0 }
+#custom-pacman { padding-left: 14px }

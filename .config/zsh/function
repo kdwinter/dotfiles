@@ -1,0 +1,369 @@
+#!/usr/bin/env zsh
+
+# reload zshrc
+function src() {
+    autoload -U zrecompile
+
+    [[ -f ~/.zshrc.local ]] && zrecompile -p ~/.zshrc.local
+
+    for i in "$(find ~/.config/zsh/ -type f)"; do
+        [[ -f $i ]] && zrecompile -p $i
+        [[ -f $i.zwc.old ]] && rm -f $i.zwc.old
+    done
+
+    [[ -f ~/.zcompdump ]] && zrecompile -p ~/.zcompdump
+    [[ -f ~/.zcompdump ]] && zrecompile -p ~/.zcompdump
+    [[ -f ~/.zshrc.zwc.old ]] && rm -f ~/.zshrc.zwc.old
+    [[ -f ~/.zcompdump.zwc.old ]] && rm -f ~/.zcompdump.zwc.old
+
+    source ~/.zshrc.local
+}
+
+function add_alias() {
+    local name=$1 value="$2"
+
+    echo "alias $name='$value'" >> ~/.config/zsh/alias
+    eval "alias $name='$value'"
+
+    alias $name
+}
+
+# git functions
+function ga()  { git add $* }
+function gl()  { git log $* }
+function gs()  { git status -sb $* }
+function gp()  { git push $* }
+function gc()  { git commit -S -s -m "$*" }
+function gm()  { git merge -S --signoff "$*" }
+function gpl() { git pull $* }
+function gco() {
+    if [ -z "$1" ]; then
+        git checkout master
+    else
+        git checkout $*
+    fi
+}
+
+function mkmine() {
+    doas chown -R ${USER} ${1:-.}
+}
+
+# Usage: sanitize <file>
+function sanitize() {
+    doas chmod -R u=rwX,go=rX "$@"
+    doas chown -R ${USER}.users "$@"
+}
+
+# create_archive archive.tar.gz dir/**/*
+function create_archive() {
+    local archive_file="$1"
+
+    case $archive_file in
+        *.tar.bz2)  shift && tar cjf $archive_file $* ;;
+        *.tbz2)     shift && tar cjf $archive_file $* ;;
+        *.tar.gz)   shift && tar czf $archive_file $* ;;
+        *.tgz)      shift && tar czf $archive_file $* ;;
+        *.tar.xz)   shift && tar cJf $archive_file $* ;;
+        *.zip)      shift && zip $archive_file $*     ;;
+        *.rar)      shift && rar $archive_file $*     ;;
+    esac
+}
+
+function extract_archive() {
+    local old_dirs current_dirs lower
+
+    lower=${(L)1}
+    old_dirs=( *(N/) )
+
+    case $lower in
+        *.tar.bz2)  tar xvjf $@   ;;
+        *.tar.gz)   tar xvzf $@   ;;
+        *.tar.xz)   tar xvJf $@   ;;
+        *.bz2)      bunzip2 $@    ;;
+        *.rar)      unrar x $@    ;;
+        *.gz)       gunzip $@     ;;
+        *.tar)      tar xvf $@    ;;
+        *.tbz2)     tar xvjf $@   ;;
+        *.tgz)      tar xvzf $@   ;;
+        *.zip)      unzip $@      ;;
+        *.Z)        uncompress $@ ;;
+        *.7z)       7z x $@       ;;
+        *.xz)       unxz $@       ;;
+        *.exe)      cabextract $@ ;;
+        *.lha)      lha e $@      ;;
+        *) echo "Unknown archive type: $@" || return 1 ;;
+    esac
+
+    # Change in to the newly created directory, and
+    # list the directory contents, if there is one.
+    current_dirs=( *(N/) )
+    for i in {1..${#current_dirs}}; do
+        if [[ $current_dirs[$i] != $old_dirs[$i] ]]; then
+            cd $current_dirs[$i]
+            break
+        fi
+    done
+}
+
+function cd() {
+    builtin cd "$@"
+    ll
+}
+
+# marks
+export MARKPATH=$HOME/.marks
+
+function jump() {
+    builtin cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
+}
+
+function mark() {
+    mkdir -p $MARKPATH; ln -s "$(pwd)" $MARKPATH/$1
+}
+
+function unmark() {
+    rm -i $MARKPATH/$1
+}
+
+function marks() {
+    ls -la $MARKPATH | sed 's/  / /g' | cut -d' ' -f9- | sed 's/@//g' && echo
+}
+
+function conf() {
+    case $1 in
+        polybar)     $EDITOR ~/.config/polybar/config ;;
+        zathura)     $EDITOR ~/.config/zathura/zathurarc ;;
+        sway)        $EDITOR ~/.config/sway/config    ;;
+        i3)          $EDITOR ~/.config/i3/config      ;;
+        termite)     $EDITOR ~/.config/termite/config ;;
+        alacritty)   $EDITOR ~/.config/alacritty/alacritty.yml ;;
+        awesome)     $EDITOR ~/.config/awesome/rc.lua ;;
+        bash)        $EDITOR ~/.bashrc                ;;
+        zsh)         $EDITOR ~/.config/zsh/zshrc      ;;
+        xinit)       $EDITOR ~/.xinitrc               ;;
+        sx)          $EDITOR ~/.config/sx/sxrc        ;;
+        xresources)  $EDITOR ~/.Xresources            ;;
+        xdefaults)   $EDITOR ~/.Xdefaults             ;;
+        irssi)       $EDITOR ~/.irssi/config          ;;
+        weechat)     $EDITOR ~/.weechat/weechat.conf  ;;
+        vim)         $EDITOR ~/.vim/vimrc             ;;
+        gvim)        $EDITOR ~/.vim/gvimrc            ;;
+        conky)       $EDITOR ~/.conkyrc               ;;
+        emacs)       $EDITOR ~/.config/emacs/init.el  ;;
+        rtorrent)    $EDITOR ~/.rtorrent.rc           ;;
+        dlna)        $EDITOR ~/.config/minidlna/minidlna.conf ;;
+        mutt)        $EDITOR ~/.config/mutt/muttrc    ;;
+        git)         $EDITOR ~/.gitconfig             ;;
+        tmux)        $EDITOR ~/.config/tmux/tmux.conf ;;
+        dunst)       $EDITOR ~/.config/dunst/dunstrc  ;;
+        mako)        $EDITOR ~/.config/mako/config    ;;
+        rofi)        $EDITOR ~/.config/rofi/config    ;;
+        compton)     $EDITOR ~/.config/compton.conf   ;;
+        mbsync)      $EDITOR ~/.mbsyncrc              ;;
+        offlineimap) $EDITOR ~/.offlineimaprc         ;;
+        quake)       $EDITOR ~/.local/share/Steam/steamapps/common/Quake\ Live/76561197987021307/baseq3/autoexec.cfg ;;
+        qutebrowser) $EDITOR ~/.config/qutebrowser/config.py ;;
+        wofi)        $EDITOR ~/.config/wofi/config    ;;
+        waybar)      $EDITOR ~/.config/waybar/config  ;;
+        *) echo "Unknown app: $1" || return 1         ;;
+    esac
+}
+
+# replace_in_files Node.root.title Node.root_title
+function replace_in_files() {
+    local search="$1" replace="$2"
+
+    echo "Replacing ${search} with ${replace}..."
+    grep --exclude-dir=.git -rl "${search}" | xargs sed -i "s/${search}/${replace}/g"
+}
+
+function git_changelog() {
+    local v1="$1" v2="$2"
+
+    git log --pretty=format:%s $v1..$v2 . | sort | awk '$0="* "$0'
+}
+
+function play() {
+    # Skip DASH manifest for speed purposes. This might actually disable
+    # being able to specify things like 'bestaudio' as the requested format,
+    # but try anyway.
+    # Get the best audio that isn't WebM, because afplay doesn't support it.
+    # Use "$*" so that quoting the requested song isn't necessary.
+    youtube-dl --default-search=ytsearch: \
+        --youtube-skip-dash-manifest \
+        --output="${TMPDIR:-/tmp/}%(title)s-%(id)s.%(ext)s" \
+        --restrict-filenames \
+        --format="bestaudio[ext!=webm]" \
+        --exec=cvlc "$*"
+}
+
+function download_mp3() {
+    # Get the best audio, convert it to MP3, and save it to the current
+    # directory.
+    youtube-dl --default-search=ytsearch: \
+        --restrict-filenames \
+        --format=bestaudio \
+        --extract-audio \
+        --audio-format=mp3 \
+        --audio-quality=1 "$*"
+}
+
+function play_youtube() {
+    if [ -z "$1" ]; then
+        echo "Usage: play_youtube \"search terms\""
+        exit 0
+    fi
+
+    ytid="$(youtube-dl --get-id "ytsearch:$@")"
+    mpv "https://youtube.com/watch?v=$ytid"
+}
+
+function kill_steam() {
+    if [ -e $HOME/.steampid ]; then
+        steam_pid=$(cat $HOME/.steampid)
+        if [ $1 -eq "HARD" ]; then
+            kill -9 $steam_pid
+        else
+            kill $steam_pid
+        fi
+    else
+        echo "steam not running?"
+    fi
+}
+
+function murder_steam() {
+    kill_steam "HARD"
+}
+
+function flac_to_mp3() {
+    for a in $@; do
+        ffmpeg -i "$a" -qscale:a 0 "${a[@]/%flac/mp3}"
+    done
+}
+
+function edit_rg() {
+    local search="$1" files=""
+
+    for f in "$(rg "$search" -l)"; do
+        files="$(echo "$f" | tr "\n" " ") $files"
+    done
+
+    #echo "$files" | xargs vim
+    vim -p $(echo $files)
+}
+
+function info() {
+    /usr/bin/info "$@" | less
+}
+
+function restart_bluetooth() {
+    doas modprobe -r btusb
+    doas modprobe btusb
+    doas systemctl restart bluetooth
+}
+
+function start_dlna() {
+    minidlnad -R -f $HOME/.config/minidlna/minidlna.conf -P $HOME/.config/minidlna/minidlna.pid
+    #minidlnad -f $HOME/.config/minidlna/minidlna.conf -P $HOME/.config/minidlna/minidlna.pid
+}
+
+function stop_dlna() {
+    #kill -15
+    #kill
+    #killall minidlnad
+    if [ -e $HOME/.config/minidlna/minidlna.pid ]; then
+        kill -TERM $(cat $HOME/.config/minidlna/minidlna.pid)
+    else
+        echo "minidlna not running?"
+    fi
+}
+
+function today() {
+    date +%F
+}
+
+function serve_directory() {
+    python -m http.server
+}
+
+
+function muttpersonal() {
+    systemctl --user start mbsync@personal.timer
+    systemctl --user start mbsync@personal
+
+    neomutt -F ~/.config/mutt/muttrc_personal
+}
+
+# Examples:
+#     ix hello.txt              # paste file (name/ext will be set).
+#     echo Hello world. | ix    # read from STDIN (won't set name/ext).
+#     ix -n 1 self_destruct.txt # paste will be deleted after one read.
+#     ix -i ID hello.txt        # replace ID, if you have permission.
+#     ix -d ID
+function ix() {
+    local opts
+    local OPTIND
+    [ -f "$HOME/.netrc" ] && opts='-n'
+    while getopts ":hd:i:n:" x; do
+        case $x in
+            h) echo "ix [-d ID] [-i ID] [-n N] [opts]"; return;;
+            d) $echo curl $opts -X DELETE ix.io/$OPTARG; return;;
+            i) opts="$opts -X PUT"; local id="$OPTARG";;
+            n) opts="$opts -F read:1=$OPTARG";;
+        esac
+    done
+    shift $(($OPTIND - 1))
+    [ -t 0 ] && {
+        local filename="$1"
+        shift
+        [ "$filename" ] && {
+            curl $opts -F f:1=@"$filename" $* ix.io/$id
+            return
+        }
+        echo "^C to cancel, ^D to send."
+    }
+    curl $opts -F f:1='<-' $* ix.io/$id
+}
+
+function upload_0x0() {
+    curl -F"file=@$1" http://0x0.st
+}
+
+# (wayland only)
+# wl_screenshot_region test.png
+function wl_screenshot_region() {
+    local name="$1"
+    grim -g "$(slurp)" $name
+}
+
+# (wayland only)
+# wl_screenshot_monitor DP-1 test.png
+function wl_screenshot_monitor() {
+    local monitor="$1"
+    local name="$2"
+    grim -o $monitor $name
+}
+
+function cpu_usage() {
+    local a b c cpu previdle prevtotal idle total rest
+
+    read -r cpu a b c previdle rest < /proc/stat
+    prevtotal=$((a + b + c + previdle))
+
+    sleep 0.5
+
+    read -r cpu a b c idle rest < /proc/stat
+    total=$((a + b + c + idle))
+
+    printf '%d\n' $((100 * ((total - prevtotal) - (idle - previdle)) / (total - prevtotal)))
+}
+
+# Quick shortcuts
+
+function cheatsheet() {
+    curl cheat.sh/$1
+}
+
+function weather() {
+    curl wttr.in/$1
+}

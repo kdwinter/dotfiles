@@ -1,0 +1,8 @@
+font=Inter Medium 10.5
+width=500
+border-color=#151515FF
+background-color=#282828FF
+text-color=#EBDBB2FF
+default-timeout=5000
+output=HDMI-A-1
+padding=5,5,10,5

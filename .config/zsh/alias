@@ -1,0 +1,89 @@
+#!/usr/bin/env zsh
+
+. ~/.config/zsh/vars
+
+# auto open images
+alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}="sxiv"
+# auto open movies
+alias -s {mpg,mpeg,avi,ogm,wmv,m4v,mp4,mov,mkv,webm,gifv}="mpv"
+# auto open audio
+alias -s {mp3,ogg,wav,flac}="mpv"
+# auto open web addresses
+alias -s {html,php,com,net,org,gov}="firefox-developer-edition"
+# auto open regular files
+alias -s {txt,md,yaml,conf,cr,rs}="vim"
+alias -s pdf="zathura"
+#alias -s org="emacs -nw"
+
+alias mv="mv -v"
+alias rm="rm -iv"
+alias cp="cp -v"
+alias wget="wget --timeout 10"
+alias grep="grep --color=auto"
+alias c="clear"
+alias cdc="cd; clear"
+#alias ll='ls -ahl | more; echo "\e[1;32m --[\e[1;34m Dirs:\e[1;36m `ls -al | egrep \"^drw\" | wc -l` \e[1;32m|\e[1;35m Files: \e[1;31m`ls -al | egrep -v \"^drw\" | grep -v total | wc -l` \e[1;32m]--"'
+alias ll='ls -aGF; echo "\e[1;32m --[\e[1;34m Dirs:\e[1;36m `ls -al | egrep \"^drw\" | wc -l` \e[1;32m|\e[1;35m Files: \e[1;31m`ls -al | egrep -v \"^drw\" | grep -v total | wc -l` \e[1;32m]--"'
+alias ls="ls -GF --color=auto"
+alias lso="ls -alG | awk '{k=0;for(i=0;i<=8;i++)k+=((substr(\$1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(\" %0o \",k);print}'"
+alias :q="exit"
+alias :wq="exit"
+alias dmesg="dmesg --color=auto"
+alias dmesg_errors="dmesg --level=err,warn"
+alias journalctl_errors_since_boot="journalctl -b -p err..alert"
+alias open="xdg-open"
+alias pa_sinks="pacmd list-sinks | grep -e 'name:' -e 'index'"
+alias pa_sources="pacmd list-sources | grep -e device.string -e 'name:'"
+#alias mpv="mpv --hwdec=vdpau --vo=gpu"
+#alias ssh="TERM=xterm-256color ssh"
+alias mplayer="mplayer -idx"
+alias wcat="wget -q -O -"
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
+alias vimdiff="nvim -d"
+alias manpdf="man -k . | fzf | awk '{ print \$1 }' | xargs -r man -Tpdf | zathura - "
+#alias e="emacs -nw"
+alias dirsizes="du -h -d 1"
+alias ruby_test_file='RAILS_ENV=test bundle exec ruby -I"lib:test"'
+alias j="jump"
+#alias sudo='echo "[ran with sudo]"; sudo'
+alias sudo='echo "[ran with doas]"; doas'
+alias startx='sx'
+alias sumount="doas mount -o gid=users,fmask=113,dmask=002"
+alias mountusb="doas mount --options utf8,uid=1000,nodev,nosuid"
+alias update_system="doas pacman -Syu"
+alias update_system_without_kernel="doas pacman -Syu --ignore linux,linux-headers,linux-zen,linux-zen-headers"
+alias mksrcinfo="makepkg --printsrcinfo > .SRCINFO"
+alias publicip="curl ipinfo.io"
+alias ping="ping -c 5"
+alias rg="rg --max-columns 200 --max-columns-preview"
+
+# NOTE: Cant use these because these don't apply the DNS settings.
+#alias wgup="doas systemctl start wg-quick@mullvad-no1"
+#alias wgdown="doas systemctl stop wg-quick@mullvad-no1"
+
+alias restart_i3="i3-msg restart"
+alias wiki="vim $WIKIPATH/index.wiki"
+
+case $(hostname) in
+    sanctuary)
+        #alias dota2="steam steam://rungameid/570"
+        alias quake3="quake3 +set fs_game cpma"
+        alias quakelive='open "steam://connect/185.107.96.27:27960"'
+
+        #alias ms="doas mount_btrfs_storage.sh"
+        alias mosto="doas $HOME/.local/bin/mount_zfs_storage.sh"
+    ;;
+    aranoch)
+
+    ;;
+    sescheron)
+        alias quakelive='open "steam://connect/185.107.96.27:27960"'
+
+        alias ls="exa --group-directories-first"
+        alias la="exa -a --group-directories-first"
+        alias ll="exa -al --group-directories-first"
+        alias lt="exa -aT --group-directories-first"
+    ;;
+esac

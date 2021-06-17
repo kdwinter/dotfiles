@@ -1,0 +1,14 @@
+#!/bin/sh
+
+case "${1%%:*}" in
+    #http|https|*.pdf)
+    http|https)
+        exec firefox-developer-edition "$1"
+        ;;
+    mailto)
+        exec aerc "$1"
+        ;;
+    *)
+        exec /usr/bin/xdg-open "$@"
+        ;;
+esac

@@ -1,0 +1,17 @@
+set crypt_use_gpgme = yes
+set crypt_autosign = yes
+set pgp_use_gpg_agent = yes
+#set pgp_sign_as = 6B5397C85A66AA0F4D4CF9153C0E882460A5849A
+set pgp_sign_as = 8F501EC17D6BD32F1F9D501D6AFF5453B7233ECD
+set pgp_timeout = 3600
+set pgp_good_sign = "^gpgv?: Good signature from "
+
+set crypt_replysign = yes
+set crypt_replyencrypt = yes
+set crypt_replysignencrypted = yes
+set crypt_verify_sig = yes
+
+bind compose p pgp-menu
+macro compose Y pfy "send mail without GPG"
+
+# vim:ft=muttrc:

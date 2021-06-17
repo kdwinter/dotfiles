@@ -1,0 +1,473 @@
+conky.config = {
+  out_to_x = false,
+  own_window = false,
+  out_to_console = true,
+  background = false,
+  max_text_width = 0,
+  total_run_times = 0,
+  cpu_avg_samples = 2,
+  override_utf8_locale = false,
+  double_buffer = false,
+  short_units = true,
+  if_up_strictness = "address",
+  update_interval = 3.0,
+  text_buffer_size = 256
+}
+
+conky.text = [[
+[\
+  {\
+    "full_text": "  ",\
+    "color": "\#665c54",\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " ${kernel} ",\
+    "color": "\#ebdbb2",\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_bottom": 0,\
+    "border_left": 0,\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "",\
+    "color": "\#1f1f1f",\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_top": 0,\
+    "border_right": 0,\
+    "border_left": 0,\
+    "border_bottom": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "  ",\
+    "color": "\#665c54",\
+    "background": "\#1f1f1f",\
+    "border": "\#1f1f1f",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " ${texeci 600 /usr/bin/bash /home/gig/.config/conky/weather.sh 'Deutschfeistritz'} ",\
+    "color": "\#ebdbb2",\
+    "background": "\#1f1f1f",\
+    "border": "\#1f1f1f",\
+    "border_bottom": 0,\
+    "border_left": 0,\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "",\
+    "color": "\#1a1a1a",\
+    "background": "\#1f1f1f",\
+    "border": "\#1f1f1f",\
+    "border_top": 0,\
+    "border_right": 0,\
+    "border_left": 0,\
+    "border_bottom": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "  ",\
+    "color": "\#665c54",\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " ${execi 17 /usr/bin/bash /home/gig/.config/conky/cmus_status.sh} ",\
+    "color": "\#ebdbb2",\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_bottom": 0,\
+    "border_left": 0,\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "",\
+    "color": "\#1f1f1f",\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_top": 0,\
+    "border_right": 0,\
+    "border_left": 0,\
+    "border_bottom": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "  ",\
+    "color": "\#665c54",\
+    "background": "\#1f1f1f",\
+    "border": "\#1f1f1f",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " ${fs_used_perc /}% · ${fs_used_perc /home}% ",\
+    "color": "\#ebdbb2",\
+    "background": "\#1f1f1f",\
+    "border": "\#1f1f1f",\
+    "border_bottom": 0,\
+    "border_left": 0,\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "",\
+    "color": "\#1a1a1a",\
+    "background": "\#1f1f1f",\
+    "border": "\#1f1f1f",\
+    "border_top": 0,\
+    "border_right": 0,\
+    "border_left": 0,\
+    "border_bottom": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "  ",\
+    "color": "\#665c54",\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " ${downspeed wlp6s0}/s · ${upspeed wlp6s0}/s ",\
+    "color": "\#ebdbb2",\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_bottom": 0,\
+    "border_left": 0,\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "",\
+    "color": "\#1f1f1f",\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_top": 0,\
+    "border_right": 0,\
+    "border_left": 0,\
+    "border_bottom": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "  ",\
+    "color": "\#665c54",\
+    "background": "\#1f1f1f",\
+    "border": "\#1f1f1f",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " ${if_up wlp6s0}${wireless_essid wlp6s0}-${wireless_link_qual_perc wlp6s0}%${else}${if_up enp8s0}<Wired>${else}Not connected${endif}${endif} ",\
+    "color": ${if_up wlp6s0}"\#ebdbb2"${else}${if_up enp8s0}"\#ebdbb2"${else}"\#cc241d"${endif}${endif},\
+    "background": ${if_up wlp6s0}"\#1f1f1f"${else}"\#1f1f1f"${endif},\
+    "border": "\#1f1f1f",\
+    "border_bottom": 1,\
+    "border_left": 0,\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "",\
+    "color": "\#1a1a1a",\
+    "background": "\#1f1f1f",\
+    "border": "\#1f1f1f",\
+    "border_top": 0,\
+    "border_right": 0,\
+    "border_left": 0,\
+    "border_bottom": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "  ",\
+    "color": "\#665c54",\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " ${if_match "${exec pactl list sinks | grep "Mute:" | awk '{print $2}'}" == "yes"}Muted${else}${exec pactl list sinks | grep "Volume:" | head -1 | awk '{print $5}'}${endif} ",\
+    "color": "\#ebdbb2",\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_bottom": 0,\
+    "border_left": 0,\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "",\
+    "color": "\#1f1f1f",\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_top": 0,\
+    "border_right": 0,\
+    "border_left": 0,\
+    "border_bottom": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "  ",\
+    "color": "\#665c54",\
+    "background": "\#1f1f1f",\
+    "border": "\#1f1f1f",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " CPU ${hwmon 1 temp 2}°C ",\
+    "color": ${if_match ${hwmon 1 temp 2}<70}"\#ebdbb2"${else}"\#ebdbb2"${endif},\
+    "background": ${if_match ${hwmon 1 temp 2}<70}"\#1f1f1f"${else}"\#cc241d"${endif},\
+    "border": "\#1f1f1f",\
+    "border_bottom": 1,\
+    "border_left": 0,\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "· GPU ${hwmon 0 temp 1}°C (${hwmon 0 fan 1}RPM)",\
+    "color": ${if_match ${hwmon 0 temp 1}<85}"\#ebdbb2"${else}"\#ebdbb2"${endif},\
+    "background": ${if_match ${hwmon 0 temp 1}<85}"\#1f1f1f"${else}"\#cc241d"${endif},\
+    "border": "\#1f1f1f",\
+    "border_bottom": 0,\
+    "border_left": 0,\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "",\
+    "color": "\#1a1a1a",\
+    "background": "\#1f1f1f",\
+    "border": "\#1f1f1f",\
+    "border_top": 0,\
+    "border_right": 0,\
+    "border_left": 0,\
+    "border_bottom": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "  ",\
+    "color": "\#665c54",\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " ${cpu cpu0}% · ${exec cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor} · ${loadavg}",\
+    "color": ${if_match ${cpu cpu0}<85}"\#ebdbb2"${else}"\#ebdbb2"${endif},\
+    "background": ${if_match ${cpu cpu0}<85}"\#1a1a1a"${else}"\#cc241d"${endif},\
+    "border": "\#1a1a1a",\
+    "border_bottom": 0,\
+    "border_left": 0,\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "",\
+    "color": "\#1f1f1f",\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_top": 0,\
+    "border_right": 0,\
+    "border_left": 0,\
+    "border_bottom": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "  ",\
+    "color": "\#665c54",\
+    "background": "\#1f1f1f",\
+    "border": "\#1f1f1f",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " ${mem}/${memmax} (${memperc}%) ",\
+    "color": ${if_match ${memperc}<85}"\#ebdbb2"${else}"\#ebdbb2"${endif},\
+    "background": ${if_match ${memperc}<85}"\#1f1f1f"${else}"\#cc241d"${endif},\
+    "border": "\#1f1f1f",\
+    "border_bottom": 0,\
+    "border_left": 0,\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "",\
+    "color": "\#1a1a1a",\
+    "background": "\#1f1f1f",\
+    "border": "\#1f1f1f",\
+    "border_top": 0,\
+    "border_right": 0,\
+    "border_left": 0,\
+    "border_bottom": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "  ",\
+    "color": "\#665c54",\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " ${texeci 1800 /usr/bin/bash /home/gig/.config/conky/package_updates.sh} ",\
+    "color": "\#ebdbb2",\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_bottom": 0,\
+    "border_left": 0,\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "",\
+    "color": "\#1f1f1f",\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_top": 0,\
+    "border_right": 0,\
+    "border_left": 0,\
+    "border_bottom": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "  ",\
+    "color": "\#665c54",\
+    "background": "\#1f1f1f",\
+    "border": "\#1f1f1f",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " ${if_match "${exec ip a show type wireguard}" != ""}on${else}Off${endif} ",\
+    "color": ${if_match "${exec ip a show type wireguard}" != ""}"\#98971a"${else}"\#cc241d"${endif},\
+    "background": "\#1f1f1f",\
+    "border": "\#1f1f1f",\
+    "border_bottom": 1,\
+    "border_left": 1,\
+    "border_right": 1,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "",\
+    "color": "\#1a1a1a",\
+    "background": "\#1f1f1f",\
+    "border": "\#1f1f1f",\
+    "border_top": 0,\
+    "border_right": 0,\
+    "border_left": 0,\
+    "border_bottom": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "  ",\
+    "color": "\#665c54",\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " ${new_mails /home/gig/mail/personal/INBOX} · ${new_mails /home/gig/mail/koningapestaart/INBOX} · ${new_mails /home/gig/mail/victor/INBOX} ",\
+    "color": ${if_match ${new_mails /home/gig/mail/victor/INBOX}>0}"\#cc241d"${else}${if_match ${new_mails /home/gig/mail/personal/INBOX}>0}"\#98971a"${else}"\#ebdbb2"${endif}${endif},\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_bottom": 0,\
+    "border_left": 0,\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "",\
+    "color": "\#1f1f1f",\
+    "background": "\#1a1a1a",\
+    "border": "\#1a1a1a",\
+    "border_top": 0,\
+    "border_right": 0,\
+    "border_left": 0,\
+    "border_bottom": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "  ",\
+    "color": "\#665c54",\
+    "background": "\#1f1f1f",\
+    "border": "\#1f1f1f",\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": " ${time %a %e %b %H:%M} ",\
+    "color": "\#ebdbb2",\
+    "background": "\#1f1f1f",\
+    "border": "\#1f1f1f",\
+    "border_bottom": 0,\
+    "border_left": 0,\
+    "border_right": 0,\
+    "separator": false,\
+    "separator_block_width": 0\
+  },\
+  {\
+    "full_text": "",\
+    "color": "\#ebdbb2",\
+    "separator": false,\
+    "separator_block_width": 0\
+  }\
+],
+]]

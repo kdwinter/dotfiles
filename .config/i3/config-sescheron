@@ -1,0 +1,587 @@
+# vim:ft=conf:ts=4:sw=4:sts=4:expandtab:ft=i3:
+# ╔══════════════════════════════════════════════════════════════════════════╗
+# ║                                                                          ║
+# ║                               i3 config                                  ║
+# ║                                                                          ║
+# ╟──────────────────────────────────────────────────────────────────────────╢
+# ║            https://dewinter.online | kenneth@dewinter.online             ║
+# ╚══════════════════════════════════════════════════════════════════════════╝
+# ────────────────────────────────────────────────────────────────────────────
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ VARIABLES                                                                │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+set $MOD Mod4
+set $TERM "alacritty"
+#set $MAINMONITOR "DisplayPort-0"
+#set $RIGHTMONITOR "DisplayPort-2"
+#set $FONT "pango: FontAwesome, Go Mono Bold 8"
+#set $FONT "pango: FontAwesome, Inconsolata Nerd Font Bold 10"
+#set $FONT "pango: FontAwesome, FreeSans 10"
+set $FONT "pango: FontAwesome, Inter Medium 8"
+#set $FONT "pango: FontAwesome, Prototype Regular 10"
+#set $FONT "pango: FontAwesome, Keybase Bold 9.5"
+#set $FONT "pango: FontAwesome, Fira Sans Medium 9.5"
+#set $FONT "pango: FontAwesome, AvQest 11"
+#set $FONT "pango: FontAwesome, Hack 8"
+#set $FONT "pango: FontAwesome, SF Mono Semibold 9"
+#set $FONT "pango: FontAwesome, Fantasque Sans Mono 9"
+#set $FONT "pango: FontAwesome, Inconsolata Bold 9.5"
+#set $FONT "-misc-fixed-medium-r-semicondensed-*-13-120-75-75-c-60-iso10646-1"
+#set $FONT "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-*"
+
+#set $WS1 "1:I  "
+#set $WS2 "2:II  "
+#set $WS3 "3:III  "
+#set $WS4 "4:IV  "
+#set $WS5 "5:V  "
+#set $WS6 "6:VI  "
+#set $WS7 "7:VII  "
+#set $WS8 "8:VIII  "
+#set $WS9 "9:IX  "
+#set $WS0 "10:X  "
+#set $WS1 "1: MAIN"
+#set $WS2 "2: WEB"
+#set $WS3 "3: CODE"
+#set $WS4 "4: CODE"
+#set $WS5 "5: CHAT"
+#set $WS6 "6: STEAM"
+#set $WS7 "7: MEDIA"
+#set $WS8 "8: MEDIA"
+#set $WS9 "9: GAME"
+#set $WS0 "10: MAIL"
+#set $WS1 "1:main"
+#set $WS2 "2:web"
+#set $WS3 "3:code"
+#set $WS4 "4:code"
+#set $WS5 "5:chat"
+#set $WS6 "6:steam"
+#set $WS7 "7:media"
+#set $WS8 "8:media"
+#set $WS9 "9:game"
+#set $WS0 "10:mail"
+set $WS1 "1"
+set $WS2 "2"
+set $WS3 "3"
+set $WS4 "4"
+set $WS5 "5"
+set $WS6 "6"
+set $WS7 "7"
+set $WS8 "8"
+set $WS9 "9"
+set $WS0 "10"
+
+# ────────────────────────────────────────────────────────────────────────────
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ BASIC BEHAVIOUR                                                          │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+font $FONT
+floating_modifier $MOD
+default_orientation horizontal
+#workspace_layout default
+workspace_layout stacked
+new_window pixel 1
+#new_window normal 1
+workspace_auto_back_and_forth no
+focus_follows_mouse no
+
+gaps inner 0
+gaps outer 0
+smart_borders on
+smart_gaps on
+
+# ────────────────────────────────────────────────────────────────────────────
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ WORKSPACE OUTPUTS                                                        │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+#workspace $WS1 output $MAINMONITOR
+#workspace $WS2 output $RIGHTMONITOR
+#workspace $WS3 output $MAINMONITOR
+#workspace $WS4 output $MAINMONITOR
+#workspace $WS5 output $RIGHTMONITOR
+#workspace $WS6 output $RIGHTMONITOR
+#workspace $WS7 output $RIGHTMONITOR
+#workspace $WS8 output $MAINMONITOR
+#workspace $WS9 output $MAINMONITOR
+#workspace $WS0 output $MAINMONITOR
+
+# ────────────────────────────────────────────────────────────────────────────
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ KEYBINDINGS                                                              │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+bindsym $MOD+w kill
+
+bindsym $MOD+Left focus left
+bindsym $MOD+Right focus right
+bindsym $MOD+Up focus up
+bindsym $MOD+Down focus down
+
+bindsym $MOD+h focus left
+bindsym $MOD+l focus right
+bindsym $MOD+k focus up
+bindsym $MOD+j focus down
+
+bindsym $MOD+Tab focus right
+
+bindsym $MOD+Shift+Left move left
+bindsym $MOD+Shift+Right move right
+bindsym $MOD+Shift+Up move up
+bindsym $MOD+Shift+Down move down
+
+bindsym $MOD+Shift+h move left
+bindsym $MOD+Shift+l move right
+bindsym $MOD+Shift+k move up
+bindsym $MOD+Shift+j move down
+
+bindsym $MOD+a split h
+bindsym $MOD+z split v
+
+bindsym $MOD+f fullscreen
+bindsym $MOD+g floating toggle
+bindsym $MOD+space focus mode_toggle
+
+bindsym $MOD+s sticky toggle
+
+bindsym $MOD+1 workspace $WS1
+bindsym $MOD+2 workspace $WS2
+bindsym $MOD+3 workspace $WS3
+bindsym $MOD+4 workspace $WS4
+bindsym $MOD+5 workspace $WS5
+bindsym $MOD+6 workspace $WS6
+bindsym $MOD+7 workspace $WS7
+bindsym $MOD+8 workspace $WS8
+bindsym $MOD+9 workspace $WS9
+bindsym $MOD+0 workspace $WS0
+
+bindsym $MOD+Shift+1 move window to workspace $WS1
+bindsym $MOD+Shift+2 move window to workspace $WS2
+bindsym $MOD+Shift+3 move window to workspace $WS3
+bindsym $MOD+Shift+4 move window to workspace $WS4
+bindsym $MOD+Shift+5 move window to workspace $WS5
+bindsym $MOD+Shift+6 move window to workspace $WS6
+bindsym $MOD+Shift+7 move window to workspace $WS7
+bindsym $MOD+Shift+8 move window to workspace $WS8
+bindsym $MOD+Shift+9 move window to workspace $WS9
+bindsym $MOD+Shift+0 move window to workspace $WS0
+
+bindsym $MOD+Shift+b bar mode toggle
+
+# Other keybinds
+bindsym $MOD+Return exec $TERM
+#bindsym $MOD+r exec dmenu_run -fn 'xos4 Terminus-8'
+#bindsym $MOD+r exec dmenu_run -fn 'Inconsolata-10' -nb '#121314' -sb '#18191A' -nf '#757575' -sf '#CDFF00'
+bindsym $MOD+r exec $HOME/.config/rofi/rofi_dmenu.sh
+#bindsym $MOD+r exec alacritty --class 'launcher' --command bash -c 'compgen -c | sort -u | fzf | xargs -r i3-msg -t command exec'
+
+# toggle compton
+bindsym $MOD+Mod1+c exec --no-startup-id compton -b
+bindsym $MOD+Mod1+x exec --no-startup-id pkill compton
+bindsym $MOD+Mod1+p exec --no-startup-id pkill PathOfExile
+bindsym $MOD+Mod1+b exec --no-startup-id setxkbmap be -option caps:none
+bindsym $MOD+Mod1+n exec --no-startup-id setxkbmap latin -option caps:none
+
+#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse -q set Master 5%+ unmute
+#bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse -q set Master 5%- unmute
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id cmus-remote -C "vol +10%"
+bindsym XF86AudioLowerVolume exec --no-startup-id cmus-remote -C "vol -10%"
+bindsym $MOD+XF86AudioRaiseVolume exec --no-startup-id cmus-remote -n
+bindsym $MOD+XF86AudioLowerVolume exec --no-startup-id cmus-remote -r
+bindsym XF86AudioMute exec --no-startup-id cmus-remote -u
+bindsym XF86AudioPlay exec --no-startup-id cmus-remote -u
+bindsym XF86AudioNext exec --no-startup-id cmus-remote -n
+bindsym XF86AudioPrev exec --no-startup-id cmus-remote -r
+
+#bindsym XF86Favorites exec $HOME/.local/bin/rofi_dmenu
+bindsym XF86HomePage workspace $WS1
+bindsym XF86Mail workspace $WS0
+bindsym XF86Search workspace $WS2
+bindsym XF86Calculator exec pavucontrol
+bindcode 166 exec --no-startup-id cmus-remote -r
+bindcode 167 exec --no-startup-id cmus-remote -n
+bindcode 192 workspace $WS1
+bindcode 193 workspace $WS2
+bindcode 194 workspace $WS3
+bindcode 195 workspace $WS4
+bindcode 196 workspace $WS5
+
+bindsym Print exec --no-startup-id flameshot gui
+
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
+
+#bindsym $MOD+v exec i3lock -i $HOME/Pictures/lock2.png
+#bindsym $MOD+v exec "$HOME/.local/bin/lockscreen.sh"
+bindsym $MOD+v exec $HOME/.config/i3/i3lock-fancy-multimonitor/lock
+
+# Modes
+bindsym $MOD+m mode "layout [1:stack,2:tab,3:normal]"
+mode "layout [1:stack,2:tab,3:normal]" {
+    bindsym 1 layout stacking; mode "default"
+    bindsym 2 layout tabbed; mode "default"
+    bindsym 3 layout toggle split; mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $MOD+b mode "border [1:pixel,2:normal,3:none]"
+mode "border [1:pixel,2:normal,3:none]" {
+    bindsym 1 border pixel 1; mode "default"
+    bindsym 2 border normal 1; mode "default"
+    bindsym 3 border none; mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $MOD+i mode "i3wm [1:reload,2:restart,3:quit,4:suspend]"
+mode "i3wm [1:reload,2:restart,3:quit,4:suspend]" {
+    bindsym 1 reload; mode "default"
+    bindsym 2 restart; mode "default"
+    bindsym 3 exec pkill ssh-agent; exit; mode "default"
+    bindsym 4 exec --no-startup-id $HOME/.local/bin/lock_and_suspend; mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# ────────────────────────────────────────────────────────────────────────────
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ AUTOSTART                                                                │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id $HOME/.local/bin/set_mouse_keyboard_prefs.sh
+#exec --no-startup-id xrandr --output $MAINMONITOR --mode 2560x1440 --pos 0x0 --primary
+#exec --no-startup-id xrandr --output $RIGHTMONITOR --mode 2560x1440 --pos 2560x0
+#exec --no-startup-id xrandr --output $MAINMONITOR --mode 2560x1440 --rate 144
+exec --no-startup-id xrandr --output HDMI-A-0 --rate 144 --mode 1920x1080 --pos 0x0 --primary
+exec --no-startup-id setxkbmap be -option caps:none
+exec --no-startup-id xinput --set-prop 'Microsoft Microsoft 3-Button Mouse with IntelliEye(TM)' 'libinput Accel Profile Enabled' 0, 1
+exec --no-startup-id xset r rate 350 40
+exec --no-startup-id nm-applet &
+exec --no-startup-id unclutter &
+exec --no-startup-id redshift-gtk -l 50.5:4.4 -t 4000:3600 &
+exec --no-startup-id flameshot &
+exec --no-startup-id dunst &
+#exec --no-startup-id /usr/lib/notify-osd/notify-osd &
+#exec --no-startup-id compton -b &
+#exec --no-startup-id "i3-msg 'workspace 1:TERMINAL; append_layout $HOME/.config/i3/main_workspace.json'"
+#exec --no-startup-id "i3-msg 'workspace 3:CODE; append_layout $HOME/.config/i3/code_workspace.json'"
+
+# ────────────────────────────────────────────────────────────────────────────
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ APPLICATION <-> WORKSPACE ASSIGNMENT                                     │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+assign [class="Pidgin"] $WS1
+assign [class="Firefox|Aurora|Chromium|firefoxdeveloperedition|qutebrowser"] $WS2
+assign [class="discord"] $WS5
+assign [class="Keybase|keybase"] $WS5
+assign [class="Steam"] $WS6
+assign [class="evolution|Evolution"] $WS0
+assign [title="^TeamSpeak"] $WS5
+assign [title="^Mumble"] $WS5
+
+# ────────────────────────────────────────────────────────────────────────────
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ APPLICATION BEHAVIOUR                                                    │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+#for_window [instance="Navigator" class="Firefox|Aurora|firefoxdeveloperedition|qutebrowser"] border none
+for_window [title="^Source of" class="Firefox|Aurora"] floating enable
+for_window [class="flameshot" title="Upload to Imgur"] floating enable
+for_window [class="Steam"] floating enable
+for_window [class="Steam.exe"] floating enable
+for_window [class="Wine"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Pidgin"] floating enable
+for_window [class="Thunar"] floating enable
+for_window [class="Lxappearance"] floating enable
+for_window [class="Vlc"] floating enable
+#for_window [class="mpv"] floating enable, border none
+for_window [class="mpv"] floating enable
+#for_window [class="Keybase"] floating enable
+for_window [class="Pinta"] floating enable
+for_window [title="^TeamSpeak"] floating enable
+#for_window [class="discord"] border none
+for_window [title="feh"] floating enable
+for_window [title="QEMU"] floating enable
+for_window [class="qemu-system-x86_64"] floating enable
+for_window [class="Qemu-system-x86_64"] floating enable
+for_window [class="synergy"] floating enable
+for_window [class="Sxiv"] floating enable
+for_window [class="File-roller"] floating enable
+for_window [class="Lutris"] floating enable
+for_window [instance="^launcher$"] floating enable, border none, resize set width 25 ppt height 100 ppt, move position 0 px 0 px
+
+# ────────────────────────────────────────────────────────────────────────────
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ WINDOW BORDER COLOURS                                                    │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+### Own window decoration colors
+#client.background       #1d2021
+## state                 border  bg      text    indicator
+#client.focused          #42bb05 #64dd17 #151515 #2e9ef4
+#client.focused_inactive #272727 #272727 #ffffff #484e50
+#client.unfocused        #1F1F1F #1F1F1F #888888 #292d2e
+#client.urgent           #dd2c00 #dd2c00 #ffffff #900000
+#client.placeholder      #000000 #0c0c0c #ffffff #000000
+
+### Light window decoration colors
+#client.background       #f7f7f7
+## state                 border  bg      text    indicator
+#client.focused          #1d60a7 #1d60a7 #f7f7f7 #b16286
+#client.focused_inactive #f7f7f7 #f7f7f7 #171d51 #b16286
+#client.unfocused        #d7d7d7 #d7d7d7 #171d51 #b16286
+#client.urgent           #cc241d #cc241d #f7f7f7 #cc241d
+#client.placeholder      #282828 #282828 #282828 #282828
+
+### Ayu window decoration colors
+#client.background       #1d2021
+## state                 border  bg      text    indicator
+#client.focused          #3ea1df #2d90cf #ffffff #b16286
+#client.focused_inactive #2d3741 #1c2630 #dfdac4 #b16286
+#client.unfocused        #1c2630 #1c2630 #dfdac4 #b16286
+#client.urgent           #fd7138 #fc6027 #1c2630 #cc241d
+#client.placeholder      #1c2630 #1c2630 #dfdac4 #1c2630
+
+# Zenburn
+#client.placeholder      #000000 #0c0c0c #ffffff #000000
+#client.background       #1f1f1f
+## state                 border  bg      text    indicator
+#client.focused          #8faf8f #7f9f7f #1e2320 #cc241d
+#client.focused_inactive #4f4f4f #3f3f3f #dcdccc #cc241d
+#client.unfocused        #333333 #232323 #dcdccc #cc241d
+#client.urgent           #edb4b4 #dca3a3 #1e2320 #cc241d
+
+#### Comrade window decoration colors
+#client.background       #1d2021
+## state                 border  bg      text    indicator
+#client.focused          #227fa9 #005f87 #ffffff #cc241d
+#client.focused_inactive #222222 #181818 #ffffff #cc241d
+#client.unfocused        #222222 #181818 #ffffff #cc241d
+#client.urgent           #42bb05 #64dd17 #111111 #cc241d
+#client.placeholder      #222222 #181818 #ffffff #cc241d
+
+### Gruvbox window decoration colors
+client.background       #1d2021
+# state                 border  bg      text    indicator
+#client.focused          #2296FB #0074D9 #fbf1c7 #b16286
+client.focused          #076678 #076678 #fbf1c7 #b16286
+client.focused_inactive #1d2021 #32302f #fbf1c7 #b16286
+client.unfocused        #1d2021 #282828 #fbf1c7 #b16286
+client.urgent           #cc241d #cc241d #fbf1c7 #cc241d
+client.placeholder      #1d2021 #282828 #282828 #282828
+
+### Dracula window decoration colors
+#client.background       #282a36
+# state                 border  bg      text    indicator
+#client.focused          #ff79c6 #ff79c6 #040404 #ff79c6
+#client.focused_inactive #282a36aa #282a36aa #ff79c6 #ff79c6
+#client.unfocused        #282a36aa #282a36aa #f8f8f2aa #ff79c6
+#client.urgent           #f1fa7c #f1fa7c #040404 #ff79c6
+#client.placeholder      #282a36aa #282a36aa #282a36aa #282a36aa
+
+# ────────────────────────────────────────────────────────────────────────────
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ BARS AND THEIR COLOURS                                                   │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+# Bar 1
+bar {
+    mode dock
+    modifier $MOD
+    position bottom
+    workspace_buttons yes
+    font $FONT
+    i3bar_command i3bar
+    status_command $HOME/.config/i3/i3bar_exec_main.sh
+    #status_command i3status -c "$HOME/.config/i3/i3status.conf"
+    #output $RIGHTMONITOR
+    #tray_output $RIGHTMONITOR
+    #strip_workspace_numbers yes
+    height 24
+
+    colors {
+        ### Own bar colors
+        #statusline #dcdccc
+        #background #151515dd
+        #focused_statusline #dcdccc
+        #focused_background #222222dd
+        ##                    border  backgr  text
+        #focused_workspace    #209903 #64dd17 #151515
+        #active_workspace     #222222dd #151515dd #64dd17
+        #inactive_workspace   #222222dd #151515dd #ffffff
+        #urgent_workspace     #dd2c00 #dd2c00 #FFFFFF
+
+        ### Light bar colors
+        #statusline #171d51
+        #background #f7f7f7
+        ##focused_statusline #ebdbb2
+        ##focused_background #282828ee
+        ##                    border  backgr  text
+        #focused_workspace    #1d60a7 #1d60a7 #f7f7f7
+        #inactive_workspace   #f7f7f7 #f7f7f7 #171d51
+        #active_workspace     #d7d7d7 #d7d7d7 #171d51
+        #urgent_workspace     #cc241d #cc241d #ffffff
+
+        ### Ayu bar colors
+        #statusline #dfdac4
+        #background #1c2630ee
+        ##focused_statusline #ebdbb2
+        ##focused_background #282828ee
+        ##                    border  backgr  text
+        #focused_workspace    #3ea1df #2d90cf #ffffff
+        #inactive_workspace   #1c2630 #1c2630 #dfdac4
+        #active_workspace     #2d3741 #1c2630 #dfdac4
+        #urgent_workspace     #fd7138 #fd7138 #1c2630
+
+        # Zenburn
+        #statusline #dcdccc
+        #background #1a1a1a
+        #focused_statusline #dcdccc
+        #focused_background #1f1f1f
+        ##separator  #FF9955
+        ##                  border  backgr  text
+        #focused_workspace    #8faf8f #7f9f7f #1e2320
+        #inactive_workspace   #4f4f4f #3f3f3f #dcdccc
+        #active_workspace     #4f4f4f #3f3f3f #7f9f7f
+        #urgent_workspace     #edb4b4 #dca3a3 #1e2320
+
+        #### Comrade colors
+        #statusline #ffffff
+        #background #111111ee
+        ##focused_statusline #ebdbb2
+        ##focused_background #282828ee
+        ##                    border  backgr  text
+        #focused_workspace    #227fa9 #005f87 #ffffff
+        #inactive_workspace   #111111 #111111 #ffffff
+        #active_workspace     #222222 #111111 #ffffff
+        #urgent_workspace     #42bb05 #64dd17 #111111
+
+        ### Gruvbox bar colors
+        statusline #fbf1c7
+        background #1d2021ee
+        #focused_statusline #ebdbb2
+        #focused_background #282828ee
+        #                    border  backgr  text
+        focused_workspace    #076678 #076678 #fbf1c7
+        inactive_workspace   #1d2021 #282828 #fbf1c7
+        active_workspace     #1d2021 #32302f #fbf1c7
+        urgent_workspace     #cc241d #cc241d #fbf1c7
+
+        ### Dracula bar colors
+        #statusline #f8f8f2
+        #background #282a36ee
+        #focused_statusline #fffff2
+        #focused_background #282a36ee
+        #                    border  backgr  text
+        #focused_workspace    #ff79c6 #ff79c6 #040404
+        #inactive_workspace   #181a26 #282a36 #f8f8f2
+        #active_workspace     #181a26 #282a36 #8be8fd
+        #urgent_workspace     #ff5555 #44475a #f8f8f2
+    }
+}
+
+# Bar 2
+#bar {
+#    mode dock
+#    modifier $MOD
+#    position bottom
+#    workspace_buttons yes
+#    font $FONT
+#    i3bar_command i3bar -t
+#    status_command $HOME/.config/i3/i3bar_exec_secondary.sh
+#    output $MAINMONITOR
+#    tray_output $RIGHTMONITOR
+#    #strip_workspace_numbers yes
+#    height 26
+#
+#    colors {
+#        ### Own bar colors
+#        #statusline #dcdccc
+#        #background #151515dd
+#        #focused_statusline #dcdccc
+#        #focused_background #222222dd
+#        ##                    border  backgr  text
+#        #focused_workspace    #209903 #64dd17 #151515
+#        #active_workspace     #222222dd #151515dd #64dd17
+#        #inactive_workspace   #222222dd #151515dd #ffffff
+#        #urgent_workspace     #dd2c00 #dd2c00 #FFFFFF
+#
+#        ### Light bar colors
+#        #statusline #171d51
+#        #background #f7f7f7
+#        ##focused_statusline #ebdbb2
+#        ##focused_background #282828ee
+#        ##                    border  backgr  text
+#        #focused_workspace    #1d60a7 #1d60a7 #f7f7f7
+#        #inactive_workspace   #f7f7f7 #f7f7f7 #171d51
+#        #active_workspace     #d7d7d7 #d7d7d7 #171d51
+#        #urgent_workspace     #cc241d #cc241d #ffffff
+#
+#        ### Ayu bar colors
+#        #statusline #dfdac4
+#        #background #1c2630ee
+#        ##focused_statusline #ebdbb2
+#        ##focused_background #282828ee
+#        ##                    border  backgr  text
+#        #focused_workspace    #3ea1df #2d90cf #ffffff
+#        #inactive_workspace   #1c2630 #1c2630 #dfdac4
+#        #active_workspace     #2d3741 #1c2630 #dfdac4
+#        #urgent_workspace     #fd7138 #fd7138 #1c2630
+#
+#        # Zenburn
+#        #statusline #dcdccc
+#        #background #1a1a1a
+#        #focused_statusline #dcdccc
+#        #focused_background #1f1f1f
+#        ##separator  #FF9955
+#        ##                  border  backgr  text
+#        #focused_workspace    #8faf8f #7f9f7f #1e2320
+#        #inactive_workspace   #4f4f4f #3f3f3f #dcdccc
+#        #active_workspace     #4f4f4f #3f3f3f #7f9f7f
+#        #urgent_workspace     #edb4b4 #dca3a3 #1e2320
+#
+#        #### Comrade colors
+#        #statusline #ffffff
+#        #background #111111ee
+#        ##focused_statusline #ebdbb2
+#        ##focused_background #282828ee
+#        ##                    border  backgr  text
+#        #focused_workspace    #227fa9 #005f87 #ffffff
+#        #inactive_workspace   #111111 #111111 #ffffff
+#        #active_workspace     #222222 #111111 #ffffff
+#        #urgent_workspace     #42bb05 #64dd17 #111111
+#
+#        ## Gruvbox bar colors
+#        statusline #d79921
+#        background #1d2021ee
+#        #focused_statusline #ebdbb2
+#        #focused_background #282828ee
+#        #                    border  backgr  text
+#        focused_workspace    #2296FB #0074D9 #ffffff
+#        inactive_workspace   #1d2021 #282828 #d79921
+#        active_workspace     #1d2021 #32302f #d79921
+#        urgent_workspace     #cc241d #cc241d #ffffff
+#
+#        ### Dracula bar colors
+#        #statusline #f8f8f2
+#        #background #282a36ee
+#        #focused_statusline #fffff2
+#        #focused_background #282a36ee
+#        #                    border  backgr  text
+#        #focused_workspace    #ff79c6 #ff79c6 #040404
+#        #inactive_workspace   #181a26 #282a36 #f8f8f2
+#        #active_workspace     #181a26 #282a36 #8be8fd
+#        #urgent_workspace     #ff5555 #44475a #f8f8f2
+#    }
+#}

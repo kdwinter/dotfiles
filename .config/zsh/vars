@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+#
+# Variables accessable by all config files
+
+HOSTNAME=$(hostname)

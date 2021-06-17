@@ -1,0 +1,132 @@
+#source ~/.config/mutt/colors.vimbrant
+#source ~/.config/mutt/colors.lightr
+#source ~/.config/mutt/colors.gruvbox
+#source ~/.config/mutt/colors.neonwolf
+#source ~/.config/mutt/colors.sircmpwn
+#source ~/.config/mutt/colors.dracula
+#source ~/.config/mutt/colors.solarized256
+#source ~/.config/mutt/colors.solarizedlight
+source ~/.config/mutt/colors.wizard
+#source ~/.config/mutt/colors.rleon
+
+set certificate_file = ~/.config/mutt/certificates
+set ssl_force_tls
+set hidden_host
+unset beep
+set beep_new
+set quit = ask-yes
+set delete = yes
+unset confirmappend
+set charset = UTF8
+set send_charset = "utf-8:iso-8859-1"
+set read_inc = 50
+set write_inc = 50
+set time_inc = 500
+set net_inc = 20
+unset arrow_cursor
+
+set mail_check = 15
+set timeout = 30
+set sort = reverse-threads
+#set sort = threads
+set sort_aux = last-date-received
+set strict_threads
+set sort_re
+set sort_browser = alpha
+set sort_alias = unsorted
+set move = no
+unset mark_old
+unset markers
+set menu_scroll
+set smart_wrap
+set tilde
+unset narrow_tree
+
+set pager_index_lines = 8
+set pager_context = 5
+set pager_stop
+set status_on_top
+
+ignore *
+unignore From: To: CC: Reply-To: Date: Subject: User-Agent: X-Mailer
+hdr_order From: To: CC: Reply-To: Date: Subject: User-Agent: X-Mailer
+
+set index_format = "%4C  %Z   %[%F  %H:%M]  %-22.22L  %s  %*    (%-4.4c)"
+set pager_format = "[%C/%m] %b  %> %1L (%P)"
+set folder_format = "%2C %t %N %8s %d %f"
+set status_format = "%r %?M?%M/?%m total, %?n?%n new, ?%?u?%u unread, ?%?p?%p drafts, ?%?t?%t +tagged, ?%?d?%d deleted, ?(%f %l)  %?b?%b unread messages. ?%>  %V   sort by: %s/%S  (%P) %r"
+
+set editor = "nvim"
+
+set use_from
+set use_envelope_from
+set tmpdir = ~/.config/mutt/tmp
+unset edit_headers
+set fast_reply
+unset reply_self
+unset askcc
+unset write_bcc
+set abort_nosubject = ask-yes
+set abort_unmodified = ask-yes
+set include = yes
+set forward_format = "Fwd: %s"
+set fcc_attach
+set forward_quote
+set mime_forward = ask-yes
+set postpone = ask-yes
+set recall = ask-no
+
+#set date_format = "%b %d, %Y at %H:%M"
+#set attribution = "On %D, %f wrote:"
+set attribution = "On %d, %n wrote:"
+set date_format = "!%d/%m/%Y %H:%M"
+
+set implicit_autoview
+auto_view application/x-pgp-message
+auto_view application/pgp-encrypted
+auto_view application/pgp-keys
+auto_view application/pgp-signature
+auto_view text/html
+auto_view text/calendar
+auto_view application/ics
+
+alternative_order text/plain text/enriched text/html text
+#alternative_order text/plain text/enriched text/html text text/calendar
+
+unset copy
+unset message_cache_clean
+set imap_keepalive = 180
+unset imap_passive
+set text_flowed = yes
+
+bind index,pager,attach g noop
+bind index,pager,attach R group-reply
+
+set sidebar_visible = no
+#set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+macro index,pager b "<enter-command>toggle sidebar_visible<enter>" "toggle sidebar"
+macro index,pager gl "<change-folder>-<enter>" "go to last folder"
+# ctrl+k on a mail containing a .ics file
+macro index,pager \ck <pipe-entry>'mutt2calcurse'<enter> "add ical events to calcurse"
+
+set new_mail_command = "notify-send 'New mail' '%n new messages, %u unread' &"
+
+macro index,pager d "<save-message>=Trash<enter>"        "move to trash"
+macro index,pager u "<save-message>=INBOX<enter><enter>" "move to inbox"
+macro index,pager A "<save-message>=Archive<enter>"      "archive selected email"
+macro index,pager S "<save-message>=Junk<enter>"         "mark as Junk"
+
+macro index,pager gi "<change-folder>=INBOX<enter>"   "go to inbox"
+macro index,pager ga "<change-folder>=Archive<enter>" "go to archived mail"
+macro index,pager gs "<change-folder>=Junk<enter>"    "go to Junk"
+macro index,pager gd "<change-folder>=Drafts<enter>"  "go to drafts"
+macro index,pager go "<change-folder>=Sent<enter>"    "go to sent mail"
+macro index,pager gt "<change-folder>=Trash<enter>"   "go to trash"
+
+source ~/.config/mutt/gpg
+source ~/.config/mutt/contact_aliases
+
+###################### THIS CONFIGURATION IS INCOMPLETE ######################
+# .muttrc_{personal,etc} all contain specific instructions,    #
+# and they all include this file. Mutt is run with -F /path/to/.muttrc_...   #
+##############################################################################

@@ -19,16 +19,16 @@
 ## /etc/skel/.zshrc was installed as ~/.zshrc,
 ## /etc/zsh/zshrc was installed as ~/.zshrc.global and
 ## ~/.zshrc.local does not exist yet.
-if [ -r ~/.zshrc -a -r ~/.zshrc.global -a ! -r ~/.zshrc.local ] ; then
-    printf '-!-\n'
-    printf '-!- Looks like you are using the old zshrc layout of grml.\n'
-    printf '-!- Please read the notes in the grml-zsh-refcard, being'
-    printf '-!- available at: http://grml.org/zsh/\n'
-    printf '-!-\n'
-    printf '-!- If you just want to get rid of this warning message execute:\n'
-    printf '-!-        touch ~/.zshrc.local\n'
-    printf '-!-\n'
-fi
+#if [ -r ~/.zshrc -a -r ~/.zshrc.global -a ! -r ~/.zshrc.local ] ; then
+#    printf '-!-\n'
+#    printf '-!- Looks like you are using the old zshrc layout of grml.\n'
+#    printf '-!- Please read the notes in the grml-zsh-refcard, being'
+#    printf '-!- available at: http://grml.org/zsh/\n'
+#    printf '-!-\n'
+#    printf '-!- If you just want to get rid of this warning message execute:\n'
+#    printf '-!-        touch ~/.zshrc.local\n'
+#    printf '-!-\n'
+#fi
 
 ## Settings for umask
 #if (( EUID == 0 )); then
@@ -48,15 +48,18 @@ fi
 #    REPLY=${VIRTUAL_ENV+(${VIRTUAL_ENV:t}) }
 #}
 #grml_theme_add_token  virtual-env -f virtual_env_prompt '%F{magenta}' '%f'
-#zstyle ':prompt:grml:left:items:user' pre '%F{green}'
-zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' unstagedstr '!'
-zstyle ':vcs_info:*' stagedstr '+'
-zstyle ':vcs_info:git*' formats "%f(%F{blue}%b%F{yellow}%m%u%c%f) "
+zstyle ':prompt:grml:left:items:user' pre '%F{red}'
+#zstyle ':vcs_info:*' enable git
+#zstyle ':vcs_info:*' check-for-changes true
+#zstyle ':vcs_info:*' unstagedstr '!'
+#zstyle ':vcs_info:*' stagedstr '+'
+#zstyle ':vcs_info:git*' formats "%f(%F{blue}%b%F{yellow}%m%u%c%f) "
 zstyle ':prompt:grml:left:items:host' token '%m:'
 zstyle ':prompt:grml:left:items:percent' token $'\xe2\x88\xb4 '
-zstyle ':prompt:grml:left:setup' items rc virtual-env change-root user at host path vcs percent
+#zstyle ':prompt:grml:left:items:percent' token $'%F{red}\xe2\x98\xad%F{reset} '
+zstyle ':prompt:grml:left:setup' items rc virtual-env change-root host path percent
+#zstyle ':prompt:grml:left:setup' items rc virtual-env change-root host path vcs percent
+#zstyle ':prompt:grml:left:setup' items rc virtual-env change-root user at host path vcs percent
 
 ## ZLE tweaks ##
 
@@ -224,12 +227,12 @@ zstyle ':prompt:grml:left:setup' items rc virtual-env change-root user at host p
 #manzsh()  { /usr/bin/man zshall |  most +/"$1" ; }
 
 ## Switching shell safely and efficiently? http://www.zsh.org/mla/workers/2001/msg02410.html
-#bash() {
-#    NO_SWITCH="yes" command bash "$@"
-#}
-#restart () {
-#    exec $SHELL $SHELL_ARGS "$@"
-#}
+bash() {
+    NO_SWITCH="yes" command bash "$@"
+}
+restart () {
+    exec $SHELL $SHELL_ARGS "$@"
+}
 
 ## Handy functions for use with the (e::) globbing qualifier (like nt)
 #contains() { grep -q "$*" $REPLY }
@@ -343,11 +346,11 @@ zstyle ':prompt:grml:left:setup' items rc virtual-env change-root user at host p
 
 ## ALIAS #######################################################################
 
-. ~/.zsh/alias
+. ~/.config/zsh/alias
 
 ## FUNCTION ####################################################################
 
-. ~/.zsh/function
+. ~/.config/zsh/function
 
 ## OTHER #######################################################################
 
@@ -355,22 +358,27 @@ if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.
     . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
-eval "$(rbenv init -)"
-export GEM_HOME=$(ruby -e 'print Gem.user_dir')
-export DEFAULT_GEM_HOME=$GEM_HOME
+if [[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+    . /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
 
-precmd() {
-    if [[ -f .ruby-version ]]; then
-        local gem_home_version=$(echo $GEM_HOME | grep -oE '[^/]+$' | sed 's/..$//')
-        local ruby_version=$(ruby -v | sed 's/.*ruby \?[a-zA-Z0-9]* \([0-9.]*\).*/\1/' | sed 's/..$//')
+#eval "$(rbenv init -)"
 
-        if [[ gem_home_version -ne ruby_version ]]; then
-            export GEM_HOME=$(ruby -e 'print Gem.user_dir')
-        fi
-    else
-        export GEM_HOME=$DEFAULT_GEM_HOME
-    fi
-}
+# precmd() {
+#     if [[ -f .ruby-version ]]; then
+#         local gem_home_version=$(echo $GEM_HOME | grep -oE '[^/]+$' | sed 's/..$//')
+#         #local ruby_version=$(ruby -v | sed 's/.*ruby \?[a-zA-Z0-9]* \([0-9.]*\).*/\1/' | sed 's/..$//')
+#         local ruby_version="2.7"
+#
+#         if [[ gem_home_version -ne ruby_version ]]; then
+#             export GEM_HOME=$(ruby -e 'print Gem.user_dir')
+#             export GEM_ROOT=$GEM_HOME
+#         fi
+#     else
+#         export GEM_HOME=$DEFAULT_GEM_HOME
+#         export GEM_ROOT=$GEM_HOME
+#     fi
+# }
 
 #if [[ -f ~/.zsh/ssh-agent-plugin.zsh ]]; then
 #    . ~/.zsh/ssh-agent-plugin.zsh

@@ -1,0 +1,38 @@
+font "pango: FontAwesome, Inter Medium 10"
+
+#output * {}
+output eDP-1 {
+    bg /home/gig/pictures/Wallpapers/wallhaven-546507.png fill
+    scale 1.5
+    mode 3200x1800
+#    position 0 1200
+}
+
+output HDMI-A-1 {
+    bg /home/gig/pictures/Wallpapers/wallhaven-546507.png fill
+    scale 1.0
+    mode 1920x1080
+#    position 2133 0
+}
+
+#input * {}
+# 0:0:Dell_WMI_hotkeys
+input 1:1:AT_Translated_Set_2_keyboard {
+    #xkb_layout be
+    xkb_layout be-on-qwerty
+    #xkb_layout us
+    xkb_options caps:none
+    repeat_delay 350
+    repeat_rate 40
+}
+
+input 1739:30381:DLL0665:01_06CB:76AD_Touchpad {
+    #accel_profile flat
+    #pointer_accel 0
+}
+
+exec_always {
+    gsettings set org.gnome.desktop.interface font-name 'Inter 10'
+    gsettings set org.gnome.desktop.interface document-font-name 'Inter 10'
+    gsettings set org.gnome.desktop.interface monospace-font-name 'monospace 10'
+}

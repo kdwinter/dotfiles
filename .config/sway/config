@@ -1,0 +1,320 @@
+# vim:ft=conf:ts=4:sw=4:sts=4:expandtab:ft=i3:
+# ╔══════════════════════════════════════════════════════════════════════════╗
+# ║                                                                          ║
+# ║                              sway config                                 ║
+# ║                                                                          ║
+# ╟──────────────────────────────────────────────────────────────────────────╢
+# ║            https://dewinter.online | kenneth@dewinter.online             ║
+# ╚══════════════════════════════════════════════════════════════════════════╝
+# ────────────────────────────────────────────────────────────────────────────
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ VARIABLES                                                                │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+set $MOD Mod4
+set $TERM "alacritty"
+set $FONT "pango: FontAwesome, Inter Medium 8"
+
+#set $WS1 "1:  "
+#set $WS2 "2:  "
+#set $WS3 "3:  "
+#set $WS4 "4:  "
+#set $WS5 "5:  "
+#set $WS6 "6:  "
+#set $WS7 "7:  "
+#set $WS8 "8:  "
+#set $WS9 "9:  "
+#set $WS0 "10:  "
+#set $WS1 "1:main"
+#set $WS2 "2:firefox"
+#set $WS3 "3:code"
+#set $WS4 "4:code"
+#set $WS5 "5:chat"
+#set $WS6 "6:code"
+#set $WS7 "7:code"
+#set $WS8 "8:code"
+#set $WS9 "9:code"
+#set $WS0 "10:mail"
+set $WS1 "1"
+set $WS2 "2"
+set $WS3 "3"
+set $WS4 "4"
+set $WS5 "5"
+set $WS6 "6"
+set $WS7 "7"
+set $WS8 "8"
+set $WS9 "9"
+set $WS0 "10"
+
+# ────────────────────────────────────────────────────────────────────────────
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ BASIC BEHAVIOUR                                                          │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+font $FONT
+floating_modifier $MOD
+default_orientation horizontal
+workspace_layout stacking
+#new_window normal 2
+#default_border normal 1
+default_border pixel 1
+workspace_auto_back_and_forth no
+focus_follows_mouse no
+#hide_cursor 10
+
+gaps inner 0
+gaps outer 0
+#smart_borders on
+smart_gaps on
+
+# ────────────────────────────────────────────────────────────────────────────
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ SWAY THINGS                                                              │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+exec_always {
+    gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+    gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
+    gsettings set org.gnome.desktop.interface cursor-theme 'Breeze_Obsidian'
+    gsettings set org.gnome.desktop.interface font-name 'Inter 8.5'
+    gsettings set org.gnome.desktop.interface document-font-name 'Inter 8.5'
+    gsettings set org.gnome.desktop.interface monospace-font-name 'Roboto Mono 8'
+    gsettings set org.gtk.Settings.FileChooser window-size '(1100,700)'
+    gsettings set org.gnome.desktop.default-applications.terminal exec $TERM
+    gsettings set org.gnome.desktop.default-applications.terminal exec-arg -e
+    gsettings set org.gnome.desktop.wm.preferences button-layout ''
+}
+
+include ~/.config/sway/`hostname`
+
+seat seat0 attach *
+seat seat0 xcursor_theme Breeze_Obsidian 24
+seat seat0 hide_cursor 5000
+
+# ────────────────────────────────────────────────────────────────────────────
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ KEYBINDINGS                                                              │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+bindsym $MOD+w kill
+
+bindsym $MOD+Left focus left
+bindsym $MOD+Right focus right
+bindsym $MOD+Up focus up
+bindsym $MOD+Down focus down
+
+bindsym $MOD+h focus left
+bindsym $MOD+l focus right
+bindsym $MOD+k focus up
+bindsym $MOD+j focus down
+
+bindsym $MOD+Tab focus right
+
+bindsym $MOD+Shift+Left move left
+bindsym $MOD+Shift+Right move right
+bindsym $MOD+Shift+Up move up
+bindsym $MOD+Shift+Down move down
+
+bindsym $MOD+Shift+h move left
+bindsym $MOD+Shift+l move right
+bindsym $MOD+Shift+k move up
+bindsym $MOD+Shift+j move down
+
+bindsym $MOD+a split h
+bindsym $MOD+z split v
+
+bindsym $MOD+f fullscreen
+bindsym $MOD+g floating toggle
+bindsym $MOD+Space focus mode_toggle
+
+bindsym $MOD+s sticky toggle
+
+bindsym $MOD+ampersand workspace $WS1
+bindsym $MOD+eacute workspace $WS2
+bindsym $MOD+quotedbl workspace $WS3
+bindsym $MOD+apostrophe workspace $WS4
+bindsym $MOD+parenleft workspace $WS5
+bindsym $MOD+section workspace $WS6
+bindsym $MOD+egrave workspace $WS7
+bindsym $MOD+exclam workspace $WS8
+bindsym $MOD+ccedilla workspace $WS9
+bindsym $MOD+agrave workspace $WS0
+
+bindsym $MOD+Shift+ampersand move window to workspace $WS1
+bindsym $MOD+Shift+eacute move window to workspace $WS2
+bindsym $MOD+Shift+quotedbl move window to workspace $WS3
+bindsym $MOD+Shift+apostrophe move window to workspace $WS4
+bindsym $MOD+Shift+parenleft move window to workspace $WS5
+bindsym $MOD+Shift+section move window to workspace $WS6
+bindsym $MOD+Shift+egrave move window to workspace $WS7
+bindsym $MOD+Shift+exclam move window to workspace $WS8
+bindsym $MOD+Shift+ccedilla move window to workspace $WS9
+bindsym $MOD+Shift+agrave move window to workspace $WS0
+
+# Other keybinds
+bindsym $MOD+Return exec $TERM
+bindsym $MOD+r exec wofi
+#bindsym $MOD+r exec alacritty --class 'launcher' --command bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
+
+#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse -q set Master 5%+ unmute
+#bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse -q set Master 5%- unmute
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioPlay exec --no-startup-id cmus-remote -u
+bindsym XF86AudioNext exec --no-startup-id cmus-remote -n
+bindsym XF86AudioPrev exec --no-startup-id cmus-remote -r
+
+bindsym XF86MonBrightnessUp exec brightnessctl s +10%
+bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
+
+bindsym Print exec --no-startup-id grimshot --notify save screen
+
+bindsym $MOD+v exec swaylock -f -c 000000
+
+# Modes
+bindsym $MOD+m mode "layout"
+mode "layout" {
+    bindsym ampersand layout stacking; mode "default"
+    bindsym eacute layout tabbed; mode "default"
+    bindsym quotedbl layout toggle split; mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $MOD+b mode "border"
+mode "border" {
+    bindsym ampersand border pixel 1; mode "default"
+    bindsym eacute border normal 1; mode "default"
+    bindsym quotedbl border none; mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $MOD+i mode "sway"
+mode "sway" {
+    bindsym ampersand reload; mode "default"
+    bindsym eacute restart; mode "default"
+    bindsym quotedbl exec pkill ssh-agent; exit; mode "default"
+    bindsym apostrophe exec --no-startup-id ~/.local/bin/lock_and_suspend.sh; mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# ────────────────────────────────────────────────────────────────────────────
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ AUTOSTART                                                                │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+exec --no-startup-id nm-applet --indicator &
+#exec --no-startup-id redshift -l 50.5:4.4 -r -t 4000:3500 &
+exec --no-startup-id gammastep -l 50.5:4.4 -r -t 4000:3500 &
+exec --no-startup-id mako &
+exec --no-startup-id nm-applet &
+#exec --no-startup-id flameshot &
+
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * dpms off"' \
+              resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -f -c 000000'
+
+# ────────────────────────────────────────────────────────────────────────────
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ APPLICATION <-> WORKSPACE ASSIGNMENT                                     │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+assign [class="Pidgin"] $WS1
+assign [app_id="firefoxdeveloperedition"] $WS2
+assign [class="discord"] $WS5
+assign [class="Keybase|keybase"] $WS5
+assign [class="Steam"] $WS6
+assign [class="Steam.exe"] $WS6
+assign [class="evolution|Evolution"] $WS0
+assign [title="^TeamSpeak"] $WS5
+
+# ────────────────────────────────────────────────────────────────────────────
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ APPLICATION BEHAVIOUR                                                    │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [app_id="firefoxdeveloperedition"] border none
+for_window [title="Launch Application" app_id="firefoxdeveloperedition"] floating enable
+for_window [class="Steam"] floating enable
+for_window [class="Steam.exe"] floating enable
+for_window [class="Wine"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Pidgin"] floating enable
+for_window [class="Thunar"] floating enable
+for_window [class="Lxappearance"] floating enable
+for_window [class="Vlc"] floating enable
+for_window [app_id="mpv"] floating enable, border none
+#for_window [class="Keybase"] floating enable
+for_window [class="Pinta"] floating enable
+for_window [title="^TeamSpeak"] floating enable
+#for_window [class="discord"] border none
+for_window [title="feh"] floating enable
+for_window [title="QEMU"] floating enable
+for_window [class="qemu-system-x86_64"] floating enable
+for_window [class="Qemu-system-x86_64"] floating enable
+for_window [class="synergy"] floating enable
+for_window [class="Sxiv"] floating enable
+for_window [class="imv"] floating enable
+for_window [class="Imv"] floating enable
+for_window [class="File-roller"] floating enable
+for_window [class="Lutris"] floating enable
+for_window [app_id="^launcher$"] floating enable, border none, resize set width 25 ppt height 100 ppt, move position 0 px 0 px
+
+# ────────────────────────────────────────────────────────────────────────────
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ WINDOW BORDER COLOURS                                                    │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+## Gruvboxy
+client.background       #1d2021aa
+# state                 border  bg      text    indicator
+client.focused          #076678 #076678 #fbf1c7 #b16286
+client.focused_inactive #1d2021 #32302f #fbf1c7 #b16286
+client.unfocused        #1d2021 #282828 #fbf1c7 #b16286
+client.urgent           #cc241d #cc241d #fbf1c7 #cc241d
+client.placeholder      #1d2021 #282828 #282828 #282828
+
+# ────────────────────────────────────────────────────────────────────────────
+# ┌──────────────────────────────────────────────────────────────────────────┐
+# │ BARS AND THEIR COLOURS                                                   │
+# └──────────────────────────────────────────────────────────────────────────┘
+
+# Bar 1
+bar {
+    mode dock
+    modifier $MOD
+    position bottom
+    workspace_buttons yes
+    font $FONT
+    swaybar_command waybar
+    #status_command i3status -c "~/.config/i3/i3status.conf"
+    #status_command ~/.config/i3/i3bar_exec_main.sh
+    strip_workspace_numbers yes
+    height 24
+
+    colors {
+        ## Gruvboxy
+        statusline #fbf1c7
+        background #1d2021ee
+        #focused_statusline #ebdbb2
+        #focused_background #282828ee
+        #                    border  backgr  text
+        focused_workspace    #076678 #076678 #fbf1c7
+        inactive_workspace   #1d2021 #282828 #fbf1c7
+        active_workspace     #1d2021 #32302f #fbf1c7
+        urgent_workspace     #cc241d #cc241d #fbf1c7
+    }
+}

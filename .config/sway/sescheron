@@ -1,0 +1,23 @@
+output HDMI-A-1 {
+    bg ~/pictures/wallpapers/wallhaven-oxkjgm.jpg fill
+    scale 1.0
+    mode 1920x1080@144Hz
+#    position 2133 0
+}
+
+input 12851:25345:Ducky_Ducky_One2_Mini_RGB {
+    xkb_layout be
+    xkb_options caps:none
+    repeat_delay 350
+    repeat_rate 40
+}
+
+input 1118:64:Microsoft_Microsoft_3-Button_Mouse_with_IntelliEye(TM) {
+    pointer_accel 0
+    accel_profile flat
+}
+
+input 11944:8707:Wings_Tech_Xtrfy_MZ1 {
+    pointer_accel 0
+    accel_profile flat
+}

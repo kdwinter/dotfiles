@@ -1,0 +1,71 @@
+############################################################################
+################################ Personal ##################################
+############################################################################
+
+IMAPAccount personal
+Host domain.com
+Port 993
+User user@domain.com
+PassCmd "gpg -dq ~/.config/mutt/password_personal.gpg"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+AuthMechs LOGIN
+
+IMAPStore personal-remote
+Account personal
+
+MaildirStore personal-local
+#Subfolders Verbatim
+Path ~/mail/personal/
+Inbox ~/mail/personal/INBOX
+
+#Channel personal
+#Far :personal-remote:
+#Near :personal-local:
+#Patterns *
+#Create Both
+#SyncState *
+
+Channel personal-inbox
+Far :personal-remote:"INBOX"
+Near :personal-local:INBOX
+Create Both
+Expunge Both
+
+Channel personal-archive
+Far :personal-remote:"Archive"
+Near :personal-local:Archive
+Create Both
+Expunge Both
+
+Channel personal-drafts
+Far :personal-remote:"Drafts"
+Near :personal-local:Drafts
+Create Both
+Expunge Both
+
+Channel personal-sent
+Far :personal-remote:"Sent"
+Near :personal-local:Sent
+Create Both
+Expunge Both
+
+Channel personal-trash
+Far :personal-remote:"Trash"
+Near :personal-local:Trash
+Create Both
+Expunge Both
+
+Channel personal-junk
+Far :personal-remote:"Junk"
+Near :personal-local:Junk
+Create Both
+Expunge Both
+
+Group personal
+Channel personal-inbox
+Channel personal-archive
+Channel personal-drafts
+Channel personal-sent
+Channel personal-trash
+Channel personal-junk

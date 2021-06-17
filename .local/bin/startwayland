@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+export XKB_DEFAULT_LAYOUT="be"
+#export GDK_BACKEND="wayland"
+export XDG_SESSION_TYPE="wayland"
+export XDG_RUNTIME_DIR="/run/user/$(id -u)"
+export XDG_CURRENT_DESKTOP="sway"
+export MOZ_ENABLE_WAYLAND=1
+export SWAY_CURSOR_THEME="Breeze_Obsidian"
+
+if [ "$(pgrep ssh-agent)" == "" ]; then
+    eval $(ssh-agent)
+fi
+
+exec dbus-run-session sway

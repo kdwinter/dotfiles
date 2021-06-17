@@ -1,0 +1,23 @@
+source ~/.config/mutt/muttrc
+
+set realname = "name"
+set from="email@domain.com"
+set smtp_url = "smtp://user%40domain.com@domain.com:587/"
+source "gpg -dq ~/.config/mutt/private_personal.gpg |" # Sensitive info overwritten in here
+
+set ssl_starttls=yes
+set ssl_force_tls=yes
+set ssl_use_sslv3=yes
+
+set mbox_type=Maildir
+set folder=~/mail/personal
+set mbox=~/mail/personal/Archive
+set spoolfile=~/mail/personal/INBOX
+set record=~/mail/personal/Sent
+set postponed=~/mail/personal/Drafts
+set trash=~/mail/personal/Trash
+mailboxes "=INBOX" "=Archive" "=Junk" "=Drafts" "=Sent" "=Trash"
+set header_cache = ~/.config/mutt/cache/headers
+set message_cachedir = ~/.config/mutt/cache/bodies
+
+send-hook . set signature="~/.config/mutt/signature_personal"

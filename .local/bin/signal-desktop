@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/bin/signal-desktop --use-tray-icon --enable-features=UseOzonePlatform --ozone-platform=wayland

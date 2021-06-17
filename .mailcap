@@ -1,12 +1,16 @@
-image/*; /usr/bin/sxiv %s
 #text/html; /usr/bin/firefox-developer %s
-application/pdf; /usr/bin/zathura %s
-text/html; /usr/bin/w3m -I %{charset} -T text/html; copiousoutput
-application/vnd.ms-word.document.12; docx2txt %s -; copiousoutput
-application/vnd.openxmlformats-officedocument.wordprocessingml.document; docx2txt %s -; copiousoutput
+text/html; w3m -I %{charset} -T text/html; copiousoutput
+text/csv; nvim %s
+application/vnd.ms-word.document.12; docx2txt %s - | nvim
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; docx2txt %s - | nvim
+application/msword; antiword %s | nvim
+application/vnd.ms-excel; xls2csv -x %s -s cp1252 -d utf-8 | nvim
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; xlsx2csv --all %s | nvim
+application/rtf; unrtf --text %s | nvim
+application/pdf; zathura %s
 application/msword; antiword %s; copiousoutput
-application/vnd.ms-excel; xls2csv -x %s -s cp1252 -d utf-8; copiousoutput
-application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; xls2csv -x %s -s cp1252 -d utf-8; copiousoutput
-application/rtf; unrtf --text %s; copiousoutput
+text/calendar; mutt-ics; copiousoutput
+application/ics; mutt-ics; copiousoutput
 video/*; mpv %s
-#image/*; /home/gig/bin/muttimage.sh %s; copiousoutput
+image/*; imv %s
+#image/*; /home/gig/.mutt/muttimage.sh %s; copiousoutput
